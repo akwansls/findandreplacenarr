@@ -1,0 +1,11 @@
+C:\Users\alexa\Documents\SLS\auto narr\findandreplacenarr\findandreplacenarr\obj\Debug\findandreplacenarr.csproj.AssemblyReference.cache
+C:\Users\alexa\Documents\SLS\auto narr\findandreplacenarr\findandreplacenarr\obj\Debug\findandreplacenarr.csproj.SuggestedBindingRedirects.cache
+C:\Users\alexa\Documents\SLS\auto narr\findandreplacenarr\findandreplacenarr\obj\Debug\findandreplacenarr.Form1.resources
+C:\Users\alexa\Documents\SLS\auto narr\findandreplacenarr\findandreplacenarr\obj\Debug\findandreplacenarr.Properties.Resources.resources
+C:\Users\alexa\Documents\SLS\auto narr\findandreplacenarr\findandreplacenarr\obj\Debug\findandreplacenarr.csproj.GenerateResource.cache
+C:\Users\alexa\Documents\SLS\auto narr\findandreplacenarr\findandreplacenarr\obj\Debug\findandreplacenarr.csproj.CoreCompileInputs.cache
+C:\Users\alexa\Documents\SLS\auto narr\findandreplacenarr\findandreplacenarr\bin\Debug\findandreplacenarr.exe.config
+C:\Users\alexa\Documents\SLS\auto narr\findandreplacenarr\findandreplacenarr\bin\Debug\findandreplacenarr.exe
+C:\Users\alexa\Documents\SLS\auto narr\findandreplacenarr\findandreplacenarr\bin\Debug\findandreplacenarr.pdb
+C:\Users\alexa\Documents\SLS\auto narr\findandreplacenarr\findandreplacenarr\obj\Debug\findandreplacenarr.exe
+C:\Users\alexa\Documents\SLS\auto narr\findandreplacenarr\findandreplacenarr\obj\Debug\findandreplacenarr.pdb
