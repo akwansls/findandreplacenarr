@@ -62,6 +62,11 @@ namespace findandreplacenarr
             string noccupancy = FindfsdOccupancy;
             string FSDRating;
             string FSDOpening;
+
+            //Building Occupancy Input
+            
+
+            //Fire Separation Distance
             if (IntFSDInput > 0 && IntFSDInput < 3)
             {
                 FSDOpening = "Not Permitted";
@@ -192,6 +197,109 @@ namespace findandreplacenarr
                 this.FindAndReplace(wordApp, "ARCH", AccountNameInput.Text);
                 this.FindAndReplace(wordApp, "ARCHADD", AccountAddressInput.Text);
                 this.FindAndReplace(wordApp, "ARCHZIP", AccountZipcodeInput.Text);
+
+                bool A1 = false;
+                bool A2 = false;
+                bool A3 = false;
+                bool B = false;
+                bool M = false;
+                bool R1 = false;
+                bool R2 = false;
+                bool I1 = false;
+                bool I3 = false;
+                bool S1 = false;
+                bool S2 = false;
+                A1 = intBuildingOccupancy.GetItemChecked(0);
+                A2 = intBuildingOccupancy.GetItemChecked(1);
+                A3 = intBuildingOccupancy.GetItemChecked(2);
+                B = intBuildingOccupancy.GetItemChecked(3);
+                M = intBuildingOccupancy.GetItemChecked(4);
+                R1 = intBuildingOccupancy.GetItemChecked(5);
+                R2 = intBuildingOccupancy.GetItemChecked(6);
+                I1 = intBuildingOccupancy.GetItemChecked(7);
+                I3 = intBuildingOccupancy.GetItemChecked(8);
+                S1 = intBuildingOccupancy.GetItemChecked(9);
+                S2 = intBuildingOccupancy.GetItemChecked(10);
+
+                //PARAGRAGPH REPLACE PER OCCUPANCY
+                if ((A1==true || A2==true || A3==true) && R1==true)
+                {
+                    this.FindAndReplace(wordApp, "FR ASSEMBLY HOTEL P1", "For Assembly occupancies, FFPC, NFPA 101 Section 12.3.2 and Hotel occupancies, FFPC, NFPA 101 Section 28.3.2 states that rooms containing high-pressure boilers, large transformers, or other service equipment subject to explosion shall not be located directly under or abutting required exits." +
+                        "Hotel units must be separated from adjacent hotel units by ½-hr fire barriers in accordance with FFPC, NFPA 101 Section 28.3.7.  The hotel unit separation in FBC Section 708 is 1-hour fire partition.");
+                }
+                else if ((A1 == false && A2 == false && A3 == false) && R1 == true)
+                {
+                    this.FindAndReplace(wordApp, "FR ASSEMBLY HOTEL P1", "For Hotel occupancies, FFPC, NFPA 101 Section 28.3.2 states that rooms containing high-pressure boilers, large transformers, or other service equipment subject to explosion shall not be located directly under or abutting required exits." +
+                        "Hotel units must be separated from adjacent hotel units by ½-hr fire barriers in accordance with FFPC, NFPA 101 Section 28.3.7.  The hotel unit separation in FBC Section 708 is 1-hour fire partition.");
+                }
+                if ((A1 == true || A2 == true || A3 == true) && R1 == false)
+                {
+                    this.FindAndReplace(wordApp, "FR ASSEMBLY HOTEL P1", "For Assembly occupancies, FFPC, NFPA 101 Section 12.3.2 states that rooms containing high-pressure boilers, large transformers, or other service equipment subject to explosion shall not be located directly under or abutting required exits. ");
+                }
+
+                if (R2==true)
+                {
+                    this.FindAndReplace(wordApp, "FR ASSEMBLY HOTEL P1", "Dwelling units must be separated from adjacent dwelling units by ½-hr fire barriers in accordance with FFPC, NFPA 101 Section 30.3.7.  The dwelling unit separation in Section FBC Section 708 is 1-hour fire partition.");
+                }
+
+                // Table 1 Editing per Occupancy Input
+                Microsoft.Office.Interop.Word.Table table1 = myWordDoc.Tables[1];
+                if (A1 == false)
+                {
+                    table1.Rows[1].Delete();
+                }
+                if (A2 == false)
+                {
+                    table1.Rows[2].Delete();
+                }
+                if (A3 == false)
+                {
+                    table1.Rows[3].Delete();
+                }
+                if (B == false)
+                {
+                    table1.Rows[4].Delete();
+                }
+                if (M == false)
+                {
+                    table1.Rows[5].Delete();
+                }
+                if (R1 == false)
+                {
+                    table1.Rows[6].Delete();
+                }
+                if (R2 == false)
+                {
+                    table1.Rows[7].Delete();
+                }
+                if (I1 == false)
+                {
+                    table1.Rows[8].Delete();
+                }
+                if (I3 == false)
+                {
+                    table1.Rows[9].Delete();
+                }
+                if (S1 == false)
+                {
+                    table1.Rows[10].Delete();
+                }
+                if (S2 == false)
+                {
+                    table1.Rows[11].Delete();
+                }
+
+                //Table 8 Fire rating of spaces
+                
+                Microsoft.Office.Interop.Word.Table table8 = myWordDoc.Tables[8];
+                if (R1 == false && R2 == false)
+                {
+                    table8.Rows[8].Delete();
+                    table8.Rows[11].Delete();
+                }
+
+               
+
 
                 string buildingType = "Type";
                 bool VOA = false;
@@ -350,6 +458,8 @@ namespace findandreplacenarr
                         Microsoft.Office.Interop.Word.Table table2AndAHalf = myWordDoc.Tables[3];
                         table2AndAHalf.Delete();
 
+                        this.FindAndReplace(wordApp, "IA REDUCED P1", "FBC Section 403.2.1.1 allows Type IA construction if building height is under 420 ft. to be reduced to Type IB Construction except the required fire resistance rating of columns supporting floors cannot be reduced." + "Based on the type of construction, Type IA Reduced, Tables 504.3 and 506.2 permit unlimited building height and area.  The reduced fire resistance rating of the building elements does not change the building height and building area limitations for the same building without such reductions.");
+
                     }
                     else
                     {
@@ -388,7 +498,7 @@ namespace findandreplacenarr
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CreateWordDocument(@"C:\Users\alexa\Documents\SLS\auto narr\findandreplacenarr\Narrative Template.docx", @"C:\Users\alexa\Downloads\DDMMYY_SLS XXXX_Project Name_FPLS Narrative_7th Edit. Code_Template 2020 output.docx");
+            CreateWordDocument(@"C:\Users\Owner\Desktop\SLS\findreplaceFPLS\Narrative Template.docx", @"C:\Users\alexa\Downloads\DDMMYY_SLS XXXX_Project Name_FPLS Narrative_7th Edit. Code_Template 2020 output.docx");
         }
 
         private void label1_Click_1(object sender, EventArgs e)
@@ -458,6 +568,11 @@ namespace findandreplacenarr
             listPanel.Add(panel2);
             listPanel.Add(panel3);
             listPanel[panelIndex].BringToFront();
+        }
+
+        private void intBuildingOccupancy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

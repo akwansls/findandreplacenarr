@@ -9,3 +9,14 @@ C:\Users\alexa\Documents\SLS\auto narr\findandreplacenarr\findandreplacenarr\bin
 C:\Users\alexa\Documents\SLS\auto narr\findandreplacenarr\findandreplacenarr\bin\Debug\findandreplacenarr.pdb
 C:\Users\alexa\Documents\SLS\auto narr\findandreplacenarr\findandreplacenarr\obj\Debug\findandreplacenarr.exe
 C:\Users\alexa\Documents\SLS\auto narr\findandreplacenarr\findandreplacenarr\obj\Debug\findandreplacenarr.pdb
+C:\Users\Owner\Desktop\SLS\findreplaceFPLS\findandreplacenarr\bin\Debug\findandreplacenarr.exe.config
+C:\Users\Owner\Desktop\SLS\findreplaceFPLS\findandreplacenarr\bin\Debug\findandreplacenarr.exe
+C:\Users\Owner\Desktop\SLS\findreplaceFPLS\findandreplacenarr\bin\Debug\findandreplacenarr.pdb
+C:\Users\Owner\Desktop\SLS\findreplaceFPLS\findandreplacenarr\obj\Debug\findandreplacenarr.csproj.AssemblyReference.cache
+C:\Users\Owner\Desktop\SLS\findreplaceFPLS\findandreplacenarr\obj\Debug\findandreplacenarr.csproj.SuggestedBindingRedirects.cache
+C:\Users\Owner\Desktop\SLS\findreplaceFPLS\findandreplacenarr\obj\Debug\findandreplacenarr.Form1.resources
+C:\Users\Owner\Desktop\SLS\findreplaceFPLS\findandreplacenarr\obj\Debug\findandreplacenarr.Properties.Resources.resources
+C:\Users\Owner\Desktop\SLS\findreplaceFPLS\findandreplacenarr\obj\Debug\findandreplacenarr.csproj.GenerateResource.cache
+C:\Users\Owner\Desktop\SLS\findreplaceFPLS\findandreplacenarr\obj\Debug\findandreplacenarr.csproj.CoreCompileInputs.cache
+C:\Users\Owner\Desktop\SLS\findreplaceFPLS\findandreplacenarr\obj\Debug\findandreplacenarr.exe
+C:\Users\Owner\Desktop\SLS\findreplaceFPLS\findandreplacenarr\obj\Debug\findandreplacenarr.pdb
