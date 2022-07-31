@@ -222,7 +222,7 @@ namespace findandreplacenarr
                 S2 = intBuildingOccupancy.GetItemChecked(10);
 
                 //PARAGRAGPH REPLACE PER OCCUPANCY
-                if ((A1==true || A2==true || A3==true) && R1==true)
+                if ((A1 == true || A2 == true || A3 == true) && R1 == true)
                 {
                     this.FindAndReplace(wordApp, "FR ASSEMBLY HOTEL P1", "For Assembly occupancies, FFPC, NFPA 101 Section 12.3.2 and Hotel occupancies, FFPC, NFPA 101 Section 28.3.2 states that rooms containing high-pressure boilers, large transformers, or other service equipment subject to explosion shall not be located directly under or abutting required exits." +
                         "Hotel units must be separated from adjacent hotel units by ½-hr fire barriers in accordance with FFPC, NFPA 101 Section 28.3.7.  The hotel unit separation in FBC Section 708 is 1-hour fire partition.");
@@ -237,9 +237,18 @@ namespace findandreplacenarr
                     this.FindAndReplace(wordApp, "FR ASSEMBLY HOTEL P1", "For Assembly occupancies, FFPC, NFPA 101 Section 12.3.2 states that rooms containing high-pressure boilers, large transformers, or other service equipment subject to explosion shall not be located directly under or abutting required exits. ");
                 }
 
-                if (R2==true)
+                if (R2 == true)
                 {
                     this.FindAndReplace(wordApp, "FR ASSEMBLY HOTEL P1", "Dwelling units must be separated from adjacent dwelling units by ½-hr fire barriers in accordance with FFPC, NFPA 101 Section 30.3.7.  The dwelling unit separation in Section FBC Section 708 is 1-hour fire partition.");
+                }
+
+                if (I1 == true || I3 == true)
+                {
+                    this.FindAndReplace(wordApp, "I1I3PARTITION", "Every story shall be divided into not less than two smoke compartments (FBC §420.4, FFPC, NFPA 101 FBC §32.3.3.7).  Each smoke compartment shall have an area not exceeding 22,500 square feet and the maximum travel distance from any point to reach a door in the smoke barrier shall not exceed 200 feet. Smoke barriers shall be constructed in accordance with FFPC, NFPA 101 §8.5 and shall have a minimum 1 - hour fire resistance rating(FFPC, NFPA 101 §32.3.3.7.8).Smoke barrier doors shall be at least 1 ¼ in.thick, solid - bonded wood - core doors, or shall be fire rated for at least 20 minutes(FFPC, NFPA 101 §32.3.3.7.13).At least 15 net square feet per resident shall be provided within the aggregate area of corridors, lounge or dining areas, and other low hazard areas on each side of the smoke barrier(FBC §420.4.1, FFPC, NFPA 101 §32.3.3.7.11), and not less than 6 net square feet for other occupants.");
+                }
+                else
+                {
+                    this.FindAndReplace(wordApp, "I1I3PARTITION", "DELETE");
                 }
 
                 // Table 1 Editing per Occupancy Input
@@ -298,7 +307,41 @@ namespace findandreplacenarr
                     table8.Rows[11].Delete();
                 }
 
+                // Table 10 Editing per Occupancy Input
+                Microsoft.Office.Interop.Word.Table table10 = myWordDoc.Tables[10];
+                if (A1 == false || A2 = false || A3 == false)
+                {
+                    table10.Rows[1].Delete();
+                }
                
+                if (B == false)
+                {
+                    table10.Rows[2].Delete();
+                }
+                if (M == false)
+                {
+                    table10.Rows[7].Delete();
+                }
+                if (R1 == false)
+                {
+                    table10.Rows[6].Delete();
+                }
+                if (R2 == false)
+                {
+                    table10.Rows[5].Delete();
+                }
+                if (I1 == false)
+                {
+                    table10.Rows[3].Delete();
+                }
+                if (I3 == false)
+                {
+                    table10.Rows[4].Delete();
+                }
+                if (S1 == false || S2 == false)
+                {
+                    table10.Rows[8].Delete();
+                }
 
 
                 string buildingType = "Type";
