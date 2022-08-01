@@ -197,6 +197,8 @@ namespace findandreplacenarr
                 this.FindAndReplace(wordApp, "ARCH", AccountNameInput.Text);
                 this.FindAndReplace(wordApp, "ARCHADD", AccountAddressInput.Text);
                 this.FindAndReplace(wordApp, "ARCHZIP", AccountZipcodeInput.Text);
+                
+                int intBuildingHeight = int.Parse(BuildingHeightInput.Text);
 
                 bool A1 = false;
                 bool A2 = false;
@@ -309,7 +311,7 @@ namespace findandreplacenarr
 
                 // Table 10 Editing per Occupancy Input
                 Microsoft.Office.Interop.Word.Table table10 = myWordDoc.Tables[10];
-                if (A1 == false || A2 = false || A3 == false)
+                if (A1 == false && A2 == false && A3 == false)
                 {
                     table10.Rows[1].Delete();
                 }
@@ -343,6 +345,69 @@ namespace findandreplacenarr
                     table10.Rows[8].Delete();
                 }
 
+                //Table 11 editing
+                Microsoft.Office.Interop.Word.Table table11 = myWordDoc.Tables[11];
+                if (A1 == false && A2 == false && A3 == false)
+                {
+                    table11.Rows[1].Delete();
+                }
+
+                if (B == false)
+                {
+                    table11.Rows[2].Delete();
+                }
+                if (M == false)
+                {
+                    table11.Rows[5].Delete();
+                }
+                if (R1 == false)
+                {
+                    table11.Rows[6].Delete();
+                }
+                if (R2 == false)
+                {
+                    table11.Rows[7].Delete();
+                }
+                if (I1 == false)
+                {
+                    table11.Rows[3].Delete();
+                }
+                if (I3 == false)
+                {
+                    table11.Rows[4].Delete();
+                }
+                if (S1 == false)
+                {
+                    table11.Rows[8].Delete();
+                }
+                if (S2 == false)
+                {
+                    table11.Rows[9].Delete();
+                }
+
+                //EXIT ACCESS SECTION
+                
+                if (R1 == true || I1 == true)
+                {
+                    this.FindAndReplace(wordApp, "R1I1UnitExit", "For Hotel Group R-1 occupancies and Res B/C, the FFPC requires two exit access doors from the unit when the guest room or guest suite is over 2,000 sq.ft.  The exit access doors must be located remotely from each other (FFPC, NFPA 101 Section 28.2.5.7).  If limits shown in Table 12 are exceeded, then additional exits must be provided.");
+                }
+
+                //OCCUPANT EVAC OR ADDITIONAL STAIR
+
+                if (intBuildingHeight >= 420 && R2 == false)
+                {
+                    this.FindAndReplace(wordApp, "OEESection", "For buildings greater than 420 ft. in building height, other than R-2 buildings, one additional stairway must be provided in addition to above exit stairs per FBC Section 403.5.2.  There is an alternate provision to the additional stair, which states that an occupant evacuation elevator can be provided in lieu of the stair.  The occupant evacuation elevator, separate from fire service access elevator, must comply with FBC Section 3008 and FFPC, NFPA 101 Section 7.14." + "NOTE: If the building is divided into R - 1 lower floors and R - 2 upper floors where it exceeds 420 ft. in height, then the exception can be applied, and the extra stair is not required since the upper occupancy is R - 2.");
+                }
+
+                //LOOPED CORRIDOR FOR R1/R2
+
+                if ((R2 == true || R1 == true) && loopedcorridor == true)
+                {
+                    this.FindAndReplace(wordApp, "Loopedcorridor", "For R - 2 and R - 1 occupancies, the distance between exits is not applicable to common nonlooped exit access corridors in a building that has corridor doors from the guestroom or guest suite or dwelling unit, which are arranged so that the exits are located in opposite directions from such doors (FBC Section 1007.1.1 Exception 3).The exit discharge must also meet the remoteness requirement.");
+                }
+
+
+                //VERTICAL OPENING SECTION
 
                 string buildingType = "Type";
                 bool VOA = false;
@@ -388,7 +453,7 @@ namespace findandreplacenarr
                 }
 
 
-                int intBuildingHeight = int.Parse(BuildingHeightInput.Text);
+                
 
                 if (intBuildingHeight <= 75)
                 {
