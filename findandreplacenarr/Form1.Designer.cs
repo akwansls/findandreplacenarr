@@ -86,6 +86,11 @@
             this.NextButton = new System.Windows.Forms.Button();
             this.intBuildingOccupancy = new System.Windows.Forms.CheckedListBox();
             this.label26 = new System.Windows.Forms.Label();
+            this.isNONLooped = new System.Windows.Forms.CheckBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.BDPTINPUT = new System.Windows.Forms.TextBox();
+            this.FDPTINPUT = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -581,6 +586,11 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.FDPTINPUT);
+            this.panel1.Controls.Add(this.BDPTINPUT);
+            this.panel1.Controls.Add(this.label28);
+            this.panel1.Controls.Add(this.label27);
+            this.panel1.Controls.Add(this.isNONLooped);
             this.panel1.Controls.Add(this.label26);
             this.panel1.Controls.Add(this.intBuildingOccupancy);
             this.panel1.Controls.Add(this.label20);
@@ -605,7 +615,7 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.BuildingHeightInput);
             this.panel1.Controls.Add(this.isSprinklered);
-            this.panel1.Location = new System.Drawing.Point(560, 335);
+            this.panel1.Location = new System.Drawing.Point(580, 337);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(544, 320);
@@ -670,7 +680,7 @@
             this.panel3.Controls.Add(this.occupancyClassificationInput);
             this.panel3.Controls.Add(this.label19);
             this.panel3.Controls.Add(this.button1);
-            this.panel3.Location = new System.Drawing.Point(589, 11);
+            this.panel3.Location = new System.Drawing.Point(580, 13);
             this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(544, 320);
@@ -780,6 +790,53 @@
             this.label26.TabIndex = 24;
             this.label26.Text = "Building Occupancy";
             // 
+            // isNONLooped
+            // 
+            this.isNONLooped.AutoSize = true;
+            this.isNONLooped.Location = new System.Drawing.Point(203, 224);
+            this.isNONLooped.Name = "isNONLooped";
+            this.isNONLooped.Size = new System.Drawing.Size(166, 17);
+            this.isNONLooped.TabIndex = 25;
+            this.isNONLooped.Text = "Check if Non-Looped Corridor";
+            this.isNONLooped.UseVisualStyleBackColor = true;
+            this.isNONLooped.CheckedChanged += new System.EventHandler(this.isLooped_CheckedChanged);
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(5, 243);
+            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(69, 13);
+            this.label27.TabIndex = 26;
+            this.label27.Text = "Building DPT";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(6, 269);
+            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(49, 13);
+            this.label28.TabIndex = 27;
+            this.label28.Text = "Fire DPT";
+            // 
+            // BDPTINPUT
+            // 
+            this.BDPTINPUT.Location = new System.Drawing.Point(84, 236);
+            this.BDPTINPUT.Margin = new System.Windows.Forms.Padding(2);
+            this.BDPTINPUT.Name = "BDPTINPUT";
+            this.BDPTINPUT.Size = new System.Drawing.Size(76, 20);
+            this.BDPTINPUT.TabIndex = 28;
+            // 
+            // FDPTINPUT
+            // 
+            this.FDPTINPUT.Location = new System.Drawing.Point(84, 266);
+            this.FDPTINPUT.Margin = new System.Windows.Forms.Padding(2);
+            this.FDPTINPUT.Name = "FDPTINPUT";
+            this.FDPTINPUT.Size = new System.Drawing.Size(76, 20);
+            this.FDPTINPUT.TabIndex = 29;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -864,6 +921,11 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.CheckedListBox intBuildingOccupancy;
+        private System.Windows.Forms.CheckBox isNONLooped;
+        public System.Windows.Forms.TextBox FDPTINPUT;
+        public System.Windows.Forms.TextBox BDPTINPUT;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
     }
 }
 

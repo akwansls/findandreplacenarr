@@ -385,8 +385,88 @@ namespace findandreplacenarr
                     table11.Rows[9].Delete();
                 }
 
-                //EXIT ACCESS SECTION
+                //TABLE 13 EDITING
+
+                Microsoft.Office.Interop.Word.Table table13 = myWordDoc.Tables[13];
+                if (A1 == false && A2 == false && A3 == false)
+                {
+                    table13.Rows[1-6].Delete();
+                    table13.Rows[10-12].Delete();
+                    table13.Rows[16].Delete();
+                    table13.Rows[18].Delete();
+                    table13.Rows[20].Delete();              
+                }
+                if (B == false)
+                {
+                    table13.Rows[15].Delete();
+                }
+                if (M == false)
+                {
+                    table13.Rows[13].Delete();
+                }
+                if (R1 == false && R2 == false)
+                {
+                    table13.Rows[19].Delete();
+                }
+                if (I1 == false && I3 == false)
+                {
+                    table13.Rows[5].Delete();
+                    table13.Rows[7-10].Delete();
+                }
+                if (S2 == false)
+                {
+                    table13.Rows[17].Delete();
+                }
+
+                //TABLE 14 EDITING
+
+                Microsoft.Office.Interop.Word.Table table14 = myWordDoc.Tables[14];
+                if (A1 == false && A2 == false && A3 == false)
+                {
+                    table14.Rows[1].Delete();
+                }
+                if (B == false)
+                {
+                    table14.Rows[2].Delete();
+                }
+                if (M == false)
+                {
+                    table14.Rows[3].Delete();
+                }
+                if (R2 == false)
+                {
+                    table14.Rows[5].Delete();
+                }
+                if (R1 == false)
+                {
+                    table14.Rows[6].Delete();
+                }
+                if (I1 == false)
+                {
+                    table14.Rows[7].Delete();              ;
+                }
+                if (I3 == false)
+                {
+                    table14.Rows[8].Delete();
+                }
+
+                //LOW LEVEL EXIT SIGNAGE
+
+                if (R1 == true)
+                {
+                    this.FindAndReplace(wordApp, "LOWEXIT", "NOTE:   FBC Section 1013.2 requires floor-level exit signs in all R-1 (Hotel) Occupancies.  The bottom of the sign shall not be less than 10 inches and no more than 12 inches above the floor.  The sign shall be flush mounted to the door or wall.  The edge of the sign shall be within 4 inches of the door frame on the latch side.");
+                }
                 
+                //LUMINOUS EGRESS MARKINGS - NEED TO ADD CODE FOR R2 BUILDINGS WITH NON R2 ACCESSORY SPACES ABOVE THE 75FT
+
+                if (R2 == false && intBuildingHeight >= 75)
+                {
+                    this.FindAndReplace(wordApp, "LUMINOUSMARKSECTION", "As a high-rise building, FBC §403.5.5 states that approved luminous egress path markings delineating the exit path must be provided in Group A, B, E, I, M and R-1 occupancies in accordance with FBC §1025.  Markings within the exit enclosures are required to be provided on steps, landings, handrails, perimeter demarcation lines, and discharge doors from the exit enclosure.  Materials should comply with either UL 1994 or ASTM E2072. ");
+                }
+                
+
+                //EXIT ACCESS SECTION
+
                 if (R1 == true || I1 == true)
                 {
                     this.FindAndReplace(wordApp, "R1I1UnitExit", "For Hotel Group R-1 occupancies and Res B/C, the FFPC requires two exit access doors from the unit when the guest room or guest suite is over 2,000 sq.ft.  The exit access doors must be located remotely from each other (FFPC, NFPA 101 Section 28.2.5.7).  If limits shown in Table 12 are exceeded, then additional exits must be provided.");
@@ -401,11 +481,35 @@ namespace findandreplacenarr
 
                 //LOOPED CORRIDOR FOR R1/R2
 
-                if ((R2 == true || R1 == true) && loopedcorridor == true)
+                if ((R2 == true || R1 == true) && isNONLooped.Checked)
                 {
-                    this.FindAndReplace(wordApp, "Loopedcorridor", "For R - 2 and R - 1 occupancies, the distance between exits is not applicable to common nonlooped exit access corridors in a building that has corridor doors from the guestroom or guest suite or dwelling unit, which are arranged so that the exits are located in opposite directions from such doors (FBC Section 1007.1.1 Exception 3).The exit discharge must also meet the remoteness requirement.");
+                    this.FindAndReplace(wordApp, "NONLoopedcorridor", "For R - 2 and R - 1 occupancies, the distance between exits is not applicable to common nonlooped exit access corridors in a building that has corridor doors from the guestroom or guest suite or dwelling unit, which are arranged so that the exits are located in opposite directions from such doors (FBC Section 1007.1.1 Exception 3).The exit discharge must also meet the remoteness requirement.");
                 }
 
+                //STREET FLOOR REQ
+
+                if (B == true || R1 == true || I1 == true)
+                {
+                    this.FindAndReplace(wordApp, "StreetFloorREQ", "For Business (FFPC, NFPA 101 Section 38.2.3.3), Hotel (FFPC, NFPA 101 Section 28.2.3.2) and Res B/C,(check others), the code requires that street floor exits must accommodate the occupant load of street floor plus stair discharging onto street floor.");
+                }
+
+                //DOOR LOCK I1
+
+                if (I1 == true)
+                {
+                    this.FindAndReplace(wordApp, "DoorLockI1", "Door locking arrangements shall be permitted where clinical needs of residents require specialized security measures or where residents pose a security threat provided the staff can always readily unlock doors and the building is protected with an approved automatic sprinkler system (FFPC §32.3.2.2.2(6)). Doors in the means of egress permitted to be locked must have provisions for the rapid removal of occupants by means of remote-control locks from within the locked building, keying of all locks to keys always carried by staff, or other reliable means. Only one locking device shall always be permitted (FFPC §32.3.2.2.2 (7)(8)).");
+                }
+                else
+                {
+                    this.FindAndReplace(wordApp, "DoorLockI1", "DELETE");
+                }
+
+                //PANIC HARDWARE A OR E ----- Need to add E to Program
+
+                if (A1 == true || A2 == true || A3 == true ||)
+                {
+                    this.FindAndReplace(wordApp, "PanicHardwareREQ", "Panic hardware (or fire exit hardware for fire doors) must be installed in all doors serving rooms or spaces with an occupant load of 50 persons or more in a Group A or E occupancy per FBC Section 1010.1.10.  The FFPC, Section 12.2.2.2.3, has a similar requirement for assembly occupancies where the occupancy load is 100 or more. Therefore, the FBC has the more stringent requirement and must be implemented.  Panic hardware must be installed in electrical rooms as stated in other section of this report.");
+                }
 
                 //VERTICAL OPENING SECTION
 
@@ -679,6 +783,11 @@ namespace findandreplacenarr
         }
 
         private void intBuildingOccupancy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void isLooped_CheckedChanged(object sender, EventArgs e)
         {
 
         }
