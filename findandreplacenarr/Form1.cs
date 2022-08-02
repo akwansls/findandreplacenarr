@@ -450,6 +450,24 @@ namespace findandreplacenarr
                     table14.Rows[8].Delete();
                 }
 
+                //TABLE 15 AND 16 EDITING
+                /*
+                Microsoft.Office.Interop.Word.Table table15 = myWordDoc.Tables[15];
+                Microsoft.Office.Interop.Word.Table table16 = myWordDoc.Tables[16];
+                if (isEmergencyVoiceSystem.Checked && intBuildingHeight >= 75)
+                {
+                    if ()
+                    {
+                        table16.Rows[]
+                    }
+                    //Delete Table 15 ------------------------------
+
+                }
+                else
+                {
+                    //Delete Table 16 -------------------------------
+                }
+                */
                 //LOW LEVEL EXIT SIGNAGE
 
                 if (R1 == true)

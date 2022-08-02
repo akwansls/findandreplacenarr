@@ -91,6 +91,7 @@
             this.label28 = new System.Windows.Forms.Label();
             this.BDPTINPUT = new System.Windows.Forms.TextBox();
             this.FDPTINPUT = new System.Windows.Forms.TextBox();
+            this.isEmergencyVoiceSystem = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -302,7 +303,7 @@
             // isSprinklered
             // 
             this.isSprinklered.AutoSize = true;
-            this.isSprinklered.Location = new System.Drawing.Point(203, 201);
+            this.isSprinklered.Location = new System.Drawing.Point(201, 239);
             this.isSprinklered.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.isSprinklered.Name = "isSprinklered";
             this.isSprinklered.Size = new System.Drawing.Size(121, 17);
@@ -586,6 +587,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.isEmergencyVoiceSystem);
             this.panel1.Controls.Add(this.FDPTINPUT);
             this.panel1.Controls.Add(this.BDPTINPUT);
             this.panel1.Controls.Add(this.label28);
@@ -793,7 +795,7 @@
             // isNONLooped
             // 
             this.isNONLooped.AutoSize = true;
-            this.isNONLooped.Location = new System.Drawing.Point(203, 224);
+            this.isNONLooped.Location = new System.Drawing.Point(201, 214);
             this.isNONLooped.Name = "isNONLooped";
             this.isNONLooped.Size = new System.Drawing.Size(166, 17);
             this.isNONLooped.TabIndex = 25;
@@ -836,6 +838,16 @@
             this.FDPTINPUT.Name = "FDPTINPUT";
             this.FDPTINPUT.Size = new System.Drawing.Size(76, 20);
             this.FDPTINPUT.TabIndex = 29;
+            // 
+            // isEmergencyVoiceSystem
+            // 
+            this.isEmergencyVoiceSystem.AutoSize = true;
+            this.isEmergencyVoiceSystem.Location = new System.Drawing.Point(201, 265);
+            this.isEmergencyVoiceSystem.Name = "isEmergencyVoiceSystem";
+            this.isEmergencyVoiceSystem.Size = new System.Drawing.Size(268, 17);
+            this.isEmergencyVoiceSystem.TabIndex = 30;
+            this.isEmergencyVoiceSystem.Text = "Check if Emergency Voice/Communication System ";
+            this.isEmergencyVoiceSystem.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -926,6 +938,7 @@
         public System.Windows.Forms.TextBox BDPTINPUT;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.CheckBox isEmergencyVoiceSystem;
     }
 }
 
