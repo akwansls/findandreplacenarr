@@ -73,6 +73,14 @@
             this.occupancyClassificationInput = new System.Windows.Forms.CheckedListBox();
             this.label19 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.isEmergencyVoiceSystem = new System.Windows.Forms.CheckBox();
+            this.FDPTINPUT = new System.Windows.Forms.TextBox();
+            this.BDPTINPUT = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.isNONLooped = new System.Windows.Forms.CheckBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.intBuildingOccupancy = new System.Windows.Forms.CheckedListBox();
             this.label20 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label21 = new System.Windows.Forms.Label();
@@ -84,14 +92,6 @@
             this.label22 = new System.Windows.Forms.Label();
             this.PreviousButton = new System.Windows.Forms.Button();
             this.NextButton = new System.Windows.Forms.Button();
-            this.intBuildingOccupancy = new System.Windows.Forms.CheckedListBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.isNONLooped = new System.Windows.Forms.CheckBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.BDPTINPUT = new System.Windows.Forms.TextBox();
-            this.FDPTINPUT = new System.Windows.Forms.TextBox();
-            this.isEmergencyVoiceSystem = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -111,7 +111,7 @@
             // ProjectNameInput
             // 
             this.ProjectNameInput.Location = new System.Drawing.Point(84, 71);
-            this.ProjectNameInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProjectNameInput.Margin = new System.Windows.Forms.Padding(2);
             this.ProjectNameInput.Name = "ProjectNameInput";
             this.ProjectNameInput.Size = new System.Drawing.Size(76, 20);
             this.ProjectNameInput.TabIndex = 1;
@@ -119,7 +119,7 @@
             // ProjectAddressInput
             // 
             this.ProjectAddressInput.Location = new System.Drawing.Point(84, 103);
-            this.ProjectAddressInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProjectAddressInput.Margin = new System.Windows.Forms.Padding(2);
             this.ProjectAddressInput.Name = "ProjectAddressInput";
             this.ProjectAddressInput.Size = new System.Drawing.Size(76, 20);
             this.ProjectAddressInput.TabIndex = 3;
@@ -137,7 +137,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(182, 281);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(60, 27);
             this.button1.TabIndex = 4;
@@ -148,7 +148,7 @@
             // ProjectCityInput
             // 
             this.ProjectCityInput.Location = new System.Drawing.Point(84, 135);
-            this.ProjectCityInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProjectCityInput.Margin = new System.Windows.Forms.Padding(2);
             this.ProjectCityInput.Name = "ProjectCityInput";
             this.ProjectCityInput.Size = new System.Drawing.Size(76, 20);
             this.ProjectCityInput.TabIndex = 6;
@@ -166,7 +166,7 @@
             // ProjectStateInput
             // 
             this.ProjectStateInput.Location = new System.Drawing.Point(84, 165);
-            this.ProjectStateInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProjectStateInput.Margin = new System.Windows.Forms.Padding(2);
             this.ProjectStateInput.Name = "ProjectStateInput";
             this.ProjectStateInput.Size = new System.Drawing.Size(76, 20);
             this.ProjectStateInput.TabIndex = 8;
@@ -185,7 +185,7 @@
             // ProjectZipcodeInput
             // 
             this.ProjectZipcodeInput.Location = new System.Drawing.Point(84, 198);
-            this.ProjectZipcodeInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProjectZipcodeInput.Margin = new System.Windows.Forms.Padding(2);
             this.ProjectZipcodeInput.Name = "ProjectZipcodeInput";
             this.ProjectZipcodeInput.Size = new System.Drawing.Size(76, 20);
             this.ProjectZipcodeInput.TabIndex = 10;
@@ -227,7 +227,7 @@
             // AccountNameInput
             // 
             this.AccountNameInput.Location = new System.Drawing.Point(284, 71);
-            this.AccountNameInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AccountNameInput.Margin = new System.Windows.Forms.Padding(2);
             this.AccountNameInput.Name = "AccountNameInput";
             this.AccountNameInput.Size = new System.Drawing.Size(76, 20);
             this.AccountNameInput.TabIndex = 14;
@@ -246,8 +246,8 @@
             // 
             // AccountAddressInput
             // 
-            this.AccountAddressInput.Location = new System.Drawing.Point(284, 101);
-            this.AccountAddressInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AccountAddressInput.Location = new System.Drawing.Point(284, 95);
+            this.AccountAddressInput.Margin = new System.Windows.Forms.Padding(2);
             this.AccountAddressInput.Name = "AccountAddressInput";
             this.AccountAddressInput.Size = new System.Drawing.Size(76, 20);
             this.AccountAddressInput.TabIndex = 16;
@@ -255,7 +255,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(189, 103);
+            this.label4.Location = new System.Drawing.Point(189, 98);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 13);
@@ -264,8 +264,8 @@
             // 
             // AccountZipcodeInput
             // 
-            this.AccountZipcodeInput.Location = new System.Drawing.Point(284, 135);
-            this.AccountZipcodeInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AccountZipcodeInput.Location = new System.Drawing.Point(284, 119);
+            this.AccountZipcodeInput.Margin = new System.Windows.Forms.Padding(2);
             this.AccountZipcodeInput.Name = "AccountZipcodeInput";
             this.AccountZipcodeInput.Size = new System.Drawing.Size(76, 20);
             this.AccountZipcodeInput.TabIndex = 18;
@@ -273,7 +273,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(189, 137);
+            this.label5.Location = new System.Drawing.Point(189, 122);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 13);
@@ -282,8 +282,8 @@
             // 
             // BuildingHeightInput
             // 
-            this.BuildingHeightInput.Location = new System.Drawing.Point(284, 167);
-            this.BuildingHeightInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BuildingHeightInput.Location = new System.Drawing.Point(284, 143);
+            this.BuildingHeightInput.Margin = new System.Windows.Forms.Padding(2);
             this.BuildingHeightInput.Name = "BuildingHeightInput";
             this.BuildingHeightInput.Size = new System.Drawing.Size(76, 20);
             this.BuildingHeightInput.TabIndex = 20;
@@ -292,7 +292,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(200, 170);
+            this.label6.Location = new System.Drawing.Point(200, 146);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(78, 13);
@@ -303,8 +303,8 @@
             // isSprinklered
             // 
             this.isSprinklered.AutoSize = true;
-            this.isSprinklered.Location = new System.Drawing.Point(201, 239);
-            this.isSprinklered.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.isSprinklered.Location = new System.Drawing.Point(201, 245);
+            this.isSprinklered.Margin = new System.Windows.Forms.Padding(2);
             this.isSprinklered.Name = "isSprinklered";
             this.isSprinklered.Size = new System.Drawing.Size(121, 17);
             this.isSprinklered.TabIndex = 21;
@@ -326,7 +326,7 @@
             // NFSDInput
             // 
             this.NFSDInput.Location = new System.Drawing.Point(163, 89);
-            this.NFSDInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NFSDInput.Margin = new System.Windows.Forms.Padding(2);
             this.NFSDInput.Name = "NFSDInput";
             this.NFSDInput.Size = new System.Drawing.Size(76, 20);
             this.NFSDInput.TabIndex = 24;
@@ -368,7 +368,7 @@
             "S-2",
             "U"});
             this.NFSDOccupancy.Location = new System.Drawing.Point(147, 118);
-            this.NFSDOccupancy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NFSDOccupancy.Margin = new System.Windows.Forms.Padding(2);
             this.NFSDOccupancy.Name = "NFSDOccupancy";
             this.NFSDOccupancy.Size = new System.Drawing.Size(92, 21);
             this.NFSDOccupancy.TabIndex = 27;
@@ -391,7 +391,7 @@
             "S-2",
             "U"});
             this.SFSDOccupancy.Location = new System.Drawing.Point(148, 227);
-            this.SFSDOccupancy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SFSDOccupancy.Margin = new System.Windows.Forms.Padding(2);
             this.SFSDOccupancy.Name = "SFSDOccupancy";
             this.SFSDOccupancy.Size = new System.Drawing.Size(92, 21);
             this.SFSDOccupancy.TabIndex = 32;
@@ -409,7 +409,7 @@
             // SFSDInput
             // 
             this.SFSDInput.Location = new System.Drawing.Point(164, 194);
-            this.SFSDInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SFSDInput.Margin = new System.Windows.Forms.Padding(2);
             this.SFSDInput.Name = "SFSDInput";
             this.SFSDInput.Size = new System.Drawing.Size(76, 20);
             this.SFSDInput.TabIndex = 30;
@@ -452,7 +452,7 @@
             "S-2",
             "U"});
             this.EFSDOccupancy.Location = new System.Drawing.Point(410, 120);
-            this.EFSDOccupancy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EFSDOccupancy.Margin = new System.Windows.Forms.Padding(2);
             this.EFSDOccupancy.Name = "EFSDOccupancy";
             this.EFSDOccupancy.Size = new System.Drawing.Size(92, 21);
             this.EFSDOccupancy.TabIndex = 37;
@@ -470,7 +470,7 @@
             // EFSDInput
             // 
             this.EFSDInput.Location = new System.Drawing.Point(426, 89);
-            this.EFSDInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EFSDInput.Margin = new System.Windows.Forms.Padding(2);
             this.EFSDInput.Name = "EFSDInput";
             this.EFSDInput.Size = new System.Drawing.Size(76, 20);
             this.EFSDInput.TabIndex = 35;
@@ -513,7 +513,7 @@
             "S-2",
             "U"});
             this.WFSDOccupancy.Location = new System.Drawing.Point(410, 227);
-            this.WFSDOccupancy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WFSDOccupancy.Margin = new System.Windows.Forms.Padding(2);
             this.WFSDOccupancy.Name = "WFSDOccupancy";
             this.WFSDOccupancy.Size = new System.Drawing.Size(92, 21);
             this.WFSDOccupancy.TabIndex = 42;
@@ -531,7 +531,7 @@
             // WFSDInput
             // 
             this.WFSDInput.Location = new System.Drawing.Point(426, 194);
-            this.WFSDInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WFSDInput.Margin = new System.Windows.Forms.Padding(2);
             this.WFSDInput.Name = "WFSDInput";
             this.WFSDInput.Size = new System.Drawing.Size(76, 20);
             this.WFSDInput.TabIndex = 40;
@@ -570,7 +570,7 @@
             "I-3",
             "S"});
             this.occupancyClassificationInput.Location = new System.Drawing.Point(17, 61);
-            this.occupancyClassificationInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.occupancyClassificationInput.Margin = new System.Windows.Forms.Padding(2);
             this.occupancyClassificationInput.Name = "occupancyClassificationInput";
             this.occupancyClassificationInput.Size = new System.Drawing.Size(108, 109);
             this.occupancyClassificationInput.TabIndex = 43;
@@ -618,10 +618,99 @@
             this.panel1.Controls.Add(this.BuildingHeightInput);
             this.panel1.Controls.Add(this.isSprinklered);
             this.panel1.Location = new System.Drawing.Point(580, 337);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(544, 320);
             this.panel1.TabIndex = 45;
+            // 
+            // isEmergencyVoiceSystem
+            // 
+            this.isEmergencyVoiceSystem.AutoSize = true;
+            this.isEmergencyVoiceSystem.Location = new System.Drawing.Point(201, 265);
+            this.isEmergencyVoiceSystem.Name = "isEmergencyVoiceSystem";
+            this.isEmergencyVoiceSystem.Size = new System.Drawing.Size(268, 17);
+            this.isEmergencyVoiceSystem.TabIndex = 30;
+            this.isEmergencyVoiceSystem.Text = "Check if Emergency Voice/Communication System ";
+            this.isEmergencyVoiceSystem.UseVisualStyleBackColor = true;
+            // 
+            // FDPTINPUT
+            // 
+            this.FDPTINPUT.Location = new System.Drawing.Point(84, 266);
+            this.FDPTINPUT.Margin = new System.Windows.Forms.Padding(2);
+            this.FDPTINPUT.Name = "FDPTINPUT";
+            this.FDPTINPUT.Size = new System.Drawing.Size(76, 20);
+            this.FDPTINPUT.TabIndex = 29;
+            // 
+            // BDPTINPUT
+            // 
+            this.BDPTINPUT.Location = new System.Drawing.Point(84, 236);
+            this.BDPTINPUT.Margin = new System.Windows.Forms.Padding(2);
+            this.BDPTINPUT.Name = "BDPTINPUT";
+            this.BDPTINPUT.Size = new System.Drawing.Size(76, 20);
+            this.BDPTINPUT.TabIndex = 28;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(6, 269);
+            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(49, 13);
+            this.label28.TabIndex = 27;
+            this.label28.Text = "Fire DPT";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(5, 243);
+            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(69, 13);
+            this.label27.TabIndex = 26;
+            this.label27.Text = "Building DPT";
+            // 
+            // isNONLooped
+            // 
+            this.isNONLooped.AutoSize = true;
+            this.isNONLooped.Location = new System.Drawing.Point(201, 223);
+            this.isNONLooped.Name = "isNONLooped";
+            this.isNONLooped.Size = new System.Drawing.Size(166, 17);
+            this.isNONLooped.TabIndex = 25;
+            this.isNONLooped.Text = "Check if Non-Looped Corridor";
+            this.isNONLooped.UseVisualStyleBackColor = true;
+            this.isNONLooped.CheckedChanged += new System.EventHandler(this.isLooped_CheckedChanged);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(376, 42);
+            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(166, 20);
+            this.label26.TabIndex = 24;
+            this.label26.Text = "Building Occupancy";
+            // 
+            // intBuildingOccupancy
+            // 
+            this.intBuildingOccupancy.FormattingEnabled = true;
+            this.intBuildingOccupancy.Items.AddRange(new object[] {
+            "A-1",
+            "A-2",
+            "A-3",
+            "B",
+            "M",
+            "R-1",
+            "R-2",
+            "I-1",
+            "I-3",
+            "S-1",
+            "S-2"});
+            this.intBuildingOccupancy.Location = new System.Drawing.Point(390, 71);
+            this.intBuildingOccupancy.Name = "intBuildingOccupancy";
+            this.intBuildingOccupancy.Size = new System.Drawing.Size(129, 169);
+            this.intBuildingOccupancy.TabIndex = 23;
+            this.intBuildingOccupancy.SelectedIndexChanged += new System.EventHandler(this.intBuildingOccupancy_SelectedIndexChanged);
             // 
             // label20
             // 
@@ -657,7 +746,7 @@
             this.panel2.Controls.Add(this.SFSDOccupancy);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Location = new System.Drawing.Point(24, 11);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(536, 318);
             this.panel2.TabIndex = 46;
@@ -683,7 +772,7 @@
             this.panel3.Controls.Add(this.label19);
             this.panel3.Controls.Add(this.button1);
             this.panel3.Location = new System.Drawing.Point(580, 13);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(544, 320);
             this.panel3.TabIndex = 47;
@@ -702,7 +791,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(291, 93);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(76, 20);
             this.textBox1.TabIndex = 47;
@@ -741,7 +830,7 @@
             // PreviousButton
             // 
             this.PreviousButton.Location = new System.Drawing.Point(171, 404);
-            this.PreviousButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PreviousButton.Margin = new System.Windows.Forms.Padding(2);
             this.PreviousButton.Name = "PreviousButton";
             this.PreviousButton.Size = new System.Drawing.Size(56, 19);
             this.PreviousButton.TabIndex = 48;
@@ -752,102 +841,13 @@
             // NextButton
             // 
             this.NextButton.Location = new System.Drawing.Point(265, 404);
-            this.NextButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NextButton.Margin = new System.Windows.Forms.Padding(2);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(56, 19);
             this.NextButton.TabIndex = 49;
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = true;
             this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
-            // 
-            // intBuildingOccupancy
-            // 
-            this.intBuildingOccupancy.FormattingEnabled = true;
-            this.intBuildingOccupancy.Items.AddRange(new object[] {
-            "A-1",
-            "A-2",
-            "A-3",
-            "B",
-            "M",
-            "R-1",
-            "R-2",
-            "I-1",
-            "I-3",
-            "S-1",
-            "S-2"});
-            this.intBuildingOccupancy.Location = new System.Drawing.Point(390, 71);
-            this.intBuildingOccupancy.Name = "intBuildingOccupancy";
-            this.intBuildingOccupancy.Size = new System.Drawing.Size(129, 169);
-            this.intBuildingOccupancy.TabIndex = 23;
-            this.intBuildingOccupancy.SelectedIndexChanged += new System.EventHandler(this.intBuildingOccupancy_SelectedIndexChanged);
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(376, 42);
-            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(166, 20);
-            this.label26.TabIndex = 24;
-            this.label26.Text = "Building Occupancy";
-            // 
-            // isNONLooped
-            // 
-            this.isNONLooped.AutoSize = true;
-            this.isNONLooped.Location = new System.Drawing.Point(201, 214);
-            this.isNONLooped.Name = "isNONLooped";
-            this.isNONLooped.Size = new System.Drawing.Size(166, 17);
-            this.isNONLooped.TabIndex = 25;
-            this.isNONLooped.Text = "Check if Non-Looped Corridor";
-            this.isNONLooped.UseVisualStyleBackColor = true;
-            this.isNONLooped.CheckedChanged += new System.EventHandler(this.isLooped_CheckedChanged);
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(5, 243);
-            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(69, 13);
-            this.label27.TabIndex = 26;
-            this.label27.Text = "Building DPT";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(6, 269);
-            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(49, 13);
-            this.label28.TabIndex = 27;
-            this.label28.Text = "Fire DPT";
-            // 
-            // BDPTINPUT
-            // 
-            this.BDPTINPUT.Location = new System.Drawing.Point(84, 236);
-            this.BDPTINPUT.Margin = new System.Windows.Forms.Padding(2);
-            this.BDPTINPUT.Name = "BDPTINPUT";
-            this.BDPTINPUT.Size = new System.Drawing.Size(76, 20);
-            this.BDPTINPUT.TabIndex = 28;
-            // 
-            // FDPTINPUT
-            // 
-            this.FDPTINPUT.Location = new System.Drawing.Point(84, 266);
-            this.FDPTINPUT.Margin = new System.Windows.Forms.Padding(2);
-            this.FDPTINPUT.Name = "FDPTINPUT";
-            this.FDPTINPUT.Size = new System.Drawing.Size(76, 20);
-            this.FDPTINPUT.TabIndex = 29;
-            // 
-            // isEmergencyVoiceSystem
-            // 
-            this.isEmergencyVoiceSystem.AutoSize = true;
-            this.isEmergencyVoiceSystem.Location = new System.Drawing.Point(201, 265);
-            this.isEmergencyVoiceSystem.Name = "isEmergencyVoiceSystem";
-            this.isEmergencyVoiceSystem.Size = new System.Drawing.Size(268, 17);
-            this.isEmergencyVoiceSystem.TabIndex = 30;
-            this.isEmergencyVoiceSystem.Text = "Check if Emergency Voice/Communication System ";
-            this.isEmergencyVoiceSystem.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -859,7 +859,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

@@ -524,7 +524,7 @@ namespace findandreplacenarr
 
                 //PANIC HARDWARE A OR E ----- Need to add E to Program
 
-                if (A1 == true || A2 == true || A3 == true ||)
+                if (A1 == true || A2 == true || A3 == true) //Or E is true)
                 {
                     this.FindAndReplace(wordApp, "PanicHardwareREQ", "Panic hardware (or fire exit hardware for fire doors) must be installed in all doors serving rooms or spaces with an occupant load of 50 persons or more in a Group A or E occupancy per FBC Section 1010.1.10.  The FFPC, Section 12.2.2.2.3, has a similar requirement for assembly occupancies where the occupancy load is 100 or more. Therefore, the FBC has the more stringent requirement and must be implemented.  Panic hardware must be installed in electrical rooms as stated in other section of this report.");
                 }
@@ -576,12 +576,81 @@ namespace findandreplacenarr
 
 
                 
+                //Building Type Logic
 
                 if (intBuildingHeight <= 75)
                 {
                     //Set, find and replace BUILDTYPE
                     buildingType = "Type IIB";
                     this.FindAndReplace(wordApp, "BUILDTYPE", buildingType);
+
+                    /*
+                    //occupancy specific floors and SQF Logic --------------------- assuming sprinklered checked -------------------------------------
+                    if (A2 == true || A3 == true)
+                    {
+                        if (A2Floor <= 3 || A3Floor <= 3)
+                        {
+                            buildingTypeAFloor = "Type IIB";
+                        }
+                        else if (A2Floor == 4 || A2Floor == 4)
+                        {
+                            buildingTypeAFloor = "Type IB";
+                        }
+                        else if ((A2Floor >=5 && A2Floor <= 12) || (A3Floor >=5 && A3Floor <= 12))
+                        {
+                            buildingTypeAFloor = "Type IIA";
+                        }
+                        else if (A2Floor > 12 || A3Floor > 12)
+                        {
+                            buildingTypeAFloor = "Type IA";
+                        }
+                        if (A2SQF <= 28500 || A3SQF <= 28500)
+                        {
+                            buildingTypeASQF = "Type IIB";
+                        }
+                        else if ((A2SQF > 28500 && A2SQF <= 46500) || (A3SQF > 28500 && A3SQF <= 46500))
+                        {
+                            buildingTypeASQF = "Type IIA";
+                        }
+                        else if (A2SQF > 46500 || A3SQF > 46500)
+                        {
+                            buildingTypeASQF = "Type IB";
+                        }
+                    }
+                    if (B == true)
+                    {
+                        if (BFloor == 4)
+                        {
+                            buildingTypeBFloor = "Type IIB";
+                        }
+                        else if (BFloor > 4 && BFloor <= 6)
+                        {
+                            buildingTypeBFloor = "Type IB";
+                        }
+                        else if (BFloor > 6 && BFloor <= 12)
+                        {
+                            buildingTypeBFloor = "Type IIA";
+                        }
+                        else if (BFloor > 12)
+                        {
+                            buildingTypeBFloor = "Type IA";
+                        }
+                        if (BSQF <= 69000)
+                        {
+                            buildingTypeBSQF = "Type IIB";
+                        }
+                        else if (BSQF > 69000 && BSQF <= 112500)
+                        {
+                            buildingTypeBSQF = "Type IIA";
+                        }
+                        else if (BSQF > 112500)
+                        {
+                            buildingTypeBSQF = "Type IB";
+                        }
+                    }
+
+                    //COMPARE ALL RESULTS AND PICK MOST STRINGENT
+                    */
 
                     //Delete columns that aren't IIB
                     Microsoft.Office.Interop.Word.Table table2 = myWordDoc.Tables[2];
