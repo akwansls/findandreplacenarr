@@ -594,11 +594,11 @@ namespace findandreplacenarr
                         }
                         else if (A2Floor == 4 || A2Floor == 4)
                         {
-                            buildingTypeAFloor = "Type IB";
+                            buildingTypeAFloor = "Type IIA";
                         }
                         else if ((A2Floor >=5 && A2Floor <= 12) || (A3Floor >=5 && A3Floor <= 12))
                         {
-                            buildingTypeAFloor = "Type IIA";
+                            buildingTypeAFloor = "Type IB";
                         }
                         else if (A2Floor > 12 || A3Floor > 12)
                         {
@@ -617,6 +617,7 @@ namespace findandreplacenarr
                             buildingTypeASQF = "Type IB";
                         }
                     }
+
                     if (B == true)
                     {
                         if (BFloor == 4)
@@ -625,11 +626,11 @@ namespace findandreplacenarr
                         }
                         else if (BFloor > 4 && BFloor <= 6)
                         {
-                            buildingTypeBFloor = "Type IB";
+                            buildingTypeBFloor = "Type IIA";
                         }
                         else if (BFloor > 6 && BFloor <= 12)
                         {
-                            buildingTypeBFloor = "Type IIA";
+                            buildingTypeBFloor = "Type IB";
                         }
                         else if (BFloor > 12)
                         {
@@ -646,6 +647,173 @@ namespace findandreplacenarr
                         else if (BSQF > 112500)
                         {
                             buildingTypeBSQF = "Type IB";
+                        }
+                    }
+
+                    if (M == true)
+                    {
+                        if (MFloor == 3)
+                        {
+                            buildingTypeMFloor = "Type IIB";
+                        }
+                        else if (MFloor > 3 && MFloor <= 5)
+                        {
+                            buildingTypeMFloor = "Type IIA";
+                        }
+                        else if (MFloor > 5 && MFloor <= 12)
+                        {
+                            buildingTypeMFloor = "Type IB";
+                        }
+                        else if (MFloor > 12)
+                        {
+                            buildingTypeMFloor = "Type IA";
+                        }
+                        if (MSQF <= 37500)
+                        {
+                            buildingTypeMSQF = "Type IIB";
+                        }
+                        else if (MSQF > 37500 && MSQF <= 64500)
+                        {
+                            buildingTypeMSQF = "Type IIA";
+                        }
+                        else if (MSQF > 64500)
+                        {
+                            buildingTypeMSQF = "Type IB";
+                        }
+                    }
+
+                    if (R1 == true)
+                    {
+                        if (R1Floor == 5)
+                        {
+                            buildingTypeR1Floor = "Type IIB";
+                        }
+                        //else if (R1Floor == 5)
+                        //{
+                        //    buildingTypeR1Floor = "Type IIA";
+                        //}
+                        else if (R1Floor > 5 && R1Floor <= 12)
+                        {
+                            buildingTypeR1Floor = "Type IB";
+                        }
+                        else if (R1Floor > 12)
+                        {
+                            buildingTypeR1Floor = "Type IA";
+                        }
+                        if (R1SQF <= 48000)
+                        {
+                            buildingTypeR1SQF = "Type IIB";
+                        }
+                        else if (R1SQF > 48000 && R1SQF <= 72000)
+                        {
+                            buildingTypeR1SQF = "Type IIA";
+                        }
+                        else if (R1SQF > 72000)
+                        {
+                            buildingTypeR1SQF = "Type IB";
+                        }
+                    }
+                    if (R2 == true)
+                    {
+                        if (R2Floor == 5)
+                        {
+                            buildingTypeR2Floor = "Type IIB";
+                        }
+                        //else if (R2Floor == 5)
+                        //{
+                        //    buildingTypeR2Floor = "Type IIA";
+                        //}
+                        else if (R2Floor > 5 && R2Floor <= 12)
+                        {
+                            buildingTypeR2Floor = "Type IB";
+                        }
+                        else if (R2Floor > 12)
+                        {
+                            buildingTypeR2Floor = "Type IA";
+                        }
+                        if (R2SQF <= 48000)
+                        {
+                            buildingTypeR2SQF = "Type IIB";
+                        }
+                        else if (R2SQF > 48000 && R2SQF <= 72000)
+                        {
+                            buildingTypeR2SQF = "Type IIA";
+                        }
+                        else if (R2SQF > 72000)
+                        {
+                            buildingTypeR2SQF = "Type IB";
+                        }
+                    }
+
+                    if (S1 == true)
+                    {
+                        if (S1Floor == 3)
+                        {
+                            buildingTypeS1Floor = "Type IIB";
+                        }
+                        else if (S1Floor > 3 && S1Floor <= 5)
+                        {
+                            buildingTypeS1Floor = "Type IIA";
+                        }
+                        else if (S1Floor > 5 && S1Floor <= 12)
+                        {
+                            buildingTypeS1Floor = "Type IB";
+                        }
+                        else if (S1Floor > 12)
+                        {
+                            buildingTypeS1Floor = "Type IA";
+                        }
+                        if (S1SQF <= 52500)
+                        {
+                            buildingTypeS1SQF = "Type IIB";
+                        }
+                        else if (S1SQF > 52500 && S1SQF <= 78000)
+                        {
+                            buildingTypeS1SQF = "Type IIA";
+                        }
+                        else if (S1SQF > 78000 && S1SQF <= 144000)
+                        {
+                            buildingTypeS1SQF = "Type IB";
+                        }
+                        else if (S1SQF > 144000)
+                        {
+                            buildingTypeS1SQF = "Type IA";
+                        }
+                    }
+
+                    if (S2 == true)
+                    {
+                        if (S2Floor == 4)
+                        {
+                            buildingTypeS2Floor = "Type IIB";
+                        }
+                        else if (S2Floor > 4 && S2Floor <= 6)
+                        {
+                            buildingTypeS2Floor = "Type IIA";
+                        }
+                        else if (S2Floor > 6 && S2Floor <= 12)
+                        {
+                            buildingTypeS2Floor = "Type IB";
+                        }
+                        else if (S2Floor > 12)
+                        {
+                            buildingTypeS2Floor = "Type IA";
+                        }
+                        if (S2SQF <= 78000)
+                        {
+                            buildingTypeS2SQF = "Type IIB";
+                        }
+                        else if (S2SQF > 78000 && S2SQF <= 117000)
+                        {
+                            buildingTypeS2SQF = "Type IIA";
+                        }
+                        else if (S2SQF > 117000 && S2SQF <= 237000)
+                        {
+                            buildingTypeS2SQF = "Type IB";
+                        }
+                        else if (S2SQF > 237000)
+                        {
+                            buildingTypeS2SQF = "Type IA";
                         }
                     }
 
