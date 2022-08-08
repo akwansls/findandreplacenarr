@@ -92,6 +92,8 @@
             this.label22 = new System.Windows.Forms.Label();
             this.PreviousButton = new System.Windows.Forms.Button();
             this.NextButton = new System.Windows.Forms.Button();
+            this.A3FloorInput = new System.Windows.Forms.TextBox();
+            this.A3AreaInput = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -587,6 +589,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.A3AreaInput);
+            this.panel1.Controls.Add(this.A3FloorInput);
             this.panel1.Controls.Add(this.isEmergencyVoiceSystem);
             this.panel1.Controls.Add(this.FDPTINPUT);
             this.panel1.Controls.Add(this.BDPTINPUT);
@@ -849,6 +853,20 @@
             this.NextButton.UseVisualStyleBackColor = true;
             this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
+            // A3FloorInput
+            // 
+            this.A3FloorInput.Location = new System.Drawing.Point(444, 95);
+            this.A3FloorInput.Name = "A3FloorInput";
+            this.A3FloorInput.Size = new System.Drawing.Size(100, 20);
+            this.A3FloorInput.TabIndex = 31;
+            // 
+            // A3AreaInput
+            // 
+            this.A3AreaInput.Location = new System.Drawing.Point(444, 115);
+            this.A3AreaInput.Name = "A3AreaInput";
+            this.A3AreaInput.Size = new System.Drawing.Size(100, 20);
+            this.A3AreaInput.TabIndex = 32;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -939,6 +957,8 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.CheckBox isEmergencyVoiceSystem;
+        private System.Windows.Forms.TextBox A3FloorInput;
+        private System.Windows.Forms.TextBox A3AreaInput;
     }
 }
 

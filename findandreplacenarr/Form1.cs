@@ -451,23 +451,60 @@ namespace findandreplacenarr
                 }
 
                 //TABLE 15 AND 16 EDITING
-                /*
+                
                 Microsoft.Office.Interop.Word.Table table15 = myWordDoc.Tables[15];
                 Microsoft.Office.Interop.Word.Table table16 = myWordDoc.Tables[16];
-                if (isEmergencyVoiceSystem.Checked && intBuildingHeight >= 75)
+                if (isEmergencyVoiceSystem.Checked && intBuildingHeight >= 75 && isSprinklered.Checked)
                 {
-                    if ()
-                    {
-                        table16.Rows[]
-                    }
-                    //Delete Table 15 ------------------------------
 
+                    //Delete Table 15 ------------------------------
+                    table15.Delete();
+                    if (I1 == true || I3 == true)
+                    {
+                        table16.Rows[2].Delete();
+                        //what do we do for healthcare table16.Rows[3].Delete();
+                        table16.Rows[4].Delete();
+                    }
+                    else
+                    {
+                        table16.Rows[1].Delete();
+                        table16.Rows[2].Delete();
+                        table16.Rows[3].Delete();
+                    }
                 }
                 else
                 {
                     //Delete Table 16 -------------------------------
+                    table16.Delete();
+                    if (I1 == true || I3 == true)
+                    {
+                        table15.Rows[2].Delete();
+                        //what do we do for healthcare table15.Rows[3].Delete();
+                        table15.Rows[4].Delete();
+                    }
+                    else
+                    {
+                        table15.Rows[1].Delete();
+                        table15.Rows[2].Delete();
+                        table15.Rows[3].Delete();
+                    }
                 }
-                */
+
+                //FCC Section Miami Dade and City of Miami
+
+                //FDPTINPUT is the text box
+                //if (FDPTName == "City of Miami" || FDPTName == "Miami Dade")
+                //{
+                //    this.FindAndReplace(wordApp, "MDandCOMFCC", "Miami Dade County and City of Miami Fire Department requires a door opening into the lobby and additional door opening to the outside to provide direct access without entering the lobby.   The fire command center shall be located on the address side/main entrance of the building and shall be within proximity to the fire service access elevators and stairs that have a standpipe available for fire operations.");
+                //}
+
+                //MEANS OF ESCAPE SECTION
+
+                if ((R1 == true || R2 == true) && isSprinklered.Checked) //required for R2 with only one exit =========================
+                {
+                    this.FindAndReplace(wordApp, "MeansEscape", "Secondary means of escape windows are not required in dwelling units  [hotel units] when the building is protected by an automatic sprinkler system per FFPC, NFPA 101.  Emergency escape/rescue windows are required by FBC Section 1030 for only for R-2 occupancies in buildings that have only one exit.  The rescue windows are required even if the building is protected by an automatic sprinkler system.");
+                }
+
                 //LOW LEVEL EXIT SIGNAGE
 
                 if (R1 == true)
@@ -575,8 +612,11 @@ namespace findandreplacenarr
                 }
 
 
-                
+
                 //Building Type Logic
+
+                int A3FloorIn = int.Parse(A3FloorInput.Text);
+                int A3AreaIn = int.Parse(A3AreaInput.Text); 
 
                 if (intBuildingHeight <= 75)
                 {
@@ -588,31 +628,31 @@ namespace findandreplacenarr
                     //occupancy specific floors and SQF Logic --------------------- assuming sprinklered checked -------------------------------------
                     if (A2 == true || A3 == true)
                     {
-                        if (A2Floor <= 3 || A3Floor <= 3)
+                        if (A2FloorIn <= 3 || A3FloorIn <= 3)
                         {
                             buildingTypeAFloor = "Type IIB";
                         }
-                        else if (A2Floor == 4 || A2Floor == 4)
+                        else if (A2FloorIn == 4 || A3FloorIn == 4)
                         {
                             buildingTypeAFloor = "Type IIA";
                         }
-                        else if ((A2Floor >=5 && A2Floor <= 12) || (A3Floor >=5 && A3Floor <= 12))
+                        else if ((A2FloorIn >=5 && A2FloorIn <= 12) || (A3FloorIn >=5 && A3FloorIn <= 12))
                         {
                             buildingTypeAFloor = "Type IB";
                         }
-                        else if (A2Floor > 12 || A3Floor > 12)
+                        else if (A2FloorIn > 12 || A3FloorIn > 12)
                         {
                             buildingTypeAFloor = "Type IA";
                         }
-                        if (A2SQF <= 28500 || A3SQF <= 28500)
+                        if (A2AreaIn <= 28500 || A3AreaIn <= 28500)
                         {
                             buildingTypeASQF = "Type IIB";
                         }
-                        else if ((A2SQF > 28500 && A2SQF <= 46500) || (A3SQF > 28500 && A3SQF <= 46500))
+                        else if ((A2AreaIn > 28500 && A2AreaIn <= 46500) || (A3AreaIn > 28500 && A3AreaIn <= 46500))
                         {
                             buildingTypeASQF = "Type IIA";
                         }
-                        else if (A2SQF > 46500 || A3SQF > 46500)
+                        else if (A2AreaIn > 46500 || A3AreaIn > 46500)
                         {
                             buildingTypeASQF = "Type IB";
                         }
@@ -816,6 +856,22 @@ namespace findandreplacenarr
                             buildingTypeS2SQF = "Type IA";
                         }
                     }
+                    if (buildingTypeHeight == "IA" || buildingType__Floor == "IA" || buildingType__SQF == "IA")
+                        {
+                            buildingType = "IA";
+                        }
+                    else if buildingTypeHeight == "IB" || buildingType__Floor == "IB" || buildingType__SQF == "IB")
+                        {
+                            buildingType = "IB";
+                        }
+                    else if buildingTypeHeight == "IIA" || buildingType__Floor == "IIA" || buildingType__SQF == "IIA")
+                        {
+                            buildingType = "IIA";
+                        }
+                    else if buildingTypeHeight == "IIB" || buildingType__Floor == "IIB" || buildingType__SQF == "IIB")
+                        {
+                            buildingType = "IIB";
+                        }
 
                     //COMPARE ALL RESULTS AND PICK MOST STRINGENT
                     */
