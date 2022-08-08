@@ -9,3 +9,11 @@ C:\Users\alexa\Documents\SLS\auto narr\findandreplacenarr\findandreplacenarr\bin
 C:\Users\alexa\Documents\SLS\auto narr\findandreplacenarr\findandreplacenarr\bin\Debug\findandreplacenarr.pdb
 C:\Users\alexa\Documents\SLS\auto narr\findandreplacenarr\findandreplacenarr\obj\Debug\findandreplacenarr.exe
 C:\Users\alexa\Documents\SLS\auto narr\findandreplacenarr\findandreplacenarr\obj\Debug\findandreplacenarr.pdb
+C:\Users\alexa\Documents\SLS\auto narr\findandreplacenarr\findandreplacenarr\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\alexa\Documents\SLS\auto narr\findandreplacenarr\findandreplacenarr\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\alexa\Documents\SLS\auto narr\findandreplacenarr\findandreplacenarr\obj\Debug\findandreplacenarr.csproj.CopyComplete
+C:\Users\alexa\Documents\SLS\auto narr\findandreplacenarr\findandreplacenarr\bin\Debug\Spire.Doc.dll
+C:\Users\alexa\Documents\SLS\auto narr\findandreplacenarr\findandreplacenarr\bin\Debug\Spire.Pdf.dll
+C:\Users\alexa\Documents\SLS\auto narr\findandreplacenarr\findandreplacenarr\bin\Debug\Microsoft.mshtml.dll
+C:\Users\alexa\Documents\SLS\auto narr\findandreplacenarr\findandreplacenarr\bin\Debug\Spire.Doc.xml
+C:\Users\alexa\Documents\SLS\auto narr\findandreplacenarr\findandreplacenarr\bin\Debug\Spire.Pdf.xml
