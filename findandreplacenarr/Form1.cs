@@ -1058,6 +1058,9 @@ namespace findandreplacenarr
                     buildingTypeHeight = "Type IA";
                 }
 
+                //Initiate buildingType variable
+                string buildingType = "buildType";
+
                 //Fire Separation Distance North
                 FSDFindAndReplace("NFSD", "NFSDRating", "NFSDOpening", int.Parse(NFSDInput.Text), wordApp, NFSDOccupancy.GetItemText(NFSDOccupancy.SelectedItem), buildingType);
                 //Fire Separation Distance South
