@@ -347,50 +347,51 @@ namespace findandreplacenarr
 
                 // Table 1 Editing per Occupancy Input
                 Microsoft.Office.Interop.Word.Table table1 = myWordDoc.Tables[1];
-                if (A1 == false)
+                if (S2 == false)
                 {
-                    table1.Rows[1].Delete();
-                }
-                if (A2 == false)
-                {
-                    table1.Rows[2].Delete();
-                }
-                if (A3 == false)
-                {
-                    table1.Rows[3].Delete();
-                }
-                if (B == false)
-                {
-                    table1.Rows[4].Delete();
-                }
-                if (M == false)
-                {
-                    table1.Rows[5].Delete();
-                }
-                if (R1 == false)
-                {
-                    table1.Rows[6].Delete();
-                }
-                if (R2 == false)
-                {
-                    table1.Rows[7].Delete();
-                }
-                if (I1 == false)
-                {
-                    table1.Rows[8].Delete();
-                }
-                if (I3 == false)
-                {
-                    table1.Rows[9].Delete();
+                    table1.Rows[11].Delete();
                 }
                 if (S1 == false)
                 {
                     table1.Rows[10].Delete();
                 }
-                if (S2 == false)
+                if (I3 == false)
                 {
-                    table1.Rows[11].Delete();
+                    table1.Rows[9].Delete();
                 }
+                if (I1 == false)
+                {
+                    table1.Rows[8].Delete();
+                }
+                if (R2 == false)
+                {
+                    table1.Rows[7].Delete();
+                }
+                if (R1 == false)
+                {
+                    table1.Rows[6].Delete();
+                }
+                if (M == false)
+                {
+                    table1.Rows[5].Delete();
+                }
+                if (B == false)
+                {
+                    table1.Rows[4].Delete();
+                }
+                if (A3 == false)
+                {
+                    table1.Rows[3].Delete();
+                }
+                if (A2 == false)
+                {
+                    table1.Rows[2].Delete();
+                }
+                if (A1 == false)
+                {
+                    table1.Rows[1].Delete();
+                }
+
                 //-----------------------------------------------------------------How do these work?--------------------------------------------------------------------
                 //Table 8 Fire rating of spaces
                 Microsoft.Office.Interop.Word.Table table8 = myWordDoc.Tables[8];
