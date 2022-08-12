@@ -1028,7 +1028,7 @@ namespace findandreplacenarr
                 else if (intBuildingHeight > 180)
                 {
 
-                    //if (intBuildingHeight >= 420)
+                    //if (intBuildingHeight <= 420)
                     //{
                     //Set, find and replace BUILDTYPE
                     //buildingTypeHeight = "Type IA Reduced";
@@ -1068,6 +1068,37 @@ namespace findandreplacenarr
                     || buildingTypeS2SQF == "IA")
                 {
                     buildingType = "IA";
+
+                    if(intBuildingHeight <= 420)
+                    {
+                        buildingType = "Type IA Reduced";
+
+                        this.FindAndReplace(wordApp, "BUILDTYPE", buildingType);
+
+                        //Delete columns that aren't IB
+                        Microsoft.Office.Interop.Word.Table table2 = myWordDoc.Tables[2];
+                        table2.Columns[5].Delete();
+                        table2.Columns[4].Delete();
+                        table2.Columns[2].Delete();
+                        //Delete the other table
+                        Microsoft.Office.Interop.Word.Table table2AndAHalf = myWordDoc.Tables[3];
+                        table2AndAHalf.Delete();
+
+                    }
+                    else
+                    {
+                        this.FindAndReplace(wordApp, "BUILDTYPE", buildingType);
+
+                        //Delete columns that aren't IA
+                        Microsoft.Office.Interop.Word.Table table2 = myWordDoc.Tables[2];
+                        table2.Columns[5].Delete();
+                        table2.Columns[4].Delete();
+                        table2.Columns[3].Delete();
+                        //Delete the other table
+                        Microsoft.Office.Interop.Word.Table table2AndAHalf = myWordDoc.Tables[3];
+                        table2AndAHalf.Delete();
+
+                    }
                 }
                 else if (buildingTypeHeight == "IB" || buildingTypeA2Floor == "IB" || buildingTypeA3Floor == "IB" || buildingTypeBFloor == "IB" || buildingTypeMFloor == "IB" ||
                     buildingTypeR1Floor == "IB" || buildingTypeR2Floor == "IB" || buildingTypeS1Floor == "IB" || buildingTypeS2Floor == "IB" || buildingTypeA2SQF == "IB" ||
@@ -1075,6 +1106,18 @@ namespace findandreplacenarr
                     || buildingTypeS2SQF == "IB")
                 {
                     buildingType = "IB";
+
+                    this.FindAndReplace(wordApp, "BUILDTYPE", buildingType);
+
+                    //Delete columns that aren't IB
+                    Microsoft.Office.Interop.Word.Table table2 = myWordDoc.Tables[2];
+                    table2.Columns[5].Delete();
+                    table2.Columns[4].Delete();
+                    table2.Columns[2].Delete();
+
+                    //Delete the other table
+                    Microsoft.Office.Interop.Word.Table table2AndAHalf = myWordDoc.Tables[3];
+                    table2AndAHalf.Delete();
                 }
                 else if (buildingTypeHeight == "IIA" || buildingTypeA2Floor == "IIA" || buildingTypeA3Floor == "IIA" || buildingTypeBFloor == "IIA" || buildingTypeMFloor == "IIA" ||
                     buildingTypeR1Floor == "IIA" || buildingTypeR2Floor == "IIA" || buildingTypeS1Floor == "IIA" || buildingTypeS2Floor == "IIA" || buildingTypeA2SQF == "IIA" ||
@@ -1082,6 +1125,20 @@ namespace findandreplacenarr
                     || buildingTypeS2SQF == "IIA")
                 {
                     buildingType = "IIA";
+
+                    this.FindAndReplace(wordApp, "BUILDTYPE", buildingType);
+
+                    //Delete columns that aren't IIA
+                    Microsoft.Office.Interop.Word.Table table2 = myWordDoc.Tables[2];
+                    table2.Columns[5].Delete();
+                    for (int i = 0; i < 2; i++)
+                    {
+                        table2.Columns[2].Delete();
+                    }
+
+                    //Delete the other table
+                    Microsoft.Office.Interop.Word.Table table2AndAHalf = myWordDoc.Tables[3];
+                    table2AndAHalf.Delete();
                 }
                 else if (buildingTypeHeight == "IIB" || buildingTypeA2Floor == "IIB" || buildingTypeA3Floor == "IIB" || buildingTypeBFloor == "IIB" || buildingTypeMFloor == "IIB" ||
                     buildingTypeR1Floor == "IIB" || buildingTypeR2Floor == "IIB" || buildingTypeS1Floor == "IIB" || buildingTypeS2Floor == "IIB" || buildingTypeA2SQF == "IIB" ||
@@ -1089,6 +1146,20 @@ namespace findandreplacenarr
                     || buildingTypeS2SQF == "IIB")
                 {
                     buildingType = "IIB";
+
+                    this.FindAndReplace(wordApp, "BUILDTYPE", buildingType);
+
+                    //Delete columns that aren't IIB
+                    Microsoft.Office.Interop.Word.Table table2 = myWordDoc.Tables[2];
+                    for (int i = 0; i < 3; i++)
+                    {
+
+                        table2.Columns[2].Delete();
+                    }
+
+                    //Delete the other table
+                    Microsoft.Office.Interop.Word.Table table2AndAHalf = myWordDoc.Tables[3];
+                    table2AndAHalf.Delete();
                 }
 
 
