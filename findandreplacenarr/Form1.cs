@@ -227,7 +227,7 @@ namespace findandreplacenarr
                 this.FindAndReplace(wordApp, "ARCHADD", AccountAddressInput.Text);
                 this.FindAndReplace(wordApp, "ARCHZIP", AccountZipcodeInput.Text);
 
-                string buildingTypeHeight;
+                string buildingTypeHeight = null;
                 bool VOA = false;
                 bool VOB = false;
                 bool VOM = false;
@@ -640,23 +640,23 @@ namespace findandreplacenarr
                 }
 
                 //-------------------------------------------Building Occupancy-------------------------------------------------------------
-                string buildingTypeA2Floor;
-                string buildingTypeA3Floor;
-                string buildingTypeBFloor;
-                string buildingTypeMFloor;
-                string buildingTypeR1Floor;
-                string buildingTypeR2Floor;
-                string buildingTypeS1Floor;
-                string buildingTypeS2Floor;
+                string buildingTypeA2Floor = null;
+                string buildingTypeA3Floor = null;
+                string buildingTypeBFloor = null;
+                string buildingTypeMFloor = null;
+                string buildingTypeR1Floor = null;
+                string buildingTypeR2Floor = null;
+                string buildingTypeS1Floor = null;
+                string buildingTypeS2Floor = null;
 
-                string buildingTypeA2SQF;
-                string buildingTypeA3SQF;
-                string buildingTypeBSQF;
-                string buildingTypeMSQF;
-                string buildingTypeR1SQF;
-                string buildingTypeR2SQF;
-                string buildingTypeS1SQF;
-                string buildingTypeS2SQF;
+                string buildingTypeA2SQF = null;
+                string buildingTypeA3SQF = null;
+                string buildingTypeBSQF = null;
+                string buildingTypeMSQF = null;
+                string buildingTypeR1SQF = null;
+                string buildingTypeR2SQF = null;
+                string buildingTypeS1SQF = null;
+                string buildingTypeS2SQF = null;
 
                 if (A2 == true || A3 == true)
                 {
@@ -929,8 +929,7 @@ namespace findandreplacenarr
                     }
                 }
 
-
-
+                //get buildingTypeHeight
                 if (intBuildingHeight <= 75)
                 {
                     //Set, find and replace BUILDTYPE
@@ -1061,6 +1060,37 @@ namespace findandreplacenarr
 
                 //Initiate buildingType variable
                 string buildingType = "buildType";
+
+                //get actual buildingType
+                if(buildingTypeHeight == "IA" || buildingTypeA2Floor == "IA" || buildingTypeA3Floor == "IA" || buildingTypeBFloor == "IA" || buildingTypeMFloor == "IA" ||
+                    buildingTypeR1Floor == "IA" || buildingTypeR2Floor == "IA" || buildingTypeS1Floor == "IA" || buildingTypeS2Floor == "IA" || buildingTypeA2SQF == "IA" || 
+                    buildingTypeA3SQF == "IA" || buildingTypeBSQF == "IA" || buildingTypeMSQF == "IA" || buildingTypeR1SQF == "IA" || buildingTypeR2SQF == "IA" || buildingTypeS1SQF == "IA"
+                    || buildingTypeS2SQF == "IA")
+                {
+                    buildingType = "IA";
+                }
+                else if (buildingTypeHeight == "IB" || buildingTypeA2Floor == "IB" || buildingTypeA3Floor == "IB" || buildingTypeBFloor == "IB" || buildingTypeMFloor == "IB" ||
+                    buildingTypeR1Floor == "IB" || buildingTypeR2Floor == "IB" || buildingTypeS1Floor == "IB" || buildingTypeS2Floor == "IB" || buildingTypeA2SQF == "IB" ||
+                    buildingTypeA3SQF == "IB" || buildingTypeBSQF == "IB" || buildingTypeMSQF == "IB" || buildingTypeR1SQF == "IB" || buildingTypeR2SQF == "IB" || buildingTypeS1SQF == "IB"
+                    || buildingTypeS2SQF == "IB")
+                {
+                    buildingType = "IB";
+                }
+                else if (buildingTypeHeight == "IIA" || buildingTypeA2Floor == "IIA" || buildingTypeA3Floor == "IIA" || buildingTypeBFloor == "IIA" || buildingTypeMFloor == "IIA" ||
+                    buildingTypeR1Floor == "IIA" || buildingTypeR2Floor == "IIA" || buildingTypeS1Floor == "IIA" || buildingTypeS2Floor == "IIA" || buildingTypeA2SQF == "IIA" ||
+                    buildingTypeA3SQF == "IIA" || buildingTypeBSQF == "IIA" || buildingTypeMSQF == "IIA" || buildingTypeR1SQF == "IIA" || buildingTypeR2SQF == "IIA" || buildingTypeS1SQF == "IIA"
+                    || buildingTypeS2SQF == "IIA")
+                {
+                    buildingType = "IIA";
+                }
+                else if (buildingTypeHeight == "IIB" || buildingTypeA2Floor == "IIB" || buildingTypeA3Floor == "IIB" || buildingTypeBFloor == "IIB" || buildingTypeMFloor == "IIB" ||
+                    buildingTypeR1Floor == "IIB" || buildingTypeR2Floor == "IIB" || buildingTypeS1Floor == "IIB" || buildingTypeS2Floor == "IIB" || buildingTypeA2SQF == "IIB" ||
+                    buildingTypeA3SQF == "IIB" || buildingTypeBSQF == "IIB" || buildingTypeMSQF == "IIB" || buildingTypeR1SQF == "IIB" || buildingTypeR2SQF == "IIB" || buildingTypeS1SQF == "IIB"
+                    || buildingTypeS2SQF == "IIB")
+                {
+                    buildingType = "IIB";
+                }
+
 
                 //Fire Separation Distance North
                 FSDFindAndReplace("NFSD", "NFSDRating", "NFSDOpening", int.Parse(NFSDInput.Text), wordApp, NFSDOccupancy.GetItemText(NFSDOccupancy.SelectedItem), buildingType);

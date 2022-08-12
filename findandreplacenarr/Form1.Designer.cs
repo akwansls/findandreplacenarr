@@ -181,7 +181,7 @@
             // ProjectNameInput
             // 
             this.ProjectNameInput.Location = new System.Drawing.Point(196, 106);
-            this.ProjectNameInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProjectNameInput.Margin = new System.Windows.Forms.Padding(2);
             this.ProjectNameInput.Name = "ProjectNameInput";
             this.ProjectNameInput.Size = new System.Drawing.Size(76, 20);
             this.ProjectNameInput.TabIndex = 1;
@@ -189,7 +189,7 @@
             // ProjectAddressInput
             // 
             this.ProjectAddressInput.Location = new System.Drawing.Point(196, 139);
-            this.ProjectAddressInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProjectAddressInput.Margin = new System.Windows.Forms.Padding(2);
             this.ProjectAddressInput.Name = "ProjectAddressInput";
             this.ProjectAddressInput.Size = new System.Drawing.Size(76, 20);
             this.ProjectAddressInput.TabIndex = 3;
@@ -207,7 +207,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(274, 388);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(60, 27);
             this.button1.TabIndex = 4;
@@ -218,7 +218,7 @@
             // ProjectCityInput
             // 
             this.ProjectCityInput.Location = new System.Drawing.Point(196, 170);
-            this.ProjectCityInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProjectCityInput.Margin = new System.Windows.Forms.Padding(2);
             this.ProjectCityInput.Name = "ProjectCityInput";
             this.ProjectCityInput.Size = new System.Drawing.Size(76, 20);
             this.ProjectCityInput.TabIndex = 6;
@@ -236,7 +236,7 @@
             // ProjectStateInput
             // 
             this.ProjectStateInput.Location = new System.Drawing.Point(196, 200);
-            this.ProjectStateInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProjectStateInput.Margin = new System.Windows.Forms.Padding(2);
             this.ProjectStateInput.Name = "ProjectStateInput";
             this.ProjectStateInput.Size = new System.Drawing.Size(76, 20);
             this.ProjectStateInput.TabIndex = 8;
@@ -255,7 +255,7 @@
             // ProjectZipcodeInput
             // 
             this.ProjectZipcodeInput.Location = new System.Drawing.Point(196, 234);
-            this.ProjectZipcodeInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProjectZipcodeInput.Margin = new System.Windows.Forms.Padding(2);
             this.ProjectZipcodeInput.Name = "ProjectZipcodeInput";
             this.ProjectZipcodeInput.Size = new System.Drawing.Size(76, 20);
             this.ProjectZipcodeInput.TabIndex = 10;
@@ -297,7 +297,7 @@
             // AccountNameInput
             // 
             this.AccountNameInput.Location = new System.Drawing.Point(432, 106);
-            this.AccountNameInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AccountNameInput.Margin = new System.Windows.Forms.Padding(2);
             this.AccountNameInput.Name = "AccountNameInput";
             this.AccountNameInput.Size = new System.Drawing.Size(76, 20);
             this.AccountNameInput.TabIndex = 14;
@@ -317,7 +317,7 @@
             // AccountAddressInput
             // 
             this.AccountAddressInput.Location = new System.Drawing.Point(432, 136);
-            this.AccountAddressInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AccountAddressInput.Margin = new System.Windows.Forms.Padding(2);
             this.AccountAddressInput.Name = "AccountAddressInput";
             this.AccountAddressInput.Size = new System.Drawing.Size(76, 20);
             this.AccountAddressInput.TabIndex = 16;
@@ -335,7 +335,7 @@
             // AccountZipcodeInput
             // 
             this.AccountZipcodeInput.Location = new System.Drawing.Point(432, 170);
-            this.AccountZipcodeInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AccountZipcodeInput.Margin = new System.Windows.Forms.Padding(2);
             this.AccountZipcodeInput.Name = "AccountZipcodeInput";
             this.AccountZipcodeInput.Size = new System.Drawing.Size(76, 20);
             this.AccountZipcodeInput.TabIndex = 18;
@@ -353,7 +353,7 @@
             // BuildingHeightInput
             // 
             this.BuildingHeightInput.Location = new System.Drawing.Point(424, 221);
-            this.BuildingHeightInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BuildingHeightInput.Margin = new System.Windows.Forms.Padding(2);
             this.BuildingHeightInput.Name = "BuildingHeightInput";
             this.BuildingHeightInput.Size = new System.Drawing.Size(76, 20);
             this.BuildingHeightInput.TabIndex = 20;
@@ -374,7 +374,7 @@
             // 
             this.isSprinklered.AutoSize = true;
             this.isSprinklered.Location = new System.Drawing.Point(344, 296);
-            this.isSprinklered.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.isSprinklered.Margin = new System.Windows.Forms.Padding(2);
             this.isSprinklered.Name = "isSprinklered";
             this.isSprinklered.Size = new System.Drawing.Size(121, 17);
             this.isSprinklered.TabIndex = 21;
@@ -396,7 +396,7 @@
             // NFSDInput
             // 
             this.NFSDInput.Location = new System.Drawing.Point(163, 89);
-            this.NFSDInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NFSDInput.Margin = new System.Windows.Forms.Padding(2);
             this.NFSDInput.Name = "NFSDInput";
             this.NFSDInput.Size = new System.Drawing.Size(76, 20);
             this.NFSDInput.TabIndex = 24;
@@ -438,7 +438,7 @@
             "S-2",
             "U"});
             this.NFSDOccupancy.Location = new System.Drawing.Point(147, 118);
-            this.NFSDOccupancy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NFSDOccupancy.Margin = new System.Windows.Forms.Padding(2);
             this.NFSDOccupancy.Name = "NFSDOccupancy";
             this.NFSDOccupancy.Size = new System.Drawing.Size(92, 21);
             this.NFSDOccupancy.TabIndex = 27;
@@ -461,7 +461,7 @@
             "S-2",
             "U"});
             this.SFSDOccupancy.Location = new System.Drawing.Point(146, 353);
-            this.SFSDOccupancy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SFSDOccupancy.Margin = new System.Windows.Forms.Padding(2);
             this.SFSDOccupancy.Name = "SFSDOccupancy";
             this.SFSDOccupancy.Size = new System.Drawing.Size(92, 21);
             this.SFSDOccupancy.TabIndex = 32;
@@ -479,7 +479,7 @@
             // SFSDInput
             // 
             this.SFSDInput.Location = new System.Drawing.Point(163, 320);
-            this.SFSDInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SFSDInput.Margin = new System.Windows.Forms.Padding(2);
             this.SFSDInput.Name = "SFSDInput";
             this.SFSDInput.Size = new System.Drawing.Size(76, 20);
             this.SFSDInput.TabIndex = 30;
@@ -522,7 +522,7 @@
             "S-2",
             "U"});
             this.EFSDOccupancy.Location = new System.Drawing.Point(443, 120);
-            this.EFSDOccupancy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EFSDOccupancy.Margin = new System.Windows.Forms.Padding(2);
             this.EFSDOccupancy.Name = "EFSDOccupancy";
             this.EFSDOccupancy.Size = new System.Drawing.Size(92, 21);
             this.EFSDOccupancy.TabIndex = 37;
@@ -540,7 +540,7 @@
             // EFSDInput
             // 
             this.EFSDInput.Location = new System.Drawing.Point(459, 89);
-            this.EFSDInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EFSDInput.Margin = new System.Windows.Forms.Padding(2);
             this.EFSDInput.Name = "EFSDInput";
             this.EFSDInput.Size = new System.Drawing.Size(76, 20);
             this.EFSDInput.TabIndex = 35;
@@ -583,7 +583,7 @@
             "S-2",
             "U"});
             this.WFSDOccupancy.Location = new System.Drawing.Point(443, 353);
-            this.WFSDOccupancy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WFSDOccupancy.Margin = new System.Windows.Forms.Padding(2);
             this.WFSDOccupancy.Name = "WFSDOccupancy";
             this.WFSDOccupancy.Size = new System.Drawing.Size(92, 21);
             this.WFSDOccupancy.TabIndex = 42;
@@ -601,7 +601,7 @@
             // WFSDInput
             // 
             this.WFSDInput.Location = new System.Drawing.Point(459, 320);
-            this.WFSDInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WFSDInput.Margin = new System.Windows.Forms.Padding(2);
             this.WFSDInput.Name = "WFSDInput";
             this.WFSDInput.Size = new System.Drawing.Size(76, 20);
             this.WFSDInput.TabIndex = 40;
@@ -640,7 +640,7 @@
             "I-3",
             "S"});
             this.occupancyClassificationInput.Location = new System.Drawing.Point(17, 61);
-            this.occupancyClassificationInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.occupancyClassificationInput.Margin = new System.Windows.Forms.Padding(2);
             this.occupancyClassificationInput.Name = "occupancyClassificationInput";
             this.occupancyClassificationInput.Size = new System.Drawing.Size(108, 79);
             this.occupancyClassificationInput.TabIndex = 43;
@@ -686,7 +686,7 @@
             this.panel1.Controls.Add(this.isNONLooped);
             this.panel1.Controls.Add(this.isEmergencyVoiceSystem);
             this.panel1.Location = new System.Drawing.Point(18, 23);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(639, 464);
             this.panel1.TabIndex = 45;
@@ -708,7 +708,7 @@
             "City of Miami",
             "Miami Dade"});
             this.comboBox2.Location = new System.Drawing.Point(196, 322);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(92, 21);
             this.comboBox2.TabIndex = 25;
@@ -731,7 +731,7 @@
             "City of Miami",
             "Miami Dade"});
             this.comboBox1.Location = new System.Drawing.Point(196, 281);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(92, 21);
             this.comboBox1.TabIndex = 23;
@@ -750,7 +750,7 @@
             // 
             this.isNONLooped.AutoSize = true;
             this.isNONLooped.Location = new System.Drawing.Point(344, 261);
-            this.isNONLooped.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.isNONLooped.Margin = new System.Windows.Forms.Padding(2);
             this.isNONLooped.Name = "isNONLooped";
             this.isNONLooped.Size = new System.Drawing.Size(166, 17);
             this.isNONLooped.TabIndex = 23;
@@ -761,7 +761,7 @@
             // 
             this.isEmergencyVoiceSystem.AutoSize = true;
             this.isEmergencyVoiceSystem.Location = new System.Drawing.Point(344, 329);
-            this.isEmergencyVoiceSystem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.isEmergencyVoiceSystem.Margin = new System.Windows.Forms.Padding(2);
             this.isEmergencyVoiceSystem.Name = "isEmergencyVoiceSystem";
             this.isEmergencyVoiceSystem.Size = new System.Drawing.Size(265, 17);
             this.isEmergencyVoiceSystem.TabIndex = 24;
@@ -801,7 +801,7 @@
             this.panel3.Controls.Add(this.SFSDOccupancy);
             this.panel3.Controls.Add(this.label14);
             this.panel3.Location = new System.Drawing.Point(20, 23);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(637, 464);
             this.panel3.TabIndex = 46;
@@ -809,7 +809,7 @@
             // uploadWFSD
             // 
             this.uploadWFSD.Location = new System.Drawing.Point(459, 396);
-            this.uploadWFSD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uploadWFSD.Margin = new System.Windows.Forms.Padding(2);
             this.uploadWFSD.Name = "uploadWFSD";
             this.uploadWFSD.Size = new System.Drawing.Size(56, 28);
             this.uploadWFSD.TabIndex = 50;
@@ -820,7 +820,7 @@
             // WFSDImage
             // 
             this.WFSDImage.Location = new System.Drawing.Point(372, 382);
-            this.WFSDImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WFSDImage.Margin = new System.Windows.Forms.Padding(2);
             this.WFSDImage.Name = "WFSDImage";
             this.WFSDImage.Size = new System.Drawing.Size(75, 41);
             this.WFSDImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -830,7 +830,7 @@
             // uploadESFD
             // 
             this.uploadESFD.Location = new System.Drawing.Point(459, 164);
-            this.uploadESFD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uploadESFD.Margin = new System.Windows.Forms.Padding(2);
             this.uploadESFD.Name = "uploadESFD";
             this.uploadESFD.Size = new System.Drawing.Size(56, 28);
             this.uploadESFD.TabIndex = 48;
@@ -841,7 +841,7 @@
             // EFSDImage
             // 
             this.EFSDImage.Location = new System.Drawing.Point(372, 150);
-            this.EFSDImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EFSDImage.Margin = new System.Windows.Forms.Padding(2);
             this.EFSDImage.Name = "EFSDImage";
             this.EFSDImage.Size = new System.Drawing.Size(75, 41);
             this.EFSDImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -851,7 +851,7 @@
             // uploadNFSD
             // 
             this.uploadNFSD.Location = new System.Drawing.Point(170, 162);
-            this.uploadNFSD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uploadNFSD.Margin = new System.Windows.Forms.Padding(2);
             this.uploadNFSD.Name = "uploadNFSD";
             this.uploadNFSD.Size = new System.Drawing.Size(56, 30);
             this.uploadNFSD.TabIndex = 46;
@@ -862,7 +862,7 @@
             // NFSDImage
             // 
             this.NFSDImage.Location = new System.Drawing.Point(82, 150);
-            this.NFSDImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NFSDImage.Margin = new System.Windows.Forms.Padding(2);
             this.NFSDImage.Name = "NFSDImage";
             this.NFSDImage.Size = new System.Drawing.Size(75, 41);
             this.NFSDImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -872,7 +872,7 @@
             // uploadSFSD
             // 
             this.uploadSFSD.Location = new System.Drawing.Point(170, 396);
-            this.uploadSFSD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uploadSFSD.Margin = new System.Windows.Forms.Padding(2);
             this.uploadSFSD.Name = "uploadSFSD";
             this.uploadSFSD.Size = new System.Drawing.Size(56, 28);
             this.uploadSFSD.TabIndex = 44;
@@ -883,7 +883,7 @@
             // SFSDImage
             // 
             this.SFSDImage.Location = new System.Drawing.Point(82, 384);
-            this.SFSDImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SFSDImage.Margin = new System.Windows.Forms.Padding(2);
             this.SFSDImage.Name = "SFSDImage";
             this.SFSDImage.Size = new System.Drawing.Size(75, 41);
             this.SFSDImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -911,7 +911,7 @@
             this.panel4.Controls.Add(this.label19);
             this.panel4.Controls.Add(this.button1);
             this.panel4.Location = new System.Drawing.Point(20, 23);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(637, 462);
             this.panel4.TabIndex = 47;
@@ -930,7 +930,7 @@
             // VOLevelsInput
             // 
             this.VOLevelsInput.Location = new System.Drawing.Point(291, 93);
-            this.VOLevelsInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.VOLevelsInput.Margin = new System.Windows.Forms.Padding(2);
             this.VOLevelsInput.Name = "VOLevelsInput";
             this.VOLevelsInput.Size = new System.Drawing.Size(76, 20);
             this.VOLevelsInput.TabIndex = 47;
@@ -969,7 +969,7 @@
             // PreviousButton
             // 
             this.PreviousButton.Location = new System.Drawing.Point(231, 490);
-            this.PreviousButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PreviousButton.Margin = new System.Windows.Forms.Padding(2);
             this.PreviousButton.Name = "PreviousButton";
             this.PreviousButton.Size = new System.Drawing.Size(56, 19);
             this.PreviousButton.TabIndex = 48;
@@ -980,7 +980,7 @@
             // NextButton
             // 
             this.NextButton.Location = new System.Drawing.Point(325, 490);
-            this.NextButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NextButton.Margin = new System.Windows.Forms.Padding(2);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(56, 19);
             this.NextButton.TabIndex = 49;
@@ -1049,7 +1049,7 @@
             this.panel2.Controls.Add(this.label29);
             this.panel2.Controls.Add(this.label26);
             this.panel2.Location = new System.Drawing.Point(18, 20);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(639, 464);
             this.panel2.TabIndex = 50;
@@ -1078,7 +1078,7 @@
             // S2Area
             // 
             this.S2Area.Location = new System.Drawing.Point(538, 341);
-            this.S2Area.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.S2Area.Margin = new System.Windows.Forms.Padding(2);
             this.S2Area.Name = "S2Area";
             this.S2Area.Size = new System.Drawing.Size(76, 20);
             this.S2Area.TabIndex = 79;
@@ -1096,7 +1096,7 @@
             // S2HighestFloor
             // 
             this.S2HighestFloor.Location = new System.Drawing.Point(538, 307);
-            this.S2HighestFloor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.S2HighestFloor.Margin = new System.Windows.Forms.Padding(2);
             this.S2HighestFloor.Name = "S2HighestFloor";
             this.S2HighestFloor.Size = new System.Drawing.Size(76, 20);
             this.S2HighestFloor.TabIndex = 77;
@@ -1125,7 +1125,7 @@
             // S1Area
             // 
             this.S1Area.Location = new System.Drawing.Point(538, 249);
-            this.S1Area.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.S1Area.Margin = new System.Windows.Forms.Padding(2);
             this.S1Area.Name = "S1Area";
             this.S1Area.Size = new System.Drawing.Size(76, 20);
             this.S1Area.TabIndex = 74;
@@ -1143,7 +1143,7 @@
             // S1HighestFloor
             // 
             this.S1HighestFloor.Location = new System.Drawing.Point(538, 215);
-            this.S1HighestFloor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.S1HighestFloor.Margin = new System.Windows.Forms.Padding(2);
             this.S1HighestFloor.Name = "S1HighestFloor";
             this.S1HighestFloor.Size = new System.Drawing.Size(76, 20);
             this.S1HighestFloor.TabIndex = 72;
@@ -1172,7 +1172,7 @@
             // textBox17
             // 
             this.textBox17.Location = new System.Drawing.Point(539, 165);
-            this.textBox17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox17.Margin = new System.Windows.Forms.Padding(2);
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(76, 20);
             this.textBox17.TabIndex = 69;
@@ -1190,7 +1190,7 @@
             // textBox18
             // 
             this.textBox18.Location = new System.Drawing.Point(539, 132);
-            this.textBox18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox18.Margin = new System.Windows.Forms.Padding(2);
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(76, 20);
             this.textBox18.TabIndex = 67;
@@ -1219,7 +1219,7 @@
             // textBox15
             // 
             this.textBox15.Location = new System.Drawing.Point(538, 75);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox15.Margin = new System.Windows.Forms.Padding(2);
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(76, 20);
             this.textBox15.TabIndex = 64;
@@ -1237,7 +1237,7 @@
             // textBox16
             // 
             this.textBox16.Location = new System.Drawing.Point(538, 41);
-            this.textBox16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox16.Margin = new System.Windows.Forms.Padding(2);
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(76, 20);
             this.textBox16.TabIndex = 62;
@@ -1266,7 +1266,7 @@
             // R2Area
             // 
             this.R2Area.Location = new System.Drawing.Point(341, 432);
-            this.R2Area.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.R2Area.Margin = new System.Windows.Forms.Padding(2);
             this.R2Area.Name = "R2Area";
             this.R2Area.Size = new System.Drawing.Size(76, 20);
             this.R2Area.TabIndex = 59;
@@ -1284,7 +1284,7 @@
             // R2HighestFloor
             // 
             this.R2HighestFloor.Location = new System.Drawing.Point(341, 401);
-            this.R2HighestFloor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.R2HighestFloor.Margin = new System.Windows.Forms.Padding(2);
             this.R2HighestFloor.Name = "R2HighestFloor";
             this.R2HighestFloor.Size = new System.Drawing.Size(76, 20);
             this.R2HighestFloor.TabIndex = 57;
@@ -1313,7 +1313,7 @@
             // R1Area
             // 
             this.R1Area.Location = new System.Drawing.Point(342, 337);
-            this.R1Area.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.R1Area.Margin = new System.Windows.Forms.Padding(2);
             this.R1Area.Name = "R1Area";
             this.R1Area.Size = new System.Drawing.Size(76, 20);
             this.R1Area.TabIndex = 54;
@@ -1331,7 +1331,7 @@
             // R1HighestFloor
             // 
             this.R1HighestFloor.Location = new System.Drawing.Point(342, 306);
-            this.R1HighestFloor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.R1HighestFloor.Margin = new System.Windows.Forms.Padding(2);
             this.R1HighestFloor.Name = "R1HighestFloor";
             this.R1HighestFloor.Size = new System.Drawing.Size(76, 20);
             this.R1HighestFloor.TabIndex = 52;
@@ -1360,7 +1360,7 @@
             // MArea
             // 
             this.MArea.Location = new System.Drawing.Point(342, 249);
-            this.MArea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MArea.Margin = new System.Windows.Forms.Padding(2);
             this.MArea.Name = "MArea";
             this.MArea.Size = new System.Drawing.Size(76, 20);
             this.MArea.TabIndex = 49;
@@ -1378,7 +1378,7 @@
             // MHighestFloor
             // 
             this.MHighestFloor.Location = new System.Drawing.Point(342, 215);
-            this.MHighestFloor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MHighestFloor.Margin = new System.Windows.Forms.Padding(2);
             this.MHighestFloor.Name = "MHighestFloor";
             this.MHighestFloor.Size = new System.Drawing.Size(76, 20);
             this.MHighestFloor.TabIndex = 47;
@@ -1407,7 +1407,7 @@
             // BArea
             // 
             this.BArea.Location = new System.Drawing.Point(342, 162);
-            this.BArea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BArea.Margin = new System.Windows.Forms.Padding(2);
             this.BArea.Name = "BArea";
             this.BArea.Size = new System.Drawing.Size(76, 20);
             this.BArea.TabIndex = 44;
@@ -1425,7 +1425,7 @@
             // BHighestFloor
             // 
             this.BHighestFloor.Location = new System.Drawing.Point(342, 131);
-            this.BHighestFloor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BHighestFloor.Margin = new System.Windows.Forms.Padding(2);
             this.BHighestFloor.Name = "BHighestFloor";
             this.BHighestFloor.Size = new System.Drawing.Size(76, 20);
             this.BHighestFloor.TabIndex = 42;
@@ -1454,7 +1454,7 @@
             // A3Area
             // 
             this.A3Area.Location = new System.Drawing.Point(342, 73);
-            this.A3Area.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.A3Area.Margin = new System.Windows.Forms.Padding(2);
             this.A3Area.Name = "A3Area";
             this.A3Area.Size = new System.Drawing.Size(76, 20);
             this.A3Area.TabIndex = 39;
@@ -1472,7 +1472,7 @@
             // A3HighestFloor
             // 
             this.A3HighestFloor.Location = new System.Drawing.Point(342, 41);
-            this.A3HighestFloor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.A3HighestFloor.Margin = new System.Windows.Forms.Padding(2);
             this.A3HighestFloor.Name = "A3HighestFloor";
             this.A3HighestFloor.Size = new System.Drawing.Size(76, 20);
             this.A3HighestFloor.TabIndex = 37;
@@ -1501,7 +1501,7 @@
             // A2Area
             // 
             this.A2Area.Location = new System.Drawing.Point(93, 383);
-            this.A2Area.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.A2Area.Margin = new System.Windows.Forms.Padding(2);
             this.A2Area.Name = "A2Area";
             this.A2Area.Size = new System.Drawing.Size(76, 20);
             this.A2Area.TabIndex = 34;
@@ -1519,7 +1519,7 @@
             // A2HighestFloor
             // 
             this.A2HighestFloor.Location = new System.Drawing.Point(93, 349);
-            this.A2HighestFloor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.A2HighestFloor.Margin = new System.Windows.Forms.Padding(2);
             this.A2HighestFloor.Name = "A2HighestFloor";
             this.A2HighestFloor.Size = new System.Drawing.Size(76, 20);
             this.A2HighestFloor.TabIndex = 32;
@@ -1548,7 +1548,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(93, 288);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(76, 20);
             this.textBox2.TabIndex = 29;
@@ -1566,7 +1566,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(93, 254);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(76, 20);
             this.textBox1.TabIndex = 27;
@@ -1587,7 +1587,7 @@
             "S-1",
             "S-2"});
             this.BuildingOccupancyListBox.Location = new System.Drawing.Point(20, 57);
-            this.BuildingOccupancyListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BuildingOccupancyListBox.Margin = new System.Windows.Forms.Padding(2);
             this.BuildingOccupancyListBox.Name = "BuildingOccupancyListBox";
             this.BuildingOccupancyListBox.Size = new System.Drawing.Size(122, 154);
             this.BuildingOccupancyListBox.TabIndex = 26;
@@ -1620,11 +1620,11 @@
             this.ClientSize = new System.Drawing.Size(675, 522);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.PreviousButton);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
