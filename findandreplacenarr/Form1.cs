@@ -223,26 +223,47 @@ namespace findandreplacenarr
                 S1 = intBuildingOccupancy.GetItemChecked(9);
                 S2 = intBuildingOccupancy.GetItemChecked(10);
 
-                //PARAGRAGPH REPLACE PER OCCUPANCY
-                if ((A1 == true || A2 == true || A3 == true) && R1 == true)
+                //PARAGRAGPH REPLACE PER OCCUPANCY - What occupancy is this
+
+                if ((A1 == true || A2 == true || A3 == true) && R1 == true && R2 == false)
                 {
                     this.FindAndReplace(wordApp, "FR ASSEMBLY HOTEL P1", "For Assembly occupancies, FFPC, NFPA 101 Section 12.3.2 and Hotel occupancies, FFPC, NFPA 101 Section 28.3.2 states that rooms containing high-pressure boilers, large transformers, or other service equipment subject to explosion shall not be located directly under or abutting required exits." +
                         "Hotel units must be separated from adjacent hotel units by ½-hr fire barriers in accordance with FFPC, NFPA 101 Section 28.3.7.  The hotel unit separation in FBC Section 708 is 1-hour fire partition.");
                 }
-                else if ((A1 == false && A2 == false && A3 == false) && R1 == true)
+                else if ((A1 == false && A2 == false && A3 == false) && R1 == true && R2 == false)
                 {
                     this.FindAndReplace(wordApp, "FR ASSEMBLY HOTEL P1", "For Hotel occupancies, FFPC, NFPA 101 Section 28.3.2 states that rooms containing high-pressure boilers, large transformers, or other service equipment subject to explosion shall not be located directly under or abutting required exits." +
                         "Hotel units must be separated from adjacent hotel units by ½-hr fire barriers in accordance with FFPC, NFPA 101 Section 28.3.7.  The hotel unit separation in FBC Section 708 is 1-hour fire partition.");
                 }
-                if ((A1 == true || A2 == true || A3 == true) && R1 == false)
+                else if ((A1 == true || A2 == true || A3 == true) && R1 == false && R2 == false)
                 {
-                    this.FindAndReplace(wordApp, "FR ASSEMBLY HOTEL P1", "For Assembly occupancies, FFPC, NFPA 101 Section 12.3.2 states that rooms containing high-pressure boilers, large transformers, or other service equipment subject to explosion shall not be located directly under or abutting required exits. ");
+                    this.FindAndReplace(wordApp, "FR ASSEMBLY HOTEL P1", "For Assembly occupancies, FFPC, NFPA 101 Section 12.3.2 states that rooms containing high-pressure boilers, large transformers, or other service equipment subject to explosion shall not be located directly under or abutting required exits.");
                 }
 
-                if (R2 == true)
+                else if ((A1 == false && A2 == false && A3 == false) && R1 == false && R2 == true)
                 {
                     this.FindAndReplace(wordApp, "FR ASSEMBLY HOTEL P1", "Dwelling units must be separated from adjacent dwelling units by ½-hr fire barriers in accordance with FFPC, NFPA 101 Section 30.3.7.  The dwelling unit separation in Section FBC Section 708 is 1-hour fire partition.");
                 }
+                else if ((A1 == true || A2 == true || A3 == true) && R1 == false && R2 == true)
+                {
+                    this.FindAndReplace(wordApp, "FR ASSEMBLY HOTEL P1", "For Assembly occupancies, FFPC, NFPA 101 Section 12.3.2 states that rooms containing high-pressure boilers, large transformers, or other service equipment subject to explosion shall not be located directly under or abutting required exits." + "Dwelling units must be separated from adjacent dwelling units by ½-hr fire barriers in accordance with FFPC, NFPA 101 Section 30.3.7.  The dwelling unit separation in Section FBC Section 708 is 1-hour fire partition.");
+                }
+                else if ((A1 == true && A2 == true && A3 == true) && R1 == true && R2 == true)
+                {
+                    this.FindAndReplace(wordApp, "FR ASSEMBLY HOTEL P1", "For Assembly occupancies, FFPC, NFPA 101 Section 12.3.2 and Hotel occupancies, FFPC, NFPA 101 Section 28.3.2 states that rooms containing high-pressure boilers, large transformers, or other service equipment subject to explosion shall not be located directly under or abutting required exits." +
+                        "Hotel units must be separated from adjacent hotel units by ½-hr fire barriers in accordance with FFPC, NFPA 101 Section 28.3.7.  The hotel unit separation in FBC Section 708 is 1-hour fire partition." + "Dwelling units must be separated from adjacent dwelling units by ½-hr fire barriers in accordance with FFPC, NFPA 101 Section 30.3.7.  The dwelling unit separation in Section FBC Section 708 is 1-hour fire partition.");
+                }
+                else if ((A1 == false && A2 == false && A3 == false) && R1 == true && R2 == true)
+                {
+                    this.FindAndReplace(wordApp, "FR ASSEMBLY HOTEL P1", "For Hotel occupancies, FFPC, NFPA 101 Section 28.3.2 states that rooms containing high-pressure boilers, large transformers, or other service equipment subject to explosion shall not be located directly under or abutting required exits." +
+                        "Hotel units must be separated from adjacent hotel units by ½-hr fire barriers in accordance with FFPC, NFPA 101 Section 28.3.7.  The hotel unit separation in FBC Section 708 is 1-hour fire partition." + "Dwelling units must be separated from adjacent dwelling units by ½-hr fire barriers in accordance with FFPC, NFPA 101 Section 30.3.7.  The dwelling unit separation in Section FBC Section 708 is 1-hour fire partition.");
+                }
+                else
+                {
+                    this.FindAndReplace(wordApp, "FR ASSEMBLY HOTEL P1", "DELETE");
+                }
+
+                //What section is this
 
                 if (I1 == true || I3 == true)
                 {
@@ -856,11 +877,11 @@ namespace findandreplacenarr
                             buildingTypeS2SQF = "Type IA";
                         }
                     }
-                    if (buildingTypeHeight == "IA" || buildingType__Floor == "IA" || buildingType__SQF == "IA")
+                    if (buildingTypeHeight == "IA" || buildingTypeA1Floor == "IA" || buildingTypeA3Floor == "IA" || buildingTypeMFloor == "IA" || buildingType__SQF == "IA")
                         {
                             buildingType = "IA";
                         }
-                    else if buildingTypeHeight == "IB" || buildingType__Floor == "IB" || buildingType__SQF == "IB")
+                    else if (buildingTypeHeight == "IB" || buildingType__Floor == "IB" || buildingType__SQF == "IB")
                         {
                             buildingType = "IB";
                         }
