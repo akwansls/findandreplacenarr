@@ -74,9 +74,9 @@
             this.label19 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label28 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.FIREBOX = new System.Windows.Forms.ComboBox();
             this.label27 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.BLDGBOX = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
             this.isNONLooped = new System.Windows.Forms.CheckBox();
             this.isEmergencyVoiceSystem = new System.Windows.Forms.CheckBox();
@@ -658,9 +658,9 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.label28);
-            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.FIREBOX);
             this.panel1.Controls.Add(this.label27);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.BLDGBOX);
             this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.ProjectNameLabel);
@@ -701,17 +701,17 @@
             this.label28.TabIndex = 26;
             this.label28.Text = "Fire DPT";
             // 
-            // comboBox2
+            // FIREBOX
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.FIREBOX.FormattingEnabled = true;
+            this.FIREBOX.Items.AddRange(new object[] {
             "City of Miami",
             "Miami Dade"});
-            this.comboBox2.Location = new System.Drawing.Point(196, 322);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(92, 21);
-            this.comboBox2.TabIndex = 25;
+            this.FIREBOX.Location = new System.Drawing.Point(196, 322);
+            this.FIREBOX.Margin = new System.Windows.Forms.Padding(2);
+            this.FIREBOX.Name = "FIREBOX";
+            this.FIREBOX.Size = new System.Drawing.Size(92, 21);
+            this.FIREBOX.TabIndex = 25;
             // 
             // label27
             // 
@@ -724,17 +724,17 @@
             this.label27.Text = "Building DPT";
             this.label27.Click += new System.EventHandler(this.label27_Click);
             // 
-            // comboBox1
+            // BLDGBOX
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.BLDGBOX.FormattingEnabled = true;
+            this.BLDGBOX.Items.AddRange(new object[] {
             "City of Miami",
             "Miami Dade"});
-            this.comboBox1.Location = new System.Drawing.Point(196, 281);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(92, 21);
-            this.comboBox1.TabIndex = 23;
+            this.BLDGBOX.Location = new System.Drawing.Point(196, 281);
+            this.BLDGBOX.Margin = new System.Windows.Forms.Padding(2);
+            this.BLDGBOX.Name = "BLDGBOX";
+            this.BLDGBOX.Size = new System.Drawing.Size(92, 21);
+            this.BLDGBOX.TabIndex = 23;
             // 
             // label20
             // 
@@ -1620,10 +1620,10 @@
             this.ClientSize = new System.Drawing.Size(675, 522);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.PreviousButton);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -1711,9 +1711,9 @@
         private System.Windows.Forms.Button uploadNFSD;
         private System.Windows.Forms.PictureBox NFSDImage;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox FIREBOX;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox BLDGBOX;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.CheckBox isNONLooped;

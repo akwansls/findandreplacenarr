@@ -580,17 +580,79 @@ namespace findandreplacenarr
                     }
                 }
 
+                //TABLE 17 FIRE EXTINGUISHERS
+                Microsoft.Office.Interop.Word.Table table17 = myWordDoc.Tables[17];
+                if(R1 == true || R2 == true || A1 == true || A2 == true || A3 == true || B == true)
+                {
+                    table17.Rows[3].Delete();
+                    //if (COMKITCHEN == false)
+                    //{
+                     //{
+                     //    table17.Rows[1].Delete();
+                     //}
+                    //}
+                }
+                else if(S1 == true || S2 == true)
+                {
+                    table17.Rows[2].Delete();
+                    //if (COMKITCHEN == false)
+                    //{
+                    //    table17.Rows[1].Delete();
+                    //}
+                }
+                //ELEVATOR SECTION
+
+                //STAIR SECTION
+
+                //FIRE ALARM SECTION
+                if(R1 == true)
+                {
+
+                }
+
                 //MEANS OF ESCAPE SECTION
                 if ((R1 == true || R2 == true) && isSprinklered.Checked) //required for R2 with only one exit =========================
                 {
                     this.FindAndReplace(wordApp, "MeansEscape", "Secondary means of escape windows are not required in dwelling units  [hotel units] when the building is protected by an automatic sprinkler system per FFPC, NFPA 101.  Emergency escape/rescue windows are required by FBC Section 1030 for only for R-2 occupancies in buildings that have only one exit.  The rescue windows are required even if the building is protected by an automatic sprinkler system.");
+
+                    //SMOKE ALARM SECTION
+                    this.FindAndReplace(wordApp, "R1R2SMOKEALARM", "FBC Section 907.2.11 and FFPC, NFPA 101 Section 28.3.4.5 and Section 30.3.4.5 require that single- or multiple-station smoke alarms be installed and maintained in Residential Apartment (R-2) and Hotel Occupancy (R-1) in all of the following locations:");
+                    this.FindAndReplace(wordApp, "R1R2SMOKEALARM1", "On the ceiling or wall - located outside of each separate sleeping area in the immediate vicinity of bedrooms. ");
+                    this.FindAndReplace(wordApp, "R1R2SMOKEALARM2", "In each room used for sleeping purposes. ");
+                    this.FindAndReplace(wordApp, "R1R2SMOKEALARM3", "In each story within a dwelling unit. ");
+                    this.FindAndReplace(wordApp, "R1R2SMOKEALARMEND", "Where more than one (1) smoke alarm is required to be installed within an individual dwelling unit the smoke alarms should be interconnected in a manner such that the activation of one (1) alarm will activate all of the alarms within the individual unit. The alarm should be clearly audible in all bedrooms over background noise levels with all intervening doors closed.");
+
+                    //EMERGENCY POWER SECTION
+                    this.FindAndReplace(wordApp, "R1R2EMERGENCYPOWER", "An 8-hour fuel supply shall be provided on life safety equipment within the building. It is noted that it is common practice to include the following systems: domestic water pumps; jockey pumps; telephone and security systems.");
+                    if(BLDGBOX.SelectedItem.ToString() == "City of Miami" || FIREBOX.SelectedItem.ToString() == "City of Miami")
+                    {
+                        this.FindAndReplace(wordApp, "R1R2EMERGENCYPOWERCOM", "In the City of Miami, the fire department will require a 24-hour fuel supply for emergency power.");
+                    }
                 }
 
+                //SMOKE DETECTION SECTION -----------------------------------------
+
+
+                Microsoft.Office.Interop.Word.Table table18 = myWordDoc.Tables[18];
                 //LOW LEVEL EXIT SIGNAGE
                 if (R1 == true)
                 {
                     this.FindAndReplace(wordApp, "LOWEXIT", "NOTE:   FBC Section 1013.2 requires floor-level exit signs in all R-1 (Hotel) Occupancies.  The bottom of the sign shall not be less than 10 inches and no more than 12 inches above the floor.  The sign shall be flush mounted to the door or wall.  The edge of the sign shall be within 4 inches of the door frame on the latch side.");
+                    //FIRE ALARM SECTION HOTEL
+                    this.FindAndReplace(wordApp, "HOTELFA", "In Hotel (R-1)occupancies, a certain number of rooms must be provided with visible alarms depending on the total number of sleeping rooms in the hotel in accordance with FBC Table 907.5.2.3.2.");
+                    else
+                    {
+                        table18.Delete();
+                    }
                 }
+
+                //SMOKE REMOVAL SECTION
+                if(intBuildingHeight >= 75)
+                {
+                    this.FindAndReplace(wordApp, "SMOKEREMOVAL", "A smoke removal system is required for high-rise buildings as indicated in FBC Section 403.4.7.  Natural or mechanical ventilation must be provided for this project to facilitate smoke removal in post-fire salvage and overhaul operations in accordance with Section 403.4.7. Natural ventilation involves manually operable windows or panels distributed around the perimeter of each floor based on the criteria in FBC Section 403.4.7(1).  If natural means is not feasible, then mechanical ventilation must be provided to achieve one exhaust air change every 15 minutes for the area involved.  Return and exhaust air shall be moved directly to the outside without recirculation to other portions of the building.");
+                    this.FindAndReplace(wordApp, "SCRADESIGN", "The Smoke Control Rational Analysis for this project will provide more detailed design criteria for the required smoke control systems.");
+                }
+
 
                 //LUMINOUS EGRESS MARKINGS - NEED TO ADD CODE FOR R2 BUILDINGS WITH NON R2 ACCESSORY SPACES ABOVE THE 75FT
                 if (R2 == false && intBuildingHeight >= 75)
@@ -632,6 +694,46 @@ namespace findandreplacenarr
                     this.FindAndReplace(wordApp, "DoorLockI1", "DELETE");
                 }
 
+                //SPRINKLER SECTION
+                if(intBuildingHeight >= 420)
+                {
+                    this.FindAndReplace(wordApp, "SPRINKLER420", "The building is greater than 420 ft and so will be supplied by a minimum of two risers.  Each riser shall supply sprinkler on alternate floors.  If more  than two risers are provided for a zone, then sprinklers on adjacent floors shall not be supplied from the same riser (FBC Section 403.3).");
+                    //SITE WATER SECTION
+                    this.FindAndReplace(wordApp, "MAINWATER420", "The building is greater than 420 ft, therefore, the water supply must be designed so that there are separate connections to a minimum of two public mains on different streets (FBC Section 403.3).");
+                }
+                if(BLDGBOX.SelectedItem.ToString() == "Miami Dade")
+                {
+                    this.FindAndReplace(wordApp, "SPRINKLERTERRACE", "Miami Dade Fire Department will require sprinkler protection in all balconies with a depth of four (4) feet.  The fire department has accepted alternative solutions if sprinkler head installation in the balcony is not feasible.  Further discussion on this item required.");
+                }
+                else
+                {
+                    this.FindAndReplace(wordApp, "SPRINKLERTERRACE", "The fire department will require sprinkler protection in terraces that are four (4) feet or more in depth.  A terrace is usually recessed within footprint of the building and has living space on three walls.  Open balconies (cantilevered) will not require sprinkler protection even if there is a privacy partition between balconies.");
+                }
+                //STAIR DISCHARGE SECTION ----- ADD PICTURE
+
+                //FCC SECTION
+                if(BLDGBOX.SelectedItem.ToString() == "City of Miami" || BLDGBOX.SelectedItem.ToString() == "Miami Dade")
+                {
+                    this.FindAndReplace(wordApp, "COMandMDFCC", "Miami Dade County and City of Miami Fire Department requires a door opening into the lobby and additional door opening to the outside to provide direct access without entering the lobby.   The fire command center shall be located on the address side/main entrance of the building and shall be within proximity to the fire service access elevators and stairs that have a standpipe available for fire operations.");
+                }
+                //add FCC PICTURE --------------------------------------------------------------
+
+                //MONITORING SECTION
+                if(intBuildingHeight >= 120)
+                {
+                    this.FindAndReplace(wordApp, "FSESprinkler", "For high-rise buildings with a fire service elevator, the sprinkler system shall have a sprinkler control valve supervisory switch and water-flow-initiating device provided for each floor that is monitored by the buildings fire alarm system in accordance with FBC Section 3007.2.2.");
+                    //STANDPIPE SECTION
+                    this.FindAndReplace(wordApp, "STANDPIPE120", "The standpipe located in an exit enclosure shall have access to the floor without passing through the fire service elevator lobby (FBC Section 3007.9.1). However, in a high-rise R-2 or R-1 occupancy building, standpipes must be located in stairwells and are subject to only the requirements of the FFPC and NFPA 14, adopted by the State Fire Marshal.");
+                }
+
+                //FIRE PUMP 
+                //ADD CODE FOR HIGHZONE PUMP ----------------------
+                //INSERT FIRE PUMP ROOM PICTURE----------------------------------------
+
+                //SUPPRESSION SYSTEM SECTION
+                //ADD COMMERCIAL KITCHEN AND WHEN SUPPRESSION SYSTEM NEEDED (SUPPRESSIONSYSTEM)
+
+
                 //PANIC HARDWARE A OR E ----- Need to add E to Program
 
                 if (A1 == true || A2 == true || A3 == true) //Or E is true)
@@ -639,7 +741,7 @@ namespace findandreplacenarr
                     this.FindAndReplace(wordApp, "PanicHardwareREQ", "Panic hardware (or fire exit hardware for fire doors) must be installed in all doors serving rooms or spaces with an occupant load of 50 persons or more in a Group A or E occupancy per FBC Section 1010.1.10.  The FFPC, Section 12.2.2.2.3, has a similar requirement for assembly occupancies where the occupancy load is 100 or more. Therefore, the FBC has the more stringent requirement and must be implemented.  Panic hardware must be installed in electrical rooms as stated in other section of this report.");
                 }
 
-                //-------------------------------------------Building Occupancy-------------------------------------------------------------
+                //Type Construction
                 string buildingTypeA2Floor = null;
                 string buildingTypeA3Floor = null;
                 string buildingTypeBFloor = null;
@@ -661,6 +763,7 @@ namespace findandreplacenarr
                 if (A2 == true || A3 == true)
                 {
                     //---------A2--------------------------//
+                    //highest floor
                     if (int.Parse(A2HighestFloor.Text) <= 3)
                     {
                         buildingTypeA2Floor = "Type IIB";
@@ -692,6 +795,7 @@ namespace findandreplacenarr
                     }
 
                     //-------------A3--------------------//
+                    //highest floor
                     if (int.Parse(A3HighestFloor.Text) <= 3)
                     {
                         buildingTypeA3Floor = "Type IIB";
@@ -727,6 +831,8 @@ namespace findandreplacenarr
 
                 if (B == true)
                 {
+                    //----------------B-------------------
+                    ////highest floor
                     //What about when Bfloor is below 4?
                     if (int.Parse(BHighestFloor.Text) == 4)
                     {
@@ -761,6 +867,8 @@ namespace findandreplacenarr
 
                 if (M == true)
                 {
+                    //---------------------M---------------------
+                    //highest floor
                     //What if it is less than 3?
                     if (int.Parse(MHighestFloor.Text) == 3)
                     {
@@ -795,6 +903,8 @@ namespace findandreplacenarr
 
                 if (R1 == true)
                 {
+                    //--------------------R1--------------
+                    //highest floor
                     //What if R1 highest floor is below 5?
                     if (int.Parse(R1HighestFloor.Text) == 5)
                     {
@@ -825,6 +935,8 @@ namespace findandreplacenarr
 
                 if (R2 == true)
                 {
+                    //---------------------R2--------------------
+                    //highest floor
                     //What about when R2Highest is below 5?
                     if (int.Parse(R2HighestFloor.Text) == 5)
                     {
@@ -855,6 +967,8 @@ namespace findandreplacenarr
 
                 if (S1 == true)
                 {
+                    //------------------------S1------------------
+                    //highest floor
                     //What about when S1Highest is below 3?
                     if (int.Parse(S1HighestFloor.Text) == 3)
                     {
@@ -893,6 +1007,8 @@ namespace findandreplacenarr
 
                 if (S2 == true)
                 {
+                    //---------------------S2------------------
+                    //highest floor
                     //What about when S2Highest is below 4?
                     if (int.Parse(S2HighestFloor.Text) == 4)
                     {
@@ -1055,7 +1171,7 @@ namespace findandreplacenarr
                     */
 
                     //}
-                    buildingTypeHeight = "Type IA";
+                    buildingTypeHeight = "Type IA";             
                 }
 
                 //Initiate buildingType variable
@@ -1133,6 +1249,8 @@ namespace findandreplacenarr
                     table2.Columns[5].Delete();
                     for (int i = 0; i < 2; i++)
                     {
+                        table2.Columns[5].Delete();
+                        table2.Columns[3].Delete();
                         table2.Columns[2].Delete();
                     }
 
@@ -1153,7 +1271,8 @@ namespace findandreplacenarr
                     Microsoft.Office.Interop.Word.Table table2 = myWordDoc.Tables[2];
                     for (int i = 0; i < 3; i++)
                     {
-
+                        table2.Columns[4].Delete();
+                        table2.Columns[3].Delete();
                         table2.Columns[2].Delete();
                     }
 
@@ -1180,7 +1299,7 @@ namespace findandreplacenarr
 
 
                 //Start vertical opening section of narrative
-                if (VOA = true)
+                if (VOA == true)
                 {
                     if(numVOLevels == 2)
                     {
@@ -1243,7 +1362,7 @@ namespace findandreplacenarr
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CreateWordDocument(@"C:\Users\alexa\Documents\SLS\auto narr\findandreplacenarr\Narrative Template.docx", @"C:\Users\alexa\Downloads\DDMMYY_SLS XXXX_Project Name_FPLS Narrative_7th Edit. Code_Template 2020 output.docx");
+            CreateWordDocument(@"C: \Users\Owner\Desktop\SLS\SLSFindReplace\Narrative Template.docx", @"C:\Users\alexa\Downloads\DDMMYY_SLS XXXX_Project Name_FPLS Narrative_7th Edit. Code_Template 2020 output.docx");
         }
 
         private void label1_Click_1(object sender, EventArgs e)
