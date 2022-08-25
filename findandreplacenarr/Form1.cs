@@ -300,40 +300,40 @@ namespace findandreplacenarr
                 //PARAGRAGPH REPLACE PER OCCUPANCY
                 if ((A1 == true || A2 == true || A3 == true) && R1 == true && R2 == false)
                 {
-                    this.FindAndReplace(wordApp, "FR ASSEMBLY HOTEL P1", "For Assembly occupancies, FFPC, NFPA 101 Section 12.3.2 and Hotel occupancies, FFPC, NFPA 101 Section 28.3.2 states that rooms containing high-pressure boilers, large transformers, or other service equipment subject to explosion shall not be located directly under or abutting required exits." +
+                    this.FindAndReplace(wordApp, "FireAR1", "For Assembly occupancies, FFPC, NFPA 101 Section 12.3.2 and Hotel occupancies, FFPC, NFPA 101 Section 28.3.2 states that rooms containing high-pressure boilers, large transformers, or other service equipment subject to explosion shall not be located directly under or abutting required exits." +
                         "Hotel units must be separated from adjacent hotel units by ½-hr fire barriers in accordance with FFPC, NFPA 101 Section 28.3.7.  The hotel unit separation in FBC Section 708 is 1-hour fire partition.");
                 }
                 else if ((A1 == false && A2 == false && A3 == false) && R1 == true && R2 == false)
                 {
-                    this.FindAndReplace(wordApp, "FR ASSEMBLY HOTEL P1", "For Hotel occupancies, FFPC, NFPA 101 Section 28.3.2 states that rooms containing high-pressure boilers, large transformers, or other service equipment subject to explosion shall not be located directly under or abutting required exits." +
+                    this.FindAndReplace(wordApp, "FireAR1", "For Hotel occupancies, FFPC, NFPA 101 Section 28.3.2 states that rooms containing high-pressure boilers, large transformers, or other service equipment subject to explosion shall not be located directly under or abutting required exits." +
                         "Hotel units must be separated from adjacent hotel units by ½-hr fire barriers in accordance with FFPC, NFPA 101 Section 28.3.7.  The hotel unit separation in FBC Section 708 is 1-hour fire partition.");
                 }
                 else if ((A1 == true || A2 == true || A3 == true) && R1 == false && R2 == false)
                 {
-                    this.FindAndReplace(wordApp, "FR ASSEMBLY HOTEL P1", "For Assembly occupancies, FFPC, NFPA 101 Section 12.3.2 states that rooms containing high-pressure boilers, large transformers, or other service equipment subject to explosion shall not be located directly under or abutting required exits.");
+                    this.FindAndReplace(wordApp, "FireAR1", "For Assembly occupancies, FFPC, NFPA 101 Section 12.3.2 states that rooms containing high-pressure boilers, large transformers, or other service equipment subject to explosion shall not be located directly under or abutting required exits.");
                 }
                 else if ((A1 == false && A2 == false && A3 == false) && R1 == false && R2 == true)
                 {
-                    this.FindAndReplace(wordApp, "FR ASSEMBLY HOTEL P1", "Dwelling units must be separated from adjacent dwelling units by ½-hr fire barriers in accordance with FFPC, NFPA 101 Section 30.3.7.  The dwelling unit separation in Section FBC Section 708 is 1-hour fire partition.");
+                    this.FindAndReplace(wordApp, "FireAR1", "Dwelling units must be separated from adjacent dwelling units by ½-hr fire barriers in accordance with FFPC, NFPA 101 Section 30.3.7.  The dwelling unit separation in Section FBC Section 708 is 1-hour fire partition.");
                 }
                 else if((A1 == true || A2 == true || A3 == true) && R1 == false && R2 == true)
                 {
-                    this.FindAndReplace(wordApp, "FR ASSEMBLY HOTEL P1", "For Assembly occupancies, FFPC, NFPA 101 Section 12.3.2 states that rooms containing high-pressure boilers, large transformers, or other service equipment subject to explosion shall not be located directly under or abutting required exits."
+                    this.FindAndReplace(wordApp, "FireAR1", "For Assembly occupancies, FFPC, NFPA 101 Section 12.3.2 states that rooms containing high-pressure boilers, large transformers, or other service equipment subject to explosion shall not be located directly under or abutting required exits."
                         + "Dwelling units must be separated from adjacent dwelling units by ½-hr fire barriers in accordance with FFPC, NFPA 101 Section 30.3.7.  The dwelling unit separation in Section FBC Section 708 is 1-hour fire partition.");
                 }
                 else if((A1 == true && A2 == true && A3 == true) && R1 == true && R2 == true)
                 {
-                    this.FindAndReplace(wordApp, "FR ASSEMBLY HOTEL P1", "For Assembly occupancies, FFPC, NFPA 101 Section 12.3.2 and Hotel occupancies, FFPC, NFPA 101 Section 28.3.2 states that rooms containing high-pressure boilers, large transformers, or other service equipment subject to explosion shall not be located directly under or abutting required exits." +
+                    this.FindAndReplace(wordApp, "FireAR1", "For Assembly occupancies, FFPC, NFPA 101 Section 12.3.2 and Hotel occupancies, FFPC, NFPA 101 Section 28.3.2 states that rooms containing high-pressure boilers, large transformers, or other service equipment subject to explosion shall not be located directly under or abutting required exits." +
                         "Hotel units must be separated from adjacent hotel units by ½-hr fire barriers in accordance with FFPC, NFPA 101 Section 28.3.7.  The hotel unit separation in FBC Section 708 is 1-hour fire partition." + "Dwelling units must be separated from adjacent dwelling units by ½-hr fire barriers in accordance with FFPC, NFPA 101 Section 30.3.7.  The dwelling unit separation in Section FBC Section 708 is 1-hour fire partition.");
                 }
                 else if((A1 == false && A2 == false && A3 == false) && R1 == true && R2 == true)
                 {
-                    this.FindAndReplace(wordApp, "FR ASSEMBLY HOTEL P1", "For Hotel occupancies, FFPC, NFPA 101 Section 28.3.2 states that rooms containing high-pressure boilers, large transformers, or other service equipment subject to explosion shall not be located directly under or abutting required exits." +
+                    this.FindAndReplace(wordApp, "FireAR1", "For Hotel occupancies, FFPC, NFPA 101 Section 28.3.2 states that rooms containing high-pressure boilers, large transformers, or other service equipment subject to explosion shall not be located directly under or abutting required exits." +
                         "Hotel units must be separated from adjacent hotel units by ½-hr fire barriers in accordance with FFPC, NFPA 101 Section 28.3.7.  The hotel unit separation in FBC Section 708 is 1-hour fire partition." + "Dwelling units must be separated from adjacent dwelling units by ½-hr fire barriers in accordance with FFPC, NFPA 101 Section 30.3.7.  The dwelling unit separation in Section FBC Section 708 is 1-hour fire partition.");
                 }
                 else
                 {
-                    this.FindAndReplace(wordApp, "FR ASSEMBLY HOTEL P1", "DELETE");
+                    this.FindAndReplace(wordApp, "FireAR1", "DELETE");
                 }
 
                 if (I1 == true || I3 == true)
@@ -397,20 +397,17 @@ namespace findandreplacenarr
                 Microsoft.Office.Interop.Word.Table table8 = myWordDoc.Tables[8];
                 if (R1 == false && R2 == false)
                 {
-                    table8.Rows[8].Delete();
                     table8.Rows[11].Delete();
+                    table8.Rows[8].Delete();
+                    
                 }
 
                 // Table 10 Editing per Occupancy Input
                 Microsoft.Office.Interop.Word.Table table10 = myWordDoc.Tables[10];
-                if (A1 == false && A2 == false && A3 == false)
-                {
-                    table10.Rows[1].Delete();
-                }
 
-                if (B == false)
+                if (S1 == false || S2 == false)
                 {
-                    table10.Rows[2].Delete();
+                    table10.Rows[8].Delete();
                 }
                 if (M == false)
                 {
@@ -424,77 +421,80 @@ namespace findandreplacenarr
                 {
                     table10.Rows[5].Delete();
                 }
-                if (I1 == false)
-                {
-                    table10.Rows[3].Delete();
-                }
+
                 if (I3 == false)
                 {
                     table10.Rows[4].Delete();
                 }
-                if (S1 == false || S2 == false)
+                if (I1 == false)
                 {
-                    table10.Rows[8].Delete();
+                    table10.Rows[3].Delete();
                 }
+                if (B == false)
+                {
+                    table10.Rows[2].Delete();
+                }
+                if (A1 == false && A2 == false && A3 == false)
+                {
+                    table10.Rows[1].Delete();
+                }
+
 
                 //Table 11 editing
                 Microsoft.Office.Interop.Word.Table table11 = myWordDoc.Tables[11];
-                if (A1 == false && A2 == false && A3 == false)
+                if (S2 == false)
                 {
-                    table11.Rows[1].Delete();
-                }
-
-                if (B == false)
-                {
-                    table11.Rows[2].Delete();
-                }
-                if (M == false)
-                {
-                    table11.Rows[5].Delete();
-                }
-                if (R1 == false)
-                {
-                    table11.Rows[6].Delete();
-                }
-                if (R2 == false)
-                {
-                    table11.Rows[7].Delete();
-                }
-                if (I1 == false)
-                {
-                    table11.Rows[3].Delete();
-                }
-                if (I3 == false)
-                {
-                    table11.Rows[4].Delete();
+                    table11.Rows[9].Delete();
                 }
                 if (S1 == false)
                 {
                     table11.Rows[8].Delete();
                 }
-                if (S2 == false)
+                if (R2 == false)
                 {
-                    table11.Rows[9].Delete();
+                    table11.Rows[7].Delete();
                 }
 
-                //TABLE 13 EDITING
+                if (R1 == false)
+                {
+                    table11.Rows[6].Delete();
+                }
+                if (M == false)
+                {
+                    table11.Rows[5].Delete();
+                }
+                if (I3 == false)
+                {
+                    table11.Rows[4].Delete();
+                }
+                if (I1 == false)
+                {
+                    table11.Rows[3].Delete();
+                }
+                if (B == false)
+                {
+                    table11.Rows[2].Delete();
+                }
+                if (A1 == false && A2 == false && A3 == false)
+                {
+                    table11.Rows[1].Delete();
+                }
+                /*
+                //TABLE 13 EDITING ------------------------------------------------------------------------------------------------------
                 Microsoft.Office.Interop.Word.Table table13 = myWordDoc.Tables[13];
                 if (A1 == false && A2 == false && A3 == false)
                 {
-                    table13.Rows[1 - 6].Delete();
-                    table13.Rows[10 - 12].Delete();
-                    table13.Rows[16].Delete();
-                    table13.Rows[18].Delete();
                     table13.Rows[20].Delete();
+                    table13.Rows[18].Delete();
+                    table13.Rows[16].Delete();
+                    table13.Rows[10 - 12].Delete();
+                    table13.Rows[1 - 6].Delete();
                 }
                 if (B == false)
                 {
                     table13.Rows[15].Delete();
                 }
-                if (M == false)
-                {
-                    table13.Rows[13].Delete();
-                }
+
                 if (R1 == false && R2 == false)
                 {
                     table13.Rows[19].Delete();
@@ -508,36 +508,42 @@ namespace findandreplacenarr
                 {
                     table13.Rows[17].Delete();
                 }
+                if (M == false)
+                {
+                    table13.Rows[13].Delete();
+                }
+                */
 
                 //TABLE 14 EDITING
                 Microsoft.Office.Interop.Word.Table table14 = myWordDoc.Tables[14];
-                if (A1 == false && A2 == false && A3 == false)
+
+                if (I3 == false)
                 {
-                    table14.Rows[1].Delete();
-                }
-                if (B == false)
-                {
-                    table14.Rows[2].Delete();
-                }
-                if (M == false)
-                {
-                    table14.Rows[3].Delete();
-                }
-                if (R2 == false)
-                {
-                    table14.Rows[5].Delete();
-                }
-                if (R1 == false)
-                {
-                    table14.Rows[6].Delete();
+                    table14.Rows[8].Delete();
                 }
                 if (I1 == false)
                 {
                     table14.Rows[7].Delete(); ;
                 }
-                if (I3 == false)
+                if (R1 == false)
                 {
-                    table14.Rows[8].Delete();
+                    table14.Rows[6].Delete();
+                }
+                if (R2 == false)
+                {
+                    table14.Rows[5].Delete();
+                }
+                if (M == false)
+                {
+                    table14.Rows[3].Delete();
+                }
+                if (B == false)
+                {
+                    table14.Rows[2].Delete();
+                }
+                if (A1 == false && A2 == false && A3 == false)
+                {
+                    table14.Rows[1].Delete();
                 }
 
                 //TABLE 15 AND 16 EDITING
@@ -551,15 +557,16 @@ namespace findandreplacenarr
                     table15.Delete();
                     if (I1 == true || I3 == true)
                     {
+                        table16.Rows[4].Delete();
                         table16.Rows[2].Delete();
                         //what do we do for healthcare table16.Rows[3].Delete();
-                        table16.Rows[4].Delete();
+                    
                     }
                     else
                     {
-                        table16.Rows[1].Delete();
-                        table16.Rows[2].Delete();
                         table16.Rows[3].Delete();
+                        table16.Rows[2].Delete();
+                        table16.Rows[1].Delete();
                     }
                 }
                 else
@@ -568,15 +575,16 @@ namespace findandreplacenarr
                     table16.Delete();
                     if (I1 == true || I3 == true)
                     {
+                        table15.Rows[4].Delete();
                         table15.Rows[2].Delete();
                         //what do we do for healthcare table15.Rows[3].Delete();
-                        table15.Rows[4].Delete();
+
                     }
                     else
                     {
-                        table15.Rows[1].Delete();
-                        table15.Rows[2].Delete();
                         table15.Rows[3].Delete();
+                        table15.Rows[2].Delete();
+                        table15.Rows[1].Delete();
                     }
                 }
 
@@ -604,11 +612,11 @@ namespace findandreplacenarr
 
                 //STAIR SECTION
 
-                //FIRE ALARM SECTION
-                if(R1 == true)
-                {
-
-                }
+                //FIRE ALARM SECTION ----------------------------------------------------------------------------------
+                //if(R1 == true)
+                //{
+                //
+                //}
 
                 //MEANS OF ESCAPE SECTION
                 if ((R1 == true || R2 == true) && isSprinklered.Checked) //required for R2 with only one exit =========================
@@ -633,18 +641,8 @@ namespace findandreplacenarr
                 //SMOKE DETECTION SECTION -----------------------------------------
 
 
-                Microsoft.Office.Interop.Word.Table table18 = myWordDoc.Tables[18];
-                //LOW LEVEL EXIT SIGNAGE
-                if (R1 == true)
-                {
-                    this.FindAndReplace(wordApp, "LOWEXIT", "NOTE:   FBC Section 1013.2 requires floor-level exit signs in all R-1 (Hotel) Occupancies.  The bottom of the sign shall not be less than 10 inches and no more than 12 inches above the floor.  The sign shall be flush mounted to the door or wall.  The edge of the sign shall be within 4 inches of the door frame on the latch side.");
-                    //FIRE ALARM SECTION HOTEL
-                    this.FindAndReplace(wordApp, "HOTELFA", "In Hotel (R-1)occupancies, a certain number of rooms must be provided with visible alarms depending on the total number of sleeping rooms in the hotel in accordance with FBC Table 907.5.2.3.2.");
-                    else
-                    {
-                        table18.Delete();
-                    }
-                }
+               
+                
 
                 //SMOKE REMOVAL SECTION
                 if(intBuildingHeight >= 75)
@@ -669,7 +667,7 @@ namespace findandreplacenarr
                 //OCCUPANT EVAC OR ADDITIONAL STAIR
                 if (intBuildingHeight >= 420 && R2 == false)
                 {
-                    this.FindAndReplace(wordApp, "OEESection", "For buildings greater than 420 ft. in building height, other than R-2 buildings, one additional stairway must be provided in addition to above exit stairs per FBC Section 403.5.2.  There is an alternate provision to the additional stair, which states that an occupant evacuation elevator can be provided in lieu of the stair.  The occupant evacuation elevator, separate from fire service access elevator, must comply with FBC Section 3008 and FFPC, NFPA 101 Section 7.14." + "NOTE: If the building is divided into R - 1 lower floors and R - 2 upper floors where it exceeds 420 ft. in height, then the exception can be applied, and the extra stair is not required since the upper occupancy is R - 2.");
+                    this.FindAndReplace(wordApp, "OEESection", "For buildings greater than 420 ft. in building height, other than R-2 buildings, one additional stairway must be provided in addition to above exit stairs per FBC Section 403.5.2.  There is an alternate provision to the additional stair, which states that an occupant evacuation elevator can be provided in lieu of the stair.  The occupant evacuation elevator, separate from fire service access elevator, must comply with FBC Section 3008 and FFPC, NFPA 101 Section 7.14." + "NOTE: Where the spaces above 420 ft that are not R-2 are accessory to the R-2 building, an additional stairwary or Occupant Evacuation Elevator is not required.");
                 }
 
                 //LOOPED CORRIDOR FOR R1/R2
@@ -692,6 +690,18 @@ namespace findandreplacenarr
                 else
                 {
                     this.FindAndReplace(wordApp, "DoorLockI1", "DELETE");
+                }
+
+                //MEZZ SECTION
+                if (isMezz.Checked)
+                {
+                    this.FindAndReplace(wordApp, "MEZZSECTION", "Mezzanines within the PNAME  project are designed to comply with the requirements of the FBC and the FFPC. Currently there is a mezzanine located on ______. A mezzanine or mezzanines must comply with FBC Section 505.2.  and shall be considered a portion of the story below. Such mezzanines shall not contribute to either the building area or number of stories as regulated by Section 503.1. The area of the mezzanine shall be included in determining the fire area. The clear height above and below the mezzanine floor construction shall be not less than 7 feet. The aggregate area of a mezzanine or mezzanines within a room shall be not greater than one - third of the floor area of that room or space in which they are located.The enclosed portion of a room shall not be included in a determination of the floor area of the room in which the mezzanine is located.In determining the allowable mezzanine area, the area of the mezzanine shall not be included in the floor area of the room. (FBC Section 505.2.1). The floor area of a mezzanine, or the aggregate floor area of multiple mezzanines, shall not exceed one - half of the floor area of the room or story in which the mezzanines are located; otherwise, such mezzanine or aggregated mezzanines shall be treated as floors (FFPC, NFPA 101 Section 37.1.2.2.3). The means of egress for mezzanines shall comply with FBC Section 505.2.2 and FFPC, NFPA 101 Section 12.2.4.5.");
+                }
+
+                //STAGE SECTION
+                if (isStage.Checked)
+                {
+                    this.FindAndReplace(wordApp, "STAGESECTION", "Currently, there is a stage/platform area located within the project. Stages and platforms must comply with FBC Section 410.3 and 410.4 and FFPC, NFPA 101 Section 12.4.6. It is assumed the stage area will be less than 1,000 square feet. Where the stage height is greater than 50 feet, all portions of the stage shall be separated from the seating area by a proscenium wall with not less than a 2 - hour fire - resistance rating extending continuously from the foundation to the roof(FBC 410.3.4). Emergency ventilation shall be provided for stages larger than 1, 000 square feet in floor area, or with a stage height greater than 50 feet.Such ventilation shall comply with Section 410.3.7.1 or 410.3.7.2(FBC 410.3.7). Permanent platforms shall be constructed of materials as required for the type of construction of the building in which the permanent platform is located.Permanent platforms are permitted to be constructed of fire - retardant - treated wood for Types I and II construction where the platforms are not more than 30 inches above the main floor, and not more than one - third of the room floor area, and not more than 3, 000 square feet in area.Where the space beneath the permanent platform is used for storage or any purpose other than equipment, wiring or plumbing, the floor assembly shall be not less than 1 - hour fire - resistance - rated construction.Where the space beneath the permanent platform is used only for equipment, wiring or plumbing, the underside of the permanent platform need not be protected (FBC Section 410.4). Combustible materials used in sets and scenery shall meet the fire propagation performance criteria of Test Method 1 or Test Method 2, as appropriate, of NFPA 701, in accordance with FFPC Section 806. Foam plastics and materials containing foam plastics shall comply with FBC Section 2603 (FBC Section 410.3.6). The stage shall be separated from dressing rooms, scene docks, property rooms, workshops, storerooms, and compartments appurtenant to the stage and other parts of the building by fire barriers constructed in accordance with FBC Section 707 or Section 711, or both.The fire-resistance rating shall be not less than 1 hour for stage heights of 50 feet or less(FBC Section 410.5.1). For technical production areas, the exit access travel distance shall be not greater than 400 feet for buildings equipped throughout with an automatic sprinkler system.Where two means of egress are required, the common path of travel shall be not greater than 100 feet (FBC Section 410.6.3) and the egress width shall be not less than 22 inches(FBC Section 410.6.3.5). Exit access stairways and ramps serving a stage or platform are not required to be enclosed.Exit access stairways and ramps serving technical production areas are not required to be enclosed (FBC Section 410.6.2). Stages shall be equipped with an automatic sprinkler system in accordance with FBC Section 903.3.1.1. Sprinklers shall be installed under the roof and gridiron and under all catwalks and galleries over the stage.Sprinklers shall be installed in dressing rooms, performer lounges, shops, and storerooms accessory to such stages. Sprinklers are not required under stage areas less than 4 feet in clear height that are utilized exclusively for storage of tables and chairs, provided the concealed space is separated from the adjacent spaces by Type X gypsum board not less than 5/8-inch in thickness. Sprinklers are not required for stages 1,000 square feet or less in area and 50 feet or less in height where curtains, scenery or other combustible hangings are not retractable vertically.Combustible hangings shall be limited to a single main curtain, borders, legs, and a single backdrop (FBC Section 410.7).");
                 }
 
                 //SPRINKLER SECTION
@@ -1197,8 +1207,8 @@ namespace findandreplacenarr
                         table2.Columns[4].Delete();
                         table2.Columns[2].Delete();
                         //Delete the other table
-                        Microsoft.Office.Interop.Word.Table table2AndAHalf = myWordDoc.Tables[3];
-                        table2AndAHalf.Delete();
+                        //Microsoft.Office.Interop.Word.Table table2AndAHalf = myWordDoc.Tables[3];
+                        //table2AndAHalf.Delete();
 
                     }
                     else
@@ -1211,8 +1221,8 @@ namespace findandreplacenarr
                         table2.Columns[4].Delete();
                         table2.Columns[3].Delete();
                         //Delete the other table
-                        Microsoft.Office.Interop.Word.Table table2AndAHalf = myWordDoc.Tables[3];
-                        table2AndAHalf.Delete();
+                        //Microsoft.Office.Interop.Word.Table table2AndAHalf = myWordDoc.Tables[3];
+                        //table2AndAHalf.Delete();
 
                     }
                 }
@@ -1232,8 +1242,8 @@ namespace findandreplacenarr
                     table2.Columns[2].Delete();
 
                     //Delete the other table
-                    Microsoft.Office.Interop.Word.Table table2AndAHalf = myWordDoc.Tables[3];
-                    table2AndAHalf.Delete();
+                    //Microsoft.Office.Interop.Word.Table table2AndAHalf = myWordDoc.Tables[3];
+                    //table2AndAHalf.Delete();
                 }
                 else if (buildingTypeHeight == "IIA" || buildingTypeA2Floor == "IIA" || buildingTypeA3Floor == "IIA" || buildingTypeBFloor == "IIA" || buildingTypeMFloor == "IIA" ||
                     buildingTypeR1Floor == "IIA" || buildingTypeR2Floor == "IIA" || buildingTypeS1Floor == "IIA" || buildingTypeS2Floor == "IIA" || buildingTypeA2SQF == "IIA" ||
@@ -1255,8 +1265,8 @@ namespace findandreplacenarr
                     }
 
                     //Delete the other table
-                    Microsoft.Office.Interop.Word.Table table2AndAHalf = myWordDoc.Tables[3];
-                    table2AndAHalf.Delete();
+                    //Microsoft.Office.Interop.Word.Table table2AndAHalf = myWordDoc.Tables[3];
+                    //table2AndAHalf.Delete();
                 }
                 else if (buildingTypeHeight == "IIB" || buildingTypeA2Floor == "IIB" || buildingTypeA3Floor == "IIB" || buildingTypeBFloor == "IIB" || buildingTypeMFloor == "IIB" ||
                     buildingTypeR1Floor == "IIB" || buildingTypeR2Floor == "IIB" || buildingTypeS1Floor == "IIB" || buildingTypeS2Floor == "IIB" || buildingTypeA2SQF == "IIB" ||
@@ -1277,8 +1287,8 @@ namespace findandreplacenarr
                     }
 
                     //Delete the other table
-                    Microsoft.Office.Interop.Word.Table table2AndAHalf = myWordDoc.Tables[3];
-                    table2AndAHalf.Delete();
+                    //Microsoft.Office.Interop.Word.Table table2AndAHalf = myWordDoc.Tables[3];
+                    //table2AndAHalf.Delete();
                 }
 
 
@@ -1299,62 +1309,108 @@ namespace findandreplacenarr
 
 
                 //Start vertical opening section of narrative
-                if (VOA == true)
+                if (isVO.Checked)
                 {
-                    if(numVOLevels == 2)
+                    if (isMezzanine.Checked)
                     {
-                        //Assembly spaces shall be permitted to have unprotected vertical openings between any two adjacent floors, provided that such openings are separated from unprotected vertical openings serving other floors by a barrier complying with 8.6.5;
+                        this.FindAndReplace(wordApp, "MEZZSECTION", "Mezzanines within the PNAME  project are designed to comply with the requirements of the FBC and the FFPC. Currently there is a mezzanine located on ______. A mezzanine or mezzanines must comply with FBC Section 505.2.  and shall be considered a portion of the story below. Such mezzanines shall not contribute to either the building area or number of stories as regulated by Section 503.1. The area of the mezzanine shall be included in determining the fire area. The clear height above and below the mezzanine floor construction shall be not less than 7 feet.The aggregate area of a mezzanine or mezzanines within a room shall be not greater than one - third of the floor area of that room or space in which they are located.The enclosed portion of a room shall not be included in a determination of the floor area of the room in which the mezzanine is located. In determining the allowable mezzanine area, the area of the mezzanine shall not be included in the floor area of the room. (FBC Section 505.2.1). The floor area of a mezzanine, or the aggregate floor area of multiple mezzanines, shall not exceed one - half of the floor area of the room or story in which the mezzanines are located; otherwise, such mezzanine or aggregated mezzanines shall be treated as floors (FFPC, NFPA 101 Section 37.1.2.2.3). The means of egress for mezzanines shall comply with FBC Section 505.2.2 and FFPC, NFPA 101 Section 12.2.4.5.");
                     }
-                    else if(numVOLevels > 2 && numVOLevels <= 4)
+                    else if (isEscalator.Checked)
                     {
-                        /*
-                         * Assembly spaces are allowed per NFPA 101 Section 12.3 to implement Convenience Stairways that comply with all of the following:
-                            (1) The convenience stair openings shall not serve as a required means of egress.
-	                        (2) THe building shall be protected throughout by an approved, supervised automatic sprinkler system in accordance with Section 9.7.
-	                        (3) The convenience stair openings shall be protected in accordance with the method detailed for the protection of vertical openings in NFPA 13(Sprinkler-Draft Curtain protection method).
-	                        (4) In new construction, the area of the floor opening shall not exceed twice the horizontal projected area of the stairway.
-	                        (5) For new construction, such openings shall not connect more than four contiguous stories.
-                         */
+                        this.FindAndReplace(wordApp, "ESCALATORSECTION", "These openings must be protected in accordance with FBC Section 712 and FFPC, NFPA 101 Section 8.6.9.7. Per FBC Section 712.1.3.1, the escalators shall be protected by a draft curtain and closely spaced sprinklers in accordance with NFPA 13 where the area of the vertical opening between stories does not exceed twice the horizontal projected area of the escalator.The sprinkler protection around the vertical opening must comply with NFPA 13  Section 8.15.4.  Draft stops (18-inch deep) shall be located immediately adjacent to the opening made of noncombustible material that will stay in place before and during sprinkler operation.In addition, sprinkler heads are spaced 6 feet apart and placed 6-12 inches from drafts top on side away from opening. Another option is to protect the vertical opening by approved shutters at every penetrated floor shall be permitted.The shutters shall be of noncombustible construction and have a fire-resistance rating of not less than 1.5 hours.The shutter shall be so constructed as to close immediately upon the actuation of a smoke detector installed in accordance with FBC Section 907.3.1 and shall completely shut off the well opening. Escalators shall cease operation when the shutter begins to close. The shutter shall operate at a speed of not more than 30 feet per minute and shall be equipped with a sensitive leading edge to arrest its progress where in contact with any obstacle, and to continue its progress on release there from (FBC Section 712.1.3.2).");
                     }
-                }
-                else if(VOR2 == true)
-                {
-                    if(numVOLevels == 2)
+                    else if (isVOpening2.Checked)
                     {
-                        //INCLUDE R-2 SOMEWHERE HERE AND USE 8.6.9.1 CONVENIENT OPENING SECTION
-                    }
-                    else if(numVOLevels > 2 && numVOLevels <= 3)
-                    {
-                        //INCLUDE R-2 SOMEWHERE HERE AND USE 8.6.6 COMMUNICATING SPACE SECTION
-                    }
-                }
-                else if(VOR1 == true)
-                {
-                    if(numVOLevels == 2)
-                    {
-                        //INCLUDE R-2 SOMEWHERE HERE AND USE 8.6.9.1 CONVENIENT OPENING SECTION
-                    }
-                }
-                else if(VOB == true)
-                {
-                    if(numVOLevels <= 2)
-                    {
-                        //INCLUDE BUSINESS SOMEWHERE HERE AND USE 8.6.9.1 CONVENIENT OPENING SECTION
-                    }
-                    else if(numVOLevels > 2)
-                    {
-                        /*
-                         * Business spaces are allowed per NFPA 101 Section 38.3 to implement Convenience Stairways that comply with all of the following:
-	                        (1) The convenience stair openings shall not serve as a required means of egress.
-	                        (2) THe building shall be protected throughout by an approved, supervised automatic sprinkler system in accordance with Section 9.7.
-	                        (3) The convenience stair openings shall be protected in accordance with the method detailed for the protection of vertical openings in NFPA 13(Sprinkler-Draft Curtain protection method).
-	                        (4) In new construction, the area of the floor opening shall not exceed twice the horizontal projected area of the stairway.
-	                        (5) For new construction, such openings shall not have a limit of floors in business occupancy.
-                         */
-                    }
-                }
-                
+                        if (VOA == true)
+                        {
+                            if (numVOLevels == 2)
+                            {
+                                this.FindAndReplace(wordApp, "VASSEMBLY2", "The vertical opening located on VOFloorBot to VFloorTop will be designed as a two story opening and must be designed in accordance with all criteria in FBC 712.1.9 and FFPC, NFPA 101 Section 12.3 (3).");
+                                this.FindAndReplace(wordApp, "VO1", "Assembly occupancies protected by an approved, supervised automatic sprinkler system in accordance with Section 9.7 shall be permitted to have unprotected openings between any two adjacent floors, provided that such openings are separated from unprotected vertical openings serving other floors by a barrier complying with 8.6.5");
+                            }
+                            else if (numVOLevels > 2 && numVOLevels <= 4)
+                            {
+                                this.FindAndReplace(wordApp, "VO1", "Assembly occupancies protected by an approved, supervised automatic sprinkler system in accordance with Section 9.7 shall be permitted to have unprotected openings between any two adjacent floors, provided that such openings are separated from unprotected vertical openings serving other floors by a barrier complying with 8.6.5" + "NOTE: Further discussion required regarding a code compliant method of separating the Vertical Opening to create vertical openings not greater than 2 floors.");
+                            }
+                        }
+                        else if (VOR2 == true || VOR1 == true)
+                        {
+                            if (numVOLevels == 2)
+                            {
+                                this.FindAndReplace(wordApp, "VO8.6.9.1", "The vertical opening located on floors VOFloorBot to VOFloorTop will be designed as a Convenience Opening and must meet be designed in accordance with all criteria in FBC Section 712.1.9 and FFPC, NFPA 101 Section 8.6.9.1.");
+                                this.FindAndReplace(wordApp, "VO1", "(1) Such openings shall connect not more than two adjacent stories (one floor pierced only).");
+                                this.FindAndReplace(wordApp, "VO2", "(2) Such openings shall be separated from unprotected vertical openings serving other floors by a barrier complying with 8.6.5.");
+                                this.FindAndReplace(wordApp, "VO3", "(3) Such openings shall be separated from corridors.");
+                                this.FindAndReplace(wordApp, "VO4", "(4) In new construction, the area of the floor openings shall not exceed twice the horizontal projected area of the stairway.");
+                                this.FindAndReplace(wordApp, "VO5", "(5) For new construction, such openings shall not connect more than four contiguous stories, unless otherwise permitted by Chapters 11 through 43.");
+                                this.FindAndReplace(wordApp, "VO6", "");
+                            }
+                        }
 
+                        else if (VOB == true)
+                        {
+                            if (numVOLevels == 2)
+                            {
+                                //NEED USER INPUT - IF LOWER LEVELS AND REQUIRED FOR EGRESS THEN BELOW
+                                this.FindAndReplace(wordApp, "VO38.2.4.6", "Business occupancies providing a single means of egress for a two-story single-tenant space or building in accordance with NFPA 101 38.2.4.6 shall meet the following criteria:");
+                                this.FindAndReplace(wordApp, "VO38.2.4.6P1", "The building is protected throughout by an approved, supervised automatic sprinkler system in accordance with 9.7.1.1(1).");
+                                this.FindAndReplace(wordApp, "VO38.2.4.6P2", "The total travel to the outside does not exceed 100 ft (30m).");
+                                this.FindAndReplace(wordApp, "VO1019.1", "Exit access stairways and ramps serving as an exit access component in a means of egress system shall comply with the requirements of this section. The number of stories connected by exit access stairways and ramps shall include basements, but not mezzanines. (FBC Section 1019.1)");
+                                this.FindAndReplace(wordApp, "VO1019.1P1", "According to FBC Section 1019.1, (in other than Group I-2 and I-3 occupancies)  floor openings containing exit access stairways or ramps that do not comply with one of the conditions listed in this section shall be enclosed with a shaft enclosure constructed in accordance with FBC Section 713.");
+                                this.FindAndReplace(wordApp, "VO1019.1P2", "Exit access stairways and ramps that serve or atmospherically communicate between only two stories. Such interconnected stories shall not be open to other stories.");
+                            }
+                            if (numVOLevels == 2) //AND NOT REQUIRED FOR EGRESS
+                            {
+                                this.FindAndReplace(wordApp, "VO8.6.9.1", "The vertical opening located on floors VOFloorBot to VOFloorTop will be designed as a Convenience Opening and must meet be designed in accordance with all criteria in FBC Section 712.1.9 and FFPC, NFPA 101 Section 8.6.9.1.");
+                                this.FindAndReplace(wordApp, "VO1", "(1) Such openings shall connect not more than two adjacent stories (one floor pierced only).");
+                                this.FindAndReplace(wordApp, "VO2", "(2) Such openings shall be separated from unprotected vertical openings serving other floors by a barrier complying with 8.6.5.");
+                                this.FindAndReplace(wordApp, "VO3", "(3) Such openings shall be separated from corridors.");
+                                this.FindAndReplace(wordApp, "VO4", "(4) In new construction, the area of the floor openings shall not exceed twice the horizontal projected area of the stairway.");
+                                this.FindAndReplace(wordApp, "VO5", "(5) For new construction, such openings shall not connect more than four contiguous stories, unless otherwise permitted by Chapters 11 through 43.");
+                                this.FindAndReplace(wordApp, "VO6", "(6) Such opening shall not serve as a required means of egress.");
+                            }
+                            else if (numVOLevels > 2 && numVOLevels <= 4) //AND NOT REQUIRED FOR EGRESS
+                            {
+                                this.FindAndReplace(wordApp, "VO8.6.9.1", "The vertical opening located on floors VOFloorBot to VOFloorTop will be designed as a Convenience Opening and must meet be designed in accordance with all criteria in FBC Section 712.1.9 and FFPC, NFPA 101 Section 8.6.9.1." + "NOTE: Further discussion required regarding a code compliant method of separating the Vertical Opening to create vertical openings not greater than 2 floors.");
+                                this.FindAndReplace(wordApp, "VO1", "(1) Such openings shall connect not more than two adjacent stories (one floor pierced only).");
+                                this.FindAndReplace(wordApp, "VO2", "(2) Such openings shall be separated from unprotected vertical openings serving other floors by a barrier complying with 8.6.5.");
+                                this.FindAndReplace(wordApp, "VO3", "(3) Such openings shall be separated from corridors.");
+                                this.FindAndReplace(wordApp, "VO4", "(4) In new construction, the area of the floor openings shall not exceed twice the horizontal projected area of the stairway.");
+                                this.FindAndReplace(wordApp, "VO5", "(5) For new construction, such openings shall not connect more than four contiguous stories, unless otherwise permitted by Chapters 11 through 43.");
+                                this.FindAndReplace(wordApp, "VO6", "");
+                            }
+                        }
+                        else if (VOM == true)
+                        {
+                            if(numVOLevels == 2)
+                            {
+                                this.FindAndReplace(wordApp, "VO8.6.9.2", "The vertical opening located on floors VOFloorBot to VOFloorTop will be designed as a Convenience Opening and must meet be designed in accordance with all criteria in FBC Section 712.1.9 and FFPC, NFPA 101 Section 8.6.9.2.");
+                                this.FindAndReplace(wordApp, "VO1", "(1) The convenience stair openings shall not serve as required means of egress.");
+                                this.FindAndReplace(wordApp, "VO2", "(2) The building shall be protected throughout by an approved, supervised automatic sprinkler systems in accordance with Section 9.7");
+                                this.FindAndReplace(wordApp, "VO3", "(3) The convenience stair openings shall be protected in accordance with the method detailed for the protection of vertical openings in NFPA 13.");
+                                this.FindAndReplace(wordApp, "VO4", "(4) In new construction, the area of the floor openings shall not exceed twice the horizontal projected area of the stairway.");
+                                this.FindAndReplace(wordApp, "VO5", "(5) For new construction, such openings shall not connect more than four contiguous stories, unless otherwise permitted by Chapters 11 through 43.");
+                                this.FindAndReplace(wordApp, "VO6", "");
+                            }
+                        }
+                    }
+                }
+
+                Microsoft.Office.Interop.Word.Table table18 = myWordDoc.Tables[18];
+                //LOW LEVEL EXIT SIGNAGE
+                if (R1 == true)
+                {
+                    this.FindAndReplace(wordApp, "LOWEXIT", "NOTE:   FBC Section 1013.2 requires floor-level exit signs in all R-1 (Hotel) Occupancies.  The bottom of the sign shall not be less than 10 inches and no more than 12 inches above the floor.  The sign shall be flush mounted to the door or wall.  The edge of the sign shall be within 4 inches of the door frame on the latch side.");
+                    //FIRE ALARM SECTION HOTEL
+                    this.FindAndReplace(wordApp, "HOTELFA", "In Hotel (R-1)occupancies, a certain number of rooms must be provided with visible alarms depending on the total number of sleeping rooms in the hotel in accordance with FBC Table 907.5.2.3.2.");
+                }
+                else
+                {
+                    table18.Delete();
+                }
+
+                Microsoft.Office.Interop.Word.Table table2AndAHalf = myWordDoc.Tables[3];
+                table2AndAHalf.Delete();
             }
 
         }
@@ -1362,7 +1418,7 @@ namespace findandreplacenarr
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CreateWordDocument(@"C: \Users\Owner\Desktop\SLS\SLSFindReplace\Narrative Template.docx", @"C:\Users\alexa\Downloads\DDMMYY_SLS XXXX_Project Name_FPLS Narrative_7th Edit. Code_Template 2020 output.docx");
+            CreateWordDocument(@"C:\Users\Owner\Desktop\SLS\SLSFindReplace\Narrative Template.docx", @"C:\Users\alexa\Downloads\DDMMYY_SLS XXXX_Project Name_FPLS Narrative_7th Edit. Code_Template 2020 output.docx");
         }
 
         private void label1_Click_1(object sender, EventArgs e)

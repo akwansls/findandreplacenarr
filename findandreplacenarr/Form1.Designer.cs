@@ -94,7 +94,6 @@
             this.label25 = new System.Windows.Forms.Label();
             this.VOLevelsInput = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.PreviousButton = new System.Windows.Forms.Button();
             this.NextButton = new System.Windows.Forms.Button();
@@ -157,6 +156,14 @@
             this.BuildingOccupancyListBox = new System.Windows.Forms.CheckedListBox();
             this.label29 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
+            this.isMezz = new System.Windows.Forms.CheckBox();
+            this.isStage = new System.Windows.Forms.CheckBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.isVO = new System.Windows.Forms.CheckBox();
+            this.label63 = new System.Windows.Forms.Label();
+            this.isMezzanine = new System.Windows.Forms.CheckBox();
+            this.isEscalator = new System.Windows.Forms.CheckBox();
+            this.isVOpening2 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.WFSDImage)).BeginInit();
@@ -639,16 +646,16 @@
             "I-1",
             "I-3",
             "S"});
-            this.occupancyClassificationInput.Location = new System.Drawing.Point(17, 61);
+            this.occupancyClassificationInput.Location = new System.Drawing.Point(15, 192);
             this.occupancyClassificationInput.Margin = new System.Windows.Forms.Padding(2);
             this.occupancyClassificationInput.Name = "occupancyClassificationInput";
-            this.occupancyClassificationInput.Size = new System.Drawing.Size(108, 79);
+            this.occupancyClassificationInput.Size = new System.Drawing.Size(108, 124);
             this.occupancyClassificationInput.TabIndex = 43;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(5, 42);
+            this.label19.Location = new System.Drawing.Point(6, 164);
             this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(264, 13);
@@ -657,6 +664,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.isStage);
+            this.panel1.Controls.Add(this.isMezz);
             this.panel1.Controls.Add(this.label28);
             this.panel1.Controls.Add(this.FIREBOX);
             this.panel1.Controls.Add(this.label27);
@@ -902,10 +911,15 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.isVOpening2);
+            this.panel4.Controls.Add(this.isEscalator);
+            this.panel4.Controls.Add(this.isMezzanine);
+            this.panel4.Controls.Add(this.label63);
+            this.panel4.Controls.Add(this.isVO);
+            this.panel4.Controls.Add(this.label23);
             this.panel4.Controls.Add(this.label25);
             this.panel4.Controls.Add(this.VOLevelsInput);
             this.panel4.Controls.Add(this.label24);
-            this.panel4.Controls.Add(this.label23);
             this.panel4.Controls.Add(this.label22);
             this.panel4.Controls.Add(this.occupancyClassificationInput);
             this.panel4.Controls.Add(this.label19);
@@ -920,7 +934,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(279, 71);
+            this.label25.Location = new System.Drawing.Point(341, 181);
             this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(259, 15);
@@ -929,7 +943,7 @@
             // 
             // VOLevelsInput
             // 
-            this.VOLevelsInput.Location = new System.Drawing.Point(291, 93);
+            this.VOLevelsInput.Location = new System.Drawing.Point(344, 213);
             this.VOLevelsInput.Margin = new System.Windows.Forms.Padding(2);
             this.VOLevelsInput.Name = "VOLevelsInput";
             this.VOLevelsInput.Size = new System.Drawing.Size(76, 20);
@@ -938,23 +952,12 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(279, 42);
+            this.label24.Location = new System.Drawing.Point(341, 166);
             this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(234, 13);
             this.label24.TabIndex = 46;
             this.label24.Text = "What levels does this vertical opening open on?";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(4, 11);
-            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(511, 25);
-            this.label23.TabIndex = 45;
-            this.label23.Text = "Skip this page if there are NO vertical openings";
             // 
             // label22
             // 
@@ -1613,6 +1616,88 @@
             this.label26.TabIndex = 22;
             this.label26.Text = "Page 2";
             // 
+            // isMezz
+            // 
+            this.isMezz.AutoSize = true;
+            this.isMezz.Location = new System.Drawing.Point(344, 355);
+            this.isMezz.Margin = new System.Windows.Forms.Padding(2);
+            this.isMezz.Name = "isMezz";
+            this.isMezz.Size = new System.Drawing.Size(148, 17);
+            this.isMezz.TabIndex = 27;
+            this.isMezz.Text = "Check if Mezzanine Level";
+            this.isMezz.UseVisualStyleBackColor = true;
+            // 
+            // isStage
+            // 
+            this.isStage.AutoSize = true;
+            this.isStage.Location = new System.Drawing.Point(344, 384);
+            this.isStage.Margin = new System.Windows.Forms.Padding(2);
+            this.isStage.Name = "isStage";
+            this.isStage.Size = new System.Drawing.Size(132, 17);
+            this.isStage.TabIndex = 28;
+            this.isStage.Text = "Check if Stage is used";
+            this.isStage.UseVisualStyleBackColor = true;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(6, 39);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(209, 13);
+            this.label23.TabIndex = 49;
+            this.label23.Text = "Does the building have a vertical opening?";
+            // 
+            // isVO
+            // 
+            this.isVO.AutoSize = true;
+            this.isVO.Location = new System.Drawing.Point(237, 39);
+            this.isVO.Name = "isVO";
+            this.isVO.Size = new System.Drawing.Size(47, 17);
+            this.isVO.TabIndex = 50;
+            this.isVO.Text = "YES";
+            this.isVO.UseVisualStyleBackColor = true;
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Location = new System.Drawing.Point(6, 79);
+            this.label63.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(100, 13);
+            this.label63.TabIndex = 51;
+            this.label63.Text = "If yes, all that apply:";
+            // 
+            // isMezzanine
+            // 
+            this.isMezzanine.AutoSize = true;
+            this.isMezzanine.Location = new System.Drawing.Point(237, 74);
+            this.isMezzanine.Name = "isMezzanine";
+            this.isMezzanine.Size = new System.Drawing.Size(77, 17);
+            this.isMezzanine.TabIndex = 52;
+            this.isMezzanine.Text = "Mezzanine";
+            this.isMezzanine.UseVisualStyleBackColor = true;
+            // 
+            // isEscalator
+            // 
+            this.isEscalator.AutoSize = true;
+            this.isEscalator.Location = new System.Drawing.Point(342, 74);
+            this.isEscalator.Name = "isEscalator";
+            this.isEscalator.Size = new System.Drawing.Size(70, 17);
+            this.isEscalator.TabIndex = 53;
+            this.isEscalator.Text = "Escalator";
+            this.isEscalator.UseVisualStyleBackColor = true;
+            // 
+            // isVOpening2
+            // 
+            this.isVOpening2.AutoSize = true;
+            this.isVOpening2.Location = new System.Drawing.Point(455, 74);
+            this.isVOpening2.Name = "isVOpening2";
+            this.isVOpening2.Size = new System.Drawing.Size(52, 17);
+            this.isVOpening2.TabIndex = 54;
+            this.isVOpening2.Text = "Other";
+            this.isVOpening2.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1620,10 +1705,10 @@
             this.ClientSize = new System.Drawing.Size(675, 522);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.PreviousButton);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -1698,7 +1783,6 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Button PreviousButton;
         private System.Windows.Forms.Button NextButton;
-        private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TextBox VOLevelsInput;
         private System.Windows.Forms.Label label24;
@@ -1775,6 +1859,14 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.CheckedListBox BuildingOccupancyListBox;
         private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.CheckBox isMezz;
+        private System.Windows.Forms.CheckBox isStage;
+        private System.Windows.Forms.CheckBox isVO;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.CheckBox isVOpening2;
+        private System.Windows.Forms.CheckBox isEscalator;
+        private System.Windows.Forms.CheckBox isMezzanine;
+        private System.Windows.Forms.Label label63;
     }
 }
 

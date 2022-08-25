@@ -17,3 +17,22 @@ C:\Users\alexa\Documents\SLS\auto narr\findandreplacenarr\findandreplacenarr\bin
 C:\Users\alexa\Documents\SLS\auto narr\findandreplacenarr\findandreplacenarr\bin\Debug\Microsoft.mshtml.dll
 C:\Users\alexa\Documents\SLS\auto narr\findandreplacenarr\findandreplacenarr\bin\Debug\Spire.Doc.xml
 C:\Users\alexa\Documents\SLS\auto narr\findandreplacenarr\findandreplacenarr\bin\Debug\Spire.Pdf.xml
+C:\Users\Owner\Desktop\SLS\SLSFindReplace\findandreplacenarr\obj\Debug\findandreplacenarr.csproj.AssemblyReference.cache
+C:\Users\Owner\Desktop\SLS\SLSFindReplace\findandreplacenarr\obj\Debug\findandreplacenarr.csproj.SuggestedBindingRedirects.cache
+C:\Users\Owner\Desktop\SLS\SLSFindReplace\findandreplacenarr\obj\Debug\findandreplacenarr.Form1.resources
+C:\Users\Owner\Desktop\SLS\SLSFindReplace\findandreplacenarr\obj\Debug\findandreplacenarr.Properties.Resources.resources
+C:\Users\Owner\Desktop\SLS\SLSFindReplace\findandreplacenarr\obj\Debug\findandreplacenarr.csproj.GenerateResource.cache
+C:\Users\Owner\Desktop\SLS\SLSFindReplace\findandreplacenarr\obj\Debug\findandreplacenarr.csproj.CoreCompileInputs.cache
+C:\Users\Owner\Desktop\SLS\SLSFindReplace\findandreplacenarr\obj\Debug\findandreplacenarr.exe
+C:\Users\Owner\Desktop\SLS\SLSFindReplace\findandreplacenarr\obj\Debug\findandreplacenarr.pdb
+C:\Users\Owner\Desktop\SLS\SLSFindReplace\findandreplacenarr\bin\Debug\findandreplacenarr.exe.config
+C:\Users\Owner\Desktop\SLS\SLSFindReplace\findandreplacenarr\bin\Debug\findandreplacenarr.exe
+C:\Users\Owner\Desktop\SLS\SLSFindReplace\findandreplacenarr\bin\Debug\findandreplacenarr.pdb
+C:\Users\Owner\Desktop\SLS\SLSFindReplace\findandreplacenarr\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\Owner\Desktop\SLS\SLSFindReplace\findandreplacenarr\bin\Debug\Spire.Doc.dll
+C:\Users\Owner\Desktop\SLS\SLSFindReplace\findandreplacenarr\bin\Debug\Spire.Pdf.dll
+C:\Users\Owner\Desktop\SLS\SLSFindReplace\findandreplacenarr\bin\Debug\Microsoft.mshtml.dll
+C:\Users\Owner\Desktop\SLS\SLSFindReplace\findandreplacenarr\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\Owner\Desktop\SLS\SLSFindReplace\findandreplacenarr\bin\Debug\Spire.Doc.xml
+C:\Users\Owner\Desktop\SLS\SLSFindReplace\findandreplacenarr\bin\Debug\Spire.Pdf.xml
+C:\Users\Owner\Desktop\SLS\SLSFindReplace\findandreplacenarr\obj\Debug\findandreplacenarr.csproj.CopyComplete
