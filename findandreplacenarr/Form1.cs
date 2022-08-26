@@ -729,7 +729,7 @@ namespace findandreplacenarr
                 //STAIR DISCHARGE SECTION ----- ADD PICTURE
 
                 //FCC SECTION
-                if(BLDGBOX.SelectedItem.ToString() == "City of Miami" || BLDGBOX.SelectedItem.ToString() == "Miami Dade")
+                if(intBuildingHeight >= 75 && (BLDGBOX.SelectedItem.ToString() == "City of Miami" || BLDGBOX.SelectedItem.ToString() == "Miami Dade"))
                 {
                     this.FindAndReplace(wordApp, "COMandMDFCC", "Miami Dade County and City of Miami Fire Department requires a door opening into the lobby and additional door opening to the outside to provide direct access without entering the lobby.   The fire command center shall be located on the address side/main entrance of the building and shall be within proximity to the fire service access elevators and stairs that have a standpipe available for fire operations.");
                 }
@@ -742,6 +742,8 @@ namespace findandreplacenarr
                     //STANDPIPE SECTION
                     this.FindAndReplace(wordApp, "STANDPIPE120", "The standpipe located in an exit enclosure shall have access to the floor without passing through the fire service elevator lobby (FBC Section 3007.9.1). However, in a high-rise R-2 or R-1 occupancy building, standpipes must be located in stairwells and are subject to only the requirements of the FFPC and NFPA 14, adopted by the State Fire Marshal.");
                 }
+
+                //------------------------------------------------DIVISION LINE ALEX/JORGE 255 ------------------------------------------------------------
 
                 //FIRE PUMP 
                 //ADD CODE FOR HIGHZONE PUMP ----------------------
