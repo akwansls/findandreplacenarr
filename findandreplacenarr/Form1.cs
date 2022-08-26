@@ -226,6 +226,8 @@ namespace findandreplacenarr
                 this.FindAndReplace(wordApp, "ARCH", AccountNameInput.Text);
                 this.FindAndReplace(wordApp, "ARCHADD", AccountAddressInput.Text);
                 this.FindAndReplace(wordApp, "ARCHZIP", AccountZipcodeInput.Text);
+                this.FindAndReplace(wordApp, "PNUMBER", ProjectNumberInput.Text);
+                this.FindAndReplace(wordApp, "DATE", DateInput.Text);
 
                 string buildingTypeHeight = null;
                 bool VOA = false;
@@ -636,13 +638,18 @@ namespace findandreplacenarr
                     {
                         this.FindAndReplace(wordApp, "R1R2EMERGENCYPOWERCOM", "In the City of Miami, the fire department will require a 24-hour fuel supply for emergency power.");
                     }
+
                 }
+
+                //SITE ACCESS - IF MIAMI DADE
+                if(FIREBOX.SelectedItem.ToString() == "Miami Dade")
+                {
+                    this.FindAndReplace(wordApp, "MiamiDadeSite", "Miami-Dade Fire Department requires set-up sites located at a minimum on two sides of the building at the approximate center of each side for firefighting and rescue operations. Depending upon the building configuration, additional set-up sites may be required by the AHJ.  Sites shall be no closer than 10 feet and no further than 30 feet from any building.  Each site shall be a minimum of 21 feet wide and 47 feet long with a cross slope no greater than 5 percent. Sites shall comply with the requirements of the emergency vehicle support capabilities above and also capable of withstanding any point forces resulting from outriggers.  Set-up sites, fire lanes, and slopes in a project must be able to accommodate a truck with dimensions as follows: 47 feet overall length, 36 feet bumper to bump, and 256 inches wheelbase length.");
+                }
+
 
                 //SMOKE DETECTION SECTION -----------------------------------------
 
-
-               
-                
 
                 //SMOKE REMOVAL SECTION
                 if(intBuildingHeight >= 75)

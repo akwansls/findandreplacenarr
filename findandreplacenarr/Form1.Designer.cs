@@ -164,6 +164,10 @@
             this.isMezzanine = new System.Windows.Forms.CheckBox();
             this.isEscalator = new System.Windows.Forms.CheckBox();
             this.isVOpening2 = new System.Windows.Forms.CheckBox();
+            this.ProjectNumberLabel = new System.Windows.Forms.Label();
+            this.ProjectNumberInput = new System.Windows.Forms.TextBox();
+            this.DateLabel = new System.Windows.Forms.Label();
+            this.DateInput = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.WFSDImage)).BeginInit();
@@ -177,7 +181,7 @@
             // ProjectNameLabel
             // 
             this.ProjectNameLabel.AutoSize = true;
-            this.ProjectNameLabel.Location = new System.Drawing.Point(124, 109);
+            this.ProjectNameLabel.Location = new System.Drawing.Point(117, 120);
             this.ProjectNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ProjectNameLabel.Name = "ProjectNameLabel";
             this.ProjectNameLabel.Size = new System.Drawing.Size(71, 13);
@@ -187,7 +191,7 @@
             // 
             // ProjectNameInput
             // 
-            this.ProjectNameInput.Location = new System.Drawing.Point(196, 106);
+            this.ProjectNameInput.Location = new System.Drawing.Point(196, 113);
             this.ProjectNameInput.Margin = new System.Windows.Forms.Padding(2);
             this.ProjectNameInput.Name = "ProjectNameInput";
             this.ProjectNameInput.Size = new System.Drawing.Size(76, 20);
@@ -195,7 +199,7 @@
             // 
             // ProjectAddressInput
             // 
-            this.ProjectAddressInput.Location = new System.Drawing.Point(196, 139);
+            this.ProjectAddressInput.Location = new System.Drawing.Point(196, 192);
             this.ProjectAddressInput.Margin = new System.Windows.Forms.Padding(2);
             this.ProjectAddressInput.Name = "ProjectAddressInput";
             this.ProjectAddressInput.Size = new System.Drawing.Size(76, 20);
@@ -204,7 +208,7 @@
             // ProjectAddressLabel
             // 
             this.ProjectAddressLabel.AutoSize = true;
-            this.ProjectAddressLabel.Location = new System.Drawing.Point(114, 141);
+            this.ProjectAddressLabel.Location = new System.Drawing.Point(107, 199);
             this.ProjectAddressLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ProjectAddressLabel.Name = "ProjectAddressLabel";
             this.ProjectAddressLabel.Size = new System.Drawing.Size(81, 13);
@@ -224,7 +228,7 @@
             // 
             // ProjectCityInput
             // 
-            this.ProjectCityInput.Location = new System.Drawing.Point(196, 170);
+            this.ProjectCityInput.Location = new System.Drawing.Point(196, 231);
             this.ProjectCityInput.Margin = new System.Windows.Forms.Padding(2);
             this.ProjectCityInput.Name = "ProjectCityInput";
             this.ProjectCityInput.Size = new System.Drawing.Size(76, 20);
@@ -233,7 +237,7 @@
             // ProjectCityLabel
             // 
             this.ProjectCityLabel.AutoSize = true;
-            this.ProjectCityLabel.Location = new System.Drawing.Point(136, 173);
+            this.ProjectCityLabel.Location = new System.Drawing.Point(124, 238);
             this.ProjectCityLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ProjectCityLabel.Name = "ProjectCityLabel";
             this.ProjectCityLabel.Size = new System.Drawing.Size(60, 13);
@@ -242,7 +246,7 @@
             // 
             // ProjectStateInput
             // 
-            this.ProjectStateInput.Location = new System.Drawing.Point(196, 200);
+            this.ProjectStateInput.Location = new System.Drawing.Point(196, 266);
             this.ProjectStateInput.Margin = new System.Windows.Forms.Padding(2);
             this.ProjectStateInput.Name = "ProjectStateInput";
             this.ProjectStateInput.Size = new System.Drawing.Size(76, 20);
@@ -251,7 +255,7 @@
             // ProjectStateLabel
             // 
             this.ProjectStateLabel.AutoSize = true;
-            this.ProjectStateLabel.Location = new System.Drawing.Point(129, 203);
+            this.ProjectStateLabel.Location = new System.Drawing.Point(120, 273);
             this.ProjectStateLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ProjectStateLabel.Name = "ProjectStateLabel";
             this.ProjectStateLabel.Size = new System.Drawing.Size(68, 13);
@@ -261,7 +265,7 @@
             // 
             // ProjectZipcodeInput
             // 
-            this.ProjectZipcodeInput.Location = new System.Drawing.Point(196, 234);
+            this.ProjectZipcodeInput.Location = new System.Drawing.Point(196, 303);
             this.ProjectZipcodeInput.Margin = new System.Windows.Forms.Padding(2);
             this.ProjectZipcodeInput.Name = "ProjectZipcodeInput";
             this.ProjectZipcodeInput.Size = new System.Drawing.Size(76, 20);
@@ -271,7 +275,7 @@
             // ProjectZipcodeLabel
             // 
             this.ProjectZipcodeLabel.AutoSize = true;
-            this.ProjectZipcodeLabel.Location = new System.Drawing.Point(114, 236);
+            this.ProjectZipcodeLabel.Location = new System.Drawing.Point(106, 308);
             this.ProjectZipcodeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ProjectZipcodeLabel.Name = "ProjectZipcodeLabel";
             this.ProjectZipcodeLabel.Size = new System.Drawing.Size(82, 13);
@@ -664,6 +668,10 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.DateInput);
+            this.panel1.Controls.Add(this.DateLabel);
+            this.panel1.Controls.Add(this.ProjectNumberInput);
+            this.panel1.Controls.Add(this.ProjectNumberLabel);
             this.panel1.Controls.Add(this.isStage);
             this.panel1.Controls.Add(this.isMezz);
             this.panel1.Controls.Add(this.label28);
@@ -703,7 +711,7 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(140, 322);
+            this.label28.Location = new System.Drawing.Point(139, 388);
             this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(49, 13);
@@ -716,7 +724,7 @@
             this.FIREBOX.Items.AddRange(new object[] {
             "City of Miami",
             "Miami Dade"});
-            this.FIREBOX.Location = new System.Drawing.Point(196, 322);
+            this.FIREBOX.Location = new System.Drawing.Point(196, 384);
             this.FIREBOX.Margin = new System.Windows.Forms.Padding(2);
             this.FIREBOX.Name = "FIREBOX";
             this.FIREBOX.Size = new System.Drawing.Size(92, 21);
@@ -725,7 +733,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(119, 284);
+            this.label27.Location = new System.Drawing.Point(119, 346);
             this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(69, 13);
@@ -739,7 +747,7 @@
             this.BLDGBOX.Items.AddRange(new object[] {
             "City of Miami",
             "Miami Dade"});
-            this.BLDGBOX.Location = new System.Drawing.Point(196, 281);
+            this.BLDGBOX.Location = new System.Drawing.Point(197, 341);
             this.BLDGBOX.Margin = new System.Windows.Forms.Padding(2);
             this.BLDGBOX.Name = "BLDGBOX";
             this.BLDGBOX.Size = new System.Drawing.Size(92, 21);
@@ -1698,6 +1706,42 @@
             this.isVOpening2.Text = "Other";
             this.isVOpening2.UseVisualStyleBackColor = true;
             // 
+            // ProjectNumberLabel
+            // 
+            this.ProjectNumberLabel.AutoSize = true;
+            this.ProjectNumberLabel.Location = new System.Drawing.Point(106, 154);
+            this.ProjectNumberLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ProjectNumberLabel.Name = "ProjectNumberLabel";
+            this.ProjectNumberLabel.Size = new System.Drawing.Size(80, 13);
+            this.ProjectNumberLabel.TabIndex = 29;
+            this.ProjectNumberLabel.Text = "Project Number";
+            // 
+            // ProjectNumberInput
+            // 
+            this.ProjectNumberInput.Location = new System.Drawing.Point(196, 147);
+            this.ProjectNumberInput.Margin = new System.Windows.Forms.Padding(2);
+            this.ProjectNumberInput.Name = "ProjectNumberInput";
+            this.ProjectNumberInput.Size = new System.Drawing.Size(76, 20);
+            this.ProjectNumberInput.TabIndex = 30;
+            // 
+            // DateLabel
+            // 
+            this.DateLabel.AutoSize = true;
+            this.DateLabel.Location = new System.Drawing.Point(31, 26);
+            this.DateLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DateLabel.Name = "DateLabel";
+            this.DateLabel.Size = new System.Drawing.Size(30, 13);
+            this.DateLabel.TabIndex = 31;
+            this.DateLabel.Text = "Date";
+            // 
+            // DateInput
+            // 
+            this.DateInput.Location = new System.Drawing.Point(68, 19);
+            this.DateInput.Margin = new System.Windows.Forms.Padding(2);
+            this.DateInput.Name = "DateInput";
+            this.DateInput.Size = new System.Drawing.Size(76, 20);
+            this.DateInput.TabIndex = 32;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1705,10 +1749,10 @@
             this.ClientSize = new System.Drawing.Size(675, 522);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.PreviousButton);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -1867,6 +1911,10 @@
         private System.Windows.Forms.CheckBox isEscalator;
         private System.Windows.Forms.CheckBox isMezzanine;
         private System.Windows.Forms.Label label63;
+        public System.Windows.Forms.TextBox DateInput;
+        private System.Windows.Forms.Label DateLabel;
+        public System.Windows.Forms.TextBox ProjectNumberInput;
+        private System.Windows.Forms.Label ProjectNumberLabel;
     }
 }
 
