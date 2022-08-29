@@ -1427,7 +1427,7 @@ namespace findandreplacenarr
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CreateWordDocument(@"C:\Users\Owner\Desktop\SLS\SLSFindReplace\Narrative Template.docx", @"C:\Users\alexa\Downloads\DDMMYY_SLS XXXX_Project Name_FPLS Narrative_7th Edit. Code_Template 2020 output.docx");
+            CreateWordDocument(@"C:\Users\alexa\Documents\SLS\auto narr\findandreplacenarr\Narrative Template.docx", @"C:\Users\alexa\Downloads\DDMMYY_SLS XXXX_Project Name_FPLS Narrative_7th Edit. Code_Template 2020 output.docx");
         }
 
         private void label1_Click_1(object sender, EventArgs e)
