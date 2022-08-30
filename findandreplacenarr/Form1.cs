@@ -676,23 +676,24 @@ namespace findandreplacenarr
 
                     //EMERGENCY POWER SECTION
                     this.FindAndReplace(wordApp, "R1R2EMERGENCYPOWER", "An 8-hour fuel supply shall be provided on life safety equipment within the building. It is noted that it is common practice to include the following systems: domestic water pumps; jockey pumps; telephone and security systems.");
-                    //if (BLDGBOX.SelectedItem.ToString() == "City of Miami" || FIREBOX.SelectedItem.ToString() == "City of Miami")
-                    //{
-                        //this.FindAndReplace(wordApp, "R1R2EMERGENCYPOWERCOM", "In the City of Miami, the fire department will require a 24-hour fuel supply for emergency power.");
-                    //}
+
+                    if (isBDCOM.Checked || isFDCOM.Checked)
+                    {
+                        this.FindAndReplace(wordApp, "R1R2EMERGENCYPOWERCOM", "In the City of Miami, the fire department will require a 24-hour fuel supply for emergency power.");
+                    }
 
                 }
-                /*
+                
 
                 //SITE ACCESS - IF MIAMI DADE
-                if (FIREBOX.SelectedItem.ToString() == "Miami Dade")
+                if (isFDMD.Checked)
                 {
                     this.FindAndReplace(wordApp, "MiamiDadeSite", "Miami-Dade Fire Department requires set-up sites located at a minimum on two sides of the building at the approximate center of each side for firefighting and rescue operations. Depending upon the building configuration, ");
                     this.FindAndReplace(wordApp, "MiamiDadeSite2", "additional set-up sites may be required by the AHJ.  Sites shall be no closer than 10 feet and no further than 30 feet from any building.  Each site shall be a minimum of 21 feet wide and 47 feet long with a cross slope no greater ");
                     this.FindAndReplace(wordApp, "MiamiDadeSite3", "than 5 percent. Sites shall comply with the requirements of the emergency vehicle support capabilities above and also capable of withstanding any point forces resulting from outriggers.  Set-up sites, fire lanes, ");
                     this.FindAndReplace(wordApp, "MiamiDadeSite4", "and slopes in a project must be able to accommodate a truck with dimensions as follows: 47 feet overall length, 36 feet bumper to bump, and 256 inches wheelbase length.");
                 }
-
+                
 
                 //SMOKE DETECTION SECTION -----------------------------------------
 
@@ -714,6 +715,7 @@ namespace findandreplacenarr
                     this.FindAndReplace(wordApp, "LUMINOUSMARKSECTION", "As a high-rise building, FBC §403.5.5 states that approved luminous egress path markings delineating the exit path must be provided in Group A, B, E, I, M and R-1 occupancies in accordance with FBC §1025. ");
                     this.FindAndReplace(wordApp, "LUMINOUSMARKSECTION2", "Markings within the exit enclosures are required to be provided on steps, landings, handrails, perimeter demarcation lines, and discharge doors from the exit enclosure.  Materials should comply with either UL 1994 or ASTM E2072. ");
                 }
+                
 
                 //EXIT ACCESS SECTION
                 if (R1 == true || I1 == true)
@@ -729,7 +731,7 @@ namespace findandreplacenarr
                     this.FindAndReplace(wordApp, "OEESection2", " which states that an occupant evacuation elevator can be provided in lieu of the stair.  The occupant evacuation elevator, separate from fire service access elevator, must comply with FBC Section 3008 and FFPC, NFPA 101 Section 7.14.");
                     this.FindAndReplace(wordApp, "OEESection3", "NOTE: Where the spaces above 420 ft that are not R-2 are accessory to the R-2 building, an additional stairwary or Occupant Evacuation Elevator is not required.");
                 }
-
+                
                 //LOOPED CORRIDOR FOR R1/R2
                 if ((R2 == true || R1 == true) && isNONLooped.Checked)
                 {
@@ -781,16 +783,18 @@ namespace findandreplacenarr
                     this.FindAndReplace(wordApp, "STAGESECTION20", "Sprinklers are not required for stages 1,000 square feet or less in area and 50 feet or less in height where curtains, scenery or other combustible hangings are not retractable vertically. ");
                     this.FindAndReplace(wordApp, "STAGESECTION21", "Combustible hangings shall be limited to a single main curtain, borders, legs, and a single backdrop (FBC Section 410.7).");
                 }
-
+                
                 //SPRINKLER SECTION
                 if (intBuildingHeight >= 420)
                 {
                     this.FindAndReplace(wordApp, "SPRINKLER420", "The building is greater than 420 ft and so will be supplied by a minimum of two risers.  Each riser shall supply sprinkler on alternate floors.  If more  than two risers are provided for a zone, ");
                     this.FindAndReplace(wordApp, "SPRINKLER420B", "then sprinklers on adjacent floors shall not be supplied from the same riser (FBC Section 403.3). ");
+                    
                     //SITE WATER SECTION
                     this.FindAndReplace(wordApp, "MAINWATER420", "The building is greater than 420 ft, therefore, the water supply must be designed so that there are separate connections to a minimum of two public mains on different streets (FBC Section 403.3).");
                 }
-                if (BLDGBOX.SelectedItem.ToString() == "Miami Dade")
+
+                if (isBDMD.Checked)
                 {
                     this.FindAndReplace(wordApp, "SPRINKLERTERRACE", "Miami Dade Fire Department will require sprinkler protection in all balconies with a depth of four (4) feet.  The fire department has accepted alternative solutions if ");
                     this.FindAndReplace(wordApp, "SPRINKLERTERRACE2", "sprinkler head installation in the balcony is not feasible.  Further discussion on this item required.");
@@ -800,26 +804,28 @@ namespace findandreplacenarr
                     this.FindAndReplace(wordApp, "SPRINKLERTERRACE", "The fire department will require sprinkler protection in terraces that are four (4) feet or more in depth.  A terrace is usually recessed within footprint of the building and has living space on three walls. ");
                     this.FindAndReplace(wordApp, "SPRINKLERTERRACE2", "Open balconies (cantilevered) will not require sprinkler protection even if there is a privacy partition between balconies.");
                 }
-                //STAIR DISCHARGE SECTION ----- ADD PICTURE
+                //STAIR DISCHARGE SECTION -------------------------- ADD PICTURE
 
                 //FCC SECTION
-                if (intBuildingHeight >= 75 && (BLDGBOX.SelectedItem.ToString() == "City of Miami" || BLDGBOX.SelectedItem.ToString() == "Miami Dade"))
+                if (intBuildingHeight >= 75 && (isFDCOM.Checked || isFDMD.Checked))
                 {
                     this.FindAndReplace(wordApp, "MDandCOMFCC", "Miami Dade County and City of Miami Fire Department requires a door opening into the lobby and additional door opening to the outside to provide direct access without entering the lobby. ");
                     this.FindAndReplace(wordApp, "MDandCOMFCC2", "The fire command center shall be located on the address side/main entrance of the building and shall be within proximity to the fire service access elevators and stairs that have a standpipe available for fire operations.");
                 }
-                //add FCC PICTURE --------------------------------------------------------------
+                //add FCC PICTURE --------------------------------------------------------------ADD PICTURE
 
+                
                 //MONITORING SECTION
                 if (intBuildingHeight >= 120)
                 {
                     this.FindAndReplace(wordApp, "FSESprinkler", "For high-rise buildings with a fire service elevator, the sprinkler system shall have a sprinkler control valve supervisory switch and water-flow-initiating device provided ");
                     this.FindAndReplace(wordApp, "FSESprinkler2", "for each floor that is monitored by the buildings fire alarm system in accordance with FBC Section 3007.2.2. ");
+                    
                     //STANDPIPE SECTION
                     this.FindAndReplace(wordApp, "STANDPIPE120", "The standpipe located in an exit enclosure shall have access to the floor without passing through the fire service elevator lobby (FBC Section 3007.9.1). However, in a high-rise R-2 or R-1 occupancy building, ");
                     this.FindAndReplace(wordApp, "STANDPIPE120B", "standpipes must be located in stairwells and are subject to only the requirements of the FFPC and NFPA 14, adopted by the State Fire Marshal.");
                 }
-
+                
                 //------------------------------------------------DIVISION LINE ALEX/JORGE 255 ------------------------------------------------------------
 
                 //FIRE PUMP 
@@ -838,7 +844,7 @@ namespace findandreplacenarr
                     this.FindAndReplace(wordApp, "PanicHardwareREQ1", "The FFPC, Section 12.2.2.2.3, has a similar requirement for assembly occupancies where the occupancy load is 100 or more. Therefore, the FBC has the more stringent requirement and must be implemented.");
                     this.FindAndReplace(wordApp, "PanicHardwareREQ2", "Panic hardware must be installed in electrical rooms as stated in other section of this report.");
                 }
-
+                
                 //Type Construction
                 string buildingTypeA2Floor = null;
                 string buildingTypeA3Floor = null;
@@ -858,7 +864,7 @@ namespace findandreplacenarr
                 string buildingTypeS1SQF = null;
                 string buildingTypeS2SQF = null;
 
-                if (A2 == true || A3 == true)
+                if (A2 == true)
                 {
                     //---------A2--------------------------//
                     //highest floor
@@ -891,9 +897,11 @@ namespace findandreplacenarr
                     {
                         buildingTypeA2SQF = "Type IB";
                     }
-
+                 }   
                     //-------------A3--------------------//
                     //highest floor
+                 if(A3 == true)
+                 { 
                     if (int.Parse(A3HighestFloor.Text) <= 3)
                     {
                         buildingTypeA3Floor = "Type IIB";
@@ -923,10 +931,8 @@ namespace findandreplacenarr
                     {
                         buildingTypeA3SQF = "Type IB";
                     }
-
-
-                }
-
+                 }
+                
                 if (B == true)
                 {
                     //----------------B-------------------
@@ -1182,53 +1188,18 @@ namespace findandreplacenarr
                 }
 
                 //Initiate buildingType variable
-                string buildingType = "buildType";
-
+                string buildingType = "TEST";
+                
                 //get actual buildingType
-                if (buildingTypeHeight == "IA" || buildingTypeA2Floor == "IA" || buildingTypeA3Floor == "IA" || buildingTypeBFloor == "IA" || buildingTypeMFloor == "IA" ||
-                    buildingTypeR1Floor == "IA" || buildingTypeR2Floor == "IA" || buildingTypeS1Floor == "IA" || buildingTypeS2Floor == "IA" || buildingTypeA2SQF == "IA" ||
-                    buildingTypeA3SQF == "IA" || buildingTypeBSQF == "IA" || buildingTypeMSQF == "IA" || buildingTypeR1SQF == "IA" || buildingTypeR2SQF == "IA" || buildingTypeS1SQF == "IA"
-                    || buildingTypeS2SQF == "IA")
+                if (buildingTypeHeight == "Type IA" || buildingTypeA2Floor == "Type IA" || buildingTypeA3Floor == "Type IA" || buildingTypeBFloor == "Type IA" || buildingTypeMFloor == "Type IA" ||
+                buildingTypeR1Floor == "Type IA" || buildingTypeR2Floor == "Type IA" || buildingTypeS1Floor == "Type IA" || buildingTypeS2Floor == "Type IA" || buildingTypeA2SQF == "Type IA" ||
+                buildingTypeA3SQF == "Type IA" || buildingTypeBSQF == "Type IA" || buildingTypeMSQF == "Type IA" || buildingTypeR1SQF == "Type IA" || buildingTypeR2SQF == "Type IA" || buildingTypeS1SQF == "Type IA"
+                || buildingTypeS2SQF == "Type IA")
                 {
-                    buildingType = "IA";
-
+                    buildingType = "Type IA";                
                     if (intBuildingHeight <= 420)
                     {
-                        buildingType = "Type IA Reduced";
-
-                        this.FindAndReplace(wordApp, "BUILDTYPE", buildingType);
-
-                        //Delete columns that aren't IB
-                        Microsoft.Office.Interop.Word.Table table2 = myWordDoc.Tables[2];
-                        table2.Columns[5].Delete();
-                        table2.Columns[4].Delete();
-                        table2.Columns[2].Delete();
-                        //Delete the other table
-                        //Microsoft.Office.Interop.Word.Table table2AndAHalf = myWordDoc.Tables[3];
-                        //table2AndAHalf.Delete();
-
-                    }
-                    else
-                    {
-                        this.FindAndReplace(wordApp, "BUILDTYPE", buildingType);
-
-                        //Delete columns that aren't IA
-                        Microsoft.Office.Interop.Word.Table table2 = myWordDoc.Tables[2];
-                        table2.Columns[5].Delete();
-                        table2.Columns[4].Delete();
-                        table2.Columns[3].Delete();
-                        //Delete the other table
-                        //Microsoft.Office.Interop.Word.Table table2AndAHalf = myWordDoc.Tables[3];
-                        //table2AndAHalf.Delete();
-
-                    }
-                }
-                else if (buildingTypeHeight == "IB" || buildingTypeA2Floor == "IB" || buildingTypeA3Floor == "IB" || buildingTypeBFloor == "IB" || buildingTypeMFloor == "IB" ||
-                    buildingTypeR1Floor == "IB" || buildingTypeR2Floor == "IB" || buildingTypeS1Floor == "IB" || buildingTypeS2Floor == "IB" || buildingTypeA2SQF == "IB" ||
-                    buildingTypeA3SQF == "IB" || buildingTypeBSQF == "IB" || buildingTypeMSQF == "IB" || buildingTypeR1SQF == "IB" || buildingTypeR2SQF == "IB" || buildingTypeS1SQF == "IB"
-                    || buildingTypeS2SQF == "IB")
-                {
-                    buildingType = "IB";
+                    buildingType = "Type IA Reduced";
 
                     this.FindAndReplace(wordApp, "BUILDTYPE", buildingType);
 
@@ -1238,57 +1209,74 @@ namespace findandreplacenarr
                     table2.Columns[4].Delete();
                     table2.Columns[2].Delete();
 
-                    //Delete the other table
-                    //Microsoft.Office.Interop.Word.Table table2AndAHalf = myWordDoc.Tables[3];
-                    //table2AndAHalf.Delete();
+                    }
+                    else
+                    {
+                    this.FindAndReplace(wordApp, "BUILDTYPE", buildingType);
+
+                    //Delete columns that aren't IA
+                    Microsoft.Office.Interop.Word.Table table2 = myWordDoc.Tables[2];
+                    table2.Columns[5].Delete();
+                    table2.Columns[4].Delete();
+                    table2.Columns[3].Delete();
+
+                    }
+
                 }
-                else if (buildingTypeHeight == "IIA" || buildingTypeA2Floor == "IIA" || buildingTypeA3Floor == "IIA" || buildingTypeBFloor == "IIA" || buildingTypeMFloor == "IIA" ||
-                    buildingTypeR1Floor == "IIA" || buildingTypeR2Floor == "IIA" || buildingTypeS1Floor == "IIA" || buildingTypeS2Floor == "IIA" || buildingTypeA2SQF == "IIA" ||
-                    buildingTypeA3SQF == "IIA" || buildingTypeBSQF == "IIA" || buildingTypeMSQF == "IIA" || buildingTypeR1SQF == "IIA" || buildingTypeR2SQF == "IIA" || buildingTypeS1SQF == "IIA"
-                    || buildingTypeS2SQF == "IIA")
+                
+                else if (buildingTypeHeight == "Type IB" || buildingTypeA2Floor == "Type IB" || buildingTypeA3Floor == "Type IB" || buildingTypeBFloor == "Type IB" || buildingTypeMFloor == "Type IB" ||
+                    buildingTypeR1Floor == "Type IB" || buildingTypeR2Floor == "Type IB" || buildingTypeS1Floor == "Type IB" || buildingTypeS2Floor == "Type IB" || buildingTypeA2SQF == "Type IB" ||
+                    buildingTypeA3SQF == "Type IB" || buildingTypeBSQF == "Type IB" || buildingTypeMSQF == "Type IB" || buildingTypeR1SQF == "Type IB" || buildingTypeR2SQF == "Type IB" || buildingTypeS1SQF == "Type IB"
+                    || buildingTypeS2SQF == "Type IB")
                 {
-                    buildingType = "IIA";
+                    buildingType = "Type IB";
+
+                    this.FindAndReplace(wordApp, "BUILDTYPE", buildingType);
+
+                    //Delete columns that aren't IB
+                    Microsoft.Office.Interop.Word.Table table2 = myWordDoc.Tables[2];
+                    table2.Columns[5].Delete();
+                    table2.Columns[4].Delete();
+                    table2.Columns[2].Delete();
+
+                }
+                else if (buildingTypeHeight == "Type IIA" || buildingTypeA2Floor == "Type IIA" || buildingTypeA3Floor == "Type IIA" || buildingTypeBFloor == "Type IIA" || buildingTypeMFloor == "Type IIA" ||
+                    buildingTypeR1Floor == "Type IIA" || buildingTypeR2Floor == "Type IIA" || buildingTypeS1Floor == "Type IIA" || buildingTypeS2Floor == "Type IIA" || buildingTypeA2SQF == "Type IIA" ||
+                    buildingTypeA3SQF == "Type IIA" || buildingTypeBSQF == "Type IIA" || buildingTypeMSQF == "Type IIA" || buildingTypeR1SQF == "Type IIA" || buildingTypeR2SQF == "Type IIA" || buildingTypeS1SQF == "Type IIA"
+                    || buildingTypeS2SQF == "Type IIA")
+                {
+                    buildingType = "Type IIA";
 
                     this.FindAndReplace(wordApp, "BUILDTYPE", buildingType);
 
                     //Delete columns that aren't IIA
                     Microsoft.Office.Interop.Word.Table table2 = myWordDoc.Tables[2];
+                    
                     table2.Columns[5].Delete();
-                    for (int i = 0; i < 2; i++)
-                    {
-                        table2.Columns[5].Delete();
-                        table2.Columns[3].Delete();
-                        table2.Columns[2].Delete();
-                    }
+                    table2.Columns[3].Delete();
+                    table2.Columns[2].Delete();
+                    
 
-                    //Delete the other table
-                    //Microsoft.Office.Interop.Word.Table table2AndAHalf = myWordDoc.Tables[3];
-                    //table2AndAHalf.Delete();
                 }
-                else if (buildingTypeHeight == "IIB" || buildingTypeA2Floor == "IIB" || buildingTypeA3Floor == "IIB" || buildingTypeBFloor == "IIB" || buildingTypeMFloor == "IIB" ||
-                    buildingTypeR1Floor == "IIB" || buildingTypeR2Floor == "IIB" || buildingTypeS1Floor == "IIB" || buildingTypeS2Floor == "IIB" || buildingTypeA2SQF == "IIB" ||
-                    buildingTypeA3SQF == "IIB" || buildingTypeBSQF == "IIB" || buildingTypeMSQF == "IIB" || buildingTypeR1SQF == "IIB" || buildingTypeR2SQF == "IIB" || buildingTypeS1SQF == "IIB"
-                    || buildingTypeS2SQF == "IIB")
+                else if (buildingTypeHeight == "Type IIB" || buildingTypeA2Floor == "Type IIB" || buildingTypeA3Floor == "Type IIB" || buildingTypeBFloor == "Type IIB" || buildingTypeMFloor == "Type IIB" ||
+                    buildingTypeR1Floor == "Type IIB" || buildingTypeR2Floor == "Type IIB" || buildingTypeS1Floor == "Type IIB" || buildingTypeS2Floor == "Type IIB" || buildingTypeA2SQF == "Type IIB" ||
+                    buildingTypeA3SQF == "Type IIB" || buildingTypeBSQF == "Type IIB" || buildingTypeMSQF == "Type IIB" || buildingTypeR1SQF == "Type IIB" || buildingTypeR2SQF == "Type IIB" || buildingTypeS1SQF == "Type IIB"
+                    || buildingTypeS2SQF == "Type IIB")
                 {
-                    buildingType = "IIB";
+                    buildingType = "Type IIB";
 
                     this.FindAndReplace(wordApp, "BUILDTYPE", buildingType);
 
                     //Delete columns that aren't IIB
                     Microsoft.Office.Interop.Word.Table table2 = myWordDoc.Tables[2];
-                    for (int i = 0; i < 3; i++)
-                    {
-                        table2.Columns[4].Delete();
-                        table2.Columns[3].Delete();
-                        table2.Columns[2].Delete();
-                    }
 
-                    //Delete the other table
-                    //Microsoft.Office.Interop.Word.Table table2AndAHalf = myWordDoc.Tables[3];
-                    //table2AndAHalf.Delete();
+                    table2.Columns[4].Delete();
+                    table2.Columns[3].Delete();
+                    table2.Columns[2].Delete();
+
                 }
 
-
+                
                 //Fire Separation Distance North
                 FSDFindAndReplace("NFSD", "NFSDRating", "NFSDOpening", int.Parse(NFSDInput.Text), wordApp, NFSDOccupancy.GetItemText(NFSDOccupancy.SelectedItem), buildingType);
                 //Fire Separation Distance South
@@ -1303,7 +1291,7 @@ namespace findandreplacenarr
                 FindTextAndReplaceImage(wordApp, myWordDoc, "SEWRPIC", SFSDImage.ImageLocation);
                 FindTextAndReplaceImage(wordApp, myWordDoc, "EEWRPIC", EFSDImage.ImageLocation);
                 FindTextAndReplaceImage(wordApp, myWordDoc, "WEWRPIC", WFSDImage.ImageLocation);
-
+                /*
 
                 //Start vertical opening section of narrative
                 if (isVO.Checked)
