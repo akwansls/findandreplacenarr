@@ -552,9 +552,7 @@ namespace findandreplacenarr
                 if (A1 == false && A2 == false && A3 == false)
                 {
                     table13.Rows[2].Delete();
-                }
-
-                /*
+                }              
 
                 
                 //TABLE 14 EDITING
@@ -562,78 +560,84 @@ namespace findandreplacenarr
 
                 if (I3 == false)
                 {
-                    table14.Rows[8].Delete();
+                    table14.Rows[9].Delete();
                 }
                 if (I1 == false)
                 {
-                    table14.Rows[7].Delete(); ;
+                    table14.Rows[8].Delete(); ;
                 }
                 if (R1 == false)
                 {
-                    table14.Rows[6].Delete();
+                    table14.Rows[7].Delete();
                 }
                 if (R2 == false)
                 {
-                    table14.Rows[5].Delete();
+                    table14.Rows[6].Delete();
                 }
                 if (M == false)
                 {
-                    table14.Rows[3].Delete();
+                    table14.Rows[4].Delete();
                 }
                 if (B == false)
                 {
-                    table14.Rows[2].Delete();
+                    table14.Rows[3].Delete();
                 }
                 if (A1 == false && A2 == false && A3 == false)
                 {
-                    table14.Rows[1].Delete();
+                    table14.Rows[2].Delete();
                 }
-
+                
                 //TABLE 15 AND 16 EDITING
 
                 Microsoft.Office.Interop.Word.Table table15 = myWordDoc.Tables[15];
                 Microsoft.Office.Interop.Word.Table table16 = myWordDoc.Tables[16];
-                if (isEmergencyVoiceSystem.Checked && intBuildingHeight >= 75 && isSprinklered.Checked)
-                {
-
+                //if (isEmergencyVoiceSystem.Checked && intBuildingHeight >= 75 && isSprinklered.Checked)
+                //{
                     //Delete Table 15 ------------------------------
-                    table15.Delete();
-                    if (I1 == true || I3 == true)
-                    {
-                        table16.Rows[4].Delete();
-                        table16.Rows[2].Delete();
-                        //what do we do for healthcare table16.Rows[3].Delete();
-
-                    }
-                    else
-                    {
-                        table16.Rows[3].Delete();
-                        table16.Rows[2].Delete();
-                        table16.Rows[1].Delete();
-                    }
-                }
-                else
-                {
+                    //table15.Delete();
+                    //if (I1 == true || I3 == true)
+                    //{
+                        //table16.Rows[5].Delete();
+                        //table16.Rows[4].Delete();
+                        //table16.Rows[2].Delete();
+                    //}
+                    //else
+                    //{
+                        //table16.Rows[5].Delete();
+                        //table16.Rows[4].Delete();
+                        //table16.Rows[3].Delete();
+                    //}                  
+                //}                
+                //else
+                //{
                     //Delete Table 16 -------------------------------
-                    table16.Delete();
-                    if (I1 == true || I3 == true)
-                    {
-                        table15.Rows[4].Delete();
-                        table15.Rows[2].Delete();
-                        //what do we do for healthcare table15.Rows[3].Delete();
+                    //table16.Delete();
+                    //if (I1 == true || I3 == true)
+                    //{
+                        //table15.Rows[5].Delete();
+                        //table15.Rows[3].Delete();
+                        //table15.Rows[2].Delete();
 
-                    }
-                    else
-                    {
-                        table15.Rows[3].Delete();
-                        table15.Rows[2].Delete();
-                        table15.Rows[1].Delete();
-                    }
-                }
-
+                    //}
+                    //else
+                    //{
+                        //table15.Rows[5].Delete();
+                        //table15.Rows[4].Delete();
+                        //table15.Rows[3].Delete();
+                    //}
+                //}
+               
                 //TABLE 17 FIRE EXTINGUISHERS
                 Microsoft.Office.Interop.Word.Table table17 = myWordDoc.Tables[17];
-                if (R1 == true || R2 == true || A1 == true || A2 == true || A3 == true || B == true)
+                if (S1 == false && S2 == false)
+                {
+                    table17.Rows[4].Delete();
+                    //if (COMKITCHEN == false)
+                    //{
+                    //    table17.Rows[1].Delete();
+                    //}
+                }
+                if (R1 == false && R2 == false && A1 == false && A2 == false && A3 == false && B == false)
                 {
                     table17.Rows[3].Delete();
                     //if (COMKITCHEN == false)
@@ -643,14 +647,8 @@ namespace findandreplacenarr
                     //}
                     //}
                 }
-                else if (S1 == true || S2 == true)
-                {
-                    table17.Rows[2].Delete();
-                    //if (COMKITCHEN == false)
-                    //{
-                    //    table17.Rows[1].Delete();
-                    //}
-                }
+
+               
                 //ELEVATOR SECTION
 
                 //STAIR SECTION
@@ -678,12 +676,13 @@ namespace findandreplacenarr
 
                     //EMERGENCY POWER SECTION
                     this.FindAndReplace(wordApp, "R1R2EMERGENCYPOWER", "An 8-hour fuel supply shall be provided on life safety equipment within the building. It is noted that it is common practice to include the following systems: domestic water pumps; jockey pumps; telephone and security systems.");
-                    if (BLDGBOX.SelectedItem.ToString() == "City of Miami" || FIREBOX.SelectedItem.ToString() == "City of Miami")
-                    {
-                        this.FindAndReplace(wordApp, "R1R2EMERGENCYPOWERCOM", "In the City of Miami, the fire department will require a 24-hour fuel supply for emergency power.");
-                    }
+                    //if (BLDGBOX.SelectedItem.ToString() == "City of Miami" || FIREBOX.SelectedItem.ToString() == "City of Miami")
+                    //{
+                        //this.FindAndReplace(wordApp, "R1R2EMERGENCYPOWERCOM", "In the City of Miami, the fire department will require a 24-hour fuel supply for emergency power.");
+                    //}
 
                 }
+                /*
 
                 //SITE ACCESS - IF MIAMI DADE
                 if (FIREBOX.SelectedItem.ToString() == "Miami Dade")
