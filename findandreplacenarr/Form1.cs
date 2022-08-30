@@ -299,6 +299,7 @@ namespace findandreplacenarr
                 S1 = BuildingOccupancyListBox.GetItemChecked(9);
                 S2 = BuildingOccupancyListBox.GetItemChecked(10);
 
+                
                 //PARAGRAGPH REPLACE PER OCCUPANCY
 
                 if ((A1 == true || A2 == true || A3 == true) && R1 == true)
@@ -322,7 +323,7 @@ namespace findandreplacenarr
                 {
                     this.FindAndReplace(wordApp, "FireR2", "Dwelling units must be separated from adjacent dwelling units by ½-hr fire barriers in accordance with FFPC, NFPA 101 Section 30.3.7.  The dwelling unit separation in Section FBC Section 708 is 1-hour fire partition.  ");
                 }
-
+                
                 //I3 Partition
                 if (I1 == true || I3 == true)
                 {
@@ -335,56 +336,55 @@ namespace findandreplacenarr
                 else
                 {
                     this.FindAndReplace(wordApp, "I1I3PARTITION", "DELETE");
-                }
-
+                }                              
+                 
                 // Table 1 Editing per Occupancy Input
                 Microsoft.Office.Interop.Word.Table table1 = myWordDoc.Tables[1];
                 if (S2 == false)
                 {
-                    table1.Rows[11].Delete();
+                    table1.Rows[12].Delete();
                 }
                 if (S1 == false)
                 {
-                    table1.Rows[10].Delete();
+                    table1.Rows[11].Delete();
                 }
                 if (I3 == false)
                 {
-                    table1.Rows[9].Delete();
+                    table1.Rows[10].Delete();
                 }
                 if (I1 == false)
                 {
-                    table1.Rows[8].Delete();
+                    table1.Rows[9].Delete();
                 }
                 if (R2 == false)
                 {
-                    table1.Rows[7].Delete();
+                    table1.Rows[8].Delete();
                 }
                 if (R1 == false)
                 {
-                    table1.Rows[6].Delete();
+                    table1.Rows[7].Delete();
                 }
                 if (M == false)
                 {
-                    table1.Rows[5].Delete();
+                    table1.Rows[6].Delete();
                 }
                 if (B == false)
                 {
-                    table1.Rows[4].Delete();
+                    table1.Rows[5].Delete();
                 }
                 if (A3 == false)
                 {
-                    table1.Rows[3].Delete();
+                    table1.Rows[4].Delete();
                 }
                 if (A2 == false)
                 {
-                    table1.Rows[2].Delete();
+                    table1.Rows[3].Delete();
                 }
                 if (A1 == false)
                 {
-                    table1.Rows[1].Delete();
-                }
-
-                //-----------------------------------------------------------------How do these work?--------------------------------------------------------------------
+                    table1.Rows[2].Delete();
+                }               
+                
                 //Table 8 Fire rating of spaces
                 Microsoft.Office.Interop.Word.Table table8 = myWordDoc.Tables[8];
                 if (R1 == false && R2 == false)
@@ -393,119 +393,170 @@ namespace findandreplacenarr
                     table8.Rows[8].Delete();
 
                 }
-
+                
                 // Table 10 Editing per Occupancy Input
                 Microsoft.Office.Interop.Word.Table table10 = myWordDoc.Tables[10];
 
                 if (S1 == false || S2 == false)
                 {
-                    table10.Rows[8].Delete();
-                }
+                    table10.Rows[9].Delete();
+                }                
                 if (M == false)
                 {
-                    table10.Rows[7].Delete();
+                    table10.Rows[8].Delete();
                 }
                 if (R1 == false)
                 {
-                    table10.Rows[6].Delete();
+                    table10.Rows[7].Delete();
                 }
                 if (R2 == false)
                 {
-                    table10.Rows[5].Delete();
+                    table10.Rows[6].Delete();
                 }
 
                 if (I3 == false)
                 {
-                    table10.Rows[4].Delete();
+                    table10.Rows[5].Delete();
                 }
                 if (I1 == false)
                 {
-                    table10.Rows[3].Delete();
+                    table10.Rows[4].Delete();
                 }
                 if (B == false)
                 {
-                    table10.Rows[2].Delete();
+                    table10.Rows[3].Delete();
                 }
                 if (A1 == false && A2 == false && A3 == false)
                 {
-                    table10.Rows[1].Delete();
-                }
-
+                    table10.Rows[2].Delete();
+                }           
 
                 //Table 11 editing
                 Microsoft.Office.Interop.Word.Table table11 = myWordDoc.Tables[11];
                 if (S2 == false)
                 {
-                    table11.Rows[9].Delete();
+                    table11.Rows[10].Delete();
                 }
                 if (S1 == false)
                 {
-                    table11.Rows[8].Delete();
+                    table11.Rows[9].Delete();
                 }
                 if (R2 == false)
                 {
-                    table11.Rows[7].Delete();
+                    table11.Rows[8].Delete();
                 }
 
                 if (R1 == false)
                 {
-                    table11.Rows[6].Delete();
+                    table11.Rows[7].Delete();
                 }
                 if (M == false)
                 {
-                    table11.Rows[5].Delete();
+                    table11.Rows[6].Delete();
                 }
                 if (I3 == false)
                 {
-                    table11.Rows[4].Delete();
+                    table11.Rows[5].Delete();
                 }
                 if (I1 == false)
                 {
-                    table11.Rows[3].Delete();
+                    table11.Rows[4].Delete();
                 }
                 if (B == false)
                 {
-                    table11.Rows[2].Delete();
+                    table11.Rows[3].Delete();
                 }
                 if (A1 == false && A2 == false && A3 == false)
                 {
-                    table11.Rows[1].Delete();
+                    table11.Rows[2].Delete();
                 }
-                /*
+
                 //TABLE 13 EDITING ------------------------------------------------------------------------------------------------------
                 Microsoft.Office.Interop.Word.Table table13 = myWordDoc.Tables[13];
                 if (A1 == false && A2 == false && A3 == false)
                 {
-                    table13.Rows[20].Delete();
-                    table13.Rows[18].Delete();
-                    table13.Rows[16].Delete();
-                    table13.Rows[10 - 12].Delete();
-                    table13.Rows[1 - 6].Delete();
+                    table13.Rows[22].Delete();
                 }
-                if (B == false)
-                {
-                    table13.Rows[15].Delete();
-                }
-
                 if (R1 == false && R2 == false)
                 {
-                    table13.Rows[19].Delete();
+                    table13.Rows[21].Delete();
+                }
+                if (A1 == false && A2 == false && A3 == false)
+                {
+                    table13.Rows[20].Delete();
                 }
                 if (I1 == false && I3 == false)
                 {
-                    table13.Rows[5].Delete();
-                    table13.Rows[7 - 10].Delete();
+                    table13.Rows[19].Delete();
                 }
                 if (S2 == false)
                 {
+                    table13.Rows[18].Delete();
+                }
+                if (A1 == false && A2 == false && A3 == false)
+                {
                     table13.Rows[17].Delete();
+                }
+                if (B == false)
+                {
+                    table13.Rows[16].Delete();
                 }
                 if (M == false)
                 {
+                    table13.Rows[14].Delete();
+                }
+                if (A1 == false && A2 == false && A3 == false)
+                {
                     table13.Rows[13].Delete();
                 }
-                */
+                if (A1 == false && A2 == false && A3 == false)
+                {
+                    table13.Rows[12].Delete();
+                }
+                if (A1 == false && A2 == false && A3 == false)
+                {
+                    table13.Rows[11].Delete();
+                }
+                if (I1 == false && I3 == false)
+                {
+                    table13.Rows[10].Delete();
+                }
+                if (I1 == false && I3 == false)
+                {
+                    table13.Rows[9].Delete();
+                }
+                if (I1 == false && I3 == false)
+                {
+                    table13.Rows[8].Delete();
+                }
+                if (A1 == false && A2 == false && A3 == false)
+                {
+                    table13.Rows[7].Delete();
+                }
+                if (I1 == false && I3 == false)
+                {
+                    table13.Rows[6].Delete();
+                }
+                if (A1 == false && A2 == false && A3 == false)
+                {
+                    table13.Rows[5].Delete();
+                }
+                if (A1 == false && A2 == false && A3 == false)
+                {
+                    table13.Rows[4].Delete();
+                }
+                if (A1 == false && A2 == false && A3 == false)
+                {
+                    table13.Rows[3].Delete();
+                }
+                if (A1 == false && A2 == false && A3 == false)
+                {
+                    table13.Rows[2].Delete();
+                }
 
+                /*
+
+                
                 //TABLE 14 EDITING
                 Microsoft.Office.Interop.Word.Table table14 = myWordDoc.Tables[14];
 
@@ -1099,43 +1150,13 @@ namespace findandreplacenarr
                     //Set, find and replace BUILDTYPE
                     buildingTypeHeight = "Type IIB";
 
-                    /*
-                    this.FindAndReplace(wordApp, "BUILDTYPE", buildingType);
-
-                    //Delete columns that aren't IIB
-                    Microsoft.Office.Interop.Word.Table table2 = myWordDoc.Tables[2];
-                    for (int i = 0; i < 3; i++)
-                    {
-
-                        table2.Columns[2].Delete();
-                    }
-
-                    //Delete the other table
-                    Microsoft.Office.Interop.Word.Table table2AndAHalf = myWordDoc.Tables[3];
-                    table2AndAHalf.Delete();
-                    */
-
                 }
                 else if (intBuildingHeight > 75 && intBuildingHeight <= 85)
                 {
                     //Set, find and replace BUILDTYPE
                     buildingTypeHeight = "Type IIA";
 
-                    /*
-                    this.FindAndReplace(wordApp, "BUILDTYPE", buildingType);
 
-                    //Delete columns that aren't IIA
-                    Microsoft.Office.Interop.Word.Table table2 = myWordDoc.Tables[2];
-                    table2.Columns[5].Delete();
-                    for (int i = 0; i < 2; i++)
-                    {
-                        table2.Columns[2].Delete();
-                    }
-
-                    //Delete the other table
-                    Microsoft.Office.Interop.Word.Table table2AndAHalf = myWordDoc.Tables[3];
-                    table2AndAHalf.Delete();
-                    */
 
                 }
                 else if (intBuildingHeight > 85 && intBuildingHeight <= 180)
@@ -1146,25 +1167,6 @@ namespace findandreplacenarr
                         //Set, find and replace BUILDTYPE
                         buildingTypeHeight = "Type IIA";
 
-                        /*
-                        this.FindAndReplace(wordApp, "BUILDTYPE", buildingType);
-
-                        //Delete columns that aren't IIA
-                        Microsoft.Office.Interop.Word.Table table2 = myWordDoc.Tables[2];
-                        table2.Columns[5].Delete();
-                        for (int i = 0; i < 2; i++)
-                        {
-                            table2.Columns[2].Delete();
-                        }
-
-                        //Change Primary Column
-                        Microsoft.Office.Interop.Word.Cell primColChange = table2.Cell(3, 2);
-                        primColChange.Range.Text = "2";
-
-                        //Delete the other table
-                        Microsoft.Office.Interop.Word.Table table2AndAHalf = myWordDoc.Tables[3];
-                        table2AndAHalf.Delete();
-                        */
 
                     }
                     else
@@ -1172,53 +1174,11 @@ namespace findandreplacenarr
                         //Set, find and replace BUILDTYPE
                         buildingTypeHeight = "Type IB";
 
-                        /*
-                        this.FindAndReplace(wordApp, "BUILDTYPE", buildingType);
-
-                        //Delete columns that aren't IB
-                        Microsoft.Office.Interop.Word.Table table2 = myWordDoc.Tables[2];
-                        table2.Columns[5].Delete();
-                        table2.Columns[4].Delete();
-                        table2.Columns[2].Delete();
-
-                        //Delete the other table
-                        Microsoft.Office.Interop.Word.Table table2AndAHalf = myWordDoc.Tables[3];
-                        table2AndAHalf.Delete();
-                        */
-
                     }
 
                 }
                 else if (intBuildingHeight > 180)
                 {
-
-                    //if (intBuildingHeight <= 420)
-                    //{
-                    //Set, find and replace BUILDTYPE
-                    //buildingTypeHeight = "Type IA Reduced";
-                    /*
-                    this.FindAndReplace(wordApp, "BUILDTYPE", buildingType);
-
-                    //Delete columns that aren't IB
-                    Microsoft.Office.Interop.Word.Table table2 = myWordDoc.Tables[2];
-                    table2.Columns[5].Delete();
-                    table2.Columns[4].Delete();
-                    table2.Columns[2].Delete();
-
-                    //Change Primary Column
-                    Microsoft.Office.Interop.Word.Cell primColChange = table2.Cell(3, 2);
-                    primColChange.Range.Text = "3";
-
-                    //Change Building Element Header
-                    Microsoft.Office.Interop.Word.Cell buildElemChange = table2.Cell(1, 2);
-                    buildElemChange.Range.Text = "Type IA Reduced";
-
-                    //Delete the other table
-                    Microsoft.Office.Interop.Word.Table table2AndAHalf = myWordDoc.Tables[3];
-                    table2AndAHalf.Delete();
-                    */
-
-                    //}
                     buildingTypeHeight = "Type IA";
                 }
 
@@ -1489,17 +1449,17 @@ namespace findandreplacenarr
                         table18.Delete();
                     }
 
-                    Microsoft.Office.Interop.Word.Table table2AndAHalf = myWordDoc.Tables[3];
-                    table2AndAHalf.Delete();
-                }
 
+                }
+                
+                */
             }
         }
 
 
             private void button1_Click(object sender, EventArgs e)
             {
-                CreateWordDocument(@"C:\Users\alexa\Documents\SLS\auto narr\findandreplacenarr\Narrative Template.docx", @"C:\Users\alexa\Downloads\DDMMYY_SLS XXXX_Project Name_FPLS Narrative_7th Edit. Code_Template 2020 output.docx");
+                CreateWordDocument(@"C:\Users\Owner\Desktop\SLS\SLSFindReplace\Narrative Template.docx", @"C:\Users\alexa\Downloads\DDMMYY_SLS XXXX_Project Name_FPLS Narrative_7th Edit. Code_Template 2020 output.docx");
             }
 
             private void label1_Click_1(object sender, EventArgs e)
