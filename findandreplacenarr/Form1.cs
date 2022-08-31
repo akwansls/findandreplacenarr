@@ -1315,7 +1315,7 @@ namespace findandreplacenarr
 
                 }
 
-                /*
+                
                 //Fire Separation Distance North
                 FSDFindAndReplace("NFSD", "NFSDRating", "NFSDOpening", int.Parse(NFSDInput.Text), wordApp, NFSDOccupancy.GetItemText(NFSDOccupancy.SelectedItem), buildingType);
                 //Fire Separation Distance South
@@ -1330,7 +1330,7 @@ namespace findandreplacenarr
                 FindTextAndReplaceImage(wordApp, myWordDoc, "SEWRPIC", SFSDImage.ImageLocation);
                 FindTextAndReplaceImage(wordApp, myWordDoc, "EEWRPIC", EFSDImage.ImageLocation);
                 FindTextAndReplaceImage(wordApp, myWordDoc, "WEWRPIC", WFSDImage.ImageLocation);
-                */
+                
 
                 //Start vertical opening section of narrative
                 if (isVO.Checked)
