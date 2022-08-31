@@ -216,19 +216,6 @@ namespace findandreplacenarr
 
                 myWordDoc.Activate();
 
-
-                //find and replace
-                this.FindAndReplace(wordApp, "PNAME", ProjectNameInput.Text);
-                this.FindAndReplace(wordApp, "PADDRESS", ProjectAddressInput.Text);
-                this.FindAndReplace(wordApp, "PCITY", ProjectCityInput.Text);
-                this.FindAndReplace(wordApp, "PSTATE", ProjectStateInput.Text);
-                this.FindAndReplace(wordApp, "PZIPCODE", ProjectZipcodeInput.Text);
-                this.FindAndReplace(wordApp, "ARCH", AccountNameInput.Text);
-                this.FindAndReplace(wordApp, "ARCHADD", AccountAddressInput.Text);
-                this.FindAndReplace(wordApp, "ARCHZIP", AccountZipcodeInput.Text);
-                this.FindAndReplace(wordApp, "PNUMBER", ProjectNumberInput.Text);
-                this.FindAndReplace(wordApp, "DATE", DateInput.Text);
-
                 string buildingTypeHeight = null;
                 bool VOA = false;
                 bool VOB = false;
@@ -273,7 +260,7 @@ namespace findandreplacenarr
                     VOS = true;
                 }
 
-
+                
                 int intBuildingHeight = int.Parse(BuildingHeightInput.Text);
 
                 bool A1 = false;
@@ -586,47 +573,22 @@ namespace findandreplacenarr
                 {
                     table14.Rows[2].Delete();
                 }
-                
-                //TABLE 15 AND 16 EDITING
 
-                Microsoft.Office.Interop.Word.Table table15 = myWordDoc.Tables[15];
-                Microsoft.Office.Interop.Word.Table table16 = myWordDoc.Tables[16];
-                //if (isEmergencyVoiceSystem.Checked && intBuildingHeight >= 75 && isSprinklered.Checked)
-                //{
-                    //Delete Table 15 ------------------------------
-                    //table15.Delete();
-                    //if (I1 == true || I3 == true)
-                    //{
-                        //table16.Rows[5].Delete();
-                        //table16.Rows[4].Delete();
-                        //table16.Rows[2].Delete();
-                    //}
-                    //else
-                    //{
-                        //table16.Rows[5].Delete();
-                        //table16.Rows[4].Delete();
-                        //table16.Rows[3].Delete();
-                    //}                  
-                //}                
-                //else
-                //{
-                    //Delete Table 16 -------------------------------
-                    //table16.Delete();
-                    //if (I1 == true || I3 == true)
-                    //{
-                        //table15.Rows[5].Delete();
-                        //table15.Rows[3].Delete();
-                        //table15.Rows[2].Delete();
+                Microsoft.Office.Interop.Word.Table table18 = myWordDoc.Tables[18];
+                //LOW LEVEL EXIT SIGNAGE
+                if (R1 == true)
+                {
+                    this.FindAndReplace(wordApp, "LOWEXIT", "NOTE:   FBC Section 1013.2 requires floor-level exit signs in all R-1 (Hotel) Occupancies.  The bottom of the sign shall not be less than 10 inches and no more than 12 inches above the floor.  ");
+                    this.FindAndReplace(wordApp, "LOWEXIT2", "The sign shall be flush mounted to the door or wall.  The edge of the sign shall be within 4 inches of the door frame on the latch side.");
 
-                    //}
-                    //else
-                    //{
-                        //table15.Rows[5].Delete();
-                        //table15.Rows[4].Delete();
-                        //table15.Rows[3].Delete();
-                    //}
-                //}
-               
+                    //FIRE ALARM SECTION HOTEL
+                    this.FindAndReplace(wordApp, "HOTELFA", "In Hotel (R-1) occupancies, a certain number of rooms must be provided with visible alarms depending on the total number of sleeping rooms in the hotel in accordance with FBC Table 907.5.2.3.2.");
+                }
+                else
+                {
+                    table18.Delete();
+                }
+
                 //TABLE 17 FIRE EXTINGUISHERS
                 Microsoft.Office.Interop.Word.Table table17 = myWordDoc.Tables[17];
                 if (S1 == false && S2 == false)
@@ -647,6 +609,48 @@ namespace findandreplacenarr
                     //}
                     //}
                 }
+
+                //TABLE 15 AND 16 EDITING
+
+                Microsoft.Office.Interop.Word.Table table15 = myWordDoc.Tables[15];
+                Microsoft.Office.Interop.Word.Table table16 = myWordDoc.Tables[16];
+                if (isEmergencyVoiceSystem.Checked && intBuildingHeight >= 75 && isSprinklered.Checked)
+                {
+                    //Delete Table 15 ------------------------------
+                    table15.Delete();
+                    //if (I1 == true || I3 == true)
+                    //{
+                        //table16.Rows[5].Delete();
+                        //table16.Rows[4].Delete();
+                        //table16.Rows[2].Delete();
+                    //}
+                    //else
+                    //{
+                        //table16.Rows[5].Delete();
+                        //table16.Rows[4].Delete();
+                        //table16.Rows[3].Delete();
+                    //}                  
+                }                
+                else
+                {
+                    //Delete Table 16 -------------------------------
+                    table16.Delete();
+                    //if (I1 == true || I3 == true)
+                    //{
+                        //table15.Rows[5].Delete();
+                        //table15.Rows[3].Delete();
+                        //table15.Rows[2].Delete();
+
+                    //}
+                    //else
+                    //{
+                        //table15.Rows[5].Delete();
+                        //table15.Rows[4].Delete();
+                        //table15.Rows[3].Delete();
+                    //}
+                }
+               
+
 
                
                 //ELEVATOR SECTION
@@ -694,9 +698,12 @@ namespace findandreplacenarr
                     this.FindAndReplace(wordApp, "MiamiDadeSite4", "and slopes in a project must be able to accommodate a truck with dimensions as follows: 47 feet overall length, 36 feet bumper to bump, and 256 inches wheelbase length.");
                 }
                 
-
                 //SMOKE DETECTION SECTION -----------------------------------------
-
+                if (I1 == true)
+                {
+                    this.FindAndReplace(wordApp, "SMOKEDETECTION", "In Group I-1 occupancies, an automatic smoke detection system shall be installed in corridors, areas open to corridors and habitable spaces other than sleeping units and kitchens (FBC §907.2.6.1 and FFPC §32.3.3.4.8.1). ");
+                    this.FindAndReplace(wordApp, "SMOKEDETECTION2", "The system shall be activated to initiate an alarm that is audible in all sleeping areas.");
+                }
 
                 //SMOKE REMOVAL SECTION
                 if (intBuildingHeight >= 75)
@@ -814,6 +821,38 @@ namespace findandreplacenarr
                 }
                 //add FCC PICTURE --------------------------------------------------------------ADD PICTURE
 
+                //FSAESECTION
+                if (intBuildingHeight >= 120)
+                {
+                    this.FindAndReplace(wordApp, "FSAESECTION", "The highest occupied floor is located more than 120-feet above the lowest level of fire department vehicle access.  Therefore, two fire service access elevators in accordance with ");
+                    this.FindAndReplace(wordApp, "FSAESECTION1", "FBC Section 403.6.1 shall be provided. The fire service access elevator is required to include the following:");
+                    this.FindAndReplace(wordApp, "FSAESECTION2", "Floors:  The elevator must serve every floor.");
+                    this.FindAndReplace(wordApp, "FSAESECTION3", "Phase I Recall:  Actuation of any building fire alarm initiating device shall initiate Phase I Recall for the fire service access elevators.");
+                    this.FindAndReplace(wordApp, "FSAESECTION4", "Hoist-way Lighting: FBC Section 3007.5.2 requires that the entire height of the fire-fighter service elevator hoist-way be illuminated at not less than one (1) foot-candle as measured from the top of the elevator car.");
+                    this.FindAndReplace(wordApp, "FSAESECTION5", "Fire Service Access Elevator Lobby: ");
+                    this.FindAndReplace(wordApp, "FSAESECTION6", "Option #1(lobby approach): FBC Section 3007.6.4 requires that a 150 ft2 lobby with a minimum dimension of 8-feet and with a direct connection to a stair be provided on all floors except the street floor.  ");
+                    this.FindAndReplace(wordApp, "FSAESECTION7", "The stair enclosure must have access to the floor without passing through the lobby. The lobby must be constructed as a smoke barrier having a minimum 1-hour fire resistance rating.  ");
+                    this.FindAndReplace(wordApp, "FSAESECTION8", "Doorways must be protected with a 45-minute fire door assembly that also comply with smoke and draft control requirements (UL 1784).");
+                    this.FindAndReplace(wordApp, "FSAESECTION9", "Option #2 (6-ft corridor exception): FBC Section 3007.6 Exception 2 permits the designer to substitute the lobby requirements above with a corridor that is 6 feet wide throughout.  The corridor must have ");
+                    this.FindAndReplace(wordApp, "FSAESECTION10", "a 1-hour fire resistance rating with 45-minute fire doors.  The corridor must be protected with a smoke control system.");
+                    this.FindAndReplace(wordApp, "FSAESECTION11", "Option #3 (protected path): FBC 3007.6.1 exception permits the designer to provide a protected path from the lobby to the stair, provided that the level of fire protection is not less than the elevator lobby ");
+                    this.FindAndReplace(wordApp, "FSAESECTION12", "enclosure. The protected path shall be separated from the enclosed elevator lobby through an opening protected by a smoke draft control assembly in accordance with FBC section 7.16.5.3.");
+                    this.FindAndReplace(wordApp, "FSAESECTION13", "NOTE:  The Fire Marshal will not approve utility rooms, electrical rooms, trash rooms, or any other similar rooms opening into the FSA elevator lobby. ");
+                    this.FindAndReplace(wordApp, "FSAESECTION14", "Elevator Monitoring System: FBC Section 3007.7 requires that the fire service access elevator be continuously monitored at the fire command center by a standard emergency service interface system meeting the requirements of NFPA 72. ");
+                    this.FindAndReplace(wordApp, "FSAESECTION15", "Protection of Wiring or Cables: FBC Section 3007.8 requires that wires or cables located outside the hoist-way/machine room that provide normal and standby power, control signals, communication with the car, ");
+                    this.FindAndReplace(wordApp, "FSAESECTION16", "lighting, heating, air conditioning, ventilation, and fire detection systems to the fire service access elevator shall be protected by 2-hour fire resistance rated construction or by circuit integrity cable with a minimum rating of 2 hours. ");
+                    this.FindAndReplace(wordApp, "FSAESECTION17", "Elevator Size: FBC Section 3002.4 requires that the elevator car be of such a size to accommodate an ambulance stretcher 24” x 76” with not less than 5-inch radius corners, in the horizontal, open position. ");
+                    this.FindAndReplace(wordApp, "FSAESECTION18", "Sprinkler System:  Sprinkler heads shall not be installed in the machine room, elevator machine spaces, and hoist-way of the fire service access elevator. An approved method shall be ");
+                    this.FindAndReplace(wordApp, "FSAESECTION19", "installed that prevents water from infiltrating into the hoist-way due to operation of the sprinkler heads outside the lobby.  ");
+                    this.FindAndReplace(wordApp, "FSAESECTION20", "Signage:  A pictorial symbol designating which elevators are fire service access elevators shall be installed in the hoist-way door frame as detailed in FBC Section 3007.6.5.");
+                    this.FindAndReplace(wordApp, "FSAESECTION21", "Electrical Power: The follwing features shall be supplied by both normal and standby power (Type 60/Class2/Level1):");
+                    this.FindAndReplace(wordApp, "FSAESECTION22", "Elevator equipment");
+                    this.FindAndReplace(wordApp, "FSAESECTION23", "Elevator hoist-way lighting");
+                    this.FindAndReplace(wordApp, "FSAESECTION24", "Elevator machine room ventilation and cooling equipment");
+                    this.FindAndReplace(wordApp, "FSAESECTION25", "Elevator controller cooling equipment");
+                    this.FindAndReplace(wordApp, "FSAESECTION26", "NOTE:  FBC Section 3007.6 Exception 2 permits the designer to substitute the lobby requirements above with a corridor that is 6 feet wide throughout.  The corridor must have a 1-hour fire resistance ");
+                    this.FindAndReplace(wordApp, "FSAESECTION27", "rating with 45-minute fire doors.  The corridor must be protected with a smoke control system.");
+                }
                 
                 //MONITORING SECTION
                 if (intBuildingHeight >= 120)
@@ -1276,7 +1315,7 @@ namespace findandreplacenarr
 
                 }
 
-                
+                /*
                 //Fire Separation Distance North
                 FSDFindAndReplace("NFSD", "NFSDRating", "NFSDOpening", int.Parse(NFSDInput.Text), wordApp, NFSDOccupancy.GetItemText(NFSDOccupancy.SelectedItem), buildingType);
                 //Fire Separation Distance South
@@ -1291,20 +1330,22 @@ namespace findandreplacenarr
                 FindTextAndReplaceImage(wordApp, myWordDoc, "SEWRPIC", SFSDImage.ImageLocation);
                 FindTextAndReplaceImage(wordApp, myWordDoc, "EEWRPIC", EFSDImage.ImageLocation);
                 FindTextAndReplaceImage(wordApp, myWordDoc, "WEWRPIC", WFSDImage.ImageLocation);
-                /*
+                */
 
                 //Start vertical opening section of narrative
                 if (isVO.Checked)
                 {
                     if (isMezzanine.Checked)
                     {
-                        this.FindAndReplace(wordApp, "MEZZSECTION", "Mezzanines within the project are designed to comply with the requirements of the FBC and the FFPC. A mezzanine or mezzanines must comply with FBC Section 505.2");
-                        this.FindAndReplace(wordApp, "MEZZSECTION1", "and shall be considered a portion of the story below. Such mezzanines shall not contribute to either the building area or number of stories as regulated by Section 503.1. The area of the mezzanine shall be included in determining the fire area.");
-                        this.FindAndReplace(wordApp, "MEZZSECTION2", "The clear height above and below the mezzanine floor construction shall be not less than 7 feet. The aggregate area of a mezzanine or mezzanines within a room shall be not greater than one - third");
-                        this.FindAndReplace(wordApp, "MEZZSECTION3", " of the floor area of that room or space in which they are located. The enclosed portion of a room shall not be included in a determination of the floor area of the room in which the mezzanine is located. ");
-                        this.FindAndReplace(wordApp, "MEZZSECTION4", "In determining the allowable mezzanine area, the area of the mezzanine shall not be included in the floor area of the room. (FBC Section 505.2.1). The floor area of a mezzanine, or the aggregate floor area of ");
-                        this.FindAndReplace(wordApp, "MEZZSECTION5", "multiple mezzanines, shall not exceed one - half of the floor area of the room or story in which the mezzanines are located; otherwise, such mezzanine or aggregated mezzanines shall be treated as floors ");
-                        this.FindAndReplace(wordApp, "MEZZSECTION6", "(FFPC, NFPA 101 Section 37.1.2.2.3). The means of egress for mezzanines shall comply with FBC Section 505.2.2 and FFPC, NFPA 101 Section 12.2.4.5.");
+                        this.FindAndReplace(wordApp, "MEZZSECTION", "Mezzanines within the  project are designed to comply with the requirements of the FBC and the FFPC. A mezzanine or mezzanines must comply with FBC Section 505.2.  and shall be considered a portion of the story below. ");
+                        this.FindAndReplace(wordApp, "MEZZSECTION1", "Such mezzanines shall not contribute to either the building area or number of stories as regulated by Section 503.1. The area of the mezzanine shall be included in determining the fire area. ");
+                        this.FindAndReplace(wordApp, "MEZZSECTION2", "The clear height above and below the mezzanine floor construction shall be not less than 7 feet.");
+                        this.FindAndReplace(wordApp, "MEZZSECTION3", "The aggregate area of a mezzanine or mezzanines within a room shall be not greater than one-third of the floor area of that room or space in which they are located. The enclosed portion of a room shall not be included in ");
+                        this.FindAndReplace(wordApp, "MEZZSECTION4", "a determination of the floor area of the room in which the mezzanine is located. In determining the allowable mezzanine area, the area of the mezzanine shall not be included in the floor area of the room. (FBC Section 505.2.1). ");
+                        this.FindAndReplace(wordApp, "MEZZSECTION5", "The floor area of a mezzanine, or the aggregate floor area of multiple mezzanines, shall not exceed one-half of the floor area of the room or story in which the mezzanines are located; otherwise, ");
+                        this.FindAndReplace(wordApp, "MEZZSECTION6", "such mezzanine or aggregated mezzanines shall be treated as floors (FFPC, NFPA 101 Section 37.1.2.2.3)");
+                        this.FindAndReplace(wordApp, "MEZZSECTION7", "The means of egress for mezzanines shall comply with FBC Section 505.2.2 and FFPC, NFPA 101 Section 12.2.4.5.");
+                        //FindTextAndReplaceImage(wordApp, myWordDoc, "MEZZPIC", MezzImage.ImageLocation);
                     }
                     else if (isEscalator.Checked)
                     {
@@ -1417,29 +1458,52 @@ namespace findandreplacenarr
                                     this.FindAndReplace(wordApp, "VO5", "(5) For new construction, such openings shall not connect more than four contiguous stories, unless otherwise permitted by Chapters 11 through 43.");
                                     this.FindAndReplace(wordApp, "VO6", "");
 
-                                }
+                                }                           
+                            }
+                            else
+                            {
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION", "The atrium must comply with FBC Section 404 and FFPC, NFPA 101 Section 8.6.7.  The FDPT Fire Department may consider a double-height ceiling as an atrium.  ");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION2", "The atrium requirements in FFPC and FBC are as follows:");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION3", "The atrium must be separated from the adjacent spaces by fire barriers with not less than a 1-hour fire resistance rating. ");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION4", "Any number of levels shall be permitted to open directly to the atrium without enclosure based on a smoke control engineering analysis.");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION5", "Glass walls and inoperable windows shall be permitted in lieu of the fire barriers where all the following are met:");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION6", "Automatic sprinklers are spaced on both sides of the glass wall at 6-ft. intervals.");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION7", "The sprinklers are located between 4 inches to 12 inches away from the glass.");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION8", "The glass wall is of tempered, wired, or laminated glass held in place by a gasket framing system to deflect without breaking the glass before sprinklers operate.");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION9", "The sprinkler heads are not required on the atrium side of the glass wall where there is no walkway or other floor area on the atrium side above main floor level.");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION10", "Doors in the glass walls are of glass or other material that resists the passage of smoke.");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION11", "Doors in the glass walls are self-closing or automatic-closing upon detection of smoke.");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION12", "The glass is continuous vertically, without horizontal mullions, window treatments, or other obstructions that would interfere with the wetting of the entire glass surface.");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION13", "Access to exits is permitted to be within the atrium.  Exit discharge is permitted to be within the atrium.");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION14", "The occupancy within the atrium meets the specification for classification as low or ordinary hazard contents.");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION15", "The entire building is protected by approved, supervised automatic sprinkler system.");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION16", "An engineering analysis is performed that demonstrates that the building is designed to keep the smoke layer 6 ft. above the highest floor level of ");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION17", "exit access open to the atrium for a period of 20 minutes or 1.5 times the calculated egress time, whichever is greater.");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION18", "The smoke control system described above is activated by sprinkler system and manual controls accessible to the fire department.");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION19", "Smoke control system is required and shall be connected to standby power");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION20", "The interior finish of walls and ceiling of the atrium shall not be less than Class B with no reduction in class for sprinkler protection (FBC).");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION21", "In floors above the lowest level, the portion of exit access travel distance within the atrium space shall be not greater than 200 feet (FBC).");
+
                             }
                         }
                     }
-
-                    Microsoft.Office.Interop.Word.Table table18 = myWordDoc.Tables[18];
-                    //LOW LEVEL EXIT SIGNAGE
-                    if (R1 == true)
-                    {
-                        this.FindAndReplace(wordApp, "LOWEXIT", "NOTE:   FBC Section 1013.2 requires floor-level exit signs in all R-1 (Hotel) Occupancies.  The bottom of the sign shall not be less than 10 inches and no more than 12 inches above the floor.  ");
-                        this.FindAndReplace(wordApp, "LOWEXIT2", "The sign shall be flush mounted to the door or wall.  The edge of the sign shall be within 4 inches of the door frame on the latch side.");
-                        //FIRE ALARM SECTION HOTEL
-                        this.FindAndReplace(wordApp, "HOTELFA", "In Hotel (R-1)occupancies, a certain number of rooms must be provided with visible alarms depending on the total number of sleeping rooms in the hotel in accordance with FBC Table 907.5.2.3.2.");
-                    }
-                    else
-                    {
-                        table18.Delete();
-                    }
-
-
+                
                 }
                 
-                */
+            
+
+                //find and replace
+                this.FindAndReplace(wordApp, "PNAME", ProjectNameInput.Text);
+                this.FindAndReplace(wordApp, "PADDRESS", ProjectAddressInput.Text);
+                this.FindAndReplace(wordApp, "PCITY", ProjectCityInput.Text);
+                this.FindAndReplace(wordApp, "PSTATE", ProjectStateInput.Text);
+                this.FindAndReplace(wordApp, "PZIPCODE", ProjectZipcodeInput.Text);
+                this.FindAndReplace(wordApp, "ARCH", AccountNameInput.Text);
+                this.FindAndReplace(wordApp, "ARCHADD", AccountAddressInput.Text);
+                this.FindAndReplace(wordApp, "ARCHZIP", AccountZipcodeInput.Text);
+                this.FindAndReplace(wordApp, "PNUMBER", ProjectNumberInput.Text);
+                this.FindAndReplace(wordApp, "DATE", DateInput.Text);
+
             }
         }
 

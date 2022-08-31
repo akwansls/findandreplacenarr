@@ -169,6 +169,8 @@
             this.isBDCOM = new System.Windows.Forms.CheckBox();
             this.isFDMD = new System.Windows.Forms.CheckBox();
             this.isFDCOM = new System.Windows.Forms.CheckBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.MezzImage = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.WFSDImage)).BeginInit();
@@ -177,6 +179,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.SFSDImage)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MezzImage)).BeginInit();
             this.SuspendLayout();
             // 
             // ProjectNameLabel
@@ -955,6 +958,8 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.button2);
+            this.panel4.Controls.Add(this.MezzImage);
             this.panel4.Controls.Add(this.isVOpening2);
             this.panel4.Controls.Add(this.isEscalator);
             this.panel4.Controls.Add(this.isMezzanine);
@@ -997,7 +1002,7 @@
             // isMezzanine
             // 
             this.isMezzanine.AutoSize = true;
-            this.isMezzanine.Location = new System.Drawing.Point(237, 74);
+            this.isMezzanine.Location = new System.Drawing.Point(140, 75);
             this.isMezzanine.Name = "isMezzanine";
             this.isMezzanine.Size = new System.Drawing.Size(77, 17);
             this.isMezzanine.TabIndex = 52;
@@ -1753,6 +1758,26 @@
             this.isFDCOM.Text = "City of Miami";
             this.isFDCOM.UseVisualStyleBackColor = true;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(219, 107);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(56, 30);
+            this.button2.TabIndex = 56;
+            this.button2.Text = "upload";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // MezzImage
+            // 
+            this.MezzImage.Location = new System.Drawing.Point(140, 106);
+            this.MezzImage.Margin = new System.Windows.Forms.Padding(2);
+            this.MezzImage.Name = "MezzImage";
+            this.MezzImage.Size = new System.Drawing.Size(75, 41);
+            this.MezzImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.MezzImage.TabIndex = 55;
+            this.MezzImage.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1780,6 +1805,7 @@
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MezzImage)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1927,6 +1953,8 @@
         private System.Windows.Forms.CheckBox isFDCOM;
         private System.Windows.Forms.CheckBox isFDMD;
         private System.Windows.Forms.CheckBox isBDCOM;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.PictureBox MezzImage;
     }
 }
 
