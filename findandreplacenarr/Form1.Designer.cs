@@ -32,7 +32,6 @@
             this.ProjectNameInput = new System.Windows.Forms.TextBox();
             this.ProjectAddressInput = new System.Windows.Forms.TextBox();
             this.ProjectAddressLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.ProjectCityInput = new System.Windows.Forms.TextBox();
             this.ProjectCityLabel = new System.Windows.Forms.Label();
             this.ProjectStateInput = new System.Windows.Forms.TextBox();
@@ -73,6 +72,9 @@
             this.occupancyClassificationInput = new System.Windows.Forms.CheckedListBox();
             this.label19 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.isFDCOM = new System.Windows.Forms.CheckBox();
+            this.isFDMD = new System.Windows.Forms.CheckBox();
+            this.isBDCOM = new System.Windows.Forms.CheckBox();
             this.DateInput = new System.Windows.Forms.TextBox();
             this.DateLabel = new System.Windows.Forms.Label();
             this.ProjectNumberInput = new System.Windows.Forms.TextBox();
@@ -95,6 +97,8 @@
             this.SFSDImage = new System.Windows.Forms.PictureBox();
             this.label21 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.MezzImage = new System.Windows.Forms.PictureBox();
             this.isVOpening2 = new System.Windows.Forms.CheckBox();
             this.isEscalator = new System.Windows.Forms.CheckBox();
             this.isMezzanine = new System.Windows.Forms.CheckBox();
@@ -166,11 +170,31 @@
             this.BuildingOccupancyListBox = new System.Windows.Forms.CheckedListBox();
             this.label29 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.isBDCOM = new System.Windows.Forms.CheckBox();
-            this.isFDMD = new System.Windows.Forms.CheckBox();
-            this.isFDCOM = new System.Windows.Forms.CheckBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.MezzImage = new System.Windows.Forms.PictureBox();
+            this.uploadREND = new System.Windows.Forms.Button();
+            this.RENDImage = new System.Windows.Forms.PictureBox();
+            this.isGarage = new System.Windows.Forms.CheckBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label65 = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
+            this.label70 = new System.Windows.Forms.Label();
+            this.label71 = new System.Windows.Forms.Label();
+            this.uploadSTAIRDISCHARGE = new System.Windows.Forms.Button();
+            this.STAIRDISCHARGEImage = new System.Windows.Forms.PictureBox();
+            this.uploadFCC = new System.Windows.Forms.Button();
+            this.FCCImage = new System.Windows.Forms.PictureBox();
+            this.uploadFP = new System.Windows.Forms.Button();
+            this.FPImage = new System.Windows.Forms.PictureBox();
+            this.uploadGENERATOR = new System.Windows.Forms.Button();
+            this.GENERATORImage = new System.Windows.Forms.PictureBox();
+            this.uploadSITEACCESS = new System.Windows.Forms.Button();
+            this.SITEACCESSImage = new System.Windows.Forms.PictureBox();
+            this.uploadFSAE = new System.Windows.Forms.Button();
+            this.FSAEImage = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.WFSDImage)).BeginInit();
@@ -178,8 +202,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.NFSDImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SFSDImage)).BeginInit();
             this.panel4.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MezzImage)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RENDImage)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.STAIRDISCHARGEImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FCCImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FPImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GENERATORImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SITEACCESSImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FSAEImage)).BeginInit();
             this.SuspendLayout();
             // 
             // ProjectNameLabel
@@ -196,7 +228,7 @@
             // ProjectNameInput
             // 
             this.ProjectNameInput.Location = new System.Drawing.Point(196, 113);
-            this.ProjectNameInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProjectNameInput.Margin = new System.Windows.Forms.Padding(2);
             this.ProjectNameInput.Name = "ProjectNameInput";
             this.ProjectNameInput.Size = new System.Drawing.Size(76, 20);
             this.ProjectNameInput.TabIndex = 1;
@@ -204,7 +236,7 @@
             // ProjectAddressInput
             // 
             this.ProjectAddressInput.Location = new System.Drawing.Point(196, 192);
-            this.ProjectAddressInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProjectAddressInput.Margin = new System.Windows.Forms.Padding(2);
             this.ProjectAddressInput.Name = "ProjectAddressInput";
             this.ProjectAddressInput.Size = new System.Drawing.Size(76, 20);
             this.ProjectAddressInput.TabIndex = 3;
@@ -219,21 +251,10 @@
             this.ProjectAddressLabel.TabIndex = 2;
             this.ProjectAddressLabel.Text = "Project Address";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(274, 388);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(60, 27);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Change";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // ProjectCityInput
             // 
             this.ProjectCityInput.Location = new System.Drawing.Point(196, 231);
-            this.ProjectCityInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProjectCityInput.Margin = new System.Windows.Forms.Padding(2);
             this.ProjectCityInput.Name = "ProjectCityInput";
             this.ProjectCityInput.Size = new System.Drawing.Size(76, 20);
             this.ProjectCityInput.TabIndex = 6;
@@ -251,7 +272,7 @@
             // ProjectStateInput
             // 
             this.ProjectStateInput.Location = new System.Drawing.Point(196, 266);
-            this.ProjectStateInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProjectStateInput.Margin = new System.Windows.Forms.Padding(2);
             this.ProjectStateInput.Name = "ProjectStateInput";
             this.ProjectStateInput.Size = new System.Drawing.Size(76, 20);
             this.ProjectStateInput.TabIndex = 8;
@@ -270,7 +291,7 @@
             // ProjectZipcodeInput
             // 
             this.ProjectZipcodeInput.Location = new System.Drawing.Point(196, 303);
-            this.ProjectZipcodeInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProjectZipcodeInput.Margin = new System.Windows.Forms.Padding(2);
             this.ProjectZipcodeInput.Name = "ProjectZipcodeInput";
             this.ProjectZipcodeInput.Size = new System.Drawing.Size(76, 20);
             this.ProjectZipcodeInput.TabIndex = 10;
@@ -312,7 +333,7 @@
             // AccountNameInput
             // 
             this.AccountNameInput.Location = new System.Drawing.Point(432, 106);
-            this.AccountNameInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AccountNameInput.Margin = new System.Windows.Forms.Padding(2);
             this.AccountNameInput.Name = "AccountNameInput";
             this.AccountNameInput.Size = new System.Drawing.Size(76, 20);
             this.AccountNameInput.TabIndex = 14;
@@ -332,7 +353,7 @@
             // AccountAddressInput
             // 
             this.AccountAddressInput.Location = new System.Drawing.Point(432, 136);
-            this.AccountAddressInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AccountAddressInput.Margin = new System.Windows.Forms.Padding(2);
             this.AccountAddressInput.Name = "AccountAddressInput";
             this.AccountAddressInput.Size = new System.Drawing.Size(76, 20);
             this.AccountAddressInput.TabIndex = 16;
@@ -350,7 +371,7 @@
             // AccountZipcodeInput
             // 
             this.AccountZipcodeInput.Location = new System.Drawing.Point(432, 170);
-            this.AccountZipcodeInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AccountZipcodeInput.Margin = new System.Windows.Forms.Padding(2);
             this.AccountZipcodeInput.Name = "AccountZipcodeInput";
             this.AccountZipcodeInput.Size = new System.Drawing.Size(76, 20);
             this.AccountZipcodeInput.TabIndex = 18;
@@ -367,8 +388,8 @@
             // 
             // BuildingHeightInput
             // 
-            this.BuildingHeightInput.Location = new System.Drawing.Point(424, 221);
-            this.BuildingHeightInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BuildingHeightInput.Location = new System.Drawing.Point(432, 203);
+            this.BuildingHeightInput.Margin = new System.Windows.Forms.Padding(2);
             this.BuildingHeightInput.Name = "BuildingHeightInput";
             this.BuildingHeightInput.Size = new System.Drawing.Size(76, 20);
             this.BuildingHeightInput.TabIndex = 20;
@@ -377,7 +398,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(340, 223);
+            this.label6.Location = new System.Drawing.Point(340, 206);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(78, 13);
@@ -389,7 +410,7 @@
             // 
             this.isSprinklered.AutoSize = true;
             this.isSprinklered.Location = new System.Drawing.Point(344, 296);
-            this.isSprinklered.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.isSprinklered.Margin = new System.Windows.Forms.Padding(2);
             this.isSprinklered.Name = "isSprinklered";
             this.isSprinklered.Size = new System.Drawing.Size(121, 17);
             this.isSprinklered.TabIndex = 21;
@@ -411,7 +432,7 @@
             // NFSDInput
             // 
             this.NFSDInput.Location = new System.Drawing.Point(163, 89);
-            this.NFSDInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NFSDInput.Margin = new System.Windows.Forms.Padding(2);
             this.NFSDInput.Name = "NFSDInput";
             this.NFSDInput.Size = new System.Drawing.Size(76, 20);
             this.NFSDInput.TabIndex = 24;
@@ -453,7 +474,7 @@
             "S-2",
             "U"});
             this.NFSDOccupancy.Location = new System.Drawing.Point(147, 118);
-            this.NFSDOccupancy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NFSDOccupancy.Margin = new System.Windows.Forms.Padding(2);
             this.NFSDOccupancy.Name = "NFSDOccupancy";
             this.NFSDOccupancy.Size = new System.Drawing.Size(92, 21);
             this.NFSDOccupancy.TabIndex = 27;
@@ -476,7 +497,7 @@
             "S-2",
             "U"});
             this.SFSDOccupancy.Location = new System.Drawing.Point(146, 353);
-            this.SFSDOccupancy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SFSDOccupancy.Margin = new System.Windows.Forms.Padding(2);
             this.SFSDOccupancy.Name = "SFSDOccupancy";
             this.SFSDOccupancy.Size = new System.Drawing.Size(92, 21);
             this.SFSDOccupancy.TabIndex = 32;
@@ -494,7 +515,7 @@
             // SFSDInput
             // 
             this.SFSDInput.Location = new System.Drawing.Point(163, 320);
-            this.SFSDInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SFSDInput.Margin = new System.Windows.Forms.Padding(2);
             this.SFSDInput.Name = "SFSDInput";
             this.SFSDInput.Size = new System.Drawing.Size(76, 20);
             this.SFSDInput.TabIndex = 30;
@@ -537,7 +558,7 @@
             "S-2",
             "U"});
             this.EFSDOccupancy.Location = new System.Drawing.Point(443, 120);
-            this.EFSDOccupancy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EFSDOccupancy.Margin = new System.Windows.Forms.Padding(2);
             this.EFSDOccupancy.Name = "EFSDOccupancy";
             this.EFSDOccupancy.Size = new System.Drawing.Size(92, 21);
             this.EFSDOccupancy.TabIndex = 37;
@@ -555,7 +576,7 @@
             // EFSDInput
             // 
             this.EFSDInput.Location = new System.Drawing.Point(459, 89);
-            this.EFSDInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EFSDInput.Margin = new System.Windows.Forms.Padding(2);
             this.EFSDInput.Name = "EFSDInput";
             this.EFSDInput.Size = new System.Drawing.Size(76, 20);
             this.EFSDInput.TabIndex = 35;
@@ -598,7 +619,7 @@
             "S-2",
             "U"});
             this.WFSDOccupancy.Location = new System.Drawing.Point(443, 353);
-            this.WFSDOccupancy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WFSDOccupancy.Margin = new System.Windows.Forms.Padding(2);
             this.WFSDOccupancy.Name = "WFSDOccupancy";
             this.WFSDOccupancy.Size = new System.Drawing.Size(92, 21);
             this.WFSDOccupancy.TabIndex = 42;
@@ -616,7 +637,7 @@
             // WFSDInput
             // 
             this.WFSDInput.Location = new System.Drawing.Point(459, 320);
-            this.WFSDInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WFSDInput.Margin = new System.Windows.Forms.Padding(2);
             this.WFSDInput.Name = "WFSDInput";
             this.WFSDInput.Size = new System.Drawing.Size(76, 20);
             this.WFSDInput.TabIndex = 40;
@@ -655,7 +676,7 @@
             "I-3",
             "S"});
             this.occupancyClassificationInput.Location = new System.Drawing.Point(15, 192);
-            this.occupancyClassificationInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.occupancyClassificationInput.Margin = new System.Windows.Forms.Padding(2);
             this.occupancyClassificationInput.Name = "occupancyClassificationInput";
             this.occupancyClassificationInput.Size = new System.Drawing.Size(108, 109);
             this.occupancyClassificationInput.TabIndex = 43;
@@ -672,6 +693,9 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.isGarage);
+            this.panel1.Controls.Add(this.uploadREND);
+            this.panel1.Controls.Add(this.RENDImage);
             this.panel1.Controls.Add(this.isFDCOM);
             this.panel1.Controls.Add(this.isFDMD);
             this.panel1.Controls.Add(this.isBDCOM);
@@ -708,15 +732,48 @@
             this.panel1.Controls.Add(this.isNONLooped);
             this.panel1.Controls.Add(this.isEmergencyVoiceSystem);
             this.panel1.Location = new System.Drawing.Point(18, 23);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(639, 464);
             this.panel1.TabIndex = 45;
             // 
+            // isFDCOM
+            // 
+            this.isFDCOM.AutoSize = true;
+            this.isFDCOM.Location = new System.Drawing.Point(188, 415);
+            this.isFDCOM.Margin = new System.Windows.Forms.Padding(2);
+            this.isFDCOM.Name = "isFDCOM";
+            this.isFDCOM.Size = new System.Drawing.Size(85, 17);
+            this.isFDCOM.TabIndex = 35;
+            this.isFDCOM.Text = "City of Miami";
+            this.isFDCOM.UseVisualStyleBackColor = true;
+            // 
+            // isFDMD
+            // 
+            this.isFDMD.AutoSize = true;
+            this.isFDMD.Location = new System.Drawing.Point(188, 394);
+            this.isFDMD.Margin = new System.Windows.Forms.Padding(2);
+            this.isFDMD.Name = "isFDMD";
+            this.isFDMD.Size = new System.Drawing.Size(82, 17);
+            this.isFDMD.TabIndex = 34;
+            this.isFDMD.Text = "Miami Dade";
+            this.isFDMD.UseVisualStyleBackColor = true;
+            // 
+            // isBDCOM
+            // 
+            this.isBDCOM.AutoSize = true;
+            this.isBDCOM.Location = new System.Drawing.Point(190, 364);
+            this.isBDCOM.Margin = new System.Windows.Forms.Padding(2);
+            this.isBDCOM.Name = "isBDCOM";
+            this.isBDCOM.Size = new System.Drawing.Size(85, 17);
+            this.isBDCOM.TabIndex = 33;
+            this.isBDCOM.Text = "City of Miami";
+            this.isBDCOM.UseVisualStyleBackColor = true;
+            // 
             // DateInput
             // 
             this.DateInput.Location = new System.Drawing.Point(68, 19);
-            this.DateInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DateInput.Margin = new System.Windows.Forms.Padding(2);
             this.DateInput.Name = "DateInput";
             this.DateInput.Size = new System.Drawing.Size(76, 20);
             this.DateInput.TabIndex = 32;
@@ -734,7 +791,7 @@
             // ProjectNumberInput
             // 
             this.ProjectNumberInput.Location = new System.Drawing.Point(196, 147);
-            this.ProjectNumberInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProjectNumberInput.Margin = new System.Windows.Forms.Padding(2);
             this.ProjectNumberInput.Name = "ProjectNumberInput";
             this.ProjectNumberInput.Size = new System.Drawing.Size(76, 20);
             this.ProjectNumberInput.TabIndex = 30;
@@ -753,7 +810,7 @@
             // 
             this.isStage.AutoSize = true;
             this.isStage.Location = new System.Drawing.Point(344, 361);
-            this.isStage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.isStage.Margin = new System.Windows.Forms.Padding(2);
             this.isStage.Name = "isStage";
             this.isStage.Size = new System.Drawing.Size(132, 17);
             this.isStage.TabIndex = 28;
@@ -764,7 +821,7 @@
             // 
             this.isBDMD.AutoSize = true;
             this.isBDMD.Location = new System.Drawing.Point(190, 343);
-            this.isBDMD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.isBDMD.Margin = new System.Windows.Forms.Padding(2);
             this.isBDMD.Name = "isBDMD";
             this.isBDMD.Size = new System.Drawing.Size(82, 17);
             this.isBDMD.TabIndex = 27;
@@ -805,8 +862,8 @@
             // isNONLooped
             // 
             this.isNONLooped.AutoSize = true;
-            this.isNONLooped.Location = new System.Drawing.Point(344, 261);
-            this.isNONLooped.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.isNONLooped.Location = new System.Drawing.Point(344, 264);
+            this.isNONLooped.Margin = new System.Windows.Forms.Padding(2);
             this.isNONLooped.Name = "isNONLooped";
             this.isNONLooped.Size = new System.Drawing.Size(166, 17);
             this.isNONLooped.TabIndex = 23;
@@ -817,7 +874,7 @@
             // 
             this.isEmergencyVoiceSystem.AutoSize = true;
             this.isEmergencyVoiceSystem.Location = new System.Drawing.Point(344, 329);
-            this.isEmergencyVoiceSystem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.isEmergencyVoiceSystem.Margin = new System.Windows.Forms.Padding(2);
             this.isEmergencyVoiceSystem.Name = "isEmergencyVoiceSystem";
             this.isEmergencyVoiceSystem.Size = new System.Drawing.Size(265, 17);
             this.isEmergencyVoiceSystem.TabIndex = 24;
@@ -857,7 +914,7 @@
             this.panel3.Controls.Add(this.SFSDOccupancy);
             this.panel3.Controls.Add(this.label14);
             this.panel3.Location = new System.Drawing.Point(20, 23);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(637, 464);
             this.panel3.TabIndex = 46;
@@ -865,7 +922,7 @@
             // uploadWFSD
             // 
             this.uploadWFSD.Location = new System.Drawing.Point(459, 396);
-            this.uploadWFSD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uploadWFSD.Margin = new System.Windows.Forms.Padding(2);
             this.uploadWFSD.Name = "uploadWFSD";
             this.uploadWFSD.Size = new System.Drawing.Size(56, 28);
             this.uploadWFSD.TabIndex = 50;
@@ -876,7 +933,7 @@
             // WFSDImage
             // 
             this.WFSDImage.Location = new System.Drawing.Point(372, 382);
-            this.WFSDImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WFSDImage.Margin = new System.Windows.Forms.Padding(2);
             this.WFSDImage.Name = "WFSDImage";
             this.WFSDImage.Size = new System.Drawing.Size(75, 41);
             this.WFSDImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -886,7 +943,7 @@
             // uploadESFD
             // 
             this.uploadESFD.Location = new System.Drawing.Point(459, 164);
-            this.uploadESFD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uploadESFD.Margin = new System.Windows.Forms.Padding(2);
             this.uploadESFD.Name = "uploadESFD";
             this.uploadESFD.Size = new System.Drawing.Size(56, 28);
             this.uploadESFD.TabIndex = 48;
@@ -897,7 +954,7 @@
             // EFSDImage
             // 
             this.EFSDImage.Location = new System.Drawing.Point(372, 150);
-            this.EFSDImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EFSDImage.Margin = new System.Windows.Forms.Padding(2);
             this.EFSDImage.Name = "EFSDImage";
             this.EFSDImage.Size = new System.Drawing.Size(75, 41);
             this.EFSDImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -907,7 +964,7 @@
             // uploadNFSD
             // 
             this.uploadNFSD.Location = new System.Drawing.Point(170, 162);
-            this.uploadNFSD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uploadNFSD.Margin = new System.Windows.Forms.Padding(2);
             this.uploadNFSD.Name = "uploadNFSD";
             this.uploadNFSD.Size = new System.Drawing.Size(56, 30);
             this.uploadNFSD.TabIndex = 46;
@@ -918,7 +975,7 @@
             // NFSDImage
             // 
             this.NFSDImage.Location = new System.Drawing.Point(82, 150);
-            this.NFSDImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NFSDImage.Margin = new System.Windows.Forms.Padding(2);
             this.NFSDImage.Name = "NFSDImage";
             this.NFSDImage.Size = new System.Drawing.Size(75, 41);
             this.NFSDImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -928,7 +985,7 @@
             // uploadSFSD
             // 
             this.uploadSFSD.Location = new System.Drawing.Point(170, 396);
-            this.uploadSFSD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uploadSFSD.Margin = new System.Windows.Forms.Padding(2);
             this.uploadSFSD.Name = "uploadSFSD";
             this.uploadSFSD.Size = new System.Drawing.Size(56, 28);
             this.uploadSFSD.TabIndex = 44;
@@ -939,7 +996,7 @@
             // SFSDImage
             // 
             this.SFSDImage.Location = new System.Drawing.Point(82, 384);
-            this.SFSDImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SFSDImage.Margin = new System.Windows.Forms.Padding(2);
             this.SFSDImage.Name = "SFSDImage";
             this.SFSDImage.Size = new System.Drawing.Size(75, 41);
             this.SFSDImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -972,12 +1029,31 @@
             this.panel4.Controls.Add(this.label22);
             this.panel4.Controls.Add(this.occupancyClassificationInput);
             this.panel4.Controls.Add(this.label19);
-            this.panel4.Controls.Add(this.button1);
             this.panel4.Location = new System.Drawing.Point(20, 23);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(637, 462);
             this.panel4.TabIndex = 47;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(219, 107);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(56, 30);
+            this.button2.TabIndex = 56;
+            this.button2.Text = "upload";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // MezzImage
+            // 
+            this.MezzImage.Location = new System.Drawing.Point(140, 106);
+            this.MezzImage.Margin = new System.Windows.Forms.Padding(2);
+            this.MezzImage.Name = "MezzImage";
+            this.MezzImage.Size = new System.Drawing.Size(75, 41);
+            this.MezzImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.MezzImage.TabIndex = 55;
+            this.MezzImage.TabStop = false;
             // 
             // isVOpening2
             // 
@@ -1053,7 +1129,7 @@
             // VOLevelsInput
             // 
             this.VOLevelsInput.Location = new System.Drawing.Point(344, 213);
-            this.VOLevelsInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.VOLevelsInput.Margin = new System.Windows.Forms.Padding(2);
             this.VOLevelsInput.Name = "VOLevelsInput";
             this.VOLevelsInput.Size = new System.Drawing.Size(76, 20);
             this.VOLevelsInput.TabIndex = 47;
@@ -1081,7 +1157,7 @@
             // PreviousButton
             // 
             this.PreviousButton.Location = new System.Drawing.Point(231, 490);
-            this.PreviousButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PreviousButton.Margin = new System.Windows.Forms.Padding(2);
             this.PreviousButton.Name = "PreviousButton";
             this.PreviousButton.Size = new System.Drawing.Size(56, 19);
             this.PreviousButton.TabIndex = 48;
@@ -1092,7 +1168,7 @@
             // NextButton
             // 
             this.NextButton.Location = new System.Drawing.Point(325, 490);
-            this.NextButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NextButton.Margin = new System.Windows.Forms.Padding(2);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(56, 19);
             this.NextButton.TabIndex = 49;
@@ -1161,7 +1237,7 @@
             this.panel2.Controls.Add(this.label29);
             this.panel2.Controls.Add(this.label26);
             this.panel2.Location = new System.Drawing.Point(18, 20);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(639, 464);
             this.panel2.TabIndex = 50;
@@ -1190,7 +1266,7 @@
             // S2Area
             // 
             this.S2Area.Location = new System.Drawing.Point(538, 341);
-            this.S2Area.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.S2Area.Margin = new System.Windows.Forms.Padding(2);
             this.S2Area.Name = "S2Area";
             this.S2Area.Size = new System.Drawing.Size(76, 20);
             this.S2Area.TabIndex = 79;
@@ -1208,7 +1284,7 @@
             // S2HighestFloor
             // 
             this.S2HighestFloor.Location = new System.Drawing.Point(538, 307);
-            this.S2HighestFloor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.S2HighestFloor.Margin = new System.Windows.Forms.Padding(2);
             this.S2HighestFloor.Name = "S2HighestFloor";
             this.S2HighestFloor.Size = new System.Drawing.Size(76, 20);
             this.S2HighestFloor.TabIndex = 77;
@@ -1237,7 +1313,7 @@
             // S1Area
             // 
             this.S1Area.Location = new System.Drawing.Point(538, 249);
-            this.S1Area.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.S1Area.Margin = new System.Windows.Forms.Padding(2);
             this.S1Area.Name = "S1Area";
             this.S1Area.Size = new System.Drawing.Size(76, 20);
             this.S1Area.TabIndex = 74;
@@ -1255,7 +1331,7 @@
             // S1HighestFloor
             // 
             this.S1HighestFloor.Location = new System.Drawing.Point(538, 215);
-            this.S1HighestFloor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.S1HighestFloor.Margin = new System.Windows.Forms.Padding(2);
             this.S1HighestFloor.Name = "S1HighestFloor";
             this.S1HighestFloor.Size = new System.Drawing.Size(76, 20);
             this.S1HighestFloor.TabIndex = 72;
@@ -1284,7 +1360,7 @@
             // textBox17
             // 
             this.textBox17.Location = new System.Drawing.Point(539, 165);
-            this.textBox17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox17.Margin = new System.Windows.Forms.Padding(2);
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(76, 20);
             this.textBox17.TabIndex = 69;
@@ -1302,7 +1378,7 @@
             // textBox18
             // 
             this.textBox18.Location = new System.Drawing.Point(539, 132);
-            this.textBox18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox18.Margin = new System.Windows.Forms.Padding(2);
             this.textBox18.Name = "textBox18";
             this.textBox18.Size = new System.Drawing.Size(76, 20);
             this.textBox18.TabIndex = 67;
@@ -1331,7 +1407,7 @@
             // textBox15
             // 
             this.textBox15.Location = new System.Drawing.Point(538, 75);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox15.Margin = new System.Windows.Forms.Padding(2);
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(76, 20);
             this.textBox15.TabIndex = 64;
@@ -1349,7 +1425,7 @@
             // textBox16
             // 
             this.textBox16.Location = new System.Drawing.Point(538, 41);
-            this.textBox16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox16.Margin = new System.Windows.Forms.Padding(2);
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(76, 20);
             this.textBox16.TabIndex = 62;
@@ -1378,7 +1454,7 @@
             // R2Area
             // 
             this.R2Area.Location = new System.Drawing.Point(341, 432);
-            this.R2Area.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.R2Area.Margin = new System.Windows.Forms.Padding(2);
             this.R2Area.Name = "R2Area";
             this.R2Area.Size = new System.Drawing.Size(76, 20);
             this.R2Area.TabIndex = 59;
@@ -1396,7 +1472,7 @@
             // R2HighestFloor
             // 
             this.R2HighestFloor.Location = new System.Drawing.Point(341, 401);
-            this.R2HighestFloor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.R2HighestFloor.Margin = new System.Windows.Forms.Padding(2);
             this.R2HighestFloor.Name = "R2HighestFloor";
             this.R2HighestFloor.Size = new System.Drawing.Size(76, 20);
             this.R2HighestFloor.TabIndex = 57;
@@ -1425,7 +1501,7 @@
             // R1Area
             // 
             this.R1Area.Location = new System.Drawing.Point(342, 337);
-            this.R1Area.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.R1Area.Margin = new System.Windows.Forms.Padding(2);
             this.R1Area.Name = "R1Area";
             this.R1Area.Size = new System.Drawing.Size(76, 20);
             this.R1Area.TabIndex = 54;
@@ -1443,7 +1519,7 @@
             // R1HighestFloor
             // 
             this.R1HighestFloor.Location = new System.Drawing.Point(342, 306);
-            this.R1HighestFloor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.R1HighestFloor.Margin = new System.Windows.Forms.Padding(2);
             this.R1HighestFloor.Name = "R1HighestFloor";
             this.R1HighestFloor.Size = new System.Drawing.Size(76, 20);
             this.R1HighestFloor.TabIndex = 52;
@@ -1472,7 +1548,7 @@
             // MArea
             // 
             this.MArea.Location = new System.Drawing.Point(342, 249);
-            this.MArea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MArea.Margin = new System.Windows.Forms.Padding(2);
             this.MArea.Name = "MArea";
             this.MArea.Size = new System.Drawing.Size(76, 20);
             this.MArea.TabIndex = 49;
@@ -1490,7 +1566,7 @@
             // MHighestFloor
             // 
             this.MHighestFloor.Location = new System.Drawing.Point(342, 215);
-            this.MHighestFloor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MHighestFloor.Margin = new System.Windows.Forms.Padding(2);
             this.MHighestFloor.Name = "MHighestFloor";
             this.MHighestFloor.Size = new System.Drawing.Size(76, 20);
             this.MHighestFloor.TabIndex = 47;
@@ -1519,7 +1595,7 @@
             // BArea
             // 
             this.BArea.Location = new System.Drawing.Point(342, 162);
-            this.BArea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BArea.Margin = new System.Windows.Forms.Padding(2);
             this.BArea.Name = "BArea";
             this.BArea.Size = new System.Drawing.Size(76, 20);
             this.BArea.TabIndex = 44;
@@ -1537,7 +1613,7 @@
             // BHighestFloor
             // 
             this.BHighestFloor.Location = new System.Drawing.Point(342, 131);
-            this.BHighestFloor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BHighestFloor.Margin = new System.Windows.Forms.Padding(2);
             this.BHighestFloor.Name = "BHighestFloor";
             this.BHighestFloor.Size = new System.Drawing.Size(76, 20);
             this.BHighestFloor.TabIndex = 42;
@@ -1566,7 +1642,7 @@
             // A3Area
             // 
             this.A3Area.Location = new System.Drawing.Point(342, 73);
-            this.A3Area.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.A3Area.Margin = new System.Windows.Forms.Padding(2);
             this.A3Area.Name = "A3Area";
             this.A3Area.Size = new System.Drawing.Size(76, 20);
             this.A3Area.TabIndex = 39;
@@ -1584,7 +1660,7 @@
             // A3HighestFloor
             // 
             this.A3HighestFloor.Location = new System.Drawing.Point(342, 41);
-            this.A3HighestFloor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.A3HighestFloor.Margin = new System.Windows.Forms.Padding(2);
             this.A3HighestFloor.Name = "A3HighestFloor";
             this.A3HighestFloor.Size = new System.Drawing.Size(76, 20);
             this.A3HighestFloor.TabIndex = 37;
@@ -1613,7 +1689,7 @@
             // A2Area
             // 
             this.A2Area.Location = new System.Drawing.Point(93, 383);
-            this.A2Area.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.A2Area.Margin = new System.Windows.Forms.Padding(2);
             this.A2Area.Name = "A2Area";
             this.A2Area.Size = new System.Drawing.Size(76, 20);
             this.A2Area.TabIndex = 34;
@@ -1631,7 +1707,7 @@
             // A2HighestFloor
             // 
             this.A2HighestFloor.Location = new System.Drawing.Point(93, 349);
-            this.A2HighestFloor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.A2HighestFloor.Margin = new System.Windows.Forms.Padding(2);
             this.A2HighestFloor.Name = "A2HighestFloor";
             this.A2HighestFloor.Size = new System.Drawing.Size(76, 20);
             this.A2HighestFloor.TabIndex = 32;
@@ -1660,7 +1736,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(93, 288);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(76, 20);
             this.textBox2.TabIndex = 29;
@@ -1678,7 +1754,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(93, 254);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(76, 20);
             this.textBox1.TabIndex = 27;
@@ -1699,7 +1775,7 @@
             "S-1",
             "S-2"});
             this.BuildingOccupancyListBox.Location = new System.Drawing.Point(20, 57);
-            this.BuildingOccupancyListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BuildingOccupancyListBox.Margin = new System.Windows.Forms.Padding(2);
             this.BuildingOccupancyListBox.Name = "BuildingOccupancyListBox";
             this.BuildingOccupancyListBox.Size = new System.Drawing.Size(122, 139);
             this.BuildingOccupancyListBox.TabIndex = 26;
@@ -1725,58 +1801,268 @@
             this.label26.TabIndex = 22;
             this.label26.Text = "Page 2";
             // 
-            // isBDCOM
+            // uploadREND
             // 
-            this.isBDCOM.AutoSize = true;
-            this.isBDCOM.Location = new System.Drawing.Point(190, 364);
-            this.isBDCOM.Margin = new System.Windows.Forms.Padding(2);
-            this.isBDCOM.Name = "isBDCOM";
-            this.isBDCOM.Size = new System.Drawing.Size(85, 17);
-            this.isBDCOM.TabIndex = 33;
-            this.isBDCOM.Text = "City of Miami";
-            this.isBDCOM.UseVisualStyleBackColor = true;
+            this.uploadREND.Location = new System.Drawing.Point(424, 402);
+            this.uploadREND.Margin = new System.Windows.Forms.Padding(2);
+            this.uploadREND.Name = "uploadREND";
+            this.uploadREND.Size = new System.Drawing.Size(126, 42);
+            this.uploadREND.TabIndex = 48;
+            this.uploadREND.Text = "upload project rendering";
+            this.uploadREND.UseVisualStyleBackColor = true;
+            this.uploadREND.Click += new System.EventHandler(this.uploadREND_Click);
             // 
-            // isFDMD
+            // RENDImage
             // 
-            this.isFDMD.AutoSize = true;
-            this.isFDMD.Location = new System.Drawing.Point(188, 394);
-            this.isFDMD.Margin = new System.Windows.Forms.Padding(2);
-            this.isFDMD.Name = "isFDMD";
-            this.isFDMD.Size = new System.Drawing.Size(82, 17);
-            this.isFDMD.TabIndex = 34;
-            this.isFDMD.Text = "Miami Dade";
-            this.isFDMD.UseVisualStyleBackColor = true;
+            this.RENDImage.Location = new System.Drawing.Point(336, 402);
+            this.RENDImage.Margin = new System.Windows.Forms.Padding(2);
+            this.RENDImage.Name = "RENDImage";
+            this.RENDImage.Size = new System.Drawing.Size(75, 41);
+            this.RENDImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.RENDImage.TabIndex = 47;
+            this.RENDImage.TabStop = false;
             // 
-            // isFDCOM
+            // isGarage
             // 
-            this.isFDCOM.AutoSize = true;
-            this.isFDCOM.Location = new System.Drawing.Point(188, 415);
-            this.isFDCOM.Margin = new System.Windows.Forms.Padding(2);
-            this.isFDCOM.Name = "isFDCOM";
-            this.isFDCOM.Size = new System.Drawing.Size(85, 17);
-            this.isFDCOM.TabIndex = 35;
-            this.isFDCOM.Text = "City of Miami";
-            this.isFDCOM.UseVisualStyleBackColor = true;
+            this.isGarage.AutoSize = true;
+            this.isGarage.Location = new System.Drawing.Point(344, 236);
+            this.isGarage.Margin = new System.Windows.Forms.Padding(2);
+            this.isGarage.Name = "isGarage";
+            this.isGarage.Size = new System.Drawing.Size(100, 17);
+            this.isGarage.TabIndex = 49;
+            this.isGarage.Text = "Parking Garage";
+            this.isGarage.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // panel5
             // 
-            this.button2.Location = new System.Drawing.Point(219, 107);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(56, 30);
-            this.button2.TabIndex = 56;
-            this.button2.Text = "upload";
-            this.button2.UseVisualStyleBackColor = true;
+            this.panel5.Controls.Add(this.button1);
+            this.panel5.Controls.Add(this.uploadFSAE);
+            this.panel5.Controls.Add(this.FSAEImage);
+            this.panel5.Controls.Add(this.uploadSITEACCESS);
+            this.panel5.Controls.Add(this.SITEACCESSImage);
+            this.panel5.Controls.Add(this.uploadGENERATOR);
+            this.panel5.Controls.Add(this.GENERATORImage);
+            this.panel5.Controls.Add(this.uploadFP);
+            this.panel5.Controls.Add(this.FPImage);
+            this.panel5.Controls.Add(this.uploadFCC);
+            this.panel5.Controls.Add(this.FCCImage);
+            this.panel5.Controls.Add(this.uploadSTAIRDISCHARGE);
+            this.panel5.Controls.Add(this.STAIRDISCHARGEImage);
+            this.panel5.Controls.Add(this.label71);
+            this.panel5.Controls.Add(this.label70);
+            this.panel5.Controls.Add(this.label69);
+            this.panel5.Controls.Add(this.label68);
+            this.panel5.Controls.Add(this.label67);
+            this.panel5.Controls.Add(this.label66);
+            this.panel5.Controls.Add(this.label65);
+            this.panel5.Controls.Add(this.label64);
+            this.panel5.Location = new System.Drawing.Point(20, 12);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(639, 466);
+            this.panel5.TabIndex = 50;
             // 
-            // MezzImage
+            // label64
             // 
-            this.MezzImage.Location = new System.Drawing.Point(140, 106);
-            this.MezzImage.Margin = new System.Windows.Forms.Padding(2);
-            this.MezzImage.Name = "MezzImage";
-            this.MezzImage.Size = new System.Drawing.Size(75, 41);
-            this.MezzImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.MezzImage.TabIndex = 55;
-            this.MezzImage.TabStop = false;
+            this.label64.AutoSize = true;
+            this.label64.Location = new System.Drawing.Point(582, 446);
+            this.label64.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(41, 13);
+            this.label64.TabIndex = 23;
+            this.label64.Text = "Page 5";
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Location = new System.Drawing.Point(477, 230);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(95, 13);
+            this.label65.TabIndex = 24;
+            this.label65.Text = "UPLOAD IMAGES";
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Location = new System.Drawing.Point(20, 49);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(117, 13);
+            this.label66.TabIndex = 25;
+            this.label66.Text = "Stair Discharge(Ext/Int)";
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Location = new System.Drawing.Point(20, 114);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(108, 13);
+            this.label67.TabIndex = 26;
+            this.label67.Text = "Fire Command Center";
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Location = new System.Drawing.Point(20, 177);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(85, 13);
+            this.label68.TabIndex = 27;
+            this.label68.Text = "Fire Pump Room";
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Location = new System.Drawing.Point(20, 245);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(85, 13);
+            this.label69.TabIndex = 28;
+            this.label69.Text = "Generator Room";
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.Location = new System.Drawing.Point(20, 308);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(63, 13);
+            this.label70.TabIndex = 29;
+            this.label70.Text = "Site Access";
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Location = new System.Drawing.Point(20, 376);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(110, 13);
+            this.label71.TabIndex = 30;
+            this.label71.Text = "Fire Service Elevators";
+            // 
+            // uploadSTAIRDISCHARGE
+            // 
+            this.uploadSTAIRDISCHARGE.Location = new System.Drawing.Point(252, 37);
+            this.uploadSTAIRDISCHARGE.Margin = new System.Windows.Forms.Padding(2);
+            this.uploadSTAIRDISCHARGE.Name = "uploadSTAIRDISCHARGE";
+            this.uploadSTAIRDISCHARGE.Size = new System.Drawing.Size(126, 42);
+            this.uploadSTAIRDISCHARGE.TabIndex = 50;
+            this.uploadSTAIRDISCHARGE.Text = "UPLOAD";
+            this.uploadSTAIRDISCHARGE.UseVisualStyleBackColor = true;
+            // 
+            // STAIRDISCHARGEImage
+            // 
+            this.STAIRDISCHARGEImage.Location = new System.Drawing.Point(164, 37);
+            this.STAIRDISCHARGEImage.Margin = new System.Windows.Forms.Padding(2);
+            this.STAIRDISCHARGEImage.Name = "STAIRDISCHARGEImage";
+            this.STAIRDISCHARGEImage.Size = new System.Drawing.Size(75, 41);
+            this.STAIRDISCHARGEImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.STAIRDISCHARGEImage.TabIndex = 49;
+            this.STAIRDISCHARGEImage.TabStop = false;
+            // 
+            // uploadFCC
+            // 
+            this.uploadFCC.Location = new System.Drawing.Point(252, 103);
+            this.uploadFCC.Margin = new System.Windows.Forms.Padding(2);
+            this.uploadFCC.Name = "uploadFCC";
+            this.uploadFCC.Size = new System.Drawing.Size(126, 42);
+            this.uploadFCC.TabIndex = 52;
+            this.uploadFCC.Text = "UPLOAD";
+            this.uploadFCC.UseVisualStyleBackColor = true;
+            // 
+            // FCCImage
+            // 
+            this.FCCImage.Location = new System.Drawing.Point(164, 103);
+            this.FCCImage.Margin = new System.Windows.Forms.Padding(2);
+            this.FCCImage.Name = "FCCImage";
+            this.FCCImage.Size = new System.Drawing.Size(75, 41);
+            this.FCCImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.FCCImage.TabIndex = 51;
+            this.FCCImage.TabStop = false;
+            // 
+            // uploadFP
+            // 
+            this.uploadFP.Location = new System.Drawing.Point(252, 170);
+            this.uploadFP.Margin = new System.Windows.Forms.Padding(2);
+            this.uploadFP.Name = "uploadFP";
+            this.uploadFP.Size = new System.Drawing.Size(126, 42);
+            this.uploadFP.TabIndex = 54;
+            this.uploadFP.Text = "UPLOAD";
+            this.uploadFP.UseVisualStyleBackColor = true;
+            // 
+            // FPImage
+            // 
+            this.FPImage.Location = new System.Drawing.Point(164, 170);
+            this.FPImage.Margin = new System.Windows.Forms.Padding(2);
+            this.FPImage.Name = "FPImage";
+            this.FPImage.Size = new System.Drawing.Size(75, 41);
+            this.FPImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.FPImage.TabIndex = 53;
+            this.FPImage.TabStop = false;
+            // 
+            // uploadGENERATOR
+            // 
+            this.uploadGENERATOR.Location = new System.Drawing.Point(252, 236);
+            this.uploadGENERATOR.Margin = new System.Windows.Forms.Padding(2);
+            this.uploadGENERATOR.Name = "uploadGENERATOR";
+            this.uploadGENERATOR.Size = new System.Drawing.Size(126, 42);
+            this.uploadGENERATOR.TabIndex = 56;
+            this.uploadGENERATOR.Text = "UPLOAD";
+            this.uploadGENERATOR.UseVisualStyleBackColor = true;
+            // 
+            // GENERATORImage
+            // 
+            this.GENERATORImage.Location = new System.Drawing.Point(164, 236);
+            this.GENERATORImage.Margin = new System.Windows.Forms.Padding(2);
+            this.GENERATORImage.Name = "GENERATORImage";
+            this.GENERATORImage.Size = new System.Drawing.Size(75, 41);
+            this.GENERATORImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.GENERATORImage.TabIndex = 55;
+            this.GENERATORImage.TabStop = false;
+            // 
+            // uploadSITEACCESS
+            // 
+            this.uploadSITEACCESS.Location = new System.Drawing.Point(252, 303);
+            this.uploadSITEACCESS.Margin = new System.Windows.Forms.Padding(2);
+            this.uploadSITEACCESS.Name = "uploadSITEACCESS";
+            this.uploadSITEACCESS.Size = new System.Drawing.Size(126, 42);
+            this.uploadSITEACCESS.TabIndex = 58;
+            this.uploadSITEACCESS.Text = "UPLOAD";
+            this.uploadSITEACCESS.UseVisualStyleBackColor = true;
+            // 
+            // SITEACCESSImage
+            // 
+            this.SITEACCESSImage.Location = new System.Drawing.Point(164, 303);
+            this.SITEACCESSImage.Margin = new System.Windows.Forms.Padding(2);
+            this.SITEACCESSImage.Name = "SITEACCESSImage";
+            this.SITEACCESSImage.Size = new System.Drawing.Size(75, 41);
+            this.SITEACCESSImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.SITEACCESSImage.TabIndex = 57;
+            this.SITEACCESSImage.TabStop = false;
+            // 
+            // uploadFSAE
+            // 
+            this.uploadFSAE.Location = new System.Drawing.Point(252, 369);
+            this.uploadFSAE.Margin = new System.Windows.Forms.Padding(2);
+            this.uploadFSAE.Name = "uploadFSAE";
+            this.uploadFSAE.Size = new System.Drawing.Size(126, 42);
+            this.uploadFSAE.TabIndex = 60;
+            this.uploadFSAE.Text = "UPLOAD";
+            this.uploadFSAE.UseVisualStyleBackColor = true;
+            // 
+            // FSAEImage
+            // 
+            this.FSAEImage.Location = new System.Drawing.Point(164, 369);
+            this.FSAEImage.Margin = new System.Windows.Forms.Padding(2);
+            this.FSAEImage.Name = "FSAEImage";
+            this.FSAEImage.Size = new System.Drawing.Size(75, 41);
+            this.FSAEImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.FSAEImage.TabIndex = 59;
+            this.FSAEImage.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(494, 364);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(60, 27);
+            this.button1.TabIndex = 61;
+            this.button1.Text = "Change";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -1785,11 +2071,12 @@
             this.ClientSize = new System.Drawing.Size(675, 522);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.PreviousButton);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -1803,9 +2090,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.SFSDImage)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MezzImage)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MezzImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RENDImage)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.STAIRDISCHARGEImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FCCImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FPImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GENERATORImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SITEACCESSImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FSAEImage)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1816,7 +2112,6 @@
         public System.Windows.Forms.TextBox ProjectNameInput;
         public System.Windows.Forms.TextBox ProjectAddressInput;
         private System.Windows.Forms.Label ProjectAddressLabel;
-        private System.Windows.Forms.Button button1;
         public System.Windows.Forms.TextBox ProjectCityInput;
         private System.Windows.Forms.Label ProjectCityLabel;
         public System.Windows.Forms.TextBox ProjectStateInput;
@@ -1955,6 +2250,31 @@
         private System.Windows.Forms.CheckBox isBDCOM;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox MezzImage;
+        private System.Windows.Forms.Button uploadREND;
+        private System.Windows.Forms.PictureBox RENDImage;
+        private System.Windows.Forms.CheckBox isGarage;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button uploadFSAE;
+        private System.Windows.Forms.PictureBox FSAEImage;
+        private System.Windows.Forms.Button uploadSITEACCESS;
+        private System.Windows.Forms.PictureBox SITEACCESSImage;
+        private System.Windows.Forms.Button uploadGENERATOR;
+        private System.Windows.Forms.PictureBox GENERATORImage;
+        private System.Windows.Forms.Button uploadFP;
+        private System.Windows.Forms.PictureBox FPImage;
+        private System.Windows.Forms.Button uploadFCC;
+        private System.Windows.Forms.PictureBox FCCImage;
+        private System.Windows.Forms.Button uploadSTAIRDISCHARGE;
+        private System.Windows.Forms.PictureBox STAIRDISCHARGEImage;
+        private System.Windows.Forms.Label label71;
+        private System.Windows.Forms.Label label70;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.Label label68;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.Label label65;
     }
 }
 

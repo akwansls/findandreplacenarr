@@ -293,7 +293,7 @@ namespace findandreplacenarr
                 {
                     this.FindAndReplace(wordApp, "FireExplosion", "For Assembly occupancies, FFPC, NFPA 101 Section 12.3.2 and Hotel occupancies, FFPC, NFPA 101 Section 28.3.2 states that rooms containing high-pressure boilers, large transformers, ");
                     this.FindAndReplace(wordApp, "FireExplosion2", "or other service equipment subject to explosion shall not be located directly under or abutting required exits. ");
-                    this.FindAndReplace(wordApp, "FireR1", "Hotel units must be separated from adjacent hotel units by ½-hr fire barriers in accordance with FFPC, NFPA 101 Section 28.3.7.  The hotel unit separation in FBC Section 708 is 1-hour fire partition.");
+                    
                 }
                 else if ((A1 == true || A2 == true || A3 == true) && R1 == false)
                 {
@@ -304,11 +304,7 @@ namespace findandreplacenarr
                 {
                     this.FindAndReplace(wordApp, "FireExplosion", "For Hotel occupancies, FFPC, NFPA 101 Section 28.3.2 states that rooms containing high-pressure boilers, ");
                     this.FindAndReplace(wordApp, "FireExplosion2", "large transformers, or other service equipment subject to explosion shall not be located directly under or abutting required exits.");
-                    this.FindAndReplace(wordApp, "FireR1", "Hotel units must be separated from adjacent hotel units by ½-hr fire barriers in accordance with FFPC, NFPA 101 Section 28.3.7.  The hotel unit separation in FBC Section 708 is 1-hour fire partition.");
-                }
-                if (R2 == true)
-                {
-                    this.FindAndReplace(wordApp, "FireR2", "Dwelling units must be separated from adjacent dwelling units by ½-hr fire barriers in accordance with FFPC, NFPA 101 Section 30.3.7.  The dwelling unit separation in Section FBC Section 708 is 1-hour fire partition.  ");
+                    
                 }
                 
                 //I3 Partition
@@ -374,12 +370,19 @@ namespace findandreplacenarr
                 
                 //Table 8 Fire rating of spaces
                 Microsoft.Office.Interop.Word.Table table8 = myWordDoc.Tables[8];
+                if (isGarage.Checked)
+                {
+                    table8.Rows[24].Delete();
+                }
                 if (R1 == false && R2 == false)
                 {
+                    table8.Rows[23].Delete();
+                    table8.Rows[16].Delete();
+                    table8.Rows[14].Delete();
                     table8.Rows[11].Delete();
                     table8.Rows[8].Delete();
-
                 }
+                
                 
                 // Table 10 Editing per Occupancy Input
                 Microsoft.Office.Interop.Word.Table table10 = myWordDoc.Tables[10];
@@ -656,6 +659,10 @@ namespace findandreplacenarr
                 //ELEVATOR SECTION
 
                 //STAIR SECTION
+                if(intBuildingHeight >= 420)
+                {
+                    this.FindAndReplace(wordApp, "STAIR420", "For buildings that are more than 420 ft. in height or that of Risk Category III or IV, the construction of the stair and elevator hoistway enclosures shall comply with  FBC Sections 403.2.3.1 through 403.2.3.4.");
+                }
 
                 //FIRE ALARM SECTION ----------------------------------------------------------------------------------
                 //if(R1 == true)
@@ -1312,10 +1319,19 @@ namespace findandreplacenarr
                     table2.Columns[4].Delete();
                     table2.Columns[3].Delete();
                     table2.Columns[2].Delete();
-
                 }
 
-                
+                if (buildingType == "Type IA" || buildingType == "Type IA Reduced" || buildingType == "Type IB"|| buildingType == "Type IIA")
+                {
+                    this.FindAndReplace(wordApp, "HorizontalIIB", "In accordance with FBC Section 711.2.4.3, horizontal assemblies serving as dwelling or sleeping unit separations in accordance with Section 420.3 shall be not less than 1-hour fire-resistance-rated construction. ");
+                    this.FindAndReplace(wordApp, "HorizontalIIB2", "This rating is permitted to be reduced to ½-hour in fully sprinklered buildings of Type IIB, IIIB, and VB construction. ");
+                }
+                else
+                {
+                    this.FindAndReplace(wordApp, "HorizontalIIB", "DELETE");
+                    this.FindAndReplace(wordApp, "HorizontalIIB2", "DELETE");
+                }
+
                 //Fire Separation Distance North
                 FSDFindAndReplace("NFSD", "NFSDRating", "NFSDOpening", int.Parse(NFSDInput.Text), wordApp, NFSDOccupancy.GetItemText(NFSDOccupancy.SelectedItem), buildingType);
                 //Fire Separation Distance South
@@ -1330,7 +1346,13 @@ namespace findandreplacenarr
                 FindTextAndReplaceImage(wordApp, myWordDoc, "SEWRPIC", SFSDImage.ImageLocation);
                 FindTextAndReplaceImage(wordApp, myWordDoc, "EEWRPIC", EFSDImage.ImageLocation);
                 FindTextAndReplaceImage(wordApp, myWordDoc, "WEWRPIC", WFSDImage.ImageLocation);
-                
+                FindTextAndReplaceImage(wordApp, myWordDoc, "RenderingPic", RENDImage.ImageLocation);
+                FindTextAndReplaceImage(wordApp, myWordDoc, "STAIRDISCHARGEPIC", STAIRDISCHARGEImage.ImageLocation);
+                FindTextAndReplaceImage(wordApp, myWordDoc, "FCCPIC", FCCImage.ImageLocation);
+                FindTextAndReplaceImage(wordApp, myWordDoc, "FirePumpPic", FPImage.ImageLocation);
+                FindTextAndReplaceImage(wordApp, myWordDoc, "GeneratorPic", GENERATORImage.ImageLocation);
+                FindTextAndReplaceImage(wordApp, myWordDoc, "SiteAccessPic", SITEACCESSImage.ImageLocation);
+                FindTextAndReplaceImage(wordApp, myWordDoc, "FSAEPic", FSAEImage.ImageLocation);
 
                 //Start vertical opening section of narrative
                 if (isVO.Checked)
@@ -1364,15 +1386,14 @@ namespace findandreplacenarr
                         {
                             if (numVOLevels == 2)
                             {
-                                this.FindAndReplace(wordApp, "VASSEMBLY2", "The vertical opening located on VOFloorBot to VFloorTop will be designed as a two story opening and must be designed in accordance with all criteria in FBC 712.1.9 and FFPC, NFPA 101 Section 12.3 (3).");
-                                this.FindAndReplace(wordApp, "VO1", "Assembly occupancies protected by an approved, supervised automatic sprinkler system in accordance with Section 9.7 shall be permitted to have unprotected openings between any two adjacent floors, ");
-                                this.FindAndReplace(wordApp, "VO1P2", "provided that such openings are separated from unprotected vertical openings serving other floors by a barrier complying with 8.6.5.");
+                                this.FindAndReplace(wordApp, "VASSEMBLY", "Per FFPC, NFPA 101 §12.3.1(3), assembly occupancies protected by an approved, supervised automatic sprinkler system in accordance with §9.7 shall be permitted to have ");
+                                this.FindAndReplace(wordApp, "VASSEMBLY2", "unprotected vertical openings between two adjacent floors, provided that such openings are separated from unprotected vertical openings serving other floors by a barrier complying with §8.6.5.");          
                             }
                             else if (numVOLevels > 2 && numVOLevels <= 4)
                             {
-                                this.FindAndReplace(wordApp, "VO1", "Assembly occupancies protected by an approved, supervised automatic sprinkler system in accordance with Section 9.7 shall be permitted to have unprotected openings between any two adjacent floors, ");
-                                this.FindAndReplace(wordApp, "VO1P2", "provided that such openings are separated from unprotected vertical openings serving other floors by a barrier complying with 8.6.5.");
-                                this.FindAndReplace(wordApp, "VO1NOTE", "NOTE: Further discussion required regarding a code compliant method of separating the Vertical Opening to create vertical openings not greater than 2 floors.");
+                                this.FindAndReplace(wordApp, "VASSEMBLY", "Per FFPC, NFPA 101 §12.3.1(3), assembly occupancies protected by an approved, supervised automatic sprinkler system in accordance with §9.7 shall be permitted to have ");
+                                this.FindAndReplace(wordApp, "VASSEMBLY2", "unprotected vertical openings between two adjacent floors, provided that such openings are separated from unprotected vertical openings serving other floors by a barrier complying with §8.6.5.");
+                                this.FindAndReplace(wordApp, "VASSEMBLYNOTE", "NOTE: Vertical openings within assembly spaces where more than 2 floors are penetrated may require alternate methods to separate openings to not more than 2 floors. Further discussion required.");
                             }
                         }
                         else if (VOR2 == true || VOR1 == true)
@@ -1483,7 +1504,7 @@ namespace findandreplacenarr
                                 this.FindAndReplace(wordApp, "ATRIUMSECTION19", "Smoke control system is required and shall be connected to standby power");
                                 this.FindAndReplace(wordApp, "ATRIUMSECTION20", "The interior finish of walls and ceiling of the atrium shall not be less than Class B with no reduction in class for sprinkler protection (FBC).");
                                 this.FindAndReplace(wordApp, "ATRIUMSECTION21", "In floors above the lowest level, the portion of exit access travel distance within the atrium space shall be not greater than 200 feet (FBC).");
-
+                                //this.FindAndReplace(wordApp, "VOFans", "The plans reviewed do not show any unprotected vertical openings requiring smoke control system protection.");
                             }
                         }
                     }
@@ -1503,7 +1524,22 @@ namespace findandreplacenarr
                 this.FindAndReplace(wordApp, "ARCHZIP", AccountZipcodeInput.Text);
                 this.FindAndReplace(wordApp, "PNUMBER", ProjectNumberInput.Text);
                 this.FindAndReplace(wordApp, "DATE", DateInput.Text);
-
+                if(isFDCOM.Checked)
+                {
+                    this.FindAndReplace(wordApp, "FDPT", "City of Miami");
+                }
+                else if(isFDMD.Checked)
+                {
+                    this.FindAndReplace(wordApp, "FDPT", "Miami Dade");
+                }
+                if(isBDCOM.Checked)
+                {
+                    this.FindAndReplace(wordApp, "BDPT", "City of Miami");
+                }
+                else if(isBDMD.Checked)
+                {
+                    this.FindAndReplace(wordApp, "BDPT", "Miami Dade");
+                }
             }
         }
 
@@ -1580,6 +1616,7 @@ namespace findandreplacenarr
                 listPanel.Add(panel2);
                 listPanel.Add(panel3);
                 listPanel.Add(panel4);
+                listPanel.Add(panel5);
                 listPanel[panelIndex].BringToFront();
             }
 
@@ -1688,5 +1725,167 @@ namespace findandreplacenarr
             {
 
             }
+
+            private void uploadREND_Click(object sender, EventArgs e)
+            {
+                String imageLocation = "";
+                try
+                {
+                    OpenFileDialog dialog = new OpenFileDialog();
+                    dialog.Filter = "jpeg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All files(*.*)|*.*";
+
+                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    {
+                        imageLocation = dialog.FileName;
+
+                        RENDImage.ImageLocation = imageLocation;
+
+                    }
+
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("An Error Occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        private void uploadSTAIRDISCHARGE_Click(object sender, EventArgs e)
+        {
+            String imageLocation = "";
+            try
+            {
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.Filter = "jpeg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All files(*.*)|*.*";
+
+                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    imageLocation = dialog.FileName;
+
+                    STAIRDISCHARGEImage.ImageLocation = imageLocation;
+
+                }
+
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("An Error Occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+        private void uploadFCC_Click(object sender, EventArgs e)
+        {
+            String imageLocation = "";
+            try
+            {
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.Filter = "jpeg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All files(*.*)|*.*";
+
+                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    imageLocation = dialog.FileName;
+
+                    FCCImage.ImageLocation = imageLocation;
+
+                }
+
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("An Error Occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void uploadFP_Click(object sender, EventArgs e)
+        {
+            String imageLocation = "";
+            try
+            {
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.Filter = "jpeg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All files(*.*)|*.*";
+
+                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    imageLocation = dialog.FileName;
+
+                    FPImage.ImageLocation = imageLocation;
+
+                }
+
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("An Error Occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void uploadGENERATOR_Click(object sender, EventArgs e)
+        {
+            String imageLocation = "";
+            try
+            {
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.Filter = "jpeg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All files(*.*)|*.*";
+
+                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    imageLocation = dialog.FileName;
+
+                    GENERATORImage.ImageLocation = imageLocation;
+
+                }
+
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("An Error Occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void uploadSITEACCESS_Click(object sender, EventArgs e)
+        {
+            String imageLocation = "";
+            try
+            {
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.Filter = "jpeg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All files(*.*)|*.*";
+
+                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    imageLocation = dialog.FileName;
+
+                    SITEACCESSImage.ImageLocation = imageLocation;
+
+                }
+
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("An Error Occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void uploadFSAE_Click(object sender, EventArgs e)
+        {
+            String imageLocation = "";
+            try
+            {
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.Filter = "jpeg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All files(*.*)|*.*";
+
+                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    imageLocation = dialog.FileName;
+
+                    FSAEImage.ImageLocation = imageLocation;
+
+                }
+
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("An Error Occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+    }
     }
