@@ -72,6 +72,9 @@
             this.occupancyClassificationInput = new System.Windows.Forms.CheckedListBox();
             this.label19 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.isGarage = new System.Windows.Forms.CheckBox();
+            this.uploadREND = new System.Windows.Forms.Button();
+            this.RENDImage = new System.Windows.Forms.PictureBox();
             this.isFDCOM = new System.Windows.Forms.CheckBox();
             this.isFDMD = new System.Windows.Forms.CheckBox();
             this.isBDCOM = new System.Windows.Forms.CheckBox();
@@ -97,11 +100,8 @@
             this.SFSDImage = new System.Windows.Forms.PictureBox();
             this.label21 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.MezzImage = new System.Windows.Forms.PictureBox();
             this.isVOpening2 = new System.Windows.Forms.CheckBox();
             this.isEscalator = new System.Windows.Forms.CheckBox();
-            this.isMezzanine = new System.Windows.Forms.CheckBox();
             this.label63 = new System.Windows.Forms.Label();
             this.isVO = new System.Windows.Forms.CheckBox();
             this.label23 = new System.Windows.Forms.Label();
@@ -170,48 +170,45 @@
             this.BuildingOccupancyListBox = new System.Windows.Forms.CheckedListBox();
             this.label29 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.uploadREND = new System.Windows.Forms.Button();
-            this.RENDImage = new System.Windows.Forms.PictureBox();
-            this.isGarage = new System.Windows.Forms.CheckBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label64 = new System.Windows.Forms.Label();
-            this.label65 = new System.Windows.Forms.Label();
-            this.label66 = new System.Windows.Forms.Label();
-            this.label67 = new System.Windows.Forms.Label();
-            this.label68 = new System.Windows.Forms.Label();
-            this.label69 = new System.Windows.Forms.Label();
-            this.label70 = new System.Windows.Forms.Label();
-            this.label71 = new System.Windows.Forms.Label();
-            this.uploadSTAIRDISCHARGE = new System.Windows.Forms.Button();
-            this.STAIRDISCHARGEImage = new System.Windows.Forms.PictureBox();
-            this.uploadFCC = new System.Windows.Forms.Button();
-            this.FCCImage = new System.Windows.Forms.PictureBox();
-            this.uploadFP = new System.Windows.Forms.Button();
-            this.FPImage = new System.Windows.Forms.PictureBox();
-            this.uploadGENERATOR = new System.Windows.Forms.Button();
-            this.GENERATORImage = new System.Windows.Forms.PictureBox();
-            this.uploadSITEACCESS = new System.Windows.Forms.Button();
-            this.SITEACCESSImage = new System.Windows.Forms.PictureBox();
             this.uploadFSAE = new System.Windows.Forms.Button();
             this.FSAEImage = new System.Windows.Forms.PictureBox();
+            this.uploadSITEACCESS = new System.Windows.Forms.Button();
+            this.SITEACCESSImage = new System.Windows.Forms.PictureBox();
+            this.uploadGENERATOR = new System.Windows.Forms.Button();
+            this.GENERATORImage = new System.Windows.Forms.PictureBox();
+            this.uploadFP = new System.Windows.Forms.Button();
+            this.FPImage = new System.Windows.Forms.PictureBox();
+            this.uploadFCC = new System.Windows.Forms.Button();
+            this.FCCImage = new System.Windows.Forms.PictureBox();
+            this.uploadSTAIRDISCHARGE = new System.Windows.Forms.Button();
+            this.STAIRDISCHARGEImage = new System.Windows.Forms.PictureBox();
+            this.label71 = new System.Windows.Forms.Label();
+            this.label70 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
+            this.label65 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.isMezzanine = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RENDImage)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.WFSDImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EFSDImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NFSDImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SFSDImage)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MezzImage)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RENDImage)).BeginInit();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.STAIRDISCHARGEImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FCCImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FPImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GENERATORImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SITEACCESSImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FSAEImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SITEACCESSImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GENERATORImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FPImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FCCImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.STAIRDISCHARGEImage)).BeginInit();
             this.SuspendLayout();
             // 
             // ProjectNameLabel
@@ -693,6 +690,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.isMezzanine);
             this.panel1.Controls.Add(this.isGarage);
             this.panel1.Controls.Add(this.uploadREND);
             this.panel1.Controls.Add(this.RENDImage);
@@ -736,6 +734,38 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(639, 464);
             this.panel1.TabIndex = 45;
+            // 
+            // isGarage
+            // 
+            this.isGarage.AutoSize = true;
+            this.isGarage.Location = new System.Drawing.Point(344, 236);
+            this.isGarage.Margin = new System.Windows.Forms.Padding(2);
+            this.isGarage.Name = "isGarage";
+            this.isGarage.Size = new System.Drawing.Size(100, 17);
+            this.isGarage.TabIndex = 49;
+            this.isGarage.Text = "Parking Garage";
+            this.isGarage.UseVisualStyleBackColor = true;
+            // 
+            // uploadREND
+            // 
+            this.uploadREND.Location = new System.Drawing.Point(424, 402);
+            this.uploadREND.Margin = new System.Windows.Forms.Padding(2);
+            this.uploadREND.Name = "uploadREND";
+            this.uploadREND.Size = new System.Drawing.Size(126, 42);
+            this.uploadREND.TabIndex = 48;
+            this.uploadREND.Text = "upload project rendering";
+            this.uploadREND.UseVisualStyleBackColor = true;
+            this.uploadREND.Click += new System.EventHandler(this.uploadREND_Click);
+            // 
+            // RENDImage
+            // 
+            this.RENDImage.Location = new System.Drawing.Point(336, 402);
+            this.RENDImage.Margin = new System.Windows.Forms.Padding(2);
+            this.RENDImage.Name = "RENDImage";
+            this.RENDImage.Size = new System.Drawing.Size(75, 41);
+            this.RENDImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.RENDImage.TabIndex = 47;
+            this.RENDImage.TabStop = false;
             // 
             // isFDCOM
             // 
@@ -809,7 +839,7 @@
             // isStage
             // 
             this.isStage.AutoSize = true;
-            this.isStage.Location = new System.Drawing.Point(344, 361);
+            this.isStage.Location = new System.Drawing.Point(344, 353);
             this.isStage.Margin = new System.Windows.Forms.Padding(2);
             this.isStage.Name = "isStage";
             this.isStage.Size = new System.Drawing.Size(132, 17);
@@ -1015,11 +1045,8 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.button2);
-            this.panel4.Controls.Add(this.MezzImage);
             this.panel4.Controls.Add(this.isVOpening2);
             this.panel4.Controls.Add(this.isEscalator);
-            this.panel4.Controls.Add(this.isMezzanine);
             this.panel4.Controls.Add(this.label63);
             this.panel4.Controls.Add(this.isVO);
             this.panel4.Controls.Add(this.label23);
@@ -1034,26 +1061,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(637, 462);
             this.panel4.TabIndex = 47;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(219, 107);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(56, 30);
-            this.button2.TabIndex = 56;
-            this.button2.Text = "upload";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // MezzImage
-            // 
-            this.MezzImage.Location = new System.Drawing.Point(140, 106);
-            this.MezzImage.Margin = new System.Windows.Forms.Padding(2);
-            this.MezzImage.Name = "MezzImage";
-            this.MezzImage.Size = new System.Drawing.Size(75, 41);
-            this.MezzImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.MezzImage.TabIndex = 55;
-            this.MezzImage.TabStop = false;
             // 
             // isVOpening2
             // 
@@ -1074,16 +1081,6 @@
             this.isEscalator.TabIndex = 53;
             this.isEscalator.Text = "Escalator";
             this.isEscalator.UseVisualStyleBackColor = true;
-            // 
-            // isMezzanine
-            // 
-            this.isMezzanine.AutoSize = true;
-            this.isMezzanine.Location = new System.Drawing.Point(140, 75);
-            this.isMezzanine.Name = "isMezzanine";
-            this.isMezzanine.Size = new System.Drawing.Size(77, 17);
-            this.isMezzanine.TabIndex = 52;
-            this.isMezzanine.Text = "Mezzanine";
-            this.isMezzanine.UseVisualStyleBackColor = true;
             // 
             // label63
             // 
@@ -1801,41 +1798,8 @@
             this.label26.TabIndex = 22;
             this.label26.Text = "Page 2";
             // 
-            // uploadREND
-            // 
-            this.uploadREND.Location = new System.Drawing.Point(424, 402);
-            this.uploadREND.Margin = new System.Windows.Forms.Padding(2);
-            this.uploadREND.Name = "uploadREND";
-            this.uploadREND.Size = new System.Drawing.Size(126, 42);
-            this.uploadREND.TabIndex = 48;
-            this.uploadREND.Text = "upload project rendering";
-            this.uploadREND.UseVisualStyleBackColor = true;
-            this.uploadREND.Click += new System.EventHandler(this.uploadREND_Click);
-            // 
-            // RENDImage
-            // 
-            this.RENDImage.Location = new System.Drawing.Point(336, 402);
-            this.RENDImage.Margin = new System.Windows.Forms.Padding(2);
-            this.RENDImage.Name = "RENDImage";
-            this.RENDImage.Size = new System.Drawing.Size(75, 41);
-            this.RENDImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.RENDImage.TabIndex = 47;
-            this.RENDImage.TabStop = false;
-            // 
-            // isGarage
-            // 
-            this.isGarage.AutoSize = true;
-            this.isGarage.Location = new System.Drawing.Point(344, 236);
-            this.isGarage.Margin = new System.Windows.Forms.Padding(2);
-            this.isGarage.Name = "isGarage";
-            this.isGarage.Size = new System.Drawing.Size(100, 17);
-            this.isGarage.TabIndex = 49;
-            this.isGarage.Text = "Parking Garage";
-            this.isGarage.UseVisualStyleBackColor = true;
-            // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.button1);
             this.panel5.Controls.Add(this.uploadFSAE);
             this.panel5.Controls.Add(this.FSAEImage);
             this.panel5.Controls.Add(this.uploadSITEACCESS);
@@ -1861,179 +1825,6 @@
             this.panel5.Size = new System.Drawing.Size(639, 466);
             this.panel5.TabIndex = 50;
             // 
-            // label64
-            // 
-            this.label64.AutoSize = true;
-            this.label64.Location = new System.Drawing.Point(582, 446);
-            this.label64.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(41, 13);
-            this.label64.TabIndex = 23;
-            this.label64.Text = "Page 5";
-            // 
-            // label65
-            // 
-            this.label65.AutoSize = true;
-            this.label65.Location = new System.Drawing.Point(477, 230);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(95, 13);
-            this.label65.TabIndex = 24;
-            this.label65.Text = "UPLOAD IMAGES";
-            // 
-            // label66
-            // 
-            this.label66.AutoSize = true;
-            this.label66.Location = new System.Drawing.Point(20, 49);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(117, 13);
-            this.label66.TabIndex = 25;
-            this.label66.Text = "Stair Discharge(Ext/Int)";
-            // 
-            // label67
-            // 
-            this.label67.AutoSize = true;
-            this.label67.Location = new System.Drawing.Point(20, 114);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(108, 13);
-            this.label67.TabIndex = 26;
-            this.label67.Text = "Fire Command Center";
-            // 
-            // label68
-            // 
-            this.label68.AutoSize = true;
-            this.label68.Location = new System.Drawing.Point(20, 177);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(85, 13);
-            this.label68.TabIndex = 27;
-            this.label68.Text = "Fire Pump Room";
-            // 
-            // label69
-            // 
-            this.label69.AutoSize = true;
-            this.label69.Location = new System.Drawing.Point(20, 245);
-            this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(85, 13);
-            this.label69.TabIndex = 28;
-            this.label69.Text = "Generator Room";
-            // 
-            // label70
-            // 
-            this.label70.AutoSize = true;
-            this.label70.Location = new System.Drawing.Point(20, 308);
-            this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(63, 13);
-            this.label70.TabIndex = 29;
-            this.label70.Text = "Site Access";
-            // 
-            // label71
-            // 
-            this.label71.AutoSize = true;
-            this.label71.Location = new System.Drawing.Point(20, 376);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(110, 13);
-            this.label71.TabIndex = 30;
-            this.label71.Text = "Fire Service Elevators";
-            // 
-            // uploadSTAIRDISCHARGE
-            // 
-            this.uploadSTAIRDISCHARGE.Location = new System.Drawing.Point(252, 37);
-            this.uploadSTAIRDISCHARGE.Margin = new System.Windows.Forms.Padding(2);
-            this.uploadSTAIRDISCHARGE.Name = "uploadSTAIRDISCHARGE";
-            this.uploadSTAIRDISCHARGE.Size = new System.Drawing.Size(126, 42);
-            this.uploadSTAIRDISCHARGE.TabIndex = 50;
-            this.uploadSTAIRDISCHARGE.Text = "UPLOAD";
-            this.uploadSTAIRDISCHARGE.UseVisualStyleBackColor = true;
-            // 
-            // STAIRDISCHARGEImage
-            // 
-            this.STAIRDISCHARGEImage.Location = new System.Drawing.Point(164, 37);
-            this.STAIRDISCHARGEImage.Margin = new System.Windows.Forms.Padding(2);
-            this.STAIRDISCHARGEImage.Name = "STAIRDISCHARGEImage";
-            this.STAIRDISCHARGEImage.Size = new System.Drawing.Size(75, 41);
-            this.STAIRDISCHARGEImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.STAIRDISCHARGEImage.TabIndex = 49;
-            this.STAIRDISCHARGEImage.TabStop = false;
-            // 
-            // uploadFCC
-            // 
-            this.uploadFCC.Location = new System.Drawing.Point(252, 103);
-            this.uploadFCC.Margin = new System.Windows.Forms.Padding(2);
-            this.uploadFCC.Name = "uploadFCC";
-            this.uploadFCC.Size = new System.Drawing.Size(126, 42);
-            this.uploadFCC.TabIndex = 52;
-            this.uploadFCC.Text = "UPLOAD";
-            this.uploadFCC.UseVisualStyleBackColor = true;
-            // 
-            // FCCImage
-            // 
-            this.FCCImage.Location = new System.Drawing.Point(164, 103);
-            this.FCCImage.Margin = new System.Windows.Forms.Padding(2);
-            this.FCCImage.Name = "FCCImage";
-            this.FCCImage.Size = new System.Drawing.Size(75, 41);
-            this.FCCImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.FCCImage.TabIndex = 51;
-            this.FCCImage.TabStop = false;
-            // 
-            // uploadFP
-            // 
-            this.uploadFP.Location = new System.Drawing.Point(252, 170);
-            this.uploadFP.Margin = new System.Windows.Forms.Padding(2);
-            this.uploadFP.Name = "uploadFP";
-            this.uploadFP.Size = new System.Drawing.Size(126, 42);
-            this.uploadFP.TabIndex = 54;
-            this.uploadFP.Text = "UPLOAD";
-            this.uploadFP.UseVisualStyleBackColor = true;
-            // 
-            // FPImage
-            // 
-            this.FPImage.Location = new System.Drawing.Point(164, 170);
-            this.FPImage.Margin = new System.Windows.Forms.Padding(2);
-            this.FPImage.Name = "FPImage";
-            this.FPImage.Size = new System.Drawing.Size(75, 41);
-            this.FPImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.FPImage.TabIndex = 53;
-            this.FPImage.TabStop = false;
-            // 
-            // uploadGENERATOR
-            // 
-            this.uploadGENERATOR.Location = new System.Drawing.Point(252, 236);
-            this.uploadGENERATOR.Margin = new System.Windows.Forms.Padding(2);
-            this.uploadGENERATOR.Name = "uploadGENERATOR";
-            this.uploadGENERATOR.Size = new System.Drawing.Size(126, 42);
-            this.uploadGENERATOR.TabIndex = 56;
-            this.uploadGENERATOR.Text = "UPLOAD";
-            this.uploadGENERATOR.UseVisualStyleBackColor = true;
-            // 
-            // GENERATORImage
-            // 
-            this.GENERATORImage.Location = new System.Drawing.Point(164, 236);
-            this.GENERATORImage.Margin = new System.Windows.Forms.Padding(2);
-            this.GENERATORImage.Name = "GENERATORImage";
-            this.GENERATORImage.Size = new System.Drawing.Size(75, 41);
-            this.GENERATORImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.GENERATORImage.TabIndex = 55;
-            this.GENERATORImage.TabStop = false;
-            // 
-            // uploadSITEACCESS
-            // 
-            this.uploadSITEACCESS.Location = new System.Drawing.Point(252, 303);
-            this.uploadSITEACCESS.Margin = new System.Windows.Forms.Padding(2);
-            this.uploadSITEACCESS.Name = "uploadSITEACCESS";
-            this.uploadSITEACCESS.Size = new System.Drawing.Size(126, 42);
-            this.uploadSITEACCESS.TabIndex = 58;
-            this.uploadSITEACCESS.Text = "UPLOAD";
-            this.uploadSITEACCESS.UseVisualStyleBackColor = true;
-            // 
-            // SITEACCESSImage
-            // 
-            this.SITEACCESSImage.Location = new System.Drawing.Point(164, 303);
-            this.SITEACCESSImage.Margin = new System.Windows.Forms.Padding(2);
-            this.SITEACCESSImage.Name = "SITEACCESSImage";
-            this.SITEACCESSImage.Size = new System.Drawing.Size(75, 41);
-            this.SITEACCESSImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.SITEACCESSImage.TabIndex = 57;
-            this.SITEACCESSImage.TabStop = false;
-            // 
             // uploadFSAE
             // 
             this.uploadFSAE.Location = new System.Drawing.Point(252, 369);
@@ -2043,6 +1834,7 @@
             this.uploadFSAE.TabIndex = 60;
             this.uploadFSAE.Text = "UPLOAD";
             this.uploadFSAE.UseVisualStyleBackColor = true;
+            this.uploadFSAE.Click += new System.EventHandler(this.uploadFSAE_Click);
             // 
             // FSAEImage
             // 
@@ -2054,34 +1846,225 @@
             this.FSAEImage.TabIndex = 59;
             this.FSAEImage.TabStop = false;
             // 
+            // uploadSITEACCESS
+            // 
+            this.uploadSITEACCESS.Location = new System.Drawing.Point(252, 303);
+            this.uploadSITEACCESS.Margin = new System.Windows.Forms.Padding(2);
+            this.uploadSITEACCESS.Name = "uploadSITEACCESS";
+            this.uploadSITEACCESS.Size = new System.Drawing.Size(126, 42);
+            this.uploadSITEACCESS.TabIndex = 58;
+            this.uploadSITEACCESS.Text = "UPLOAD";
+            this.uploadSITEACCESS.UseVisualStyleBackColor = true;
+            this.uploadSITEACCESS.Click += new System.EventHandler(this.uploadSITEACCESS_Click);
+            // 
+            // SITEACCESSImage
+            // 
+            this.SITEACCESSImage.Location = new System.Drawing.Point(164, 303);
+            this.SITEACCESSImage.Margin = new System.Windows.Forms.Padding(2);
+            this.SITEACCESSImage.Name = "SITEACCESSImage";
+            this.SITEACCESSImage.Size = new System.Drawing.Size(75, 41);
+            this.SITEACCESSImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.SITEACCESSImage.TabIndex = 57;
+            this.SITEACCESSImage.TabStop = false;
+            // 
+            // uploadGENERATOR
+            // 
+            this.uploadGENERATOR.Location = new System.Drawing.Point(252, 236);
+            this.uploadGENERATOR.Margin = new System.Windows.Forms.Padding(2);
+            this.uploadGENERATOR.Name = "uploadGENERATOR";
+            this.uploadGENERATOR.Size = new System.Drawing.Size(126, 42);
+            this.uploadGENERATOR.TabIndex = 56;
+            this.uploadGENERATOR.Text = "UPLOAD";
+            this.uploadGENERATOR.UseVisualStyleBackColor = true;
+            this.uploadGENERATOR.Click += new System.EventHandler(this.uploadGENERATOR_Click);
+            // 
+            // GENERATORImage
+            // 
+            this.GENERATORImage.Location = new System.Drawing.Point(164, 236);
+            this.GENERATORImage.Margin = new System.Windows.Forms.Padding(2);
+            this.GENERATORImage.Name = "GENERATORImage";
+            this.GENERATORImage.Size = new System.Drawing.Size(75, 41);
+            this.GENERATORImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.GENERATORImage.TabIndex = 55;
+            this.GENERATORImage.TabStop = false;
+            // 
+            // uploadFP
+            // 
+            this.uploadFP.Location = new System.Drawing.Point(252, 170);
+            this.uploadFP.Margin = new System.Windows.Forms.Padding(2);
+            this.uploadFP.Name = "uploadFP";
+            this.uploadFP.Size = new System.Drawing.Size(126, 42);
+            this.uploadFP.TabIndex = 54;
+            this.uploadFP.Text = "UPLOAD";
+            this.uploadFP.UseVisualStyleBackColor = true;
+            this.uploadFP.Click += new System.EventHandler(this.uploadFP_Click);
+            // 
+            // FPImage
+            // 
+            this.FPImage.Location = new System.Drawing.Point(164, 170);
+            this.FPImage.Margin = new System.Windows.Forms.Padding(2);
+            this.FPImage.Name = "FPImage";
+            this.FPImage.Size = new System.Drawing.Size(75, 41);
+            this.FPImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.FPImage.TabIndex = 53;
+            this.FPImage.TabStop = false;
+            // 
+            // uploadFCC
+            // 
+            this.uploadFCC.Location = new System.Drawing.Point(252, 103);
+            this.uploadFCC.Margin = new System.Windows.Forms.Padding(2);
+            this.uploadFCC.Name = "uploadFCC";
+            this.uploadFCC.Size = new System.Drawing.Size(126, 42);
+            this.uploadFCC.TabIndex = 52;
+            this.uploadFCC.Text = "UPLOAD";
+            this.uploadFCC.UseVisualStyleBackColor = true;
+            this.uploadFCC.Click += new System.EventHandler(this.uploadFCC_Click);
+            // 
+            // FCCImage
+            // 
+            this.FCCImage.Location = new System.Drawing.Point(164, 103);
+            this.FCCImage.Margin = new System.Windows.Forms.Padding(2);
+            this.FCCImage.Name = "FCCImage";
+            this.FCCImage.Size = new System.Drawing.Size(75, 41);
+            this.FCCImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.FCCImage.TabIndex = 51;
+            this.FCCImage.TabStop = false;
+            // 
+            // uploadSTAIRDISCHARGE
+            // 
+            this.uploadSTAIRDISCHARGE.Location = new System.Drawing.Point(252, 37);
+            this.uploadSTAIRDISCHARGE.Margin = new System.Windows.Forms.Padding(2);
+            this.uploadSTAIRDISCHARGE.Name = "uploadSTAIRDISCHARGE";
+            this.uploadSTAIRDISCHARGE.Size = new System.Drawing.Size(126, 42);
+            this.uploadSTAIRDISCHARGE.TabIndex = 50;
+            this.uploadSTAIRDISCHARGE.Text = "UPLOAD";
+            this.uploadSTAIRDISCHARGE.UseVisualStyleBackColor = true;
+            this.uploadSTAIRDISCHARGE.Click += new System.EventHandler(this.uploadSTAIRDISCHARGE_Click);
+            // 
+            // STAIRDISCHARGEImage
+            // 
+            this.STAIRDISCHARGEImage.Location = new System.Drawing.Point(164, 37);
+            this.STAIRDISCHARGEImage.Margin = new System.Windows.Forms.Padding(2);
+            this.STAIRDISCHARGEImage.Name = "STAIRDISCHARGEImage";
+            this.STAIRDISCHARGEImage.Size = new System.Drawing.Size(75, 41);
+            this.STAIRDISCHARGEImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.STAIRDISCHARGEImage.TabIndex = 49;
+            this.STAIRDISCHARGEImage.TabStop = false;
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Location = new System.Drawing.Point(20, 376);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(110, 13);
+            this.label71.TabIndex = 30;
+            this.label71.Text = "Fire Service Elevators";
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.Location = new System.Drawing.Point(20, 308);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(63, 13);
+            this.label70.TabIndex = 29;
+            this.label70.Text = "Site Access";
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Location = new System.Drawing.Point(20, 245);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(85, 13);
+            this.label69.TabIndex = 28;
+            this.label69.Text = "Generator Room";
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Location = new System.Drawing.Point(20, 177);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(85, 13);
+            this.label68.TabIndex = 27;
+            this.label68.Text = "Fire Pump Room";
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Location = new System.Drawing.Point(20, 114);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(108, 13);
+            this.label67.TabIndex = 26;
+            this.label67.Text = "Fire Command Center";
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Location = new System.Drawing.Point(20, 49);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(117, 13);
+            this.label66.TabIndex = 25;
+            this.label66.Text = "Stair Discharge(Ext/Int)";
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Location = new System.Drawing.Point(477, 230);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(95, 13);
+            this.label65.TabIndex = 24;
+            this.label65.Text = "UPLOAD IMAGES";
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Location = new System.Drawing.Point(582, 446);
+            this.label64.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(41, 13);
+            this.label64.TabIndex = 23;
+            this.label64.Text = "Page 5";
+            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(494, 364);
+            this.button1.Location = new System.Drawing.Point(414, 491);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(60, 27);
             this.button1.TabIndex = 61;
             this.button1.Text = "Change";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // isMezzanine
+            // 
+            this.isMezzanine.AutoSize = true;
+            this.isMezzanine.Location = new System.Drawing.Point(343, 375);
+            this.isMezzanine.Name = "isMezzanine";
+            this.isMezzanine.Size = new System.Drawing.Size(77, 17);
+            this.isMezzanine.TabIndex = 53;
+            this.isMezzanine.Text = "Mezzanine";
+            this.isMezzanine.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(675, 522);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.PreviousButton);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RENDImage)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.WFSDImage)).EndInit();
@@ -2090,18 +2073,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.SFSDImage)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MezzImage)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RENDImage)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.STAIRDISCHARGEImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FCCImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FPImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GENERATORImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SITEACCESSImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FSAEImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SITEACCESSImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GENERATORImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FPImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FCCImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.STAIRDISCHARGEImage)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2239,7 +2220,6 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.CheckBox isVOpening2;
         private System.Windows.Forms.CheckBox isEscalator;
-        private System.Windows.Forms.CheckBox isMezzanine;
         private System.Windows.Forms.Label label63;
         public System.Windows.Forms.TextBox DateInput;
         private System.Windows.Forms.Label DateLabel;
@@ -2248,8 +2228,6 @@
         private System.Windows.Forms.CheckBox isFDCOM;
         private System.Windows.Forms.CheckBox isFDMD;
         private System.Windows.Forms.CheckBox isBDCOM;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.PictureBox MezzImage;
         private System.Windows.Forms.Button uploadREND;
         private System.Windows.Forms.PictureBox RENDImage;
         private System.Windows.Forms.CheckBox isGarage;
@@ -2275,6 +2253,7 @@
         private System.Windows.Forms.Label label67;
         private System.Windows.Forms.Label label66;
         private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.CheckBox isMezzanine;
     }
 }
 

@@ -303,8 +303,12 @@ namespace findandreplacenarr
                 else if ((A1 == false && A2 == false && A3 == false) && R1 == true)
                 {
                     this.FindAndReplace(wordApp, "FireExplosion", "For Hotel occupancies, FFPC, NFPA 101 Section 28.3.2 states that rooms containing high-pressure boilers, ");
-                    this.FindAndReplace(wordApp, "FireExplosion2", "large transformers, or other service equipment subject to explosion shall not be located directly under or abutting required exits.");
-                    
+                    this.FindAndReplace(wordApp, "FireExplosion2", "large transformers, or other service equipment subject to explosion shall not be located directly under or abutting required exits.");  
+                }
+                else
+                {
+                    this.FindAndReplace(wordApp, "FireExplosion", "");
+                    this.FindAndReplace(wordApp, "FireExplosion2", "");
                 }
                 
                 //I3 Partition
@@ -318,7 +322,11 @@ namespace findandreplacenarr
                 }
                 else
                 {
-                    this.FindAndReplace(wordApp, "I1I3PARTITION", "DELETE");
+                    this.FindAndReplace(wordApp, "I1I3PARTITION", "");
+                    this.FindAndReplace(wordApp, "I1I3PARTITION", "");
+                    this.FindAndReplace(wordApp, "I1I3PARTITION", "");
+                    this.FindAndReplace(wordApp, "I1I3PARTITION", "");
+                    this.FindAndReplace(wordApp, "I1I3PARTITION", "");
                 }                              
                  
                 // Table 1 Editing per Occupancy Input
@@ -379,6 +387,14 @@ namespace findandreplacenarr
                     table8.Rows[23].Delete();
                     table8.Rows[16].Delete();
                     table8.Rows[14].Delete();
+                }
+                if (I1 == false && I3 == false)
+                {
+                    table8.Rows[13].Delete();
+                    table8.Rows[12].Delete();
+                }
+                if (R1 == false && R2 == false)
+                {
                     table8.Rows[11].Delete();
                     table8.Rows[8].Delete();
                 }
@@ -586,10 +602,15 @@ namespace findandreplacenarr
 
                     //FIRE ALARM SECTION HOTEL
                     this.FindAndReplace(wordApp, "HOTELFA", "In Hotel (R-1) occupancies, a certain number of rooms must be provided with visible alarms depending on the total number of sleeping rooms in the hotel in accordance with FBC Table 907.5.2.3.2.");
+                    this.FindAndReplace(wordApp, "TABLE18NAME", "Table 18: Dwelling Unit Visible Alarms");
                 }
                 else
                 {
                     table18.Delete();
+                    this.FindAndReplace(wordApp, "TABLE18NAME", "");
+                    this.FindAndReplace(wordApp, "LOWEXIT", "");
+                    this.FindAndReplace(wordApp, "LOWEXIT2", "");
+                    this.FindAndReplace(wordApp, "HOTELFA", "");
                 }
 
                 //TABLE 17 FIRE EXTINGUISHERS
@@ -621,6 +642,8 @@ namespace findandreplacenarr
                 {
                     //Delete Table 15 ------------------------------
                     table15.Delete();
+                    this.FindAndReplace(wordApp, "TABLE15NAME", "");
+                    this.FindAndReplace(wordApp, "TABLE16NAME", "Table 16: Egress Capacity");
                     //if (I1 == true || I3 == true)
                     //{
                         //table16.Rows[5].Delete();
@@ -638,18 +661,20 @@ namespace findandreplacenarr
                 {
                     //Delete Table 16 -------------------------------
                     table16.Delete();
+                    this.FindAndReplace(wordApp, "TABLE16NAME", "");
+                    this.FindAndReplace(wordApp, "TABLE15NAME", "Table 15: Egress Capacity");
                     //if (I1 == true || I3 == true)
                     //{
-                        //table15.Rows[5].Delete();
-                        //table15.Rows[3].Delete();
-                        //table15.Rows[2].Delete();
+                    //table15.Rows[5].Delete();
+                    //table15.Rows[3].Delete();
+                    //table15.Rows[2].Delete();
 
                     //}
                     //else
                     //{
-                        //table15.Rows[5].Delete();
-                        //table15.Rows[4].Delete();
-                        //table15.Rows[3].Delete();
+                    //table15.Rows[5].Delete();
+                    //table15.Rows[4].Delete();
+                    //table15.Rows[3].Delete();
                     //}
                 }
                
@@ -663,7 +688,10 @@ namespace findandreplacenarr
                 {
                     this.FindAndReplace(wordApp, "STAIR420", "For buildings that are more than 420 ft. in height or that of Risk Category III or IV, the construction of the stair and elevator hoistway enclosures shall comply with  FBC Sections 403.2.3.1 through 403.2.3.4.");
                 }
-
+                else
+                {
+                    this.FindAndReplace(wordApp, "STAIR420", "");
+                }
                 //FIRE ALARM SECTION ----------------------------------------------------------------------------------
                 //if(R1 == true)
                 //{
@@ -692,9 +720,24 @@ namespace findandreplacenarr
                     {
                         this.FindAndReplace(wordApp, "R1R2EMERGENCYPOWERCOM", "In the City of Miami, the fire department will require a 24-hour fuel supply for emergency power.");
                     }
-
+                    else
+                    {
+                        this.FindAndReplace(wordApp, "R1R2EMERGENCYPOWERCOM", "");
+                    }
                 }
-                
+                else
+                {
+                    this.FindAndReplace(wordApp, "MEANSESCAPE", "");
+                    this.FindAndReplace(wordApp, "MEANSESCAPE2", "");
+                    this.FindAndReplace(wordApp, "R1R2SMOKEALARM", "");
+                    this.FindAndReplace(wordApp, "R1R2SMOKEALARMB", "");
+                    this.FindAndReplace(wordApp, "R1R2SMOKEALARM1", "");
+                    this.FindAndReplace(wordApp, "R1R2SMOKEALARM2", "");
+                    this.FindAndReplace(wordApp, "R1R2SMOKEALARM3", "");
+                    this.FindAndReplace(wordApp, "R1R2SMOKEALARMEND", "");
+                    this.FindAndReplace(wordApp, "R1R2SMOKEALARMENDB", "");
+                    this.FindAndReplace(wordApp, "R1R2EMERGENCYPOWER", "");
+                }
 
                 //SITE ACCESS - IF MIAMI DADE
                 if (isFDMD.Checked)
@@ -702,16 +745,26 @@ namespace findandreplacenarr
                     this.FindAndReplace(wordApp, "MiamiDadeSite", "Miami-Dade Fire Department requires set-up sites located at a minimum on two sides of the building at the approximate center of each side for firefighting and rescue operations. Depending upon the building configuration, ");
                     this.FindAndReplace(wordApp, "MiamiDadeSite2", "additional set-up sites may be required by the AHJ.  Sites shall be no closer than 10 feet and no further than 30 feet from any building.  Each site shall be a minimum of 21 feet wide and 47 feet long with a cross slope no greater ");
                     this.FindAndReplace(wordApp, "MiamiDadeSite3", "than 5 percent. Sites shall comply with the requirements of the emergency vehicle support capabilities above and also capable of withstanding any point forces resulting from outriggers.  Set-up sites, fire lanes, ");
-                    this.FindAndReplace(wordApp, "MiamiDadeSite4", "and slopes in a project must be able to accommodate a truck with dimensions as follows: 47 feet overall length, 36 feet bumper to bump, and 256 inches wheelbase length.");
+                    this.FindAndReplace(wordApp, "MiamiDadeSite4", "and slopes in a project must be able to accommodate a truck with dimensions as follows: 47 feet overall length, 36 feet bumper to bump, and 256 inches wheelbase length.");                
+                }            
+                else
+                {
+                    this.FindAndReplace(wordApp, "MiamiDadeSite", "");
+                    this.FindAndReplace(wordApp, "MiamiDadeSite2", "");
+                    this.FindAndReplace(wordApp, "MiamiDadeSite3", "");
+                    this.FindAndReplace(wordApp, "MiamiDadeSite4", "");
                 }
-                
                 //SMOKE DETECTION SECTION -----------------------------------------
                 if (I1 == true)
                 {
                     this.FindAndReplace(wordApp, "SMOKEDETECTION", "In Group I-1 occupancies, an automatic smoke detection system shall be installed in corridors, areas open to corridors and habitable spaces other than sleeping units and kitchens (FBC §907.2.6.1 and FFPC §32.3.3.4.8.1). ");
                     this.FindAndReplace(wordApp, "SMOKEDETECTION2", "The system shall be activated to initiate an alarm that is audible in all sleeping areas.");
                 }
-
+                else
+                {
+                    this.FindAndReplace(wordApp, "SMOKEDETECTION", "");
+                    this.FindAndReplace(wordApp, "SMOKEDETECTION2", "");
+                }
                 //SMOKE REMOVAL SECTION
                 if (intBuildingHeight >= 75)
                 {
@@ -721,6 +774,14 @@ namespace findandreplacenarr
                     this.FindAndReplace(wordApp, "SMOKEREMOVAL4", "Return and exhaust air shall be moved directly to the outside without recirculation to other portions of the building. ");
                     this.FindAndReplace(wordApp, "SCRADESIGN", "The Smoke Control Rational Analysis for this project will provide more detailed design criteria for the required smoke control systems.");
                 }
+                else
+                {
+                    this.FindAndReplace(wordApp, "SMOKEREMOVAL", "");
+                    this.FindAndReplace(wordApp, "SMOKEREMOVAL2", "");
+                    this.FindAndReplace(wordApp, "SMOKEREMOVAL3", "");
+                    this.FindAndReplace(wordApp, "SMOKEREMOVAL4", "");
+                    this.FindAndReplace(wordApp, "SCRADESIGN", "");
+                }
 
 
                 //LUMINOUS EGRESS MARKINGS - NEED TO ADD CODE FOR R2 BUILDINGS WITH NON R2 ACCESSORY SPACES ABOVE THE 75FT
@@ -729,13 +790,36 @@ namespace findandreplacenarr
                     this.FindAndReplace(wordApp, "LUMINOUSMARKSECTION", "As a high-rise building, FBC §403.5.5 states that approved luminous egress path markings delineating the exit path must be provided in Group A, B, E, I, M and R-1 occupancies in accordance with FBC §1025. ");
                     this.FindAndReplace(wordApp, "LUMINOUSMARKSECTION2", "Markings within the exit enclosures are required to be provided on steps, landings, handrails, perimeter demarcation lines, and discharge doors from the exit enclosure.  Materials should comply with either UL 1994 or ASTM E2072. ");
                 }
-                
+                else
+                {
+                    this.FindAndReplace(wordApp, "LUMINOUSMARKSECTION", "");
+                    this.FindAndReplace(wordApp, "LUMINOUSMARKSECTION2", "");
+                }
+
+                //MEZZANINE SECTION
+                if (isMezzanine.Checked)
+                {
+                    this.FindAndReplace(wordApp, "MEZZSECTION", "Mezzanines within the  project are designed to comply with the requirements of the FBC and the FFPC. A mezzanine or mezzanines must comply with FBC Section 505.2.  and shall be considered a portion of the story below. ");
+                    this.FindAndReplace(wordApp, "MEZZSECTION1", "Such mezzanines shall not contribute to either the building area or number of stories as regulated by Section 503.1. The area of the mezzanine shall be included in determining the fire area. ");
+                    this.FindAndReplace(wordApp, "MEZZSECTION2", "The clear height above and below the mezzanine floor construction shall be not less than 7 feet.");
+                    this.FindAndReplace(wordApp, "MEZZSECTION3", "The aggregate area of a mezzanine or mezzanines within a room shall be not greater than one-third of the floor area of that room or space in which they are located. The enclosed portion of a room shall not be included in ");
+                    this.FindAndReplace(wordApp, "MEZZSECTION4", "a determination of the floor area of the room in which the mezzanine is located. In determining the allowable mezzanine area, the area of the mezzanine shall not be included in the floor area of the room. (FBC Section 505.2.1). ");
+                    this.FindAndReplace(wordApp, "MEZZSECTION5", "The floor area of a mezzanine, or the aggregate floor area of multiple mezzanines, shall not exceed one-half of the floor area of the room or story in which the mezzanines are located; otherwise, ");
+                    this.FindAndReplace(wordApp, "MEZZSECTION6", "such mezzanine or aggregated mezzanines shall be treated as floors (FFPC, NFPA 101 Section 37.1.2.2.3)");
+                    this.FindAndReplace(wordApp, "MEZZSECTION7", "The means of egress for mezzanines shall comply with FBC Section 505.2.2 and FFPC, NFPA 101 Section 12.2.4.5.");
+
+                }
 
                 //EXIT ACCESS SECTION
                 if (R1 == true || I1 == true)
                 {
                     this.FindAndReplace(wordApp, "R1I1UnitExit", "For Hotel Group R-1 occupancies and Res B/C, the FFPC requires two exit access doors from the unit when the guest room or guest suite is over 2,000 sq.ft.  The exit access doors must be located remotely from each other ");
                     this.FindAndReplace(wordApp, "R1I1UnitExit2", "(FFPC, NFPA 101 Section 28.2.5.7).  If limits shown in Table 12 are exceeded, then additional exits must be provided.");
+                }
+                else
+                {
+                    this.FindAndReplace(wordApp, "R1I1UnitExit", "");
+                    this.FindAndReplace(wordApp, "R1I1UnitExit2", "");
                 }
 
                 //OCCUPANT EVAC OR ADDITIONAL STAIR
@@ -745,6 +829,12 @@ namespace findandreplacenarr
                     this.FindAndReplace(wordApp, "OEESection2", " which states that an occupant evacuation elevator can be provided in lieu of the stair.  The occupant evacuation elevator, separate from fire service access elevator, must comply with FBC Section 3008 and FFPC, NFPA 101 Section 7.14.");
                     this.FindAndReplace(wordApp, "OEESection3", "NOTE: Where the spaces above 420 ft that are not R-2 are accessory to the R-2 building, an additional stairwary or Occupant Evacuation Elevator is not required.");
                 }
+                else
+                {
+                    this.FindAndReplace(wordApp, "OEESection", "");
+                    this.FindAndReplace(wordApp, "OEESection2", "");
+                    this.FindAndReplace(wordApp, "OEESection3", "");
+                }
                 
                 //LOOPED CORRIDOR FOR R1/R2
                 if ((R2 == true || R1 == true) && isNONLooped.Checked)
@@ -752,12 +842,22 @@ namespace findandreplacenarr
                     this.FindAndReplace(wordApp, "NONLoopedcorridor", "For R - 2 and R - 1 occupancies, the distance between exits is not applicable to common nonlooped exit access corridors in a building that has corridor doors from the guestroom or guest suite or dwelling unit, ");
                     this.FindAndReplace(wordApp, "NONLoopedcorridor2", "which are arranged so that the exits are located in opposite directions from such doors (FBC Section 1007.1.1 Exception 3).The exit discharge must also meet the remoteness requirement.");
                 }
+                else
+                {
+                    this.FindAndReplace(wordApp, "NONLoopedcorridor", "");
+                    this.FindAndReplace(wordApp, "NONLoopedcorridor2", "");
+                }
 
                 //STREET FLOOR REQ
                 if (B == true || R1 == true || I1 == true)
                 {
                     this.FindAndReplace(wordApp, "StreetFloorREQ", "For Business (FFPC, NFPA 101 Section 38.2.3.3), Hotel (FFPC, NFPA 101 Section 28.2.3.2) and Res B/C,(check others), ");
                     this.FindAndReplace(wordApp, "StreetFloorREQ2", "the code requires that street floor exits must accommodate the occupant load of street floor plus stair discharging onto street floor.");
+                }
+                else
+                {
+                    this.FindAndReplace(wordApp, "StreetFloorREQ", "");
+                    this.FindAndReplace(wordApp, "StreetFloorREQ2", "");
                 }
 
                 //DOOR LOCK I1
@@ -769,7 +869,9 @@ namespace findandreplacenarr
                 }
                 else
                 {
-                    this.FindAndReplace(wordApp, "DoorLockI1", "DELETE");
+                    this.FindAndReplace(wordApp, "DoorLockI1", "");
+                    this.FindAndReplace(wordApp, "DoorLockI2", "");
+                    this.FindAndReplace(wordApp, "DoorLockI3", "");
                 }
 
                 //STAGE SECTION
@@ -797,6 +899,30 @@ namespace findandreplacenarr
                     this.FindAndReplace(wordApp, "STAGESECTION20", "Sprinklers are not required for stages 1,000 square feet or less in area and 50 feet or less in height where curtains, scenery or other combustible hangings are not retractable vertically. ");
                     this.FindAndReplace(wordApp, "STAGESECTION21", "Combustible hangings shall be limited to a single main curtain, borders, legs, and a single backdrop (FBC Section 410.7).");
                 }
+                else
+                {
+                    this.FindAndReplace(wordApp, "STAGESECTION", "");
+                    this.FindAndReplace(wordApp, "STAGESECTION2", "");
+                    this.FindAndReplace(wordApp, "STAGESECTION3", "");
+                    this.FindAndReplace(wordApp, "STAGESECTION4", "");
+                    this.FindAndReplace(wordApp, "STAGESECTION5", "");
+                    this.FindAndReplace(wordApp, "STAGESECTION6", "");
+                    this.FindAndReplace(wordApp, "STAGESECTION7", "");
+                    this.FindAndReplace(wordApp, "STAGESECTION8", "");
+                    this.FindAndReplace(wordApp, "STAGESECTION9", "");
+                    this.FindAndReplace(wordApp, "STAGESECTION10", "");
+                    this.FindAndReplace(wordApp, "STAGESECTION11", "");
+                    this.FindAndReplace(wordApp, "STAGESECTION12", "");
+                    this.FindAndReplace(wordApp, "STAGESECTION13", "");
+                    this.FindAndReplace(wordApp, "STAGESECTION14", "");
+                    this.FindAndReplace(wordApp, "STAGESECTION15", "");
+                    this.FindAndReplace(wordApp, "STAGESECTION16", "");
+                    this.FindAndReplace(wordApp, "STAGESECTION17", "");
+                    this.FindAndReplace(wordApp, "STAGESECTION18", "");
+                    this.FindAndReplace(wordApp, "STAGESECTION19", "");
+                    this.FindAndReplace(wordApp, "STAGESECTION20", "");
+                    this.FindAndReplace(wordApp, "STAGESECTION21", "");                    
+                }
                 
                 //SPRINKLER SECTION
                 if (intBuildingHeight >= 420)
@@ -806,6 +932,12 @@ namespace findandreplacenarr
                     
                     //SITE WATER SECTION
                     this.FindAndReplace(wordApp, "MAINWATER420", "The building is greater than 420 ft, therefore, the water supply must be designed so that there are separate connections to a minimum of two public mains on different streets (FBC Section 403.3).");
+                }
+                else
+                {
+                    this.FindAndReplace(wordApp, "SPRINKLER420", "");
+                    this.FindAndReplace(wordApp, "SPRINKLER420B", "");
+                    this.FindAndReplace(wordApp, "MAINWATER420", "");
                 }
 
                 if (isBDMD.Checked)
@@ -826,12 +958,16 @@ namespace findandreplacenarr
                     this.FindAndReplace(wordApp, "MDandCOMFCC", "Miami Dade County and City of Miami Fire Department requires a door opening into the lobby and additional door opening to the outside to provide direct access without entering the lobby. ");
                     this.FindAndReplace(wordApp, "MDandCOMFCC2", "The fire command center shall be located on the address side/main entrance of the building and shall be within proximity to the fire service access elevators and stairs that have a standpipe available for fire operations.");
                 }
-                //add FCC PICTURE --------------------------------------------------------------ADD PICTURE
+                else
+                {
+                    this.FindAndReplace(wordApp, "MDandCOMFCC", "");
+                    this.FindAndReplace(wordApp, "MDandCOMFCC2", "");
+                }               
 
                 //FSAESECTION
                 if (intBuildingHeight >= 120)
                 {
-                    this.FindAndReplace(wordApp, "FSAESECTION", "The highest occupied floor is located more than 120-feet above the lowest level of fire department vehicle access.  Therefore, two fire service access elevators in accordance with ");
+                    this.FindAndReplace(wordApp, "FSAESECTION", "The highest occupied floor is located more than 120-feet above the lowest level of fire department vehicle access. Therefore, two fire service access elevators in accordance with ");
                     this.FindAndReplace(wordApp, "FSAESECTION1", "FBC Section 403.6.1 shall be provided. The fire service access elevator is required to include the following:");
                     this.FindAndReplace(wordApp, "FSAESECTION2", "Floors:  The elevator must serve every floor.");
                     this.FindAndReplace(wordApp, "FSAESECTION3", "Phase I Recall:  Actuation of any building fire alarm initiating device shall initiate Phase I Recall for the fire service access elevators.");
@@ -860,6 +996,38 @@ namespace findandreplacenarr
                     this.FindAndReplace(wordApp, "FSAESECTION26", "NOTE:  FBC Section 3007.6 Exception 2 permits the designer to substitute the lobby requirements above with a corridor that is 6 feet wide throughout.  The corridor must have a 1-hour fire resistance ");
                     this.FindAndReplace(wordApp, "FSAESECTION27", "rating with 45-minute fire doors.  The corridor must be protected with a smoke control system.");
                 }
+                else
+                {
+                    this.FindAndReplace(wordApp, "FSAESECTION", "");
+                    this.FindAndReplace(wordApp, "FSAESECTION1", "");
+                    this.FindAndReplace(wordApp, "FSAESECTION2", "");
+                    this.FindAndReplace(wordApp, "FSAESECTION3", "");
+                    this.FindAndReplace(wordApp, "FSAESECTION4", "");
+                    this.FindAndReplace(wordApp, "FSAESECTION", "");
+                    this.FindAndReplace(wordApp, "FSAESECTION5", "");
+                    this.FindAndReplace(wordApp, "FSAESECTION6", "");
+                    this.FindAndReplace(wordApp, "FSAESECTION7", "");
+                    this.FindAndReplace(wordApp, "FSAESECTION8", "");
+                    this.FindAndReplace(wordApp, "FSAESECTION9", "");
+                    this.FindAndReplace(wordApp, "FSAESECTION10", "");
+                    this.FindAndReplace(wordApp, "FSAESECTION11", "");
+                    this.FindAndReplace(wordApp, "FSAESECTION12", "");
+                    this.FindAndReplace(wordApp, "FSAESECTION13", "");
+                    this.FindAndReplace(wordApp, "FSAESECTION14", "");
+                    this.FindAndReplace(wordApp, "FSAESECTION15", "");
+                    this.FindAndReplace(wordApp, "FSAESECTION16", "");
+                    this.FindAndReplace(wordApp, "FSAESECTION17", "");
+                    this.FindAndReplace(wordApp, "FSAESECTION18", "");
+                    this.FindAndReplace(wordApp, "FSAESECTION19", "");
+                    this.FindAndReplace(wordApp, "FSAESECTION20", "");
+                    this.FindAndReplace(wordApp, "FSAESECTION21", "");
+                    this.FindAndReplace(wordApp, "FSAESECTION22", "");
+                    this.FindAndReplace(wordApp, "FSAESECTION23", "");
+                    this.FindAndReplace(wordApp, "FSAESECTION24", "");
+                    this.FindAndReplace(wordApp, "FSAESECTION25", "");
+                    this.FindAndReplace(wordApp, "FSAESECTION26", "");
+                    this.FindAndReplace(wordApp, "FSAESECTION27", "");
+                }
                 
                 //MONITORING SECTION
                 if (intBuildingHeight >= 120)
@@ -870,6 +1038,13 @@ namespace findandreplacenarr
                     //STANDPIPE SECTION
                     this.FindAndReplace(wordApp, "STANDPIPE120", "The standpipe located in an exit enclosure shall have access to the floor without passing through the fire service elevator lobby (FBC Section 3007.9.1). However, in a high-rise R-2 or R-1 occupancy building, ");
                     this.FindAndReplace(wordApp, "STANDPIPE120B", "standpipes must be located in stairwells and are subject to only the requirements of the FFPC and NFPA 14, adopted by the State Fire Marshal.");
+                }
+                else
+                {
+                    this.FindAndReplace(wordApp, "FSESprinkler", "");
+                    this.FindAndReplace(wordApp, "FSESprinkler2", "");
+                    this.FindAndReplace(wordApp, "STANDPIPE120", "");
+                    this.FindAndReplace(wordApp, "STANDPIPE120B", "");
                 }
                 
                 //------------------------------------------------DIVISION LINE ALEX/JORGE 255 ------------------------------------------------------------
@@ -889,6 +1064,12 @@ namespace findandreplacenarr
                     this.FindAndReplace(wordApp, "PanicHardwareREQ", "Panic hardware (or fire exit hardware for fire doors) must be installed in all doors serving rooms or spaces with an occupant load of 50 persons or more in a Group A or E occupancy per FBC Section 1010.1.10.");
                     this.FindAndReplace(wordApp, "PanicHardwareREQ1", "The FFPC, Section 12.2.2.2.3, has a similar requirement for assembly occupancies where the occupancy load is 100 or more. Therefore, the FBC has the more stringent requirement and must be implemented.");
                     this.FindAndReplace(wordApp, "PanicHardwareREQ2", "Panic hardware must be installed in electrical rooms as stated in other section of this report.");
+                }
+                else
+                {
+                    this.FindAndReplace(wordApp, "PanicHardwareREQ", "");
+                    this.FindAndReplace(wordApp, "PanicHardwareREQ1", "");
+                    this.FindAndReplace(wordApp, "PanicHardwareREQ2", "");
                 }
                 
                 //Type Construction
@@ -1242,7 +1423,8 @@ namespace findandreplacenarr
                 buildingTypeA3SQF == "Type IA" || buildingTypeBSQF == "Type IA" || buildingTypeMSQF == "Type IA" || buildingTypeR1SQF == "Type IA" || buildingTypeR2SQF == "Type IA" || buildingTypeS1SQF == "Type IA"
                 || buildingTypeS2SQF == "Type IA")
                 {
-                    buildingType = "Type IA";                
+                    buildingType = "Type IA"; 
+                    
                     if (intBuildingHeight <= 420)
                     {
                     buildingType = "Type IA Reduced";
@@ -1255,10 +1437,15 @@ namespace findandreplacenarr
                     table2.Columns[4].Delete();
                     table2.Columns[2].Delete();
 
+                    this.FindAndReplace(wordApp, "IAREDUCED", "FBC Section 403.2.1.1 allows for Type IA Construction buildings under 420 ft. to be reduced to Type IB Construction except for the required fire resistance rating of columns supporting floors which cannot be reduced.");
+                    this.FindAndReplace(wordApp, "IAREDUCED2", "The construction reduction above is allowed for buildings that have sprinkler control valves equipped with supervisiory initiating devices and waterflow initiating devices for each floor.");
                     }
+
                     else
                     {
                     this.FindAndReplace(wordApp, "BUILDTYPE", buildingType);
+                    this.FindAndReplace(wordApp, "IAREDUCED", "");
+                    this.FindAndReplace(wordApp, "IAREDUCED2", "");
 
                     //Delete columns that aren't IA
                     Microsoft.Office.Interop.Word.Table table2 = myWordDoc.Tables[2];
@@ -1284,6 +1471,8 @@ namespace findandreplacenarr
                     table2.Columns[5].Delete();
                     table2.Columns[4].Delete();
                     table2.Columns[2].Delete();
+                    this.FindAndReplace(wordApp, "IAREDUCED", "");
+                    this.FindAndReplace(wordApp, "IAREDUCED2", "");
 
                 }
                 else if (buildingTypeHeight == "Type IIA" || buildingTypeA2Floor == "Type IIA" || buildingTypeA3Floor == "Type IIA" || buildingTypeBFloor == "Type IIA" || buildingTypeMFloor == "Type IIA" ||
@@ -1301,7 +1490,8 @@ namespace findandreplacenarr
                     table2.Columns[5].Delete();
                     table2.Columns[3].Delete();
                     table2.Columns[2].Delete();
-                    
+                    this.FindAndReplace(wordApp, "IAREDUCED", "");
+                    this.FindAndReplace(wordApp, "IAREDUCED2", "");
 
                 }
                 else if (buildingTypeHeight == "Type IIB" || buildingTypeA2Floor == "Type IIB" || buildingTypeA3Floor == "Type IIB" || buildingTypeBFloor == "Type IIB" || buildingTypeMFloor == "Type IIB" ||
@@ -1319,8 +1509,13 @@ namespace findandreplacenarr
                     table2.Columns[4].Delete();
                     table2.Columns[3].Delete();
                     table2.Columns[2].Delete();
+
+                    this.FindAndReplace(wordApp, "IAREDUCED", "");
+                    this.FindAndReplace(wordApp, "IAREDUCED2", "");
+
                 }
 
+                /*
                 if (buildingType == "Type IA" || buildingType == "Type IA Reduced" || buildingType == "Type IB"|| buildingType == "Type IIA")
                 {
                     this.FindAndReplace(wordApp, "HorizontalIIB", "In accordance with FBC Section 711.2.4.3, horizontal assemblies serving as dwelling or sleeping unit separations in accordance with Section 420.3 shall be not less than 1-hour fire-resistance-rated construction. ");
@@ -1328,9 +1523,10 @@ namespace findandreplacenarr
                 }
                 else
                 {
-                    this.FindAndReplace(wordApp, "HorizontalIIB", "DELETE");
-                    this.FindAndReplace(wordApp, "HorizontalIIB2", "DELETE");
+                    this.FindAndReplace(wordApp, "HorizontalIIB", "");
+                    this.FindAndReplace(wordApp, "HorizontalIIB2", "");
                 }
+                */
 
                 //Fire Separation Distance North
                 FSDFindAndReplace("NFSD", "NFSDRating", "NFSDOpening", int.Parse(NFSDInput.Text), wordApp, NFSDOccupancy.GetItemText(NFSDOccupancy.SelectedItem), buildingType);
@@ -1341,35 +1537,14 @@ namespace findandreplacenarr
                 //Fire Separation Distance West
                 FSDFindAndReplace("WFSD", "WFSDRating", "WFSDOpening", int.Parse(WFSDInput.Text), wordApp, WFSDOccupancy.GetItemText(WFSDOccupancy.SelectedItem), buildingType);
 
-                //Insert uploaded pictures
-                FindTextAndReplaceImage(wordApp, myWordDoc, "NEWRPIC", NFSDImage.ImageLocation);
-                FindTextAndReplaceImage(wordApp, myWordDoc, "SEWRPIC", SFSDImage.ImageLocation);
-                FindTextAndReplaceImage(wordApp, myWordDoc, "EEWRPIC", EFSDImage.ImageLocation);
-                FindTextAndReplaceImage(wordApp, myWordDoc, "WEWRPIC", WFSDImage.ImageLocation);
-                FindTextAndReplaceImage(wordApp, myWordDoc, "RenderingPic", RENDImage.ImageLocation);
-                FindTextAndReplaceImage(wordApp, myWordDoc, "STAIRDISCHARGEPIC", STAIRDISCHARGEImage.ImageLocation);
-                FindTextAndReplaceImage(wordApp, myWordDoc, "FCCPIC", FCCImage.ImageLocation);
-                FindTextAndReplaceImage(wordApp, myWordDoc, "FirePumpPic", FPImage.ImageLocation);
-                FindTextAndReplaceImage(wordApp, myWordDoc, "GeneratorPic", GENERATORImage.ImageLocation);
-                FindTextAndReplaceImage(wordApp, myWordDoc, "SiteAccessPic", SITEACCESSImage.ImageLocation);
-                FindTextAndReplaceImage(wordApp, myWordDoc, "FSAEPic", FSAEImage.ImageLocation);
-
                 //Start vertical opening section of narrative
+
+                Microsoft.Office.Interop.Word.Table table9 = myWordDoc.Tables[9];
+ 
                 if (isVO.Checked)
                 {
-                    if (isMezzanine.Checked)
-                    {
-                        this.FindAndReplace(wordApp, "MEZZSECTION", "Mezzanines within the  project are designed to comply with the requirements of the FBC and the FFPC. A mezzanine or mezzanines must comply with FBC Section 505.2.  and shall be considered a portion of the story below. ");
-                        this.FindAndReplace(wordApp, "MEZZSECTION1", "Such mezzanines shall not contribute to either the building area or number of stories as regulated by Section 503.1. The area of the mezzanine shall be included in determining the fire area. ");
-                        this.FindAndReplace(wordApp, "MEZZSECTION2", "The clear height above and below the mezzanine floor construction shall be not less than 7 feet.");
-                        this.FindAndReplace(wordApp, "MEZZSECTION3", "The aggregate area of a mezzanine or mezzanines within a room shall be not greater than one-third of the floor area of that room or space in which they are located. The enclosed portion of a room shall not be included in ");
-                        this.FindAndReplace(wordApp, "MEZZSECTION4", "a determination of the floor area of the room in which the mezzanine is located. In determining the allowable mezzanine area, the area of the mezzanine shall not be included in the floor area of the room. (FBC Section 505.2.1). ");
-                        this.FindAndReplace(wordApp, "MEZZSECTION5", "The floor area of a mezzanine, or the aggregate floor area of multiple mezzanines, shall not exceed one-half of the floor area of the room or story in which the mezzanines are located; otherwise, ");
-                        this.FindAndReplace(wordApp, "MEZZSECTION6", "such mezzanine or aggregated mezzanines shall be treated as floors (FFPC, NFPA 101 Section 37.1.2.2.3)");
-                        this.FindAndReplace(wordApp, "MEZZSECTION7", "The means of egress for mezzanines shall comply with FBC Section 505.2.2 and FFPC, NFPA 101 Section 12.2.4.5.");
-                        //FindTextAndReplaceImage(wordApp, myWordDoc, "MEZZPIC", MezzImage.ImageLocation);
-                    }
-                    else if (isEscalator.Checked)
+
+                    if (isEscalator.Checked)
                     {
                         this.FindAndReplace(wordApp, "ESCALATORSECTION", "These openings must be protected in accordance with FBC Section 712 and FFPC, NFPA 101 Section 8.6.9.7.");
                         this.FindAndReplace(wordApp, "ESCALATORSECTION1", "Per FBC Section 712.1.3.1, the escalators shall be protected by a draft curtain and closely spaced sprinklers in accordance with NFPA 13 where the area of the vertical opening between stories does not exceed twice the ");
@@ -1379,6 +1554,49 @@ namespace findandreplacenarr
                         this.FindAndReplace(wordApp, "ESCALATORSECTION5", "The shutter shall be so constructed as to close immediately upon the actuation of a smoke detector installed in accordance with FBC Section 907.3.1 and shall completely shut off the well opening. ");
                         this.FindAndReplace(wordApp, "ESCALATORSECTION6", "Escalators shall cease operation when the shutter begins to close. The shutter shall operate at a speed of not more than 30 feet per minute and shall be equipped with a sensitive leading edge to arrest its progress where ");
                         this.FindAndReplace(wordApp, "ESCALATORSECTION7", "in contact with any obstacle, and to continue its progress on release there from (FBC Section 712.1.3.2).");
+
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION2", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION3", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION4", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION5", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION6", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION7", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION8", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION9", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION10", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION11", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION12", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION13", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION14", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION15", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION16", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION17", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION18", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION19", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION20", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION21", "");
+
+                        this.FindAndReplace(wordApp, "VO38.2.4.6", "");
+                        this.FindAndReplace(wordApp, "VO38.2.4.6P1", "");
+                        this.FindAndReplace(wordApp, "VO38.2.4.6P2", "");
+                        this.FindAndReplace(wordApp, "VO1019.1", "");
+                        this.FindAndReplace(wordApp, "VO1019.1B", "");
+                        this.FindAndReplace(wordApp, "VO1019.1P1", "");
+                        this.FindAndReplace(wordApp, "VO1019.1P1B", "");
+                        this.FindAndReplace(wordApp, "VO1019.1P2", "");
+
+                        this.FindAndReplace(wordApp, "VASSEMBLY", "");
+                        this.FindAndReplace(wordApp, "VASSEMBLY2", "");
+                        this.FindAndReplace(wordApp, "VASSEMBLYNOTE", "");
+
+                        this.FindAndReplace(wordApp, "VO8.6.9.1", "");
+                        this.FindAndReplace(wordApp, "VO8.6.9.1NOTE", "");
+
+                        this.FindAndReplace(wordApp, "VO8.6.9.2", "");
+                        this.FindAndReplace(wordApp, "VO8.6.9.2NOTE", "");
+
+                        table9.Delete();
                     }
                     else if (isVOpening2.Checked)
                     {
@@ -1387,14 +1605,111 @@ namespace findandreplacenarr
                             if (numVOLevels == 2)
                             {
                                 this.FindAndReplace(wordApp, "VASSEMBLY", "Per FFPC, NFPA 101 §12.3.1(3), assembly occupancies protected by an approved, supervised automatic sprinkler system in accordance with §9.7 shall be permitted to have ");
-                                this.FindAndReplace(wordApp, "VASSEMBLY2", "unprotected vertical openings between two adjacent floors, provided that such openings are separated from unprotected vertical openings serving other floors by a barrier complying with §8.6.5.");          
+                                this.FindAndReplace(wordApp, "VASSEMBLY2", "unprotected vertical openings between two adjacent floors, provided that such openings are separated from unprotected vertical openings serving other floors by a barrier complying with §8.6.5.");
+                                this.FindAndReplace(wordApp, "VASSEMBLYNOTE", "");
+
+                                this.FindAndReplace(wordApp, "VO38.2.4.6", "");
+                                this.FindAndReplace(wordApp, "VO38.2.4.6P1", "");
+                                this.FindAndReplace(wordApp, "VO38.2.4.6P2", "");
+                                this.FindAndReplace(wordApp, "VO1019.1", "");
+                                this.FindAndReplace(wordApp, "VO1019.1B", "");
+                                this.FindAndReplace(wordApp, "VO1019.1P1", "");
+                                this.FindAndReplace(wordApp, "VO1019.1P1B", "");
+                                this.FindAndReplace(wordApp, "VO1019.1P2", "");
+
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION2", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION3", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION4", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION5", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION6", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION7", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION8", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION9", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION10", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION11", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION12", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION13", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION14", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION15", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION16", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION17", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION18", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION19", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION20", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION21", "");
+
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION1", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION2", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION3", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION4", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION5", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION6", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION7", "");
+
+                                this.FindAndReplace(wordApp, "VO8.6.9.1", "");
+                                this.FindAndReplace(wordApp, "VO8.6.9.1NOTE", "");
+                                this.FindAndReplace(wordApp, "VO8.6.9.2", "");
+                                this.FindAndReplace(wordApp, "VO8.6.9.2NOTE", "");
+
+                                table9.Delete();
+
                             }
-                            else if (numVOLevels > 2 && numVOLevels <= 4)
+                            else if (numVOLevels > 2)
                             {
                                 this.FindAndReplace(wordApp, "VASSEMBLY", "Per FFPC, NFPA 101 §12.3.1(3), assembly occupancies protected by an approved, supervised automatic sprinkler system in accordance with §9.7 shall be permitted to have ");
                                 this.FindAndReplace(wordApp, "VASSEMBLY2", "unprotected vertical openings between two adjacent floors, provided that such openings are separated from unprotected vertical openings serving other floors by a barrier complying with §8.6.5.");
                                 this.FindAndReplace(wordApp, "VASSEMBLYNOTE", "NOTE: Vertical openings within assembly spaces where more than 2 floors are penetrated may require alternate methods to separate openings to not more than 2 floors. Further discussion required.");
+
+                                this.FindAndReplace(wordApp, "VO38.2.4.6", "");
+                                this.FindAndReplace(wordApp, "VO38.2.4.6P1", "");
+                                this.FindAndReplace(wordApp, "VO38.2.4.6P2", "");
+                                this.FindAndReplace(wordApp, "VO1019.1", "");
+                                this.FindAndReplace(wordApp, "VO1019.1B", "");
+                                this.FindAndReplace(wordApp, "VO1019.1P1", "");
+                                this.FindAndReplace(wordApp, "VO1019.1P1B", "");
+                                this.FindAndReplace(wordApp, "VO1019.1P2", "");
+
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION2", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION3", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION4", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION5", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION6", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION7", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION8", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION9", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION10", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION11", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION12", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION13", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION14", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION15", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION16", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION17", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION18", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION19", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION20", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION21", "");
+
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION1", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION2", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION3", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION4", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION5", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION6", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION7", "");
+
+                                this.FindAndReplace(wordApp, "VO8.6.9.1", "");
+                                this.FindAndReplace(wordApp, "VO8.6.9.1NOTE", "");
+                                this.FindAndReplace(wordApp, "VO8.6.9.2", "");
+                                this.FindAndReplace(wordApp, "VO8.6.9.2NOTE", "");
+
+                                table9.Delete();
                             }
+
                         }
                         else if (VOR2 == true || VOR1 == true)
                         {
@@ -1407,6 +1722,55 @@ namespace findandreplacenarr
                                 this.FindAndReplace(wordApp, "VO4", "(4) In new construction, the area of the floor openings shall not exceed twice the horizontal projected area of the stairway.");
                                 this.FindAndReplace(wordApp, "VO5", "(5) For new construction, such openings shall not connect more than four contiguous stories, unless otherwise permitted by Chapters 11 through 43.");
                                 this.FindAndReplace(wordApp, "VO6", "");
+                                this.FindAndReplace(wordApp, "VO8.6.9.1NOTE", "");
+
+                                this.FindAndReplace(wordApp, "VO38.2.4.6", "");
+                                this.FindAndReplace(wordApp, "VO38.2.4.6P1", "");
+                                this.FindAndReplace(wordApp, "VO38.2.4.6P2", "");
+                                this.FindAndReplace(wordApp, "VO1019.1", "");
+                                this.FindAndReplace(wordApp, "VO1019.1B", "");
+                                this.FindAndReplace(wordApp, "VO1019.1P1", "");
+                                this.FindAndReplace(wordApp, "VO1019.1P1B", "");
+                                this.FindAndReplace(wordApp, "VO1019.1P2", "");
+
+                                this.FindAndReplace(wordApp, "VASSEMBLY", "");
+                                this.FindAndReplace(wordApp, "VASSEMBLY2", "");
+                                this.FindAndReplace(wordApp, "VASSEMBLYNOTE", "");
+
+                                this.FindAndReplace(wordApp, "VO8.6.9.2", "");
+                                this.FindAndReplace(wordApp, "VO8.6.9.2NOTE", "");
+
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION2", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION3", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION4", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION5", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION6", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION7", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION8", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION9", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION10", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION11", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION12", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION13", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION14", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION15", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION16", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION17", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION18", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION19", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION20", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION21", "");
+
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION1", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION2", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION3", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION4", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION5", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION6", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION7", "");
+
                             }
                             else if (numVOLevels > 2 && numVOLevels <= 4) //AND NOT REQUIRED FOR EGRESS
                             {
@@ -1418,95 +1782,406 @@ namespace findandreplacenarr
                                 this.FindAndReplace(wordApp, "VO4", "(4) In new construction, the area of the floor openings shall not exceed twice the horizontal projected area of the stairway.");
                                 this.FindAndReplace(wordApp, "VO5", "(5) For new construction, such openings shall not connect more than four contiguous stories, unless otherwise permitted by Chapters 11 through 43.");
                                 this.FindAndReplace(wordApp, "VO6", "");
-                            }
 
-                            else if (VOB == true)
-                            {
-                                if (numVOLevels == 2)
-                                {
-                                    //NEED USER INPUT - IF LOWER LEVELS AND REQUIRED FOR EGRESS THEN BELOW
-                                    this.FindAndReplace(wordApp, "VO38.2.4.6", "Business occupancies providing a single means of egress for a two-story single-tenant space or building in accordance with NFPA 101 38.2.4.6 shall meet the following criteria:");
-                                    this.FindAndReplace(wordApp, "VO38.2.4.6P1", "The building is protected throughout by an approved, supervised automatic sprinkler system in accordance with 9.7.1.1(1).");
-                                    this.FindAndReplace(wordApp, "VO38.2.4.6P2", "The total travel to the outside does not exceed 100 ft (30m).");
-                                    this.FindAndReplace(wordApp, "VO1019.1", "Exit access stairways and ramps serving as an exit access component in a means of egress system shall comply with the requirements of this section. ");
-                                    this.FindAndReplace(wordApp, "VO1019.1B", "The number of stories connected by exit access stairways and ramps shall include basements, but not mezzanines. (FBC Section 1019.1)");
-                                    this.FindAndReplace(wordApp, "VO1019.1P1", "According to FBC Section 1019.1, (in other than Group I-2 and I-3 occupancies)  floor openings containing exit access stairways or ramps that do not comply with one of ");
-                                    this.FindAndReplace(wordApp, "VO1019.1P1B", "the conditions listed in this section shall be enclosed with a shaft enclosure constructed in accordance with FBC Section 713.");
-                                    this.FindAndReplace(wordApp, "VO1019.1P2", "Exit access stairways and ramps that serve or atmospherically communicate between only two stories. Such interconnected stories shall not be open to other stories.");
-                                }
-                                if (numVOLevels == 2) //AND NOT REQUIRED FOR EGRESS
-                                {
-                                    this.FindAndReplace(wordApp, "VO8.6.9.1", "The vertical opening located on floors VOFloorBot to VOFloorTop will be designed as a Convenience Opening and must meet be designed in accordance with all criteria in FBC Section 712.1.9 and FFPC, NFPA 101 Section 8.6.9.1.");
-                                    this.FindAndReplace(wordApp, "VO1", "(1) Such openings shall connect not more than two adjacent stories (one floor pierced only).");
-                                    this.FindAndReplace(wordApp, "VO2", "(2) Such openings shall be separated from unprotected vertical openings serving other floors by a barrier complying with 8.6.5.");
-                                    this.FindAndReplace(wordApp, "VO3", "(3) Such openings shall be separated from corridors.");
-                                    this.FindAndReplace(wordApp, "VO4", "(4) In new construction, the area of the floor openings shall not exceed twice the horizontal projected area of the stairway.");
-                                    this.FindAndReplace(wordApp, "VO5", "(5) For new construction, such openings shall not connect more than four contiguous stories, unless otherwise permitted by Chapters 11 through 43.");
-                                    this.FindAndReplace(wordApp, "VO6", "(6) Such opening shall not serve as a required means of egress.");
-                                }
-                                else if (numVOLevels > 2 && numVOLevels <= 4) //AND NOT REQUIRED FOR EGRESS
-                                {
-                                    this.FindAndReplace(wordApp, "VO8.6.9.1", "The vertical opening located on floors VOFloorBot to VOFloorTop will be designed as a Convenience Opening and must meet be designed in accordance with all criteria in FBC Section 712.1.9 and FFPC, NFPA 101 Section 8.6.9.1.");
-                                    this.FindAndReplace(wordApp, "VO8.6.9.1NOTE", "NOTE: Further discussion required regarding a code compliant method of separating the Vertical Opening to create vertical openings not greater than 2 floors.");
-                                    this.FindAndReplace(wordApp, "VO1", "(1) Such openings shall connect not more than two adjacent stories (one floor pierced only).");
-                                    this.FindAndReplace(wordApp, "VO2", "(2) Such openings shall be separated from unprotected vertical openings serving other floors by a barrier complying with 8.6.5.");
-                                    this.FindAndReplace(wordApp, "VO3", "(3) Such openings shall be separated from corridors.");
-                                    this.FindAndReplace(wordApp, "VO4", "(4) In new construction, the area of the floor openings shall not exceed twice the horizontal projected area of the stairway.");
-                                    this.FindAndReplace(wordApp, "VO5", "(5) For new construction, such openings shall not connect more than four contiguous stories, unless otherwise permitted by Chapters 11 through 43.");
-                                    this.FindAndReplace(wordApp, "VO6", "");
-                                }
-                            }
-                            else if (VOM == true)
-                            {
-                                if (numVOLevels == 2)
-                                {
-                                    this.FindAndReplace(wordApp, "VO8.6.9.2", "The vertical opening located on floors VOFloorBot to VOFloorTop will be designed as a Convenience Opening and must meet be designed in accordance with all criteria in FBC Section 712.1.9 and FFPC, NFPA 101 Section 8.6.9.2.");
-                                    this.FindAndReplace(wordApp, "VO1", "(1) The convenience stair openings shall not serve as required means of egress.");
-                                    this.FindAndReplace(wordApp, "VO2", "(2) The building shall be protected throughout by an approved, supervised automatic sprinkler systems in accordance with Section 9.7");
-                                    this.FindAndReplace(wordApp, "VO3", "(3) The convenience stair openings shall be protected in accordance with the method detailed for the protection of vertical openings in NFPA 13.");
-                                    this.FindAndReplace(wordApp, "VO4", "(4) In new construction, the area of the floor openings shall not exceed twice the horizontal projected area of the stairway.");
-                                    this.FindAndReplace(wordApp, "VO5", "(5) For new construction, such openings shall not connect more than four contiguous stories, unless otherwise permitted by Chapters 11 through 43.");
-                                    this.FindAndReplace(wordApp, "VO6", "");
-                                }
-                                else if (numVOLevels > 2 && numVOLevels <= 4)
-                                {
-                                    this.FindAndReplace(wordApp, "VO8.6.9.2", "The vertical opening located on floors VOFloorBot to VOFloorTop will be designed as a Convenience Opening and must meet be designed in accordance with all criteria in FBC Section 712.1.9 and FFPC, NFPA 101 Section 8.6.9.2.");
-                                    this.FindAndReplace(wordApp, "VO8.6.9.2NOTE", "NOTE: Further discussion required regarding a code compliant method of separating the Vertical Opening to create vertical openings not greater than 2 floors.");
-                                    this.FindAndReplace(wordApp, "VO1", "(1) The convenience stair openings shall not serve as required means of egress.");
-                                    this.FindAndReplace(wordApp, "VO2", "(2) The building shall be protected throughout by an approved, supervised automatic sprinkler systems in accordance with Section 9.7");
-                                    this.FindAndReplace(wordApp, "VO3", "(3) The convenience stair openings shall be protected in accordance with the method detailed for the protection of vertical openings in NFPA 13.");
-                                    this.FindAndReplace(wordApp, "VO4", "(4) In new construction, the area of the floor openings shall not exceed twice the horizontal projected area of the stairway.");
-                                    this.FindAndReplace(wordApp, "VO5", "(5) For new construction, such openings shall not connect more than four contiguous stories, unless otherwise permitted by Chapters 11 through 43.");
-                                    this.FindAndReplace(wordApp, "VO6", "");
+                                this.FindAndReplace(wordApp, "VO38.2.4.6", "");
+                                this.FindAndReplace(wordApp, "VO38.2.4.6P1", "");
+                                this.FindAndReplace(wordApp, "VO38.2.4.6P2", "");
+                                this.FindAndReplace(wordApp, "VO1019.1", "");
+                                this.FindAndReplace(wordApp, "VO1019.1B", "");
+                                this.FindAndReplace(wordApp, "VO1019.1P1", "");
+                                this.FindAndReplace(wordApp, "VO1019.1P1B", "");
+                                this.FindAndReplace(wordApp, "VO1019.1P2", "");
 
-                                }                           
-                            }
-                            else
-                            {
-                                this.FindAndReplace(wordApp, "ATRIUMSECTION", "The atrium must comply with FBC Section 404 and FFPC, NFPA 101 Section 8.6.7.  The FDPT Fire Department may consider a double-height ceiling as an atrium.  ");
-                                this.FindAndReplace(wordApp, "ATRIUMSECTION2", "The atrium requirements in FFPC and FBC are as follows:");
-                                this.FindAndReplace(wordApp, "ATRIUMSECTION3", "The atrium must be separated from the adjacent spaces by fire barriers with not less than a 1-hour fire resistance rating. ");
-                                this.FindAndReplace(wordApp, "ATRIUMSECTION4", "Any number of levels shall be permitted to open directly to the atrium without enclosure based on a smoke control engineering analysis.");
-                                this.FindAndReplace(wordApp, "ATRIUMSECTION5", "Glass walls and inoperable windows shall be permitted in lieu of the fire barriers where all the following are met:");
-                                this.FindAndReplace(wordApp, "ATRIUMSECTION6", "Automatic sprinklers are spaced on both sides of the glass wall at 6-ft. intervals.");
-                                this.FindAndReplace(wordApp, "ATRIUMSECTION7", "The sprinklers are located between 4 inches to 12 inches away from the glass.");
-                                this.FindAndReplace(wordApp, "ATRIUMSECTION8", "The glass wall is of tempered, wired, or laminated glass held in place by a gasket framing system to deflect without breaking the glass before sprinklers operate.");
-                                this.FindAndReplace(wordApp, "ATRIUMSECTION9", "The sprinkler heads are not required on the atrium side of the glass wall where there is no walkway or other floor area on the atrium side above main floor level.");
-                                this.FindAndReplace(wordApp, "ATRIUMSECTION10", "Doors in the glass walls are of glass or other material that resists the passage of smoke.");
-                                this.FindAndReplace(wordApp, "ATRIUMSECTION11", "Doors in the glass walls are self-closing or automatic-closing upon detection of smoke.");
-                                this.FindAndReplace(wordApp, "ATRIUMSECTION12", "The glass is continuous vertically, without horizontal mullions, window treatments, or other obstructions that would interfere with the wetting of the entire glass surface.");
-                                this.FindAndReplace(wordApp, "ATRIUMSECTION13", "Access to exits is permitted to be within the atrium.  Exit discharge is permitted to be within the atrium.");
-                                this.FindAndReplace(wordApp, "ATRIUMSECTION14", "The occupancy within the atrium meets the specification for classification as low or ordinary hazard contents.");
-                                this.FindAndReplace(wordApp, "ATRIUMSECTION15", "The entire building is protected by approved, supervised automatic sprinkler system.");
-                                this.FindAndReplace(wordApp, "ATRIUMSECTION16", "An engineering analysis is performed that demonstrates that the building is designed to keep the smoke layer 6 ft. above the highest floor level of ");
-                                this.FindAndReplace(wordApp, "ATRIUMSECTION17", "exit access open to the atrium for a period of 20 minutes or 1.5 times the calculated egress time, whichever is greater.");
-                                this.FindAndReplace(wordApp, "ATRIUMSECTION18", "The smoke control system described above is activated by sprinkler system and manual controls accessible to the fire department.");
-                                this.FindAndReplace(wordApp, "ATRIUMSECTION19", "Smoke control system is required and shall be connected to standby power");
-                                this.FindAndReplace(wordApp, "ATRIUMSECTION20", "The interior finish of walls and ceiling of the atrium shall not be less than Class B with no reduction in class for sprinkler protection (FBC).");
-                                this.FindAndReplace(wordApp, "ATRIUMSECTION21", "In floors above the lowest level, the portion of exit access travel distance within the atrium space shall be not greater than 200 feet (FBC).");
-                                //this.FindAndReplace(wordApp, "VOFans", "The plans reviewed do not show any unprotected vertical openings requiring smoke control system protection.");
+                                this.FindAndReplace(wordApp, "VASSEMBLY", "");
+                                this.FindAndReplace(wordApp, "VASSEMBLY2", "");
+                                this.FindAndReplace(wordApp, "VASSEMBLYNOTE", "");
+
+                                this.FindAndReplace(wordApp, "VO8.6.9.2", "");
+                                this.FindAndReplace(wordApp, "VO8.6.9.2NOTE", "");
+
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION2", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION3", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION4", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION5", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION6", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION7", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION8", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION9", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION10", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION11", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION12", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION13", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION14", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION15", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION16", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION17", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION18", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION19", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION20", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION21", "");
+
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION1", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION2", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION3", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION4", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION5", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION6", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION7", "");
                             }
                         }
+                        else if (VOB == true)
+                        {
+                            
+                            if (numVOLevels == 2)
+                            {
+                                //NEED USER INPUT - IF LOWER LEVELS AND REQUIRED FOR EGRESS THEN BELOW
+                                this.FindAndReplace(wordApp, "VO38.2.4.6", "Business occupancies providing a single means of egress for a two-story single-tenant space or building in accordance with NFPA 101 38.2.4.6 shall meet the following criteria:");
+                                this.FindAndReplace(wordApp, "VO38.2.4.6P1", "The building is protected throughout by an approved, supervised automatic sprinkler system in accordance with 9.7.1.1(1).");
+                                this.FindAndReplace(wordApp, "VO38.2.4.6P2", "The total travel to the outside does not exceed 100 ft (30m).");
+                                this.FindAndReplace(wordApp, "VO1019.1", "Exit access stairways and ramps serving as an exit access component in a means of egress system shall comply with the requirements of this section. ");
+                                this.FindAndReplace(wordApp, "VO1019.1B", "The number of stories connected by exit access stairways and ramps shall include basements, but not mezzanines. (FBC Section 1019.1)");
+                                this.FindAndReplace(wordApp, "VO1019.1P1", "According to FBC Section 1019.1, (in other than Group I-2 and I-3 occupancies)  floor openings containing exit access stairways or ramps that do not comply with one of ");
+                                this.FindAndReplace(wordApp, "VO1019.1P1B", "the conditions listed in this section shall be enclosed with a shaft enclosure constructed in accordance with FBC Section 713.");
+                                this.FindAndReplace(wordApp, "VO1019.1P2", "Exit access stairways and ramps that serve or atmospherically communicate between only two stories. Such interconnected stories shall not be open to other stories.");
+
+                                this.FindAndReplace(wordApp, "VO8.6.9.1", "The vertical opening located on floors VOFloorBot to VOFloorTop will be designed as a Convenience Opening and must meet be designed in accordance with all criteria in FBC Section 712.1.9 and FFPC, NFPA 101 Section 8.6.9.1.");
+                                this.FindAndReplace(wordApp, "VO1", "(1) Such openings shall connect not more than two adjacent stories (one floor pierced only).");
+                                this.FindAndReplace(wordApp, "VO2", "(2) Such openings shall be separated from unprotected vertical openings serving other floors by a barrier complying with 8.6.5.");
+                                this.FindAndReplace(wordApp, "VO3", "(3) Such openings shall be separated from corridors.");
+                                this.FindAndReplace(wordApp, "VO4", "(4) In new construction, the area of the floor openings shall not exceed twice the horizontal projected area of the stairway.");
+                                this.FindAndReplace(wordApp, "VO5", "(5) For new construction, such openings shall not connect more than four contiguous stories, unless otherwise permitted by Chapters 11 through 43.");
+                                this.FindAndReplace(wordApp, "VO6", "(6) Such opening shall not serve as a required means of egress.");
+                                this.FindAndReplace(wordApp, "VO8.6.9.1NOTE", "");
+
+                                this.FindAndReplace(wordApp, "VASSEMBLY", "");
+                                this.FindAndReplace(wordApp, "VASSEMBLY2", "");
+                                this.FindAndReplace(wordApp, "VASSEMBLYNOTE", "");
+
+                                this.FindAndReplace(wordApp, "VO8.6.9.2", "");
+                                this.FindAndReplace(wordApp, "VO8.6.9.2NOTE", "");
+
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION2", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION3", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION4", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION5", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION6", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION7", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION8", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION9", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION10", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION11", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION12", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION13", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION14", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION15", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION16", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION17", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION18", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION19", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION20", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION21", "");
+
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION1", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION2", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION3", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION4", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION5", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION6", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION7", "");
+                            }
+                            else if (numVOLevels > 2 && numVOLevels <= 4) //AND NOT REQUIRED FOR EGRESS
+                            {
+                                this.FindAndReplace(wordApp, "VO8.6.9.1", "The vertical opening located on floors VOFloorBot to VOFloorTop will be designed as a Convenience Opening and must meet be designed in accordance with all criteria in FBC Section 712.1.9 and FFPC, NFPA 101 Section 8.6.9.1.");
+                                this.FindAndReplace(wordApp, "VO8.6.9.1NOTE", "NOTE: Further discussion required regarding a code compliant method of separating the Vertical Opening to create vertical openings not greater than 2 floors.");
+                                this.FindAndReplace(wordApp, "VO1", "(1) Such openings shall connect not more than two adjacent stories (one floor pierced only).");
+                                this.FindAndReplace(wordApp, "VO2", "(2) Such openings shall be separated from unprotected vertical openings serving other floors by a barrier complying with 8.6.5.");
+                                this.FindAndReplace(wordApp, "VO3", "(3) Such openings shall be separated from corridors.");
+                                this.FindAndReplace(wordApp, "VO4", "(4) In new construction, the area of the floor openings shall not exceed twice the horizontal projected area of the stairway.");
+                                this.FindAndReplace(wordApp, "VO5", "(5) For new construction, such openings shall not connect more than four contiguous stories, unless otherwise permitted by Chapters 11 through 43.");
+                                this.FindAndReplace(wordApp, "VO6", "");
+
+                                this.FindAndReplace(wordApp, "VO38.2.4.6", "");
+                                this.FindAndReplace(wordApp, "VO38.2.4.6P1", "");
+                                this.FindAndReplace(wordApp, "VO38.2.4.6P2", "");
+                                this.FindAndReplace(wordApp, "VO1019.1", "");
+                                this.FindAndReplace(wordApp, "VO1019.1B", "");
+                                this.FindAndReplace(wordApp, "VO1019.1P1", "");
+                                this.FindAndReplace(wordApp, "VO1019.1P1B", "");
+                                this.FindAndReplace(wordApp, "VO1019.1P2", "");
+
+                                this.FindAndReplace(wordApp, "VASSEMBLY", "");
+                                this.FindAndReplace(wordApp, "VASSEMBLY2", "");
+                                this.FindAndReplace(wordApp, "VASSEMBLYNOTE", "");
+
+                                this.FindAndReplace(wordApp, "VO8.6.9.2", "");
+                                this.FindAndReplace(wordApp, "VO8.6.9.2NOTE", "");
+
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION2", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION3", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION4", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION5", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION6", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION7", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION8", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION9", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION10", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION11", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION12", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION13", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION14", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION15", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION16", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION17", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION18", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION19", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION20", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION21", "");
+
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION1", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION2", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION3", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION4", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION5", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION6", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION7", "");
+                            }
+                        }
+                        else if (VOM == true)
+                        {
+                            if (numVOLevels == 2)
+                            {
+                                this.FindAndReplace(wordApp, "VO8.6.9.2", "The vertical opening located on floors VOFloorBot to VOFloorTop will be designed as a Convenience Opening and must meet be designed in accordance with all criteria in FBC Section 712.1.9 and FFPC, NFPA 101 Section 8.6.9.2.");
+                                this.FindAndReplace(wordApp, "VO1", "(1) The convenience stair openings shall not serve as required means of egress.");
+                                this.FindAndReplace(wordApp, "VO2", "(2) The building shall be protected throughout by an approved, supervised automatic sprinkler systems in accordance with Section 9.7");
+                                this.FindAndReplace(wordApp, "VO3", "(3) The convenience stair openings shall be protected in accordance with the method detailed for the protection of vertical openings in NFPA 13.");
+                                this.FindAndReplace(wordApp, "VO4", "(4) In new construction, the area of the floor openings shall not exceed twice the horizontal projected area of the stairway.");
+                                this.FindAndReplace(wordApp, "VO5", "(5) For new construction, such openings shall not connect more than four contiguous stories, unless otherwise permitted by Chapters 11 through 43.");
+                                this.FindAndReplace(wordApp, "VO6", "");
+                                this.FindAndReplace(wordApp, "VO.8.6.9.2NOTE", "");
+
+                                this.FindAndReplace(wordApp, "VO38.2.4.6", "");
+                                this.FindAndReplace(wordApp, "VO38.2.4.6P1", "");
+                                this.FindAndReplace(wordApp, "VO38.2.4.6P2", "");
+                                this.FindAndReplace(wordApp, "VO1019.1", "");
+                                this.FindAndReplace(wordApp, "VO1019.1B", "");
+                                this.FindAndReplace(wordApp, "VO1019.1P1", "");
+                                this.FindAndReplace(wordApp, "VO1019.1P1B", "");
+                                this.FindAndReplace(wordApp, "VO1019.1P2", "");
+
+                                this.FindAndReplace(wordApp, "VASSEMBLY", "");
+                                this.FindAndReplace(wordApp, "VASSEMBLY2", "");
+                                this.FindAndReplace(wordApp, "VASSEMBLYNOTE", "");
+
+                                this.FindAndReplace(wordApp, "VO8.6.9.1", "");
+                                this.FindAndReplace(wordApp, "VO8.6.9.1NOTE", "");
+
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION2", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION3", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION4", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION5", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION6", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION7", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION8", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION9", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION10", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION11", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION12", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION13", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION14", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION15", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION16", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION17", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION18", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION19", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION20", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION21", "");
+
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION1", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION2", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION3", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION4", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION5", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION6", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION7", "");
+                            }
+                            else if (numVOLevels > 2 && numVOLevels <= 4)
+                            {
+                                this.FindAndReplace(wordApp, "VO8.6.9.2", "The vertical opening located on floors VOFloorBot to VOFloorTop will be designed as a Convenience Opening and must meet be designed in accordance with all criteria in FBC Section 712.1.9 and FFPC, NFPA 101 Section 8.6.9.2.");
+                                this.FindAndReplace(wordApp, "VO8.6.9.2NOTE", "NOTE: Further discussion required regarding a code compliant method of separating the Vertical Opening to create vertical openings not greater than 2 floors.");
+                                this.FindAndReplace(wordApp, "VO1", "(1) The convenience stair openings shall not serve as required means of egress.");
+                                this.FindAndReplace(wordApp, "VO2", "(2) The building shall be protected throughout by an approved, supervised automatic sprinkler systems in accordance with Section 9.7");
+                                this.FindAndReplace(wordApp, "VO3", "(3) The convenience stair openings shall be protected in accordance with the method detailed for the protection of vertical openings in NFPA 13.");
+                                this.FindAndReplace(wordApp, "VO4", "(4) In new construction, the area of the floor openings shall not exceed twice the horizontal projected area of the stairway.");
+                                this.FindAndReplace(wordApp, "VO5", "(5) For new construction, such openings shall not connect more than four contiguous stories, unless otherwise permitted by Chapters 11 through 43.");
+                                this.FindAndReplace(wordApp, "VO6", "");
+
+                                this.FindAndReplace(wordApp, "VO38.2.4.6", "");
+                                this.FindAndReplace(wordApp, "VO38.2.4.6P1", "");
+                                this.FindAndReplace(wordApp, "VO38.2.4.6P2", "");
+                                this.FindAndReplace(wordApp, "VO1019.1", "");
+                                this.FindAndReplace(wordApp, "VO1019.1B", "");
+                                this.FindAndReplace(wordApp, "VO1019.1P1", "");
+                                this.FindAndReplace(wordApp, "VO1019.1P1B", "");
+                                this.FindAndReplace(wordApp, "VO1019.1P2", "");
+
+                                this.FindAndReplace(wordApp, "VASSEMBLY", "");
+                                this.FindAndReplace(wordApp, "VASSEMBLY2", "");
+                                this.FindAndReplace(wordApp, "VASSEMBLYNOTE", "");
+
+                                this.FindAndReplace(wordApp, "VO8.6.9.1", "");
+                                this.FindAndReplace(wordApp, "VO8.6.9.1NOTE", "");
+
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION2", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION3", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION4", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION5", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION6", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION7", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION8", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION9", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION10", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION11", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION12", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION13", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION14", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION15", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION16", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION17", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION18", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION19", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION20", "");
+                                this.FindAndReplace(wordApp, "ATRIUMSECTION21", "");
+
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION1", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION2", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION3", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION4", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION5", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION6", "");
+                                this.FindAndReplace(wordApp, "ESCALATORSECTION7", "");
+                            }
+                        }
+                        else
+                        {
+                            this.FindAndReplace(wordApp, "ATRIUMSECTION", "The atrium must comply with FBC Section 404 and FFPC, NFPA 101 Section 8.6.7.  The FDPT Fire Department may consider a double-height ceiling as an atrium.  ");
+                            this.FindAndReplace(wordApp, "ATRIUMSECTION2", "The atrium requirements in FFPC and FBC are as follows:");
+                            this.FindAndReplace(wordApp, "ATRIUMSECTION3", "The atrium must be separated from the adjacent spaces by fire barriers with not less than a 1-hour fire resistance rating. ");
+                            this.FindAndReplace(wordApp, "ATRIUMSECTION4", "Any number of levels shall be permitted to open directly to the atrium without enclosure based on a smoke control engineering analysis.");
+                            this.FindAndReplace(wordApp, "ATRIUMSECTION5", "Glass walls and inoperable windows shall be permitted in lieu of the fire barriers where all the following are met:");
+                            this.FindAndReplace(wordApp, "ATRIUMSECTION6", "Automatic sprinklers are spaced on both sides of the glass wall at 6-ft. intervals.");
+                            this.FindAndReplace(wordApp, "ATRIUMSECTION7", "The sprinklers are located between 4 inches to 12 inches away from the glass.");
+                            this.FindAndReplace(wordApp, "ATRIUMSECTION8", "The glass wall is of tempered, wired, or laminated glass held in place by a gasket framing system to deflect without breaking the glass before sprinklers operate.");
+                            this.FindAndReplace(wordApp, "ATRIUMSECTION9", "The sprinkler heads are not required on the atrium side of the glass wall where there is no walkway or other floor area on the atrium side above main floor level.");
+                            this.FindAndReplace(wordApp, "ATRIUMSECTION10", "Doors in the glass walls are of glass or other material that resists the passage of smoke.");
+                            this.FindAndReplace(wordApp, "ATRIUMSECTION11", "Doors in the glass walls are self-closing or automatic-closing upon detection of smoke.");
+                            this.FindAndReplace(wordApp, "ATRIUMSECTION12", "The glass is continuous vertically, without horizontal mullions, window treatments, or other obstructions that would interfere with the wetting of the entire glass surface.");
+                            this.FindAndReplace(wordApp, "ATRIUMSECTION13", "Access to exits is permitted to be within the atrium.  Exit discharge is permitted to be within the atrium.");
+                            this.FindAndReplace(wordApp, "ATRIUMSECTION14", "The occupancy within the atrium meets the specification for classification as low or ordinary hazard contents.");
+                            this.FindAndReplace(wordApp, "ATRIUMSECTION15", "The entire building is protected by approved, supervised automatic sprinkler system.");
+                            this.FindAndReplace(wordApp, "ATRIUMSECTION16", "An engineering analysis is performed that demonstrates that the building is designed to keep the smoke layer 6 ft. above the highest floor level of ");
+                            this.FindAndReplace(wordApp, "ATRIUMSECTION17", "exit access open to the atrium for a period of 20 minutes or 1.5 times the calculated egress time, whichever is greater.");
+                            this.FindAndReplace(wordApp, "ATRIUMSECTION18", "The smoke control system described above is activated by sprinkler system and manual controls accessible to the fire department.");
+                            this.FindAndReplace(wordApp, "ATRIUMSECTION19", "Smoke control system is required and shall be connected to standby power");
+                            this.FindAndReplace(wordApp, "ATRIUMSECTION20", "The interior finish of walls and ceiling of the atrium shall not be less than Class B with no reduction in class for sprinkler protection (FBC).");
+                            this.FindAndReplace(wordApp, "ATRIUMSECTION21", "In floors above the lowest level, the portion of exit access travel distance within the atrium space shall be not greater than 200 feet (FBC).");
+                            //this.FindAndReplace(wordApp, "VOFans", "The plans reviewed do not show any unprotected vertical openings requiring smoke control system protection.");
+
+                            this.FindAndReplace(wordApp, "VO38.2.4.6", "");
+                            this.FindAndReplace(wordApp, "VO38.2.4.6P1", "");
+                            this.FindAndReplace(wordApp, "VO38.2.4.6P2", "");
+                            this.FindAndReplace(wordApp, "VO1019.1", "");
+                            this.FindAndReplace(wordApp, "VO1019.1B", "");
+                            this.FindAndReplace(wordApp, "VO1019.1P1", "");
+                            this.FindAndReplace(wordApp, "VO1019.1P1B", "");
+                            this.FindAndReplace(wordApp, "VO1019.1P2", "");
+
+                            this.FindAndReplace(wordApp, "VASSEMBLY", "");
+                            this.FindAndReplace(wordApp, "VASSEMBLY2", "");
+                            this.FindAndReplace(wordApp, "VASSEMBLYNOTE", "");
+
+                            this.FindAndReplace(wordApp, "VO8.6.9.2", "");
+                            this.FindAndReplace(wordApp, "VO8.6.9.2NOTE", "");
+
+                            this.FindAndReplace(wordApp, "VO8.6.9.1", "");
+                            this.FindAndReplace(wordApp, "VO8.6.9.1NOTE", "");
+
+                            this.FindAndReplace(wordApp, "ESCALATORSECTION", "");
+                            this.FindAndReplace(wordApp, "ESCALATORSECTION1", "");
+                            this.FindAndReplace(wordApp, "ESCALATORSECTION2", "");
+                            this.FindAndReplace(wordApp, "ESCALATORSECTION3", "");
+                            this.FindAndReplace(wordApp, "ESCALATORSECTION4", "");
+                            this.FindAndReplace(wordApp, "ESCALATORSECTION5", "");
+                            this.FindAndReplace(wordApp, "ESCALATORSECTION6", "");
+                            this.FindAndReplace(wordApp, "ESCALATORSECTION7", "");
+
+                            table9.Delete();
+
+                        }
+                        
+                    }
+                    else
+                    {
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION2", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION3", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION4", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION5", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION6", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION7", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION8", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION9", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION10", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION11", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION12", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION13", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION14", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION15", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION16", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION17", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION18", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION19", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION20", "");
+                        this.FindAndReplace(wordApp, "ATRIUMSECTION21", "");
+
+                        this.FindAndReplace(wordApp, "VO38.2.4.6", "");
+                        this.FindAndReplace(wordApp, "VO38.2.4.6P1", "");
+                        this.FindAndReplace(wordApp, "VO38.2.4.6P2", "");
+                        this.FindAndReplace(wordApp, "VO1019.1", "");
+                        this.FindAndReplace(wordApp, "VO1019.1B", "");
+                        this.FindAndReplace(wordApp, "VO1019.1P1", "");
+                        this.FindAndReplace(wordApp, "VO1019.1P1B", "");
+                        this.FindAndReplace(wordApp, "VO1019.1P2", "");
+
+                        this.FindAndReplace(wordApp, "VASSEMBLY", "");
+                        this.FindAndReplace(wordApp, "VASSEMBLY2", "");
+                        this.FindAndReplace(wordApp, "VASSEMBLYNOTE", "");
+
+                        this.FindAndReplace(wordApp, "VO8.6.9.1", "");
+                        this.FindAndReplace(wordApp, "VO8.6.9.1NOTE", "");
+
+                        this.FindAndReplace(wordApp, "VO8.6.9.2", "");
+                        this.FindAndReplace(wordApp, "VO8.6.9.2NOTE", "");
+
+                        this.FindAndReplace(wordApp, "ESCALATORSECTION", "");
+                        this.FindAndReplace(wordApp, "ESCALATORSECTION1", "");
+                        this.FindAndReplace(wordApp, "ESCALATORSECTION2", "");
+                        this.FindAndReplace(wordApp, "ESCALATORSECTION3", "");
+                        this.FindAndReplace(wordApp, "ESCALATORSECTION4", "");
+                        this.FindAndReplace(wordApp, "ESCALATORSECTION5", "");
+                        this.FindAndReplace(wordApp, "ESCALATORSECTION6", "");
+                        this.FindAndReplace(wordApp, "ESCALATORSECTION7", "");
+
+                        table9.Delete();
                     }
                 
                 }
@@ -1524,13 +2199,31 @@ namespace findandreplacenarr
                 this.FindAndReplace(wordApp, "ARCHZIP", AccountZipcodeInput.Text);
                 this.FindAndReplace(wordApp, "PNUMBER", ProjectNumberInput.Text);
                 this.FindAndReplace(wordApp, "DATE", DateInput.Text);
-                if(isFDCOM.Checked)
+
+                //Insert uploaded pictures
+                FindTextAndReplaceImage(wordApp, myWordDoc, "NEWRPIC", NFSDImage.ImageLocation);
+                FindTextAndReplaceImage(wordApp, myWordDoc, "SEWRPIC", SFSDImage.ImageLocation);
+                FindTextAndReplaceImage(wordApp, myWordDoc, "EEWRPIC", EFSDImage.ImageLocation);
+                FindTextAndReplaceImage(wordApp, myWordDoc, "WEWRPIC", WFSDImage.ImageLocation);
+                FindTextAndReplaceImage(wordApp, myWordDoc, "RenderingPic", RENDImage.ImageLocation);
+                FindTextAndReplaceImage(wordApp, myWordDoc, "STAIRDISCHARGEPIC", STAIRDISCHARGEImage.ImageLocation);
+                FindTextAndReplaceImage(wordApp, myWordDoc, "FCCPIC", FCCImage.ImageLocation);
+                FindTextAndReplaceImage(wordApp, myWordDoc, "FirePumpPic", FPImage.ImageLocation);
+                FindTextAndReplaceImage(wordApp, myWordDoc, "GeneratorPic", GENERATORImage.ImageLocation);
+                FindTextAndReplaceImage(wordApp, myWordDoc, "SiteAccessPic", SITEACCESSImage.ImageLocation);
+                FindTextAndReplaceImage(wordApp, myWordDoc, "FSAEPic", FSAEImage.ImageLocation);
+
+                if (isFDCOM.Checked)
                 {
                     this.FindAndReplace(wordApp, "FDPT", "City of Miami");
                 }
                 else if(isFDMD.Checked)
                 {
                     this.FindAndReplace(wordApp, "FDPT", "Miami Dade");
+                }
+                else
+                {
+                    this.FindAndReplace(wordApp, "FDPT", "Local");
                 }
                 if(isBDCOM.Checked)
                 {
@@ -1539,6 +2232,10 @@ namespace findandreplacenarr
                 else if(isBDMD.Checked)
                 {
                     this.FindAndReplace(wordApp, "BDPT", "Miami Dade");
+                }
+                else
+                {
+                    this.FindAndReplace(wordApp, "BDPT", "Local");
                 }
             }
         }
@@ -1734,7 +2431,7 @@ namespace findandreplacenarr
                     OpenFileDialog dialog = new OpenFileDialog();
                     dialog.Filter = "jpeg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All files(*.*)|*.*";
 
-                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                     {
                         imageLocation = dialog.FileName;
 
@@ -1749,143 +2446,144 @@ namespace findandreplacenarr
                     MessageBox.Show("An Error Occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        private void uploadSTAIRDISCHARGE_Click(object sender, EventArgs e)
-        {
-            String imageLocation = "";
-            try
+            private void uploadSTAIRDISCHARGE_Click(object sender, EventArgs e)
             {
-                OpenFileDialog dialog = new OpenFileDialog();
-                dialog.Filter = "jpeg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All files(*.*)|*.*";
-
-                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                String imageLocation = "";
+                try
                 {
-                    imageLocation = dialog.FileName;
+                   OpenFileDialog dialog = new OpenFileDialog();
+                   dialog.Filter = "jpeg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All files(*.*)|*.*";
 
-                    STAIRDISCHARGEImage.ImageLocation = imageLocation;
+                    if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    {
+                        imageLocation = dialog.FileName;
+
+                        STAIRDISCHARGEImage.ImageLocation = imageLocation;
+
+                    }
+
 
                 }
-
-
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("An Error Occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        private void uploadFCC_Click(object sender, EventArgs e)
-        {
-            String imageLocation = "";
-            try
-            {
-                OpenFileDialog dialog = new OpenFileDialog();
-                dialog.Filter = "jpeg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All files(*.*)|*.*";
-
-                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                catch (Exception)
                 {
-                    imageLocation = dialog.FileName;
+                    MessageBox.Show("An Error Occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            private void uploadFCC_Click(object sender, EventArgs e)
+            {
+                String imageLocation = "";
+                try
+                {
+                    OpenFileDialog dialog = new OpenFileDialog();
+                    dialog.Filter = "jpeg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All files(*.*)|*.*";
 
-                    FCCImage.ImageLocation = imageLocation;
+                    if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    {
+                        imageLocation = dialog.FileName;
+
+                        FCCImage.ImageLocation = imageLocation;
+
+                    }
+
 
                 }
-
-
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("An Error Occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        private void uploadFP_Click(object sender, EventArgs e)
-        {
-            String imageLocation = "";
-            try
-            {
-                OpenFileDialog dialog = new OpenFileDialog();
-                dialog.Filter = "jpeg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All files(*.*)|*.*";
-
-                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                catch (Exception)
                 {
-                    imageLocation = dialog.FileName;
+                    MessageBox.Show("An Error Occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            private void uploadFP_Click(object sender, EventArgs e)
+            {
+                String imageLocation = "";
+                try
+                {
+                    OpenFileDialog dialog = new OpenFileDialog();
+                    dialog.Filter = "jpeg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All files(*.*)|*.*";
 
-                    FPImage.ImageLocation = imageLocation;
+                    if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    {
+                        imageLocation = dialog.FileName;
+
+                        FPImage.ImageLocation = imageLocation;
+
+                    }
+
 
                 }
-
-
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("An Error Occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        private void uploadGENERATOR_Click(object sender, EventArgs e)
-        {
-            String imageLocation = "";
-            try
-            {
-                OpenFileDialog dialog = new OpenFileDialog();
-                dialog.Filter = "jpeg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All files(*.*)|*.*";
-
-                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                catch (Exception)
                 {
-                    imageLocation = dialog.FileName;
+                    MessageBox.Show("An Error Occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            private void uploadGENERATOR_Click(object sender, EventArgs e)
+            {
+                String imageLocation = "";
+                try
+                {
+                    OpenFileDialog dialog = new OpenFileDialog();
+                    dialog.Filter = "jpeg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All files(*.*)|*.*";
 
-                    GENERATORImage.ImageLocation = imageLocation;
+                    if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    {
+                        imageLocation = dialog.FileName;
+
+                        GENERATORImage.ImageLocation = imageLocation;
+
+                    }
+
 
                 }
-
-
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("An Error Occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        private void uploadSITEACCESS_Click(object sender, EventArgs e)
-        {
-            String imageLocation = "";
-            try
-            {
-                OpenFileDialog dialog = new OpenFileDialog();
-                dialog.Filter = "jpeg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All files(*.*)|*.*";
-
-                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                catch (Exception)
                 {
-                    imageLocation = dialog.FileName;
+                    MessageBox.Show("An Error Occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            private void uploadSITEACCESS_Click(object sender, EventArgs e)
+            {
+                String imageLocation = "";
+                try
+                {
+                    OpenFileDialog dialog = new OpenFileDialog();
+                    dialog.Filter = "jpeg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All files(*.*)|*.*";
 
-                    SITEACCESSImage.ImageLocation = imageLocation;
+                    if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    {
+                        imageLocation = dialog.FileName;
+
+                        SITEACCESSImage.ImageLocation = imageLocation;
+
+                    }
+
 
                 }
-
-
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("An Error Occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        private void uploadFSAE_Click(object sender, EventArgs e)
-        {
-            String imageLocation = "";
-            try
-            {
-                OpenFileDialog dialog = new OpenFileDialog();
-                dialog.Filter = "jpeg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All files(*.*)|*.*";
-
-                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                catch (Exception)
                 {
-                    imageLocation = dialog.FileName;
+                    MessageBox.Show("An Error Occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            private void uploadFSAE_Click(object sender, EventArgs e)
+            {
+                String imageLocation = "";
+                try
+                {
+                    OpenFileDialog dialog = new OpenFileDialog();
+                    dialog.Filter = "jpeg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All files(*.*)|*.*";
 
-                    FSAEImage.ImageLocation = imageLocation;
+                    if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    {
+                        imageLocation = dialog.FileName;
+
+                        FSAEImage.ImageLocation = imageLocation;
+
+                    }
+
 
                 }
-
-
+                catch (Exception)
+                {
+                    MessageBox.Show("An Error Occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            catch (Exception)
-            {
-                MessageBox.Show("An Error Occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+
     }
-    }
+}
