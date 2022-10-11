@@ -72,6 +72,7 @@
             this.occupancyClassificationInput = new System.Windows.Forms.CheckedListBox();
             this.label19 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.isMezzanine = new System.Windows.Forms.CheckBox();
             this.isGarage = new System.Windows.Forms.CheckBox();
             this.uploadREND = new System.Windows.Forms.Button();
             this.RENDImage = new System.Windows.Forms.PictureBox();
@@ -192,7 +193,6 @@
             this.label65 = new System.Windows.Forms.Label();
             this.label64 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.isMezzanine = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RENDImage)).BeginInit();
             this.panel3.SuspendLayout();
@@ -734,6 +734,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(639, 464);
             this.panel1.TabIndex = 45;
+            // 
+            // isMezzanine
+            // 
+            this.isMezzanine.AutoSize = true;
+            this.isMezzanine.Location = new System.Drawing.Point(343, 375);
+            this.isMezzanine.Name = "isMezzanine";
+            this.isMezzanine.Size = new System.Drawing.Size(77, 17);
+            this.isMezzanine.TabIndex = 53;
+            this.isMezzanine.Text = "Mezzanine";
+            this.isMezzanine.UseVisualStyleBackColor = true;
             // 
             // isGarage
             // 
@@ -2035,16 +2045,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // isMezzanine
-            // 
-            this.isMezzanine.AutoSize = true;
-            this.isMezzanine.Location = new System.Drawing.Point(343, 375);
-            this.isMezzanine.Name = "isMezzanine";
-            this.isMezzanine.Size = new System.Drawing.Size(77, 17);
-            this.isMezzanine.TabIndex = 53;
-            this.isMezzanine.Text = "Mezzanine";
-            this.isMezzanine.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2053,11 +2053,11 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.PreviousButton);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
